@@ -106,7 +106,7 @@
     <!-- EDIT LULULLA -->
     <panel name="ClockTimeLeft" />
     <widget name="description" position="659,734" size="1149,144" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30" />
-    <widget name="config" position="659,92" size="1149,621" font="Regular;42" itemHeight="80" scrollbarMode="showOnDemand" selectionPixmap="MetriXconfluencExp/icons/menuselect.png" backgroundColor="background20" enableWrapAround="1" transparent="1" />
+    <widget name="config" position="659,92" size="1149,621" font="Regular;48" itemHeight="80" scrollbarMode="showOnDemand" selectionPixmap="MetriXconfluencExp/icons/menuselect.png" backgroundColor="background20" enableWrapAround="1" transparent="1" />
     <panel name="btRG" />
     <widget alphatest="blend" name="HelpWindow" position="76,748" size="574,179" transparent="1" />
     <widget name="footnote" position="92,934" size="550,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3" />
@@ -121,7 +121,7 @@
     <widget name="lab2" position="383,603" size="150,30" font="Regular;22" zPosition="2" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" />
     <widget name="labstop" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1" />
     <widget name="labrun" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2" />
-    <widget name="infolist" position="105,180" size="1050,720" itemHeight="50" font="Regular;25" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+    <widget name="infolist" position="105,180" size="1050,720" itemHeight="50" font="Regular;26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
     <panel name="btCRYGEpg" />
     <ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend" />
   </screen>
@@ -130,7 +130,7 @@
     <!-- EDIT LULULLA -->
     <panel name="ClockTime" />
     <widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
-    <widget name="menulist" position="105,180" size="1050,720" itemHeight="50" font="Regular;25" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+    <widget name="menulist" position="105,180" size="1050,720" itemHeight="50" font="Regular;26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
     <panel name="btCRYGEpg" />
     <ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend" />
   </screen>
@@ -139,7 +139,7 @@
     <!-- EDIT LULULLA -->
     <panel name="ClockTime" />
     <widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
-    <widget name="infotext" position="105,180" size="1050,720" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+    <widget name="infotext" position="105,180" size="1050,720" itemHeight="50" font="Regular;26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
     <panel name="btCRYGEpg" />
     <ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend" />
   </screen>
