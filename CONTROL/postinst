@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "enigma2-plugin-MetriXconfluencExp installed successfully"
+rm -rf /CONTROL/
+echo 'done'
+echo "* Installed Successfully *"
+echo "* E2 Restart Is Required *"
+echo "* Original author of this skin is iMaxxx *"
+echo "* MetriXconfluencEatv Edited  by Adrenalinnrw *"
+echo "* MetriXconfluencEatv Edited  by @Dragon *"
+echo "* MetriXconfluencExp Edited  by @Lululla *"
+init 3
+exit 0

@@ -1,0 +1,11 @@
+Package: enigma2-plugin-skins-metrixconfluencexp-atv-dragon-lululla
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Description: skin
+Source: 
+Homepage: 
+OE: enigma2
+License: Proprietary

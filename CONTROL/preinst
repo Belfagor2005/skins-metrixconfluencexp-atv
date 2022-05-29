@@ -1,0 +1,8 @@
+#!/bin/sh
+echo "* Install Please *"
+echo "* E2 Restart Is Required *"
+rm -rf /usr/share/enigma2/Remove_MetriXconfluencExp
+rm -rf /usr/uninstall/Remove_Remove_MetriXconfluencExp.del
+
+exit 0
+
