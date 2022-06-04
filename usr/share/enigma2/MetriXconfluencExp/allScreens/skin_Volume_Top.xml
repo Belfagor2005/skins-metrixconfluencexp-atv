@@ -1,0 +1,13 @@
+<skin>
+	<screen name="Volume" position="410,30" size="1100,73" title="Volume" flags="wfNoBorder">
+		<widget pixmap="MetriXconfluencExp/icons/sound/volume3.png" name="Volume" position="3,1" size="1096,71" zPosition="2" transparent="1"/>
+		<!--   
+		<ePixmap pixmap="MetriXconfluencExp/epg/progresvol.png" position="153,35" size="870,20" zPosition="2" backgroundColor="transparent" alphatest="blend" />
+		-->
+		<eLabel text="10" position="164,0" size="45,40" font="Console; 28" halign="left" valign="center" borderWidth="1" borderColor="background" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="105"/>
+		<eLabel text="30" position="335,0" size="45,40" font="Console; 28" halign="left" valign="center" borderWidth="1" borderColor="background" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="105"/>
+		<eLabel text="50" position="548,0" size="45,40" font="Console; 28" halign="left" valign="center" borderWidth="1" borderColor="background" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="105"/>
+		<eLabel text="70" position="759,0" size="45,40" font="Console; 28" halign="left" valign="center" borderWidth="1" borderColor="background" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="105"/>
+		<eLabel text="90" position="958,0" size="45,40" font="Console; 28" halign="left" valign="center" borderWidth="1" borderColor="background" foregroundColor="selectedFG" backgroundColor="background" transparent="1" zPosition="105"/>
+	</screen>
+</skin>

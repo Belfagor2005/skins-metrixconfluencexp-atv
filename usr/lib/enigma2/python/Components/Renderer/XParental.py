@@ -8,7 +8,7 @@ from enigma import eLabel, ePixmap, eTimer, loadPNG
 import re, os, sys, tempfile
 import json
 
-pratePath = 'MetriXconfluencExp/logos/parentalrating'
+pratePath = '/usr/share/enigma2/MetriXconfluencExp/logos/parentalrating'
 
 if os.path.isdir("/tmp"):
 	pathLoc = "/tmp/infos/"
