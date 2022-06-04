@@ -45,31 +45,21 @@
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-
-
-
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
-
-
 		<widget source="Event" render="XInfoEvents" />
-
-		<widget source="session.Event_Now" render="XInfoEvents" />
-		<widget source="session.Event_Next" render="XInfoEvents" />
-
-
-
+<!-- 		<widget source="session.Event_Now" render="XInfoEvents" />
+		<widget source="session.Event_Next" render="XInfoEvents" /> -->
 		<ePixmap pixmap="nocover.jpg" position="925,750" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<widget source="Event" render="PosterX" position="925,750" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
-
+		<widget source="ServiceEvent" render="PosterX" position="925,750" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="60,624" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
-		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1" />
+		<widget render="XParental" source="session.Event_Now" position="61,622" size="50,50" zPosition="4" transparent="1" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="118,641" size="350,30" alphatest="blend" zPosition="19" transparent="1" />
-		<widget source="Event" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="350,30" alphatest="blend" zPosition="20" transparent="1" />
+		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="350,30" alphatest="blend" zPosition="20" transparent="1" />
 
 		<!-- xtraEvent plugin -->
 	</screen>

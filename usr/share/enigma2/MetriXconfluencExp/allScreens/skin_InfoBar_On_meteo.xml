@@ -217,8 +217,6 @@
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
 		<!-- Cover Anzeige Jetzt -->
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		<!-- Kein Cover  -->
 		<!-- Cover Anzeige Jetzt END -->
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="FixedLabel" size="100,34" source="session.FrontendInfo" text="DVB-S" transparent="1" valign="center">
@@ -296,10 +294,12 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
+		
+		<widget source="Event" render="XInfoEvents" />			
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
 		
-		<widget source="Event" render="XInfoEvents" />		
+	
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" />
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1" />
 	    <widget source="session.Event_Now" render="XInfoEvents" />

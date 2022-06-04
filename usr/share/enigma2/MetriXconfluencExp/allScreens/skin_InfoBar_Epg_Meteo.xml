@@ -233,7 +233,6 @@
 		<widget position="1175,881" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="left" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
 			<convert type="ServiceName">TpansponderInfo</convert>
 		</widget>
-		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top" />
 		<eLabel position="375,934" size="790,2" backgroundColor="grey" foregroundColor="grey" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="931,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend" noWrap="1" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="1087,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend" noWrap="1" />
@@ -293,13 +292,17 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
-		<widget source="Event" render="XInfoEvents" />		
-		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" />
-		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1" />
+		
+		
+		<widget source="Event" render="XInfoEvents" />			
 	    <widget source="session.Event_Now" render="XInfoEvents" />
         <widget source="session.Event_Next" render="XInfoEvents" />
+		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top" />
+		
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" />
+		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1" />
 		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="2" />
 		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="2" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1174,960" size="350,30" alphatest="blend" zPosition="19" transparent="1" />
