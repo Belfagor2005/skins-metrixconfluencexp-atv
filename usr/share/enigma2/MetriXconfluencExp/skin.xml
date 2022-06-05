@@ -412,20 +412,18 @@
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="250,24" size="286,65" zPosition="2" font="Regular; 58" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
 			<convert type="ServiceName2">%n</convert>
 		</widget>
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="1376,851" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
-			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1528,887" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
-			<convert type="MSNWeather">temperature_current</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1424,953" size="270,39" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-			<convert type="MSNWeather">temperature_text,current</convert>
-		</widget>
+
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="FixedLabel" size="100,34" source="session.FrontendInfo" text="DVB-S" transparent="1" valign="center">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/iptv.png" alphatest="blend" position="240,994" size="35,35" zPosition="4" transparent="1">
+		  <convert type="ServiceInfo">IsStream</convert>
+		  <convert type="ConditionalShowHide">
+		  </convert>
+		</widget>	
+	
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName2">%s </convert>
 		</widget>
@@ -449,10 +447,20 @@
 		<widget source="session.FrontendStatus" render="Label" position="965,1001" size="100,30" font="Regular; 26" backgroundColor="black" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
-		<widget source="Event" render="XInfoEvents"/>
-		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="3" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend"/>
+		<widget alphatest="blend" render="MSNWeatherPixmap" position="1376,851" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
+			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1528,887" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
+			<convert type="MSNWeather">temperature_current</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1424,953" size="270,39" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
+			<convert type="MSNWeather">temperature_text,current</convert>
+		</widget>
+
+		<widget source="Event" render="XInfoEvents" position="0,0"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<widget render="XParental" source="Event" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
@@ -492,43 +500,20 @@
 	</screen>
 	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080"/>
-		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
-		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1515,655" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="640,650" size="350,30" alphatest="blend" zPosition="19" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1515,655" size="320,30" alphatest="blend" zPosition="19" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<widget source="Event" render="XInfoEvents"/>
-		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="3" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend"/>
-		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
-		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
-		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
-		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="105,1093" size="45,60" alphatest="blend" zPosition="2"/>
-		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="152,1114" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="152,1114" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="25" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="540,1093" size="45,60" alphatest="blend" zPosition="2"/>
-		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="587,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="587,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="975,1093" size="45,60" alphatest="blend" zPosition="2"/>
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1023,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1023,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1410,1093" size="45,60" alphatest="blend" zPosition="2"/>
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1460,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1460,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
+		<widget source="Event" render="XInfoEvents"/>	
+		
 		<!--  check  on test debut -->
 		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2"/>
 		<widget name="epg_description" position="499,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1"/>
 		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
+		
 		<widget source="session.Event_Next" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- end check -->
-		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
-		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
+
 		<widget source="session.Event_Now" render="Label" backgroundColor="black" position="243,704" size="335,32" transparent="1" zPosition="2" foregroundColor="grey" font="Regular;22" halign="center" borderWidth="2">
 			<convert type="EventName">Rating</convert>
 		</widget>
@@ -604,9 +589,11 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format: %H:%M</convert>
 		</widget>
+		
 		<widget render="VideoSize" borderWidth="2" source="session.CurrentService" position="240,1033" size="172,38" backgroundColor="black" font="Regular;30" foregroundColor="grey" halign="center" valign="center" transparent="1" zPosition="2"/>
 		<eLabel text="SNR:" position="860,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center"/>
 		<eLabel text="AGC:" position="1015,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center"/>
+		
 		<!-- <widget source="session.FrontendStatus" pixmap="MetriXconfluencExp/icons/snr.png" render="Progress" position="931,1035" size="80,30" transparent="1" halign="center" alphatest="blend"> -->
 		<widget source="session.FrontendStatus" pixmap="MetriXconfluencExp/icons/snr.png" render="Progress" position="931,1035" size="80,30" transparent="1" alphatest="blend" noWrap="1">
 			<convert type="FrontendInfo">SNR</convert>
@@ -729,7 +716,7 @@
 		<widget pixmap="MetriXconfluencExp/icons/rec_on.png" position="1185,1033" render="Pixmap" size="60,36" source="session.RecordState" zPosition="2" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget pixmap="MetriXconfluencExp/icons/format_on.png" position="1327,1033" render="Pixmap" size="63,36" source="session.CurrentService" zPosition="2" alphatest="off">
+		<widget pixmap="MetriXconfluencExp/icons/format_on.png" position="1327,1033" render="Pixmap" size="63,36" source="session.CurrentService" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -740,7 +727,7 @@
 		<widget render="MSNWeatherPixmap" position="1697,929" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1559,916" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top" alphatest="blend">
+		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1559,916" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
 		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1551,878" size="270,39" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" alphatest="blend">
@@ -752,6 +739,11 @@
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/iptv.png" alphatest="blend" position="1471,954" size="35,35" zPosition="4" transparent="1">
+		  <convert type="ServiceInfo">IsStream</convert>
+		  <convert type="ConditionalShowHide">
+		  </convert>
+		</widget>		
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName2">%s </convert>
 		</widget>
@@ -772,9 +764,43 @@
 		<widget source="session.FrontendStatus" render="Label" position="965,1001" size="100,30" font="Regular; 26" backgroundColor="black" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
+		
 		<widget source="session.CurrentService" render="Label" text="camname" position="238,1001" size="300,30" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
 			<convert type="NOVAccess">CamName</convert>
 		</widget>
+		
+		<!--
+ 		<widget source="Event" render="XInfoEvents"/>
+		-->	
+		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="640,650" size="350,30" alphatest="blend" zPosition="19" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1515,655" size="320,30" alphatest="blend" zPosition="19" transparent="1"/>		
+		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
+		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1515,655" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
+
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+
+		<widget render="XParental" source="Event" position="28,1118" size="50,50" zPosition="3" transparent="1"/>
+
+		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
+		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
+		
+		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
+		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>		
+		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="105,1093" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="152,1114" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="152,1114" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="25" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="540,1093" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="587,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="587,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="975,1093" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1023,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1023,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1410,1093" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1460,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1460,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
+	
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -786,7 +812,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin.png" position="0,-1" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="224,326" size="384,384" transparent="1" alphatest="blend"/>
 	</screen>
-	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="black">
+	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="unececec"/>
 		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="unf2e000" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
 		<widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
@@ -895,6 +921,9 @@
 	</screen>
 	<screen name="Volume" position="0,480" size="300,180" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/icons/sound/volume.png" position="0,0" size="4,105" backgroundColor="background20" zPosition="-11"/>
+		<!-- 
+		<widget name="VolumeText" zPosition="3" position="8,4" size="48,20" halign="center" valign="center" font="Enigma;18" foregroundColor="#f0f0f0" backgroundColor="#1f1f1f" transparent="1" /> 
+		-->
 		<widget render="VolumeText" source="global.CurrentTime" font="Arial; 80" position="127,34" size="150,90" backgroundColor="background20" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="20"/>
 		<widget name="Volume" position="0,594" size="872,7" backgroundColor="black" transparent="1" foregroundColor="blue" zPosition="20"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/volume2.png" position="13,-447" zPosition="-10" size="300,180"/>
@@ -909,7 +938,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/icons/audio.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1701,910" size="50,50" zPosition="10" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="ServiceList.desc" position="107,156" size="810,40" font="Regular;30" backgroundColor="black" foregroundColor="white" transparent="1"/>
 		<widget name="ServiceList" position="105,215" size="819,646" itemHeight="50" font="Regular; 26" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" backgroundColor="black" foregroundColor="white" backgroundColorSelected="#688cbf" foregroundColorSelected="white" transparent="1"/>
@@ -1561,7 +1590,7 @@
 		<widget source="key_green" render="Label" position="671,683" zPosition="1" size="210,60" font="Regular;30" valign="center" halign="center" backgroundColor="background20" transparent="1"/>
 	</screen>
 	<screen name="Console" position="135,150" size="1650,840" title="Command execution...">
-		<ePixmap position="1234,35" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/console.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1296,-80" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/console.png" transparent="1" alphatest="blend"/>
 		<widget name="text" position="30,30" size="1590,780" font="Console; 28"/>
 	</screen>
 	<screen name="CrashlogAutoSubmitConfiguration" position="0,0" size="1920,1080" title="CrashlogAutoSubmit settings" flags="wfNoBorder" backgroundColor="transparent">
@@ -1654,7 +1683,7 @@
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget source="CAidList_desc" render="Label" position="105,173" size="1050,42" font="Regular;36" backgroundColor="background20" transparent="1"/>
 		<eLabel position="105,233" size="1050,3" backgroundColor="grey"/>
@@ -1708,7 +1737,7 @@
 	</screen>
 	<screen name="Dish" position="736,347" size="384,384" title="Dish" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
 		<widget pixmap="MetriXconfluencExp/skin_default/icons/dish.png" name="Dishpixmap" position="-1,1" size="384,384" alphatest="off"/>
-		<widget name="Tuner" position="222,348" size="155,30" zPosition="2" font="Regular; 20" halign="right" borderWidth="1" borderColor="black" transparent="1"/>
+		<widget name="Tuner" position="222,348" size="155,30" zPosition="2" font="Regular; 20" halign="right" borderWidth="1" borderColor="transparent" transparent="1"/>
 		<widget name="turnTime" position="251,275" size="120,30" zPosition="1" font="Regular;26" halign="right" borderWidth="1" transparent="1"/>
 		<widget name="From" position="7,311" size="67,27" zPosition="1" font="Regular;24" halign="left" borderWidth="1" transparent="1"/>
 		<widget name="posFrom" position="85,310" size="105,32" zPosition="1" font="Regular; 28" halign="left" borderWidth="1" transparent="1"/>
@@ -1719,7 +1748,7 @@
 		<eLabel name="" position="0, 0" size="384,384" zPosition="-3"/>
 	</screen>
 	<screen name="BufferIndicator" position="768,348" size="384,384" title="Dish" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="black" borderWidth="2" valign="center" halign="center"/>
+		<widget name="status" position="0,0" size="600,48" backgroundColor="transparent" transparent="1" font="Regular;36" borderColor="transparent" borderWidth="2" valign="center" halign="center"/>
 		<eLabel name="" position="-1,-2" size="600,390" zPosition="-3"/>
 	</screen>
 	<screen name="InfoBarEventView" position="0,0" size="1280,499" backgroundColor="transparent" flags="wfNoBorder">
@@ -1731,13 +1760,13 @@
 		<widget name="epg_description" position="55,120" size="1170,330" font="Regular;22" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showNever" foregroundColor="epg-eventdescription-foreground" backgroundColor="epg-eventdescription-background" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off" />
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeEvent"/>
-		<widget name="channel" position="196,344" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent"/>
-		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,226" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<panel name="ClockTimeEvent" />
+		<widget name="channel" position="196,344" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent" />
+		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
+		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
+		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
 		<!--
 		<ePixmap pixmap="nocover.jpg" position="332,586" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
 		<ePixmap pixmap="nocover.jpg" position="730,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
@@ -1746,18 +1775,35 @@
 		<ePixmap pixmap="nocover.jpg" position="1387,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
 		<ePixmap pixmap="nocover.jpg" position="1606,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
 		 -->
-		<ePixmap pixmap="MetriXconfluencExp/buttons/menu.png" position="1731,944" size="122,60" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="638,934" size="45,60" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="890,934" size="45,60" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="1148,934" size="45,60" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1407,934" size="45,60" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="695,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1778,844" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_red.png" position="670,999" size="230,8" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_green.png" position="970,999" size="230,8" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_yellow.png" position="1278,999" size="230,8" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_blue.png" position="1582,999" size="230,8" alphatest="blend" />
+		<!--
+ 		<widget source="key_red" render="Label" position="695,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		<widget source="key_green" render="Label" position="950,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		<widget source="key_yellow" render="Label" position="1208,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		<widget source="key_blue" render="Label" position="1469,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="Event" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend"/>
+		-->
+		<widget render="Label" source="key_red" position="633,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
+		  <convert type="ConditionalShowHide" />
+		</widget>
+		<widget render="Label" source="key_green" position="934,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
+		  <convert type="ConditionalShowHide" />
+		</widget>
+		<widget render="Label" source="key_yellow" position="1235,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
+		  <convert type="ConditionalShowHide" />
+		</widget>
+		<widget render="Label" source="key_blue" position="1537,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
+		  <convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="1790,908" size="45,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		  <convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="Event" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend" />
 		<!--
 		<widget source="Event" render="PosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2"/>
 		<widget source="Event" render="PosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2"/>
@@ -1766,38 +1812,38 @@
 		<widget source="Event" render="PosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2"/>
 		<widget source="Event" render="PosterXSingleEpgList" position="718,413" size="1100,200" font="Regular;32" foregroundColor="grey"/>
 		 -->
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="603,865" size="62,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="603,865" size="62,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" position="603,865" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="194,865" size="84,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="194,865" size="84,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="194,865" size="84,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="300,865" size="48,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="300,865" size="48,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_format_on.png" position="300,865" size="48,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="471,865" size="35,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="471,865" size="35,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_txt_on.png" position="471,865" size="35,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="368,865" size="80,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="368,865" size="80,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" position="368,865" size="80,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hbbtv_on.png" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="533,865" size="41,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="533,865" size="41,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_sub_on.png" position="533,865" size="41,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel position="195,464" size="465,2" backgroundColor="grey" foregroundColor="grey"/>
+		<eLabel position="195,464" size="465,2" backgroundColor="grey" foregroundColor="grey" />
 		<widget source="session.Event_Now" render="Progress" position="195,461" size="465,8" pixmap="MetriXconfluencExp/icons/p_bar.png" borderWidth="1" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
@@ -1811,8 +1857,8 @@
 	<screen name="EPGSelection" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" transparent="1"/>
 		<panel name="btCRYB"/>
-		<panel name="ClockTimeEvent"/>
-		<widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="on" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<panel name="ClockTimeEvent2"/>
+		<widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="blend" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
 		<widget source="Event" render="Label" position="160,90" size="480,60" font="Regular; 40" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="left">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -2061,7 +2107,7 @@
 		<widget source="help" render="Label" position="105,810" size="1050,132" font="Regular;30" backgroundColor="background20" transparent="1"/>
 	</screen>
 	<screen name="QuickEPG" position="0,0" size="1920,1080" title="QuickEPG" backgroundColor="transparent" flags="wfNoBorder">
-		<eLabel name="new eLabel" position="-98,842" zPosition="-10" size="2018,240" backgroundColor="background20" alphatest="on"/>
+		<eLabel name="new eLabel" position="-98,842" zPosition="-10" size="2018,240" backgroundColor="background20" alphatest="blend"/>
 		<widget source="Service" render="Label" position="588,849" size="744,53" halign="center" font="Regular;39" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -2079,7 +2125,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<widget name="infotext" position="105,225" zPosition="1" size="1050,285" font="Regular;33" halign="center" backgroundColor="background20" transparent="1"/>
 		<widget name="resulttext" position="105,555" zPosition="1" size="1050, 75" font="Regular;53" halign="center" backgroundColor="background20" transparent="1"/>
@@ -2093,7 +2139,7 @@
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget name="hddlist" position="107,195" size="1050,413" itemHeight="50" font="Regular; 26" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/hdd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
@@ -2101,7 +2147,7 @@
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget name="model" position="105,225" size="1050,38" font="Regular;35" transparent="1"/>
 		<widget name="capacity" position="105,300" size="1050,38" font="Regular;35" transparent="1"/>
 		<widget name="bus" position="105,375" size="1050,38" font="Regular;35" transparent="1"/>
@@ -2113,7 +2159,7 @@
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget name="wait" position="105,195" size="1050,413" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/hdd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
@@ -2183,7 +2229,7 @@
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<widget name="filelist" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
@@ -2198,7 +2244,10 @@
 		<panel name="btRG"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
-	<screen name="MessageBox" position="center,252" size="1200,120" zPosition="1" title="Message" backgroundColor="background20" alphatest="on">
+	
+	
+	
+	<screen name="MessageBox" position="center,252" size="1200,120" zPosition="1" title="Message" backgroundColor="background20" alphatest="blend">
 		<widget name="text" position="165,12" size="1020,0" font="Regular;25" backgroundColor="background20"/>
 		<widget name="ErrorPixmap" pixmap="MetriXconfluencExp/icons/message/attention-53.png" position="45,15" size="80,80" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="MetriXconfluencExp/icons/message/question-53.png" position="45,15" size="80,80" alphatest="blend"/>
@@ -2277,7 +2326,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="MovieContextMenu" position="center,center" size="1920,1080" title="Movielist menu" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="224,326" size="384,384" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="1380,345" size="384,384" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<widget name="menu" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -2291,10 +2340,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="MovieBrowserConfiguration" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,-1" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="1380,345" size="384,384" transparent="1" zPosition="5" alphatest="blend"/>
+		<panel name="ClockTime"/>
 		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<panel name="btRG"/>
 	</screen>
-	<screen name="MoviePlayer" position="center,center" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" alphatest="on">
+	<screen name="MoviePlayer" position="center,center" size="1920,1080" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder" alphatest="blend">
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBigLab"/>
 		<eLabel name="new eLabel" position="225,1005" size="1470,2" backgroundColor="grey" foregroundColor="grey" zPosition="-1"/>
@@ -2339,7 +2389,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget render="VideoSize" source="session.CurrentService" position="1656,872" size="195,39" backgroundColor="background20" font="Regular;32" foregroundColor="grey" halign="center" valign="center" transparent="1" zPosition="2"/>
 	</screen>
-	<screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent" alphatest="on">
+	<screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent" alphatest="blend">
 		<widget source="Title" render="Label" position="641,93" size="1140,68" font="Regular; 44" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<widget source="global.CurrentTime" render="Label" position="317,893" size="284,120" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
@@ -2498,7 +2548,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="PluginBrowser" position="center,center" size="1920,1080" title="Plugin Browser" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin1.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
-		<widget name="list" position="895,100" size="728,851" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="list" position="895,100" size="728,851" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
+		<!--
+ 		<widget name="list" position="895,100" size="728,851" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		-->		
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="741,0" size="45,60" alphatest="blend" zPosition="2"/>
 		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="787,20" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="787,20" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
@@ -2519,7 +2572,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/plugin.png" position="375,180" size="384,384" transparent="1" zPosition="5" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeLeft2"/>
+		<widget name="list" position="1000,145" size="765,788" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
+		<!-- 
 		<widget name="list" position="1000,145" size="765,788" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		 -->
+		
 		<widget name="text" position="256,833" size="699,135" zPosition="-1" font="Regular; 33" halign="center" valign="center" transparent="1"/>
 	</screen>
 	<screen name="PositionerSetup" position="0,0" size="1920,1080" title="Positioner setup..." flags="wfNoBorder" backgroundColor="transparent">
@@ -2527,7 +2584,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1382,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget name="list" position="330,180" size="600,270" itemHeight="50" font="Regular; 26" backgroundColor="background20" transparent="1"/>
 		<widget name="red" position=" 105,495" size="255,150" backgroundColor="red" halign="center" valign="center" font="Regular;32"/>
 		<widget name="green" position="360,495" size="255,150" backgroundColor="green" halign="center" valign="center" font="Regular;32"/>
@@ -2676,17 +2733,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeBig"/>
+		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<widget name="infolist" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
-		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<widget name="list" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" picServiceEventProgressbar="MetriXconfluencExp/dvr/progcl.png" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="grey" foregroundColorServiceNotAvail="#777777" serviceNumberFont="Regular;35" serviceNameFont="Regular;35" serviceInfoFont="Regular;32" transparent="1"/>
 	</screen>
@@ -3036,10 +3093,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
 	</screen>
 	<screen name="Pic_Full_View" position="0,0" size="1920,1080" title="Info" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="pic" position="fill" zPosition="1" alphatest="on"/>
+		<widget name="pic" position="fill" zPosition="1" alphatest="blend"/>
 		<eLabel position="22,22" size="45,37" zPosition="2" backgroundColor="black" transparent="1"/>
-		<widget name="point" position="25,25" size="31,31" zPosition="3" pixmap="skin_default/icons/record.png" alphatest="on"/>
-		<widget name="play_icon" position="25,25" size="24,24" zPosition="3" pixmap="skin_default/icons/ico_mp_play.png" alphatest="on"/>
+		<widget name="point" position="25,25" size="31,31" zPosition="3" pixmap="skin_default/icons/record.png" alphatest="blend"/>
+		<widget name="play_icon" position="25,25" size="24,24" zPosition="3" pixmap="skin_default/icons/ico_mp_play.png" alphatest="blend"/>
 		<widget source="file" render="Label" position="90,22" size="900,34" zPosition="3" font="Regular;30" halign="left" noWrap="1" foregroundColor="grey" backgroundColor="black" transparent="1" borderWidth="2"/>
 	</screen>
 	<screen name="AutomaticVolumeAdjustmentConfigScreen" position="0,0" size="1920,1080" title="Automatic Volume Adjustment" flags="wfNoBorder" backgroundColor="transparent">
@@ -3125,7 +3182,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Title" render="Label" position="105,71" size="1095,60" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="config2"/>
 		<panel name="btCRYB"/>
 	</screen>
@@ -3241,7 +3298,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="config2"/>
 		<panel name="btRG"/>
 		<widget source="status" render="Label" position="105,900" size="1050,38" font="Regular;33" halign="center" backgroundColor="background20" transparent="1"/>
@@ -3376,7 +3433,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="config2"/>
 		<panel name="btCRYB"/>
 	</screen>
@@ -3385,7 +3442,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<widget name="config" position="105,180" size="1050,620" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<eLabel position="105,858" size="1050,3" backgroundColor="grey"/>
@@ -3396,7 +3453,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget name="config" position="105,173" size="1050,765" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="55,965" size="45,60" alphatest="blend"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,965" size="45,60" alphatest="blend"/>
@@ -3710,7 +3767,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<widget name="list" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 	</screen>
@@ -3761,7 +3818,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<widget name="thumbnail" position=" 105,180" size="390,240" alphatest="blend"/>
 		<widget source="serviceinfo" render="Label" position="525,180" size="630,240" font="Regular;32" backgroundColor="background20" transparent="1"/>
@@ -3845,7 +3902,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 						])
 					 },
 					   "fonts": [gFont("Regular",22),gFont("Regular",18),gFont("Regular",26),gFont("Regular",20)],
-					   "itemHeight": 158
+					   "itemHeight": 150
 					 }
 			</convert>
 		</widget>
@@ -4127,7 +4184,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="config2"/>
 		<panel name="btCRYB"/>
 	</screen>
@@ -4136,7 +4193,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget source="info" render="Label" position="105,173" size="1050,42" font="Regular;36" backgroundColor="background20" transparent="1"/>
 		<eLabel position="105,233" size="1050,3" backgroundColor="grey"/>
 		<widget name="content" position="105,180" size="1050,600" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -4146,7 +4203,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget source="info" render="Label" position="105,173" size="1050,42" itemHeight="50" font="Regular; 26" backgroundColor="background20" transparent="1"/>
 		<eLabel position="105,168" size="1050,3" backgroundColor="grey"/>
 		<widget source="content" render="Listbox" position="105,180" size="1050,600" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png">
@@ -4167,7 +4224,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget source="info" render="Label" position="105,128" size="1050,42" font="Regular;36" backgroundColor="background20" transparent="1"/>
 		<eLabel position="105,168" size="1050,3" backgroundColor="grey"/>
 		<widget name="content" position="105,178" size="1050,600" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -5133,7 +5190,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<panel name="config2"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/div-h.png" position="105,793" zPosition="1" size="864,3"/>
@@ -5634,20 +5691,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="btRG"/>
 		<panel name="config2"/>
 		<widget name="PluginInfo" position="105,870" size="975,38" zPosition="4" font="Regular;32" foregroundColor="grey"/>
-		<ePixmap pixmap="~/img/AudioSyncBG.png" zPosition="1" position="1231,264" size="600,460" alphatest="on" transparent="1"/>
+		<ePixmap pixmap="~/img/AudioSyncBG.png" zPosition="1" position="1231,264" size="600,460" alphatest="blend" transparent="1"/>
 		<widget name="ServiceInfoLabel" zPosition="4" position="1454,180" size="110,22" font="Regular;20" backgroundColor="background20" foregroundColor="white" transparent="1"/>
 		<widget name="ServiceInfo" zPosition="4" position="1621,180" size="190,22" font="Regular;22" backgroundColor="background20" foregroundColor="grey" transparent="1"/>
-		<widget name="ChannelImg" pixmaps="~/img/OptionButtonOff.png,~/img/OptionButtonOn.png" position="1416,230" zPosition="2" size="11,11" transparent="1" alphatest="on"/>
+		<widget name="ChannelImg" pixmaps="~/img/OptionButtonOff.png,~/img/OptionButtonOn.png" position="1416,230" zPosition="2" size="11,11" transparent="1" alphatest="blend"/>
 		<widget name="ChannelLabel" position="1440,225" size="160,22" font="Regular;20" halign="left" valign="center" zPosition="2" transparent="1" backgroundColor="background20" foregroundColors="#ffffff,#fe6b1b"/>
-		<widget name="GlobalImg" pixmaps="~/img/OptionButtonOff.png,~/img/OptionButtonOn.png" position="1610,231" zPosition="2" size="11,11" transparent="1" alphatest="on"/>
+		<widget name="GlobalImg" pixmaps="~/img/OptionButtonOff.png,~/img/OptionButtonOn.png" position="1610,231" zPosition="2" size="11,11" transparent="1" alphatest="blend"/>
 		<widget name="GlobalLabel" position="1626,224" size="199,22" font="Regular;20" halign="left" valign="center" zPosition="2" transparent="1" backgroundColor="background20" foregroundColors="#ffffff,#fe6b1b"/>
-		<ePixmap pixmap="~/img/AudioSyncBarBGVert.png" zPosition="2" position="1189,320" size="21,370" alphatest="on" transparent="1"/>
+		<ePixmap pixmap="~/img/AudioSyncBarBGVert.png" zPosition="2" position="1189,320" size="21,370" alphatest="blend" transparent="1"/>
 		<widget name="AudioSliderBar" pixmap="~/img/AudioSyncBarVert.png" zPosition="3" position="1189,320" size="21,370" transparent="1" orientation="orBottomToTop"/>
 		<widget name="AudioSlider" zPosition="4" position="1161,279" size="70,22" font="Regular;20" halign="center" valign="center" backgroundColor="background20" foregroundColor="white" transparent="1"/>
 	</screen>
 	<screen name="AC3LipSyncSetup" position="0,0" size="1920,1080" title="AC3 Lip Sync Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" font="Regular; 53" position="105,71" size="1200,65" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="background20"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<panel name="btRG"/>
@@ -5690,7 +5748,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<panel name="config2"/>
 		<widget source="introduction" render="Label" position="105,870" size="975,38" zPosition="10" font="Regular;32" halign="center" valign="center" transparent="1"/>
@@ -5700,7 +5758,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/usage_setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1701,910" size="50,50" zPosition="10" transparent="1" alphatest="blend"/>
 		<widget name="key_menu" position="1451,1104" size="400,50" font="Regular;30" valign="center" backgroundColor="black" foregroundColor="white" transparent="1"/>
@@ -5731,7 +5789,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<panel name="btRGB"/>
 		<widget name="config" position="105,180" size="1050,493" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<widget source="help" render="Label" font="Regular;33" position="105,695" size="1050,240" transparent="1" foregroundColor="grey" backgroundColor="background20"/>
@@ -5741,7 +5799,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget name="text" font="Regular;33" position="105,180" size="1050,675" transparent="1" backgroundColor="background20"/>
 	</screen>
 	<screen name="VPS_check_PDC_Screen" position="0,0" size="1920,1080" title="VPS-Plugin" flags="wfNoBorder" backgroundColor="transparent">
@@ -5749,7 +5807,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeTop"/>
+		<panel name="ClockTime"/>
 		<widget source="infotext" render="Label" position="105,180" size="1050,675" zPosition="1" font="Regular;33" halign="center" valign="center" transparent="1"/>
 	</screen>
 	<screen name="OSD3DSetupScreen" position="0,0" size="1920,1080" title="OSD 3D-Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -6522,15 +6580,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/softwaremanager.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYGEpg"/>
 		<widget name="packagetext" position="105,140" size="250,35" zPosition="1" font="Regular;24" halign="right" backgroundColor="layer-a-background" transparent="1"/>
 		<widget name="packagenr" position="364,140" size="50,35" zPosition="1" font="Regular;24" halign="right" backgroundColor="layer-a-background" transparent="1"/>
 		<widget source="list" render="Listbox" position="95,180" size="885,616" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
-							MultiContentEntryText(pos = (5, 1), size = (590, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (5, 26), size = (590, 21), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaBlend(pos = (605, 1), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryText(pos = (5, 1), size = (690, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (5, 26), size = (690, 21), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (725, 1), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
 							MultiContentEntryPixmapAlphaBlend(pos = (0, 50), size = (700, 2), png = 5), # index 5 is the div pixmap
 						],
 					"fonts": [gFont("Regular",24),gFont("Regular",16)],
@@ -6552,6 +6611,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/softwaremanager.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYGEpg"/>
 		<widget name="package_text" position="110,140" size="250,35" zPosition="1" font="Regular;24" halign="right" backgroundColor="layer-a-background" transparent="1"/>
 		<widget name="package_count" position="369,140" size="50,35" zPosition="1" font="Regular;24" halign="right" backgroundColor="layer-a-background" transparent="1"/>
@@ -6560,9 +6620,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="list" render="Listbox" position="95,180" size="885,616" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
-							MultiContentEntryText(pos = (5, 1), size = (590, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (5, 26), size = (590, 21), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaBlend(pos = (605, 1), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryText(pos = (5, 1), size = (690, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (5, 26), size = (690, 21), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (725, 1), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
 							MultiContentEntryPixmapAlphaBlend(pos = (0, 50), size = (700, 2), png = 5), # index 5 is the div pixmap
 						],
 					"fonts": [gFont("Regular",24),gFont("Regular",16)],
@@ -6582,10 +6642,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="RunSoftwareUpdate" position="0,0" size="1920,1080" title="Software Update..." flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1923,1080" alphatest="off"/>
+		<panel name="ClockTime"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/softupdate.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<eLabel text="Software Update" position="5,535" size="1920,400" font="Regular;100" noWrap="1" backgroundColor="StarBackground" transparent="1" foregroundColor="StarAccent1" valign="bottom" zPosition="-50"/>
-		<widget name="activity" position="100,145" size="1248,20" borderColor="layer-b-foreground" foregroundColor="layer-a-progress" borderWidth="2" transparent="1"/>
-		<widget name="update" position="100,170" size="1248,796" font="Regular; 32" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand"/>
+		<widget name="activity" position="100,145" size="1248,34" borderColor="layer-b-foreground" foregroundColor="layer-a-progress" borderWidth="2" transparent="1"/>
+		<widget name="update" position="100,193" size="1248,773" font="Regular; 32" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="OpenScript" position="0,0" size="1920,1080" title="OpenScript" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -7128,6 +7189,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Title" render="Label" position="128,83" foregroundColor="foreground" size="572,61" valign="bottom" font="Regular; 38" backgroundColor="layer-a-background" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1924,1076" alphatest="off"/>
 		<!-- EDIT LULULLA -->
+		<panel name="ClockTime"/>
 		<panel name="btPIMO"/>
 		<widget name="filename" position="190,342" size="525,50" font="Regular;19" valign="center" foregroundColor="foreground" backgroundColor="layer-a-background"/>
 		<widget source="list" render="Listbox" position="181,416" size="700,330" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1">
@@ -7155,7 +7217,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/net.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget source="Adapter" render="Label" position="104,137" size="743,42" font="Regular;36" backgroundColor="background20" transparent="1"/>
 		<widget name="config" position="105,180" size="1050,360" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<widget source="introduction2" render="Label" position="105,893" size="1050,42" font="Regular;36" halign="center" backgroundColor="background20" transparent="1"/>
@@ -7184,7 +7246,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="transparent" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget source="IF" render="Label" position="104,137" size="743,42" font="Regular;36" backgroundColor="background20" transparent="1"/>
 		<widget source="Statustext" render="Label" position="864,137" size="240,42" font="Regular;36" transparent="1"/>
 		<widget name="statuspic" position="1110,137" size=" 45,45" pixmaps="MetriXconfluencExp/buttons/green.png,MetriXconfluencExp/buttons/grey.png" transparent="1" alphatest="blend"/>
@@ -7200,7 +7262,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYGEpg"/>
 		<widget source="list" render="Listbox" position="105,180" size="1050,600" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png">
 			<convert type="TemplatedMultiContent">
@@ -7223,7 +7285,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYGEpg"/>
 		<widget source="list" render="Listbox" position="105,180" size="1050,600" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png">
 			<convert type="TemplatedMultiContent">
@@ -7330,7 +7392,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/net.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="config2"/>
 		<panel name="btCRYGEpg"/>
 	</screen>
@@ -7339,7 +7401,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/safe.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYGEpg"/>
 		<widget name="passwd" position=" 105,180" size="902,567" itemHeight="50" font="Regular; 32" zPosition="2" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1"/>
 	</screen>
@@ -7394,7 +7456,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap position="1398,363" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/softwaremanager.png" transparent="1" alphatest="blend"/>
 		<widget name="description" position="105,724" zPosition="4" size="1278,234" font="Regular; 24" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="list" position="104,180" size="1278,534" itemHeight="50" font="Regular; 26" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
 	</screen>
@@ -7402,13 +7464,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="description" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<widget source="list" render="Listbox" position="105,180" size="1050,538" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10, 0), size = (585, 100), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+						MultiContentEntryText(pos = (10, 0), size = (800, 100), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
 					],
 				"fonts": [gFont("Regular", 32)],
 				"itemHeight": 100
@@ -7426,7 +7488,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/softupdate.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget name="description" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="text" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
 	</screen>
@@ -7435,7 +7497,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/info.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget name="description" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget text="Mount Manager" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<widget name="config" position="105,180" size="1050,320" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
@@ -7447,7 +7509,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/audio.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget name="description" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
 	</screen>
@@ -7456,7 +7518,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<widget source="infotext" render="Label" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/audio.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
@@ -7476,6 +7538,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/default.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<!-- EDIT LULULLA -->
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<widget source="tasklist" render="Listbox" position="95,180" size="885,616" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -7494,9 +7557,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<screen name="AtileHDScreens" position="0,0" size="1920,1080" title="AtileHD Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<widget name="Picture" position="1136,297" size="600,335" alphatest="on"/>
+		<widget name="Picture" position="1136,297" size="600,335" alphatest="blend"/>
 		<widget name="HelpWindow" position="180,705" zPosition="10" size="100,20"/>
 		<!-- EDIT LULULLA -->
+		<panel name="ClockTime"/>
 		<panel name="btRG"/>
 		<widget source="menu" render="Listbox" position="95,180" size="885,616" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColorSelected="#124b97" selectionPixmap="MetriXconfluencExp/icons/camselect.png" alphatest="blend">
 			<convert type="TemplatedMultiContent">
@@ -7518,7 +7582,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTimeTop"/>
 		<panel name="config2"/>
 		<panel name="btCRYB"/>
-		<widget name="Picture" position="1181,297" size="600,335" alphatest="on"/>
+		<widget name="Picture" position="1181,297" size="600,335" alphatest="blend"/>
 	</screen>
 	<screen name="Pic_Setup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<!-- EDIT LULULLA -->

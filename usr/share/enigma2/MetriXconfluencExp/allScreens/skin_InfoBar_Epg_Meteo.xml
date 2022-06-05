@@ -61,7 +61,7 @@
 		<widget source="session.Event_Next" render="Label" borderWidth="2" position="457,953" size="610,40" font="Regular; 28" halign="left" transparent="1" foregroundColor="grey" backgroundColor="black" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1498,918" size="197,75" font="Arial; 62" valign="center" halign="center" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="cyan">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1489,913" size="197,75" font="Arial; 62" valign="center" halign="center" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="cyan">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget backgroundColor="black" font="Arial; 28" borderWidth="2" halign="center" position="367,882" render="Label" size="95,40" source="session.Event_Now" transparent="1" foregroundColor="grey">
@@ -72,7 +72,7 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format: %H:%M</convert>
 		</widget>
-		<widget render="VideoSize" borderWidth="2" source="session.CurrentService" position="1285,989" size="172,38" backgroundColor="black" font="Regular;30" foregroundColor="grey" halign="center" valign="center" transparent="1" zPosition="2" />
+		<widget render="VideoSize" borderWidth="2" source="session.CurrentService" position="240,1033" size="172,38" backgroundColor="black" font="Regular;30" foregroundColor="grey" halign="center" valign="center" transparent="1" zPosition="2" />
 		<eLabel text="SNR:" position="860,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center" />
 		<eLabel text="AGC:" position="1015,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center" />
 		<widget source="session.FrontendStatus" pixmap="MetriXconfluencExp/icons/snr.png" render="Progress" position="931,1035" size="80,30" transparent="1" alphatest="blend">
@@ -200,7 +200,7 @@
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1175,916" size="260,42" font="Regular; 28" valign="center" backgroundColor="black" zPosition="2" transparent="1" halign="left" foregroundColor="grey">
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1189,948" size="260,42" font="Regular; 28" valign="center" backgroundColor="black" zPosition="2" transparent="1" halign="left" foregroundColor="grey">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="250,24" size="286,65" zPosition="2" font="Regular; 58" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
@@ -214,6 +214,11 @@
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/iptv.png" alphatest="blend" position="1192,896" size="35,35" zPosition="2" transparent="1">
+		  <convert type="ServiceInfo">IsStream</convert>
+		  <convert type="ConditionalShowHide">
+		  </convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName2">%s </convert>
@@ -230,7 +235,7 @@
 		<widget source="session.CurrentService" render="Picon" position="36,33" zPosition="4" size="180,120" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget position="1175,881" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="left" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
+		<widget position="1279,993" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="right" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
 			<convert type="ServiceName">TpansponderInfo</convert>
 		</widget>
 		<eLabel position="375,934" size="790,2" backgroundColor="grey" foregroundColor="grey" />
@@ -239,6 +244,10 @@
 		<widget source="session.FrontendStatus" render="Label" position="965,1001" size="100,30" font="Regular; 26" backgroundColor="black" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" text="camname" position="238,1001" size="300,30" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
+												
+			<convert type="NOVAccess">CamName</convert>
+		</widget>		
 		<!-- progress -->
 		<!-- 	
 		<ePixmap pixmap="MetriXconfluencExp/epg/progg.png" position="1397,436" size="90,90" backgroundColor="black" zPosition="400" />
@@ -294,18 +303,18 @@
 		</widget>
 		
 		
-		<widget source="Event" render="XInfoEvents" />			
-	    <widget source="session.Event_Now" render="XInfoEvents" />
-        <widget source="session.Event_Next" render="XInfoEvents" />
-		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top" />
-		
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<widget source="Event" render="XInfoEvents" position="0,0" />
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" />
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1" />
 		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="2" />
 		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="2" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1174,960" size="350,30" alphatest="blend" zPosition="19" transparent="1" />
-		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1175,957" size="350,30" alphatest="blend" zPosition="20" transparent="1" />		
+	    <widget source="session.Event_Now" render="XInfoEvents" />
+        <widget source="session.Event_Next" render="XInfoEvents" />
+		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top" />
+		
+		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1367,879" size="320,30" alphatest="blend" zPosition="19" transparent="1" />
+		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1365,880" size="320,30" alphatest="blend" zPosition="20" transparent="1" />		
 	</screen>
 </skin>

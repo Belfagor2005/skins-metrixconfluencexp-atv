@@ -1,0 +1,17 @@
+
+19:06:55.5573 [Skin] Error: Attribute 'borderWidth' with value '1' in object of type 'eWindow' is not implemented!
+19:06:55.5574 [Skin] Error: Attribute 'borderColor' with value 'black' in object of type 'eWindow' is not implemented!
+19:06:55.5789 [Skin] Error: Attribute 'itemWidth' with value '1550' in object of type 'eListbox' is not implemented!
+
+
+19:06:55.7057 [Skin] Processing screen 'TimeshiftState', position=(0, 430), size=(1950x650) for module 'TimeshiftState'.
+19:06:55.7125 [Screen] Warning: Skin is missing element 'eventname' in <class 'Screens.PVRState.TimeshiftState'>.
+19:06:55.7130 [Screen] Warning: Skin is missing element 'speed' in <class 'Screens.PVRState.TimeshiftState'>.
+19:06:55.7131 [Screen] Warning: Skin is missing element 'statusicon' in <class 'Screens.PVRState.TimeshiftState'>.
+19:06:55.7132 [Screen] Warning: Skin is missing element 'PTSSeekBack' in <class 'Screens.PVRState.TimeshiftState'>.
+19:06:55.7133 [Screen] Warning: Skin is missing element 'PTSSeekPointer' in <class 'Screens.PVRState.TimeshiftState'>.
+19:06:55.7146 [ActionMap] Keymap(s) 'InfobarExtensions': Undefined action(s) 'showDreamPlex', 'showMediaPlayer'.
+19:06:55.7158 [Skin] Processing screen 'SubtitleDisplay', position=(0, 0), size=(1920x1080) for module 'SubtitleDisplay'.
+19:06:55.7165 [ActionMap] Keymap(s) 'InfobarZoomActions': Undefined action(s) 'ZoomInOut', 'ZoomOff'.
+
+
