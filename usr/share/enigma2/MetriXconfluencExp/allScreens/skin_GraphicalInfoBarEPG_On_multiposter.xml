@@ -59,7 +59,7 @@
 		<widget source="Event" render="PosterX" position="1646,91" nexts="8" size="190,278" zPosition="2" alphatest="blend"/>
 		<widget source="Event" render="PosterXSingleEpgList8" position="102,387" size="1735,246" font="Regular;25" foregroundColor="grey"/>
 		<widget source="Event" render="bannerX" position="700,370" size="520,290" zPosition="2" alphatest="blend"/>
-		<widget source="Event" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1232,390" size="593,246" font="Regular; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
+		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1232,390" size="593,246" font="Regular; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 	</screen>

@@ -24,7 +24,7 @@
 		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="916,726" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="785,758" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="785,758" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="52,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
@@ -48,7 +48,9 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1061,11" size="578,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="center" foregroundColor="#ffff00">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
+		
 		<widget source="Event" render="XInfoEvents" />
+		
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="786,632" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
 		<widget render="XParental" source="ServiceEvent" position="786,632" size="50,50" zPosition="4" transparent="1" />
 		<!-- <ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1455,650" size="350,30" alphatest="blend" zPosition="19" transparent="1" /> -->

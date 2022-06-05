@@ -25,7 +25,11 @@
 		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,727" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,770" size="350,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<ePixmap pixmap="nocover.jpg" position="925,750" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
+		 
+		<widget source="ServiceEvent" render="PosterX" position="925,750" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
+																									   
+		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,770" size="350,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- 	EDIT LULULLA -->
@@ -42,22 +46,22 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!-- Weather */-->
-		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
+
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1738,0" size="129,50" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="cyan2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1139,15" size="549,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="left" foregroundColor="#ffff00">
 			<convert type="ServiceName">Provider</convert>
 		</widget>
-		<widget source="Event" render="XInfoEvents" size="1920,1080" />
+		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		
+		<!-- <widget source="Event" render="XInfoEvents" size="1920,1080" /> -->
 		<!--
  		<widget source="session.Event_Now" render="XInfoEvents" />
 		<widget source="session.Event_Next" render="XInfoEvents" />
 		-->
-		<ePixmap pixmap="nocover.jpg" position="925,750" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<widget source="ServiceEvent" render="PosterX" position="925,750" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="60,624" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
 		<widget render="XParental" source="session.Event_Now" position="61,622" size="50,50" zPosition="4" transparent="1" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="115,640" size="320,30" alphatest="blend" zPosition="19" transparent="1" />

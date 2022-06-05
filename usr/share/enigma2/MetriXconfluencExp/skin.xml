@@ -457,10 +457,10 @@
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
 
-		<widget source="Event" render="XInfoEvents" position="0,0"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<widget render="XParental" source="Event" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
+		<widget source="Event" render="XInfoEvents"/>
+		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="3" transparent="1" />
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
@@ -505,11 +505,11 @@
 		<!--  check  on test debut -->
 		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2"/>
 		<widget name="epg_description" position="499,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1"/>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		
-		<widget source="session.Event_Next" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- end check -->
@@ -743,7 +743,7 @@
 		  <convert type="ServiceInfo">IsStream</convert>
 		  <convert type="ConditionalShowHide">
 		  </convert>
-		</widget>		
+		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName2">%s </convert>
 		</widget>
@@ -836,7 +836,7 @@
 		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,734" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,768" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,768" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="72,1025" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
@@ -957,7 +957,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -996,7 +996,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1197,7 +1197,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="10">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1228,7 +1228,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1259,7 +1259,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1290,7 +1290,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1321,7 +1321,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1352,7 +1352,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1383,7 +1383,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1414,7 +1414,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1445,7 +1445,7 @@
 		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
@@ -1763,7 +1763,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off" />
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeEvent" />
-		<widget name="channel" position="196,344" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent" />
+		<widget name="channel" position="119,344" size="542,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent" />
 		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
 		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
 		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
@@ -1855,17 +1855,17 @@
 		</widget>
 	</screen>
 	<screen name="EPGSelection" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="black">
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" transparent="1"/>
-		<panel name="btCRYB"/>
-		<panel name="ClockTimeEvent2"/>
-		<widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="blend" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
-		<widget source="Event" render="Label" position="160,90" size="480,60" font="Regular; 40" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="left">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="Event" render="MetrixHDRunningText" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1"/>
+	  <ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" transparent="1" />
+	  <panel name="btCRYB" />
+	  <panel name="ClockTimeEvent2" />
+	  <widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="blend" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
+	  <widget source="Event" render="Label" position="123,90" size="546,60" font="Regular; 38" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="Event" render="MetrixHDRunningText" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
+		<convert type="EventName">FullDescription</convert>
+	  </widget>
+	  <widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1" />
 	</screen>
 	<screen name="EPGSelectionMulti" position="center,center" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
@@ -1881,10 +1881,10 @@
 		<widget name="next_text" position="883,90" size="225,45" zPosition="3" text="NEXT" font="RegularLight; 30" halign="center" backgroundColor="background20" transparent="1"/>
 		<widget name="more_text" position="1108,90" size="225,45" zPosition="3" text="MORE" font="RegularLight; 30" halign="center" backgroundColor="background20" transparent="1"/>
 		<widget name="date" position="1416,92" size="375,36" font="Regular; 30" valign="center" halign="right" transparent="1"/>
-		<widget source="Event" render="Label" position="160,90" size="480,60" font="Regular; 40" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="left">
-			<convert type="EventName">Name</convert>
+		<widget source="Event" render="Label" position="123,90" size="546,60" font="Regular; 38" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
+		  <convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="MetrixHDRunningText" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
+		<widget source="Event" render="RunningTextXposter" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1"/>
@@ -1940,7 +1940,7 @@
 		<widget source="Event" render="Label" position="185,56" size="1200,69" font="Regular; 53" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="185,125" size="1500,150" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="185,125" size="1500,150" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="160,275" size=" 98, 33" font="Regular; 27" halign="center" backgroundColor="background20" transparent="1">
@@ -2031,7 +2031,7 @@
 		<widget source="Event" render="Progress" position="219,715" size="1485,8" borderWidth="1" backgroundColor="white" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="Event" borderWidth="2" render="MetrixHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,90" size="1740,400" font="Regular; 35" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
+		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,90" size="1740,400" font="Regular; 35" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_red.png" position="105,953" size="45,60" alphatest="blend"/>
@@ -2244,9 +2244,6 @@
 		<panel name="btRG"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
-	
-	
-	
 	<screen name="MessageBox" position="center,252" size="1200,120" zPosition="1" title="Message" backgroundColor="background20" alphatest="blend">
 		<widget name="text" position="165,12" size="1020,0" font="Regular;25" backgroundColor="background20"/>
 		<widget name="ErrorPixmap" pixmap="MetriXconfluencExp/icons/message/attention-53.png" position="45,15" size="80,80" alphatest="blend"/>
@@ -7467,13 +7464,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="description" position="1400,747" size="384,200" font="Regular; 28" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
-		<widget source="list" render="Listbox" position="105,180" size="1050,538" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png">
+		<widget source="list" render="Listbox" position="105,180" size="1000,538" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/camselect.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10, 0), size = (800, 100), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
+						MultiContentEntryText(pos = (10, 0), size = (950, 85), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
 					],
 				"fonts": [gFont("Regular", 32)],
-				"itemHeight": 100
+				"itemHeight": 85
 				}
 			</convert>
 		</widget>
