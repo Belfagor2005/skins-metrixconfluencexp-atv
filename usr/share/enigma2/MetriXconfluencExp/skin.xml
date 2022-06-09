@@ -499,15 +499,15 @@
 	</screen>
 	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080"/>
-		<widget source="Event" render="XInfoEvents"/>	
-		
+		<widget source="Event" render="XInfoEvents"/>
+
 		<!--  check  on test debut -->
 		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2"/>
 		<widget name="epg_description" position="499,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1"/>
 		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		
+
 		<widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -763,12 +763,12 @@
 		<widget source="session.CurrentService" render="Label" text="camname" position="238,1001" size="300,30" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
 			<convert type="NOVAccess">CamName</convert>
 		</widget>
-		
+
 		<!--
  		<widget source="Event" render="XInfoEvents"/>
-		-->	
+		-->
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="640,650" size="350,30" alphatest="blend" zPosition="19" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1515,655" size="320,30" alphatest="blend" zPosition="19" transparent="1"/>		
+		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1515,655" size="320,30" alphatest="blend" zPosition="19" transparent="1"/>
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1515,655" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
 
@@ -779,9 +779,9 @@
 
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
-		
+
 		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
-		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>		
+		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
 		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="105,1093" size="45,60" alphatest="blend" zPosition="2"/>
 		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="152,1114" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
@@ -795,7 +795,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1410,1093" size="45,60" alphatest="blend" zPosition="2"/>
 		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1460,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1460,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
-	
+
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -1460,8 +1460,8 @@
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/logos/dragon.png" position="center,center" size="900,720" zPosition="-1" transparent="1"/>
-		<widget text="by@dragon@Lululla" position="512,180" size="340,157" font="Regular;35" halign="center" zPosition="5" transparent="1" foregroundColor="lightgreen"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/dragon.png" position="center,center" size="900,720" zPosition="-1" transparent="1" />
+		<widget name="text" position="58,34" size="1740,142" font="Regular;30" halign="center" transparent="1" foregroundColor="grey" />
 	</screen>
 	<screen name="UpdatePluginMenu" position="0,0" size="1920,1080" title="Softwaremanager..." backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -1977,7 +1977,7 @@
 		<panel name="btCRYB"/>
 		<panel name="btPIMO"/>
 		<widget name="lab1" position="105,308" size="1725,585" halign="center" valign="center" zPosition="5" backgroundColor="background20" transparent="0"/>
-		
+
 		<widget name="timeline_text" position="105,261" size="1717,30" TimelineFont="Regular;26" itemHeight="40" foregroundColor="white" backgroundColor="#2f4974" borderWidth="0" transparent="0" zPosition="11" />
 		<widget name="timeline0" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
 		<widget name="timeline1" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
@@ -1986,7 +1986,7 @@
 		<widget name="timeline4" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
 		<widget name="timeline5" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
 		<widget name="timeline_now" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline-now.png" alphatest="blend" zPosition="10" />
-		<!--   
+		<!--
 		<widget name="timeline_now" position="95,303" zPosition="22" size="20,605" pixmap="MetriXconfluencExp/epg/timeline-now2.png" alphatest="blend"/>
 		<widget name="timeline_text" position="105,249" size="1725,38" selectionDisabled="1" transparent="1"/>
 		 -->
@@ -6516,57 +6516,57 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel transparent="1" zPosition="2" valign="center" halign="center" position="1328,763" size="490,50" font="Regular; 28" backgroundColor="black" foregroundColor="darkgrey" noWrap="1" text="Softcam Panel"/>
 	</screen>
 	<screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="MSN Weather" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="Title" render="Label" position="280,30" size="1600,90" font="Regular;44" halign="left" valign="center" foregroundColor="guidecolor" backgroundColor="transpBlack" transparent="1" zPosition="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/msn/meteo.jpg" position="0,0" size="1920,1080" alphatest="blend" zPosition="-1"/>
-		<ePixmap pixmap="MetriXconfluencExp/msn/msnlogo.png" position="60,30" size="194,75" alphatest="blend" zPosition="1"/>
-		<widget render="Label" source="observationpoint" position="500,55" size="0,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5"/>
-		<widget render="Label" source="observationtime" position="770,55" size="1080,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5"/>
-		<widget source="session.MSNWeather" render="MSNWeatherPixmap" position="50,140" size="256,256" zPosition="1" transparent="1" alphatest="blend">
-			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
-		</widget>
-		<widget source="caption" render="Label" position="320,180" size="700,50" font="Regular;40" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget source="condition" render="Label" position="320,235" size="700,50" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<ePixmap position="70,420" size="40,80" pixmap="MetriXconfluencExp/msn/temp.png" alphatest="blend" zPosition="1"/>
-		<widget source="currentTemp" render="Label" position="155,405" size="300,80" font="Regular;52" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget source="feelsliketemp" render="Label" position="160,465" size="300,80" font="Regular; 28" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
-		<ePixmap position="450,420" size="28,75" pixmap="MetriXconfluencExp/msn/temp_high_low.png" alphatest="blend" zPosition="1"/>
-		<widget source="session.MSNWeather" render="Label" position="515,417" size="200,40" font="Regular;34" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="3">
-			<convert type="MSNWeather">temperature_high,current</convert>
-		</widget>
-		<widget source="session.MSNWeather" render="Label" position="515,453" size="200,40" font="Regular;34" foregroundColor="blue" backgroundColor="header" transparent="1" zPosition="3">
-			<convert type="MSNWeather">temperature_low,current</convert>
-		</widget>
-		<ePixmap position="70,550" size="70,70" pixmap="MetriXconfluencExp/msn/wind.png" alphatest="blend" zPosition="1"/>
-		<widget source="wind_condition" render="Label" position="160,570" size="700,40" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<ePixmap position="70,660" size="50,54" pixmap="MetriXconfluencExp/msn/umbrella.png" alphatest="blend" zPosition="1"/>
-		<widget source="humidity" render="Label" position="160,680" size="600,45" font="Regular;32" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
-		<!-- Day 2 /-->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,180" size="140,140" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
-		</widget>
-		<widget render="Label" source="weekday2" position="1280,200" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget render="Label" source="weekday2_temp" position="1500,200" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
-		<!-- Day 3 /-->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,330" size="140,140" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
-		</widget>
-		<widget render="Label" source="weekday3" position="1280,350" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget render="Label" source="weekday3_temp" position="1500,350" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
-		<!-- Day 4 /-->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,480" size="140,140" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
-		</widget>
-		<widget render="Label" source="weekday4" position="1280,500" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget render="Label" source="weekday4_temp" position="1500,500" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
-		<!-- Day 5 /-->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,630" size="140,140" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
-		</widget>
-		<widget render="Label" source="weekday5" position="1280,650" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
-		<widget render="Label" source="weekday5_temp" position="1500,650" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
-		<!-- Logo /-->
-		<widget render="Label" source="statustext" position="70,550" size="0,0" font="Regular;30" transparent="1" zPosition="1"/>
-		<eLabel text="Menu" position="1770,1000" size="100,40" font="Regular;30" foregroundColor="un808080" backgroundColor="header" transparent="1" zPosition="1"/>
+	  <widget source="Title" render="Label" position="280,30" size="1600,90" font="Regular;44" halign="left" valign="center" foregroundColor="guidecolor" backgroundColor="transpBlack" transparent="1" zPosition="1" />
+	  <ePixmap pixmap="MetriXconfluencExp/msn/meteo.jpg" position="0,0" size="1920,1080" alphatest="blend" zPosition="-1" />
+	  <ePixmap pixmap="MetriXconfluencExp/msn/msnlogo.png" position="60,30" size="194,75" alphatest="blend" zPosition="1" />
+	  <widget render="Label" source="observationpoint" position="500,55" size="0,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5" />
+	  <widget render="Label" source="observationtime" position="770,55" size="1080,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5" />
+	  <widget source="session.MSNWeather" render="MSNWeatherPixmap" position="50,140" size="256,256" zPosition="1" transparent="1" alphatest="blend">
+		<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+	  </widget>
+	  <widget source="caption" render="Label" position="320,180" size="700,50" font="Regular;40" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget source="condition" render="Label" position="320,235" size="700,50" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <ePixmap position="70,420" size="40,80" pixmap="MetriXconfluencExp/msn/temp.png" alphatest="blend" zPosition="1" />
+	  <widget source="currentTemp" render="Label" position="155,405" size="300,80" font="Regular;42" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget source="feelsliketemp" render="Label" position="160,465" size="300,80" font="Regular; 28" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1" />
+	  <ePixmap position="450,420" size="28,75" pixmap="MetriXconfluencExp/msn/temp_high_low.png" alphatest="blend" zPosition="1" />
+	  <widget source="session.MSNWeather" render="Label" position="515,417" size="200,40" font="Regular;34" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="3">
+		<convert type="MSNWeather">temperature_high,current</convert>
+	  </widget>
+	  <widget source="session.MSNWeather" render="Label" position="515,453" size="200,40" font="Regular;34" foregroundColor="blue" backgroundColor="header" transparent="1" zPosition="3">
+		<convert type="MSNWeather">temperature_low,current</convert>
+	  </widget>
+	  <ePixmap position="70,550" size="70,70" pixmap="MetriXconfluencExp/msn/wind.png" alphatest="blend" zPosition="1" />
+	  <widget source="wind_condition" render="Label" position="160,570" size="700,40" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <ePixmap position="70,660" size="50,54" pixmap="MetriXconfluencExp/msn/umbrella.png" alphatest="blend" zPosition="1" />
+	  <widget source="humidity" render="Label" position="160,680" size="600,45" font="Regular;32" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1" />
+	  <!-- Day 2 /-->
+	  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,180" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+		<convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+	  </widget>
+	  <widget render="Label" source="weekday2" position="1280,200" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget render="Label" source="weekday2_temp" position="1500,200" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1" />
+	  <!-- Day 3 /-->
+	  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,330" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+		<convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+	  </widget>
+	  <widget render="Label" source="weekday3" position="1280,350" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget render="Label" source="weekday3_temp" position="1500,350" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1" />
+	  <!-- Day 4 /-->
+	  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,480" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+		<convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+	  </widget>
+	  <widget render="Label" source="weekday4" position="1280,500" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget render="Label" source="weekday4_temp" position="1500,500" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1" />
+	  <!-- Day 5 /-->
+	  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,630" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+		<convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+	  </widget>
+	  <widget render="Label" source="weekday5" position="1280,650" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1" />
+	  <widget render="Label" source="weekday5_temp" position="1500,650" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1" />
+	  <!-- Logo /-->
+	  <widget render="Label" source="statustext" position="70,550" size="0,0" font="Regular;30" transparent="1" zPosition="1" />
+	  <eLabel text="Menu" position="1770,1000" size="100,40" font="Regular;30" foregroundColor="un808080" backgroundColor="header" transparent="1" zPosition="1" />
 	</screen>
 	<screen name="SoftwarePanel" position="0,0" size="1920,1080" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -7548,24 +7548,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 	</screen>
 	<screen name="AtileHDScreens" position="0,0" size="1920,1080" title="AtileHD Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<widget name="Picture" position="1136,297" size="600,335" alphatest="blend"/>
-		<widget name="HelpWindow" position="180,705" zPosition="10" size="100,20"/>
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
-		<panel name="btRG"/>
-		<widget source="menu" render="Listbox" position="95,180" size="885,616" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColorSelected="#124b97" selectionPixmap="MetriXconfluencExp/icons/camselect.png" alphatest="blend">
-			<convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (12,22),size = (38,36),png = 2, flags = BT_SCALE),# index 2 is the icon
-					MultiContentEntryText(pos = (80,0),size = (630,80),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1),# index 2 is the screen preview
-				  ],
-				"fonts": [gFont("Regular",36),gFont("Regular",20)],
-				"itemHeight": 80
-				}
-			  </convert>
-		</widget>
+	  <widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
+	  <ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
+	  <widget name="Picture" position="1136,297" size="600,335" alphatest="blend" />
+	  <widget name="HelpWindow" position="1686,961" zPosition="10" size="100,20" />
+	  <!-- EDIT LULULLA -->
+	  <panel name="ClockTime" />
+	  <panel name="btRG" />
+	  <widget source="menu" render="Listbox" position="95,180" size="885,616" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColorSelected="#124b97" selectionPixmap="MetriXconfluencExp/icons/camselect.png" alphatest="blend">
+		<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (12,22),size = (38,36),png = 2, flags = BT_SCALE),# index 2 is the icon
+						MultiContentEntryText(pos = (80,0),size = (630,80),font=0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1),# index 2 is the screen preview
+					  ],
+					"fonts": [gFont("Regular",36),gFont("Regular",20)],
+					"itemHeight": 80
+					}
+				  </convert>
+	  </widget>
 	</screen>
 	<screen name="AtileHD_Config" position="center,center" size="1920,1080" title="AtileHD Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,72" size="1200,60" font="Regular;53" backgroundColor="background20" transparent="1"/>

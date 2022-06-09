@@ -1,0 +1,58 @@
+<skin>
+	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap position="-9,755" zPosition="-2" size="1920,1080" pixmap="MetriXconfluencExp/icons/infobar_hd.png"/>
+		<widget source="session.CurrentService" render="Label" position="85,875" size="1650,48" font="3d; 42" foregroundColor="#66CCCC" valign="top" noWrap="1" backgroundColor="black" transparent="1" halign="center">
+			<convert type="FhromagExtraTuner">ServiceNumberName</convert>
+		</widget>
+		<widget pixmap="MetriXconfluencExp/icons/pbar.png" position="375,983" render="Progress" size="1120,12" source="session.Event_Now" transparent="1" zPosition="3">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="320,930" size="105,36" font="3d; 32" halign="left" backgroundColor="black" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="422,930" size="20,36" font="3d; 30" halign="left" backgroundColor="black" transparent="1" foregroundColor="white"/>
+		<widget source="session.Event_Now" render="Label" position="446,930" size="900,40" font="3d; 32" halign="left" backgroundColor="black" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="1320,930" size="270,36" font="3d; 32" halign="right" backgroundColor="black" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="320,1010" size="105,36" font="3d; 32" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="422,1010" size="20,36" font="3d; 30" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1"/>
+		<widget source="session.Event_Next" render="Label" position="446,1010" size="900,40" font="3d; 32" halign="left" backgroundColor="black" transparent="1" foregroundColor="#808080">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1320,1010" size="270,36" font="3d; 32" halign="right" foregroundColor="#808080" backgroundColor="black" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget alphatest="blend" position="40,895" render="FhromaPicons" picontype="picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1720,875" size="150,48" font="3d; 46" halign="right" backgroundColor="black" transparent="1" valign="center">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="black" font="3d; 28" halign="right" position="1470,918" foregroundColor="white" render="Label" size="400,35" source="global.CurrentTime" transparent="1" valign="center" noWrap="1">
+			<convert type="ClockToText">Format:%d %B %Y </convert>
+		</widget>
+		<eLabel text="SNR:" position="1620,960" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="1840,960" size="60,25" font="RegularLight; 22" halign="left" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="green">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="1620,985" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="1840,982" size="60,25" font="RegularLight; 22" halign="left" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="green">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Progress" position="1680,969" size="150,7" borderWidth="1" zPosition="1" pixmap="CobaltFHD/bar_snr1.png" transparent="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Progress" position="1680,994" size="150,7" borderWidth="1" zPosition="1" pixmap="CobaltFHD/bar_snr1.png" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+	</screen>
+</skin>
