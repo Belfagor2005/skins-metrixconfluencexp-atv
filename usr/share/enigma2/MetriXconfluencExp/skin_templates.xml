@@ -22,18 +22,18 @@
   <!-- **************************************  -->
   <!-- ************* Menu Templates ************* -->
   <screen name="MenuTemplate">
-    <widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="white" position="1256,99" size="570,800" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
+    <widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,800" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
       <convert type="TemplatedMultiContent">
 					{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
 						"fonts": [gFont("3d",40)],	"itemHeight": 80}
 				</convert>
     </widget>
-    <ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1275,904" size="40,40" alphatest="blend" zPosition="2" />
-    <ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1315,944" size="40,40" alphatest="blend" zPosition="2" />
-    <ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1356,983" size="40,40" alphatest="blend" zPosition="2" />
-    <widget name="green" position="1318,904" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
+    <ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1275,904" size="50,50" alphatest="blend" zPosition="2" />
+    <ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1315,944" size="50,50" alphatest="blend" zPosition="2" />
+    <ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1356,983" size="50,50" alphatest="blend" zPosition="2" />
+    <widget name="green" position="1323,904" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
     <widget name="yellow" position="1363,944" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
-    <widget name="blue" position="1398,983" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
+    <widget name="blue" position="1403,983" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
   </screen>
   <screen name="MenuSystem">
     <!--

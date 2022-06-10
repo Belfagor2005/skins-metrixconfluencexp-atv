@@ -1,27 +1,26 @@
 <skin>
 	<!--  EventView  -->
 	<screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="-2,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeEvent" />
-		<widget name="channel" position="196,344" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent" />
-		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
-		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
-		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,226" font="Regular; 35" alphatest="blend" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
-		<ePixmap pixmap="nocover.jpg" position="332,586" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<ePixmap pixmap="nocover.jpg" position="730,640" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<ePixmap pixmap="nocover.jpg" position="948,640" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<ePixmap pixmap="nocover.jpg" position="1166,640" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<ePixmap pixmap="nocover.jpg" position="1387,640" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<ePixmap pixmap="nocover.jpg" position="1606,640" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-	
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="650,909" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/button_red.png" position="670,999" size="230,8" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/button_green.png" position="970,999" size="230,8" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/button_yellow.png" position="1278,999" size="230,8" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/buttons/button_blue.png" position="1582,999" size="230,8" alphatest="blend" />
+		<panel name="ClockTimeEvent"/>
+		<widget name="channel" position="196,344" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent"/>
+		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
+		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
+		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,226" font="Regular; 35" alphatest="blend" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<ePixmap pixmap="nocover.jpg" position="332,586" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="nocover.jpg" position="730,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="nocover.jpg" position="948,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="nocover.jpg" position="1166,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="nocover.jpg" position="1387,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="nocover.jpg" position="1606,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="650,909" size="55,55" zPosition="10" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_red.png" position="670,999" size="230,8" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_green.png" position="970,999" size="230,8" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_yellow.png" position="1278,999" size="230,8" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/button_blue.png" position="1582,999" size="230,8" alphatest="blend"/>
 		<!--
  		<widget source="key_red" render="Label" position="695,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		<widget source="key_green" render="Label" position="950,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
@@ -29,60 +28,59 @@
 		<widget source="key_blue" render="Label" position="1469,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		-->
 		<widget render="Label" source="key_red" position="633,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
-		  <convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget render="Label" source="key_green" position="934,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
-		  <convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget render="Label" source="key_yellow" position="1235,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
-		  <convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget render="Label" source="key_blue" position="1537,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
-		  <convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="key_help" render="Label" position="1793,911" size="45,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
-		  <convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		
-		<widget source="Event" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend" />
-		<widget source="Event" render="PosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="Event" render="PosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="Event" render="PosterX" position="1166,640" nexts="3" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="Event" render="PosterX" position="1387,640" nexts="4" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="Event" render="PosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="Event" render="PosterXSingleEpgList" position="696,413" size="1122,200" font="Regular;32" foregroundColor="grey" />
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="603,865" size="62,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" position="603,865" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
+		<widget source="Event" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="PosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="PosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="PosterX" position="1166,640" nexts="3" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="PosterX" position="1387,640" nexts="4" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="PosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="PosterXSingleEpgList" position="696,413" size="1122,200" font="Regular;32" foregroundColor="grey"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="603,875" size="62,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" position="603,875" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="194,865" size="84,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="194,865" size="84,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="194,875" size="84,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="194,875" size="84,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="300,865" size="48,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_format_on.png" position="300,865" size="48,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="300,875" size="48,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_format_on.png" position="300,875" size="48,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="471,865" size="35,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_txt_on.png" position="471,865" size="35,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="471,875" size="35,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_txt_on.png" position="471,875" size="35,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="368,865" size="80,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" position="368,865" size="80,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hbbtv_on.png" alphatest="blend">
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="368,875" size="80,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" position="368,875" size="80,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hbbtv_on.png" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="533,865" size="41,30" zPosition="1" alphatest="blend" />
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_sub_on.png" position="533,865" size="41,30" zPosition="2" alphatest="blend">
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="533,875" size="41,30" zPosition="1" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_sub_on.png" position="533,875" size="41,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<eLabel position="195,464" size="465,2" backgroundColor="grey" foregroundColor="grey" />
+		<eLabel position="195,464" size="465,2" backgroundColor="grey" foregroundColor="grey"/>
 		<widget source="session.Event_Now" render="Progress" position="195,461" size="465,8" pixmap="MetriXconfluencExp/icons/p_bar.png" borderWidth="1" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
