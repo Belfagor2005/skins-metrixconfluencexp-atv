@@ -288,6 +288,7 @@
 		<widget source="session.FrontendStatus" pixmap="MetriXconfluencExp/icons/agc.png" render="Progress" position="1087,1035" size="80,30" transparent="1" alphatest="blend">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
+		<!-- /* Crypt-Info -->
 		<eLabel text="B" font="Regular; 30" position="443,1031" size="27,39" halign="center" backgroundColor="background20" foregroundColor="un777777" transparent="1" valign="center" zPosition="3"/>
 		<widget source="session.CurrentService" render="FixedLabel" font="Regular; 30" position="443,1031" size="27,39" halign="center" backgroundColor="background20" zPosition="4" transparent="1" valign="center" text="B" foregroundColor="unff0000">
 			<convert type="ExtremeInfo">BetaCrypt</convert>
@@ -446,6 +447,7 @@
 		<widget source="session.FrontendStatus" render="Label" position="965,1001" size="100,30" font="Regular; 26" backgroundColor="black" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
+		<!-- Weather */-->
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="1376,851" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
@@ -763,7 +765,6 @@
 		<widget source="session.CurrentService" render="Label" text="camname" position="238,1001" size="300,30" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
 			<convert type="NOVAccess">CamName</convert>
 		</widget>
-
 		<!--
  		<widget source="Event" render="XInfoEvents"/>
 		-->
@@ -795,7 +796,6 @@
 		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1410,1093" size="45,60" alphatest="blend" zPosition="2"/>
 		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1460,1113" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1460,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
-
 		<ePixmap position="1405,875" size="42,42" pixmap="MetriXconfluencExp/icons/cpu_temp.png" alphatest="blend" zPosition="10" />
 		<widget backgroundColor="blackglass" font="Regular; 22" foregroundColor="white" halign="left" position="1365,880" render="Label" size="42,42" source="session.CurrentService" transparent="1" zPosition="5" noWrap="1">
 			<convert type="xTemp">Temperature</convert>
@@ -814,7 +814,7 @@
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/vpn_on.png" position="1450,923" zPosition="9" size="70,70" transparent="1" alphatest="blend">
 			<convert type="xSatVpn">vpn</convert>
 			<convert type="ConditionalShowHide" />
-		</widget>	 
+		</widget>
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
@@ -1785,14 +1785,6 @@
 		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
 		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
 		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
-		<!--
-		<ePixmap pixmap="nocover.jpg" position="332,586" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<ePixmap pixmap="nocover.jpg" position="730,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<ePixmap pixmap="nocover.jpg" position="948,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<ePixmap pixmap="nocover.jpg" position="1166,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<ePixmap pixmap="nocover.jpg" position="1387,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<ePixmap pixmap="nocover.jpg" position="1606,640" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		 -->
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1778,844" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
@@ -1800,12 +1792,6 @@
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_green.png" position="970,999" size="230,8" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_yellow.png" position="1278,999" size="230,8" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_blue.png" position="1582,999" size="230,8" alphatest="blend" />
-		<!--
- 		<widget source="key_red" render="Label" position="695,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_green" render="Label" position="950,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_yellow" render="Label" position="1208,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_blue" render="Label" position="1469,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		-->
 		<widget render="Label" source="key_red" position="633,975" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
 		  <convert type="ConditionalShowHide" />
 		</widget>
@@ -1822,14 +1808,6 @@
 		  <convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend" />
-		<!--
-		<widget source="Event" render="PosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1166,640" nexts="3" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1387,640" nexts="4" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterXSingleEpgList" position="718,413" size="1100,200" font="Regular;32" foregroundColor="grey"/>
-		 -->
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="603,865" size="62,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" position="603,865" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
@@ -2012,10 +1990,6 @@
 		<widget name="timeline4" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
 		<widget name="timeline5" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
 		<widget name="timeline_now" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline-now.png" alphatest="blend" zPosition="10" />
-		<!--
-		<widget name="timeline_now" position="95,303" zPosition="22" size="20,605" pixmap="MetriXconfluencExp/epg/timeline-now2.png" alphatest="blend"/>
-		<widget name="timeline_text" position="105,249" size="1725,38" selectionDisabled="1" transparent="1"/>
-		 -->
 		<widget name="list" position="105,308" size="1725,585" itemHeight="90" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget source="Event" render="Label" position="105,135" size="1050,59" font="Regular; 36" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
