@@ -411,7 +411,7 @@
 			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="250,24" size="286,65" zPosition="2" font="Regular; 58" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
-			<convert type="ServiceName2">%n</convert>
+			<convert type="xxServiceName2">%n</convert>
 		</widget>
 
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="FixedLabel" size="100,34" source="session.FrontendInfo" text="DVB-S" transparent="1" valign="center">
@@ -425,7 +425,7 @@
 		  </convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
-			<convert type="ServiceName2">%s </convert>
+			<convert type="xxServiceName2">%s </convert>
 		</widget>
 		<widget backgroundColor="black" font="Arial; 28" foregroundColor="metrixAccent1" halign="center" noWrap="1" position="368,950" render="Label" size="95,40" source="session.Event_Next" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -527,7 +527,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="Regular; 23" foregroundColor="grey" halign="left" position="104,803" render="Label" size="750,35" source="session.CurrentService" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="3" noWrap="1">
-			<convert type="ServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="xxServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="796,11" size="383,50" borderWidth="2" font="RegularLight; 30" halign="center" backgroundColor="black" transparent="1" foregroundColor="unf2e000" valign="center">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -743,7 +743,7 @@
 		  </convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
-			<convert type="ServiceName2">%s </convert>
+			<convert type="xxServiceName2">%s </convert>
 		</widget>
 		<widget backgroundColor="black" font="Arial; 28" foregroundColor="metrixAccent1" halign="center" noWrap="1" position="368,950" render="Label" size="95,40" source="session.Event_Next" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -836,7 +836,7 @@
 			<convert type="pliExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="ServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="xxServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="102,724" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
 			<convert type="EventTime">StartTime</convert>
