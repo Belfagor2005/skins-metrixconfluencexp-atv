@@ -1,7 +1,7 @@
 <skin>
 	<!--  ChannelSelection  -->
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="black">
-		<widget source="Title" borderWidth="2" render="Label" position="65,-3" size="962,37" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="metrixGreen" />
+		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="unececec"/>
 		<widget source="session.VideoPicture" render="Pig" position="50,69" zPosition="2" size="1075,610" backgroundColor="transparent" transparent="0" />
 		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="unf2e000" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1" />
 		<widget source="ServiceEvent" render="Label" position="199,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
@@ -26,9 +26,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<ePixmap pixmap="nocover.jpg" position="925,750" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		 
 		<widget source="ServiceEvent" render="PosterX" position="925,750" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
-																									   
 		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,770" size="350,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
@@ -46,7 +44,6 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!-- Weather */-->
-
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1738,0" size="129,50" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="cyan2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
@@ -56,12 +53,6 @@
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
-		<!-- <widget source="Event" render="XInfoEvents" size="1920,1080" /> -->
-		<!--
- 		<widget source="session.Event_Now" render="XInfoEvents" />
-		<widget source="session.Event_Next" render="XInfoEvents" />
-		-->
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="60,624" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
 		<widget render="XParental" source="session.Event_Now" position="61,622" size="50,50" zPosition="4" transparent="1" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="115,640" size="320,30" alphatest="blend" zPosition="19" transparent="1" />
