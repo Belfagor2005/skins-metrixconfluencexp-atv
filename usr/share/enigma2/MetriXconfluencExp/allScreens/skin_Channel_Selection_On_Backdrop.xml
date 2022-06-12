@@ -29,27 +29,27 @@
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- 	EDIT LULULLA -->
-		<widget name="key_red" font="RegularLight;30" position="72,1025" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget source="key_red" render="Label" font="RegularLight;30" position="72,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget name="key_green" font="RegularLight;30" position="564,1025" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget source="key_green" render="Label" font="RegularLight;30" position="564,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget name="key_yellow" font="RegularLight;30" position="1123,1025" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget source="key_yellow" render="Label" font="RegularLight;30" position="1121,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget name="key_blue" font="RegularLight;30" position="1640,1025" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget source="key_blue" render="Label" font="RegularLight;30" position="1639,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="52,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="52,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="545,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="545,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1105,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1105,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1628,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1628,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1" />
 		
 		<widget source="ServiceEvent" render="Picon" position="49,71" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1738,0" size="129,50" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="cyan2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1140,14" size="541,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="left" foregroundColor="#ffff00">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		
 		<widget source="Event" render="XInfoEvents" />

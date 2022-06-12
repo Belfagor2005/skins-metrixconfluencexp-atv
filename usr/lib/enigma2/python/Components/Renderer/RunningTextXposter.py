@@ -36,7 +36,6 @@ from enigma import eWidget, eLabel, eTimer, ePoint, eSize, gFont, \
 from Components.Renderer.Renderer import Renderer
 from skin import parseColor, parseFont
 
-import Plugins.Extensions.XCplugin.owibranding as xowibranding                                                              
 
 # scroll type:
 NONE = 0
@@ -84,25 +83,22 @@ class RunningTextXposter(Renderer):
         self.instance.resize(eSize(self.W, self.H))
         self.scroll_label = eLabel(instance)
         self.mTimer = eTimer()
-
-        try:
-            self.mTimer.callback.append(self.movingLoop)
-        except:
-            try:
-                if xowibranding.getMachineBrand() == "Dream Multimedia" or xowibranding.getOEVersion() == "OE 2.2":
-                    self.mTimer_conn = self.mTimer.timeout.connect(self.movingLoop)
-            except:
-                pass
+        self.mTimer.callback.append(self.movingLoop)
+               
+                
+                                                                                                                   
+                                                                                   
+                   
+                    
 
     def preWidgetRemove(self, instance):
         self.mTimer.stop()
 
-        try:
-            from boxbranding import getImageDistro, getImageVersion, getOEVersion
-            self.mTimer.callback.remove(self.movingLoop)
-        except:
-            if getMachineBrand() == "Dream Multimedia" or getOEVersion() == "OE 2.2":
-                self.mTimer_conn = self.mTimer.timeout.disconnect(self.movingLoop)
+            
+                                                                                 
+        self.mTimer.callback.remove(self.movingLoop)
+               
+     
         self.mTimer = None
         self.scroll_label = None
 

@@ -76,7 +76,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="252,117" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="690,92" size="1143,68" font="Regular; 44" halign="left" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>

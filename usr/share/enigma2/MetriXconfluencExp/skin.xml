@@ -123,7 +123,8 @@
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100"/>
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100"/>
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100"/>
-		<alias name="ChoiceList" font="Regular" size="32" height="60"/>
+		<alias name="ChoiceList" font="Regular" size="32" height="75"/>
+		<alias name="ChoiceBoxDescription" font="Regular" size="32" height="75" />
 		<alias name="FileList" font="Regular" size="32" height="50"/>
 		<alias name="FileListMulti" font="Regular" size="32" height="45"/>
 		<alias name="PlayList" font="Regular" size="30" height="50"/>
@@ -224,7 +225,7 @@
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1460,1113" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="5" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,86" size="1084,55" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<eLabel text="A" position="1188,991" zPosition="1" size="30,39" font="Regular; 30" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center"/>
 		<eLabel text="B" position="1218,991" zPosition="1" size="30,39" font="Regular; 30" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center"/>
@@ -408,10 +409,10 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1189,948" size="260,42" font="Regular; 28" valign="center" backgroundColor="black" zPosition="2" transparent="1" halign="left" foregroundColor="grey">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="250,24" size="286,65" zPosition="2" font="Regular; 58" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
-			<convert type="xxServiceName2">%n</convert>
+			<convert type="xServiceName2">%n</convert>
 		</widget>
 
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="FixedLabel" size="100,34" source="session.FrontendInfo" text="DVB-S" transparent="1" valign="center">
@@ -425,7 +426,7 @@
 		  </convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
-			<convert type="xxServiceName2">%s </convert>
+			<convert type="xServiceName2">%s </convert>
 		</widget>
 		<widget backgroundColor="black" font="Arial; 28" foregroundColor="metrixAccent1" halign="center" noWrap="1" position="368,950" render="Label" size="95,40" source="session.Event_Next" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -436,10 +437,10 @@
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Picon" position="36,33" zPosition="4" size="180,120" transparent="1">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget position="1275,992" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="right" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
-			<convert type="ServiceName">TpansponderInfo</convert>
+			<convert type="xServiceName2">TpansponderInfo</convert>
 		</widget>
 		<eLabel position="375,934" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="931,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend" noWrap="1"/>
@@ -477,7 +478,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBigRadio"/>
 		<widget source="session.CurrentService" render="Label" position="355,841" size="998,60" font="LCD; 57" valign="top" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1360,841" size="225,60" font="LCD; 57" halign="right" backgroundColor="background20" transparent="1">
 			<convert type="EventTime">Remaining</convert>
@@ -490,7 +491,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="345,774" size="461,48" font="Regular; 39" noWrap="1" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<ePixmap position="343,833" size="1260,147" zPosition="12" pixmap="MetriXconfluencExp/menu/radio_frame.png" alphatest="blend" noWrap="1"/>
 		<ePixmap position="341,830" size="1260,147" zPosition="10" pixmap="MetriXconfluencExp/menu/glass.png" alphatest="blend" noWrap="1"/>
@@ -501,6 +502,7 @@
 	</screen>
 	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080"/>
+		
 		<widget source="Event" render="XInfoEvents"/>
 
 		<!--  check  on test debut -->
@@ -527,7 +529,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="Regular; 23" foregroundColor="grey" halign="left" position="104,803" render="Label" size="750,35" source="session.CurrentService" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="3" noWrap="1">
-			<convert type="xxServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="796,11" size="383,50" borderWidth="2" font="RegularLight; 30" halign="center" backgroundColor="black" transparent="1" foregroundColor="unf2e000" valign="center">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -536,7 +538,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Picon" position="61,876" zPosition="4" size="180,120" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<!-- s infobar two -->
 		<eLabel text="A" position="1188,991" zPosition="1" size="30,39" font="Regular; 30" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center"/>
@@ -719,7 +721,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1189,948" size="260,42" font="Regular; 28" valign="center" backgroundColor="black" zPosition="2" transparent="1" halign="left" foregroundColor="grey">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<!-- Weather */-->
 		<widget render="MSNWeatherPixmap" position="1697,929" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
@@ -743,7 +745,7 @@
 		  </convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
-			<convert type="xxServiceName2">%s </convert>
+			<convert type="xServiceName2">%s </convert>
 		</widget>
 		<widget backgroundColor="black" font="Arial; 28" foregroundColor="metrixAccent1" halign="center" noWrap="1" position="368,950" render="Label" size="95,40" source="session.Event_Next" transparent="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -754,7 +756,7 @@
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget position="1275,992" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="right" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
-			<convert type="ServiceName">TpansponderInfo</convert>
+			<convert type="xServiceName2">TpansponderInfo</convert>
 		</widget>
 		<eLabel position="375,934" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="931,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend"/>
@@ -803,12 +805,12 @@
 		<ePixmap position="1460,875" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/wifi_off.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/wifi.png" position="1460,875" zPosition="6" size="42,42" transparent="1" alphatest="blend">
 			<convert type="RouteInfo">Wifi</convert>
-		<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap position="1405,935" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/lan_off.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/lan.png" position="1405,935" zPosition="6" size="42,42" transparent="1" alphatest="blend">
 			<convert type="RouteInfo">Lan</convert>
-		<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap position="1450,923" size="70,70" zPosition="8" pixmap="MetriXconfluencExp/icons/vpn.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/vpn_on.png" position="1450,923" zPosition="9" size="70,70" transparent="1" alphatest="blend">
@@ -828,7 +830,7 @@
 	</screen>
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="unececec"/>
-		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="unf2e000" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
+		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="unf2e000" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"  render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
 		<widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -836,7 +838,7 @@
 			<convert type="pliExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xxServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="102,724" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -863,20 +865,22 @@
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1639,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<widget source="ServiceEvent" render="Picon" position="874,525" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="50,69" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="60,624" size="50,50" zPosition="1" transparent="1" alphatest="blend"/>
+		
 		<widget source="Event" render="XInfoEvents" position="0,0"/>
+
 		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="XInfoEvents"/>
 		<widget source="session.Event_Next" render="XInfoEvents"/>
@@ -894,14 +898,14 @@
 	</screen>
 	<screen name="ChoiceBoxBase" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
 		<widget backgroundColor="metrixBackground" font="Regular;22" halign="center" name="text" position="1032,956" size="430,35" transparent="1" foregroundColor="unffbf00"/>
-		<widget backgroundColor="dark" halign="center" valign="center" enableWrapAround="1" itemHeight="50" font="Regular; 26" name="list" position="899,198" scrollbarMode="showNever" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" size="717,719" transparent="1" alphatest="blend"/>
+		<widget backgroundColor="dark" halign="center" valign="center" enableWrapAround="1" itemHeight="75" font="Regular; 26" name="list" position="899,198" scrollbarMode="showNever" selectionPixmap="MetriXconfluencExp/icons/camselect.png" size="717,719" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin1.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="224,326" size="384,384" transparent="1" alphatest="blend"/>
 		<eLabel backgroundColor="dark" font="Regular; 35" position="976,99" size="551,50" text="Input" transparent="1" foregroundColor="grey" halign="center"/>
 	</screen>
 	<screen name="ChoiceBox" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
 		<widget backgroundColor="metrixBackground" font="Regular;22" halign="center" name="text" position="1032,956" size="430,35" transparent="1" foregroundColor="unffbf00"/>
-		<widget backgroundColor="dark" halign="center" valign="center" enableWrapAround="1" itemHeight="50" font="Regular; 26" name="list" position="899,198" scrollbarMode="showNever" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" size="717,719" transparent="1" alphatest="blend"/>
+		<widget backgroundColor="dark" halign="center" valign="center" enableWrapAround="1" itemHeight="75" font="Regular; 26" name="list" position="899,198" scrollbarMode="showNever" selectionPixmap="MetriXconfluencExp/icons/camselect.png" size="717,719" transparent="1" alphatest="blend"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin1.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="224,326" size="384,384" transparent="1" alphatest="blend"/>
 		<eLabel backgroundColor="dark" font="Regular; 35" position="976,99" size="551,50" text="Input" transparent="1" foregroundColor="grey" halign="center"/>
@@ -927,7 +931,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="498,509" size="900,40" font="Regular;30" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1255,557" size="175,40" font="Regular;36" halign="right" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
@@ -1047,7 +1051,7 @@
 		<eLabel text="mod by @Lululla" position="1406,853" size="428,77" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
 		<panel name="btCRYB"/>
 		<widget name="label2" position="99,907" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="label1" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="label1" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="information_common" position="0,0" size="1920,1080" title="AboutOE" flags="wfNoBorder" backgroundColor="transparent">
@@ -1060,7 +1064,7 @@
 		<eLabel text="mod by Adrenalinnrw" position="1405,718" size="425,58" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
 		<eLabel text="mod by @Dragon@" position="1406,778" size="426,74" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
 		<eLabel text="mod by @Lululla" position="1406,853" size="428,77" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
-		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="CommitInfo" position="0,0" size="1920,1080" title="AboutOE" flags="wfNoBorder" backgroundColor="transparent">
@@ -1093,7 +1097,7 @@
 		<eLabel text="mod by Adrenalinnrw" position="1405,718" size="425,58" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
 		<eLabel text="mod by @Dragon@" position="1406,778" size="426,74" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
 		<eLabel text="mod by @Lululla" position="1406,853" size="428,77" font="Regular; 38" zPosition="2" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" halign="left"/>
-		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="ImageInformation" position="center,center" size="1920,1080" title="Image Information" flags="wfNoBorder" backgroundColor="transparent">
@@ -1103,7 +1107,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
-		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="information" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="About" position="center,center" size="1920,1080" title="About" backgroundColor="transparent" flags="wfNoBorder">
@@ -1146,7 +1150,7 @@
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
 		<widget name="description" position="1390,621" size="445,273" font="Regular; 25" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
-		<widget name="list" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="list" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="Information" position="center,center" size="1920,1080" title="Information" flags="wfNoBorder" backgroundColor="transparent">
@@ -1156,7 +1160,7 @@
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
 		<widget name="description" position="1390,621" size="445,273" font="Regular; 25" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
-		<widget name="information" position="108,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="information" position="108,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="AboutOE" position="center,center" size="1920,1080" title="AboutOE" flags="wfNoBorder" backgroundColor="transparent">
@@ -1166,7 +1170,7 @@
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
 		<widget name="description" position="1390,621" size="445,273" font="Regular; 25" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
-		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="StreamingClientsInfo" position="0,0" size="1920,1080" title="Streaming Clients Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -1175,8 +1179,8 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
-		<widget name="ScrollLabel" position="105,140" size="1050,120" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
-		<widget name="ScrollLabel2" position="105,270" size="1050,630" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="ScrollLabel" position="105,140" size="1050,120" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
+		<widget name="ScrollLabel2" position="105,270" size="1050,630" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SystemNetworkInfo" position="0,0" size="1920,1080" title="System NetworkInfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -1185,7 +1189,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
-		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SystemMemoryInfo" position="0,0" size="1920,1080" title="System MemoryInfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -1194,7 +1198,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
-		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="AboutScrollLabel" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="Devices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
@@ -1203,7 +1207,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBig"/>
 		<panel name="btCRYB"/>
-		<widget name="allinonedevices" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="allinonedevices" position="105,180" size="1050,720" itemHeight="60" font="Regular; 25" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="menu_mainmenu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -1555,7 +1559,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBigLeft"/>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1338,84" font="Regular; 60" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="1577,924" size="96,35" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="1577,924" size="96,35" zPosition="2" alphatest="blend">
@@ -1636,7 +1640,7 @@
 		<eLabel position="108,198" zPosition="3" size="1044,566" backgroundColor="unff000000"/>
 		<widget name="Video" position="108,198" zPosition="-10" size="1044,566"/>
 		<widget source="session.CurrentService" render="Label" position="105,780" size="1050,45" font="Regular;36" halign="center" valign="center" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="105,840" size="1050,38" font="Regular;30" halign="center" valign="center" backgroundColor="background20" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
@@ -1785,7 +1789,7 @@
 		<widget name="channel" position="119,344" size="542,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent" />
 		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
 		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
-		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
+		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"  />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1778,844" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
@@ -1845,28 +1849,28 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="252,117" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="690,92" size="1143,68" font="Regular; 44" halign="left" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
 		</widget>
 	</screen>
 	<screen name="EPGSelection" position="0,0" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="black">
-	  <ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" transparent="1" />
-	  <panel name="btCRYB" />
-	  <panel name="ClockTimeEvent2" />
-	  <widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="blend" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
-	  <widget source="Event" render="Label" position="123,90" size="546,60" font="Regular; 38" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
-		<convert type="EventName">Name</convert>
-	  </widget>
-	  <widget source="Event" render="RunningTextXposter" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
-		<convert type="EventName">FullDescription</convert>
-	  </widget>
-	  <widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" transparent="1" />
+		<panel name="btCRYB" />
+		<panel name="ClockTimeEvent2" />
+		<widget name="list" position="692,84" borderWidth="2" size="1148,842" scrollbarMode="showOnDemand" transparent="1" valign="center" halign="center" backgroundColor="black" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" alphatest="blend" zPosition="2" itemHeight="50" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"  />
+		<widget source="Event" render="Label" position="123,90" size="546,60" font="Regular; 38" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="RunningTextXposter" position="160,154" size="480,417" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1" />
 	</screen>
 	<screen name="EPGSelectionMulti" position="center,center" size="1920,1080" title="EPG Selection" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
-		<widget name="list" borderWidth="2" position="681,163" size="1148,774" itemHeight="50" scrollbarMode="showNever" backgroundColor="black" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="list" borderWidth="2" position="681,163" size="1148,774" itemHeight="50" scrollbarMode="showNever" backgroundColor="black" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<!-- EDIT LULULLA -->
 		<panel name="btCRYB"/>
 		<panel name="ClockTimeEvent2"/>
@@ -1893,19 +1897,19 @@
 		<panel name="btCRYB"/>
 		<widget enableWrapAround="0" itemHeight="30" font="Regular;0" name="list" position="0,0" size="0,150" zPosition="-10"/>
 		<widget source="piconCh1" render="Picon" position="218,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh2" render="Picon" position="563,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh3" render="Picon" position="923,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh4" render="Picon" position="1288,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh5" render="Picon" position="1633,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget font="Regular;33" halign="center" transparent="1" name="currCh1" position="80,205" size="340,45"/>
 		<widget font="Regular;33" halign="center" transparent="1" name="currCh2" position="418,205" size="360,45"/>
@@ -2113,7 +2117,7 @@
 	<screen name="QuickEPG" position="0,0" size="1920,1080" title="QuickEPG" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel name="new eLabel" position="-98,842" zPosition="-10" size="2018,240" backgroundColor="background20" alphatest="blend"/>
 		<widget source="Service" render="Label" position="588,849" size="744,53" halign="center" font="Regular;39" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget name="list" position="83,909" size="1754,113" colorServiceDescription="grey" colorServiceDescriptionSelected="white" transparent="1" backgroundColor="background20" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" itemHeight="41" zPosition="2"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="437,1028" size="45,53" alphatest="blend"/>
@@ -2352,7 +2356,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_clock.png" position="1370,60" zPosition="-1" size="480,105"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_movie.png" position="-2,857" zPosition="-2" size="1922,225" alphatest="off"/>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1436,84" font="Regular; 60" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="1742,918" size="62,30" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" position="1742,918" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
@@ -2489,11 +2493,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	</screen>
 	<screen name="NumberZap" position="0,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="background90">
 		<widget name="number" position="center,293" size="609,296" halign="center" font="Regular; 210" backgroundColor="metrixPreTrans3" foregroundColor="metrixPreTrans3" transparent="1"/>
-		<widget name="servicename" position="center,573" size="1421,255" backgroundColor="metrixPreTrans3" transparent="1" font="Regular; 180" valign="top" halign="center" foregroundColor="metrixPreTrans3"/>
+		<widget name="xServiceName2" position="center,573" size="1421,255" backgroundColor="metrixPreTrans3" transparent="1" font="Regular; 180" valign="top" halign="center" foregroundColor="metrixPreTrans3"/>
 	</screen>
 	<screen name="NumberZapWithName" position="-4,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="servicenumber" position="669,411" size="581,258" font="Regular; 225" halign="right" backgroundColor="background" transparent="1" valign="center" foregroundColor="metrixPreBlack2" text="5" zPosition="-1"/>
-		<widget name="servicename" position="585,410" size="750,120" font="Regular; 75" halign="left" backgroundColor="background" transparent="1"/>
+		<widget name="xServiceName2" position="585,410" size="750,120" font="Regular; 75" halign="left" backgroundColor="background" transparent="1"/>
 		<widget name="servicebouquet" position="663,555" size="594,80" font="Regular; 42" halign="left" backgroundColor="background" transparent="1"/>
 		<eLabel position="547,404" size="825,272" backgroundColor="background" zPosition="-5"/>
 	</screen>
@@ -2729,7 +2733,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
-		<widget name="infolist" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="infolist" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
@@ -2760,7 +2764,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Subservices" position="0,0" size="840,42" font="Regular;30" halign="center" valign="center" backgroundColor="background20"/>
 		<widget name="CurrentSubserviceNumber" position="0,42" size="105,72" font="Regular;33" halign="center" valign="center" backgroundColor="background20"/>
 		<widget source="session.CurrentService" render="Label" position="105,42" size="735,72" font="Regular;33" valign="center" backgroundColor="background20">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 	</screen>
 	<screen name="Subtitles" position="0,0" size="1920,1080" title="Subtitle selection" flags="wfNoBorder" backgroundColor="transparent">
@@ -3397,7 +3401,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeBigLab"/>
 		<widget source="session.CurrentService" render="Label" position="252,860" size="1080,54" font="Regular;45" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="53,971" size="150,42" font="Regular;36" halign="center" valign="center" backgroundColor="background20" shadowColor="black" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
@@ -3786,7 +3790,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel position="108,198" zPosition="3" size="1044,566" backgroundColor="unff000000"/>
 		<widget name="Video" position="108,198" zPosition="-10" size="1044,566"/>
 		<widget source="session.CurrentService" render="Label" position="105,780" size="1050,45" font="Regular;36" halign="center" valign="center" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="105,840" size="1050,38" font="Regular;30" halign="center" valign="center" backgroundColor="background20" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
@@ -3826,10 +3830,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_movie.png" position="center,852" zPosition="-2" size="1922,225"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/menu_clock.png" position="1370,60" zPosition="-1" size="480,105"/>
 		<widget source="session.CurrentService" render="Label" position="-30,677" size="1875,384" font="Regular; 150" valign="top" noWrap="1" backgroundColor="transparent" transparent="1" foregroundColor="metrixPreTrans3" zPosition="-99">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1338,84" font="Regular; 60" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="1577,924" size="96,35" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="1577,924" size="96,35" zPosition="2" alphatest="blend">
@@ -4619,7 +4623,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btRG"/>
-		<widget name="entrylist" borderWidth="2" alphatest="blend" position="105,180" size="765,600" itemHeight="70" font="Regular; 26" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="entrylist" borderWidth="2" alphatest="blend" position="105,180" size="765,600" itemHeight="70" font="Regular; 26" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 	</screen>
 	<screen name="SearchLocationMSN" position="0,0" size="1920,1080" title="SNW Location" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -4628,7 +4632,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btRGB"/>
-		<widget name="menu" position="105,180" size="765,600" borderWidth="2" alphatest="blend" itemHeight="70" font="Regular; 26" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="menu" position="105,180" size="765,600" borderWidth="2" alphatest="blend" itemHeight="70" font="Regular; 26" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 	</screen>
 	<screen name="WeatherPlugin" position="0,0" size="1920,1080" title="Weather Plugin" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -6516,7 +6520,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<eLabel transparent="1" zPosition="2" valign="center" halign="center" position="1328,763" size="490,50" font="Regular; 28" backgroundColor="black" foregroundColor="darkgrey" noWrap="1" text="Softcam Panel"/>
 	</screen>
-		<screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="MSN Weather" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="MSN Weather" backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="280,30" size="1600,90" font="Regular;44" halign="left" valign="center" foregroundColor="guidecolor" backgroundColor="transpBlack" transparent="1" zPosition="1" />
 		<ePixmap pixmap="MetriXconfluencExp/msn/meteo.jpg" position="0,0" size="1920,1080" alphatest="blend" zPosition="-1" />
 		<ePixmap pixmap="MetriXconfluencExp/msn/msnlogo.png" position="60,30" size="194,75" alphatest="blend" zPosition="1" />
@@ -6648,7 +6652,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="list" position="134,185" size="765,670" scrollbarMode="showOnDemand" itemHeight="70" font="Regular; 25" transparent="0" borderWidth="2" alphatest="blend" noWrap="1" backgroundColor="black" foregroundColor="white" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="list" position="134,185" size="765,670" scrollbarMode="showOnDemand" itemHeight="70" font="Regular; 25" transparent="0" borderWidth="2" alphatest="blend" noWrap="1" backgroundColor="black" foregroundColor="white" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/info.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SetupMenu" position="0,0" size="1920,1080" title="ClearMem" flags="wfNoBorder" backgroundColor="transparent">
@@ -6658,7 +6662,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="config" position="124,172" size="765,670" scrollbarMode="showOnDemand" itemHeight="75" font="Regular; 32" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="config" position="124,172" size="765,670" scrollbarMode="showOnDemand" itemHeight="75" font="Regular; 32" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<widget name="memory" position="148,844" zPosition="2" size="480,24" valign="center" halign="left" font="Regular;20" transparent="1" foregroundColor="white"/>
 		<widget name="slide" position="148,869" zPosition="2" borderWidth="1" size="480,8" backgroundColor="dark"/>
 	</screen>
@@ -6761,7 +6765,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="menu" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="menu" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="OscamInfoConfigScreen" position="0,0" size="1920,1080" title="Oscam Info Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -6770,7 +6774,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="config" position="112,163" size="765,745" itemHeight="50" scrollbarMode="showOnDemand" font="Regular; 26" borderWidth="2" alphatest="blend" backgroundColor="black" fieldMargins="15" nonplayableMargins="15" itemsDistances="10" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
+		<widget name="config" position="112,163" size="765,745" itemHeight="50" scrollbarMode="showOnDemand" font="Regular; 26" borderWidth="2" alphatest="blend" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="NcamInfoMenu" position="0,0" size="1920,1080" title="Ncam InfoMenu" flags="wfNoBorder" backgroundColor="transparent">
@@ -6779,7 +6783,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="mainmenu" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="mainmenu" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="OscamInfoMenu" position="0,0" size="1920,1080" title="OscamInfoMenu" flags="wfNoBorder" backgroundColor="transparent">
@@ -6788,7 +6792,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="mainmenu" position="112,163" size="765,745" scrollbarMode="showOnDemand" itemHeight="50" font="Regular; 26" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="mainmenu" position="112,163" size="765,745" scrollbarMode="showOnDemand" itemHeight="50" font="Regular; 26" borderWidth="2" alphatest="blend" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="oscECMInfo" position="0,0" size="1920,1080" title="OscamECM Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -6797,7 +6801,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
-		<widget name="output" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" borderWidth="2" alphatest="blend" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="output" position="112,163" size="765,745" itemHeight="50" font="Regular; 26" borderWidth="2" alphatest="blend" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/camd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="oscReaderStats" position="0,0" size="1920,1080" title="OscamReader Stats" flags="wfNoBorder" backgroundColor="transparent">
@@ -7410,7 +7414,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 					{"template": [
 
 							MultiContentEntryText(pos = (128, 32), size = (10, 30), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
-							MultiContentEntryText(pos = (150, 10), size = (370, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2), # Servicename
+							MultiContentEntryText(pos = (150, 10), size = (370, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2), # xServiceName2
 							MultiContentEntryText(pos = (150, 48), size = (370, 30), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
 							MultiContentEntryText(pos = (150, 80), size = (370, 30), font = 3, flags = RT_HALIGN_LEFT, text = 5), # Eventtime
 							MultiContentEntryPixmapAlphaBlend(pos=(30, 40), size=(85, 51), png=6, flags = BT_SCALE) # picon
@@ -7484,7 +7488,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
-		<widget name="text" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="text" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 	</screen>
 	<screen name="DevicePanelConf" position="center,center" size="1920,1080" title="UserManager" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
@@ -7494,7 +7498,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget text="Mount Manager" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="config" position="105,180" size="1050,320" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="config" position="105,180" size="1050,320" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<widget name="Linconn" position="108,150" size="700,20" font="Regular;18" halign="center" valign="center" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
 	</screen>
 	<screen name="Change_volume" position="center,center" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -7505,7 +7509,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
-		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 	</screen>
 	<screen name="Volume_Config" position="center,center" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget text="Volume Config" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -7514,7 +7518,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
-		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/audio.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="mySmallChannelSelection" position="center,center" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -7525,7 +7529,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
-		<widget name="list" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
+		<widget name="list" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" />
 	</screen>
 	<screen name="TaskListScreen" position="0,0" size="1920,1080" title="TaskList Screen" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>

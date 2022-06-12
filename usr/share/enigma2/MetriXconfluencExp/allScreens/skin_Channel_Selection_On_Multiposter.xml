@@ -38,16 +38,16 @@
 		<widget source="key_blue" render="Label" font="RegularLight;30" position="1639,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<widget source="ServiceEvent" render="Picon" position="1760,430" zPosition="4" size="100,60" transparent="1" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1491,72" size="380,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="ServiceName">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="1270,800" zPosition="3" size="550,200" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="1225,440" size="50,50" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget render="XParental" source="Event" position="1225,440" size="50,50" zPosition="3" transparent="1"/>
