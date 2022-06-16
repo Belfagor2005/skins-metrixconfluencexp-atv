@@ -10,7 +10,7 @@
 			<convert type="pliExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 20" foregroundColor="lightgreen" halign="left" position="782,687" render="Label" size="1072,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="ServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="824,719" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -27,6 +27,7 @@
 		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="785,758" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
+		
 		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="52,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
 		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="52,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
 		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="545,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
@@ -35,19 +36,21 @@
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1105,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
 		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1628,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1628,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		
+		
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="1,0" zPosition="-10" size="1920,1080" transparent="1" />
   	
 		<widget source="ServiceEvent" render="Picon" position="1635,547" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="1350,758" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="xServiceName2">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1743,8" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="cyan2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1061,11" size="578,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="center" foregroundColor="#ffff00">
-			<convert type="xServiceName2">Provider</convert>
+			<convert type="ServiceName2">Provider</convert>
 		</widget>
 		
 		<widget source="Event" render="XInfoEvents" />

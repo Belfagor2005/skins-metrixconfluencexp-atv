@@ -84,21 +84,10 @@ class RunningTextXposter(Renderer):
         self.scroll_label = eLabel(instance)
         self.mTimer = eTimer()
         self.mTimer.callback.append(self.movingLoop)
-               
-                
-                                                                                                                   
-                                                                                   
-                   
-                    
 
     def preWidgetRemove(self, instance):
         self.mTimer.stop()
-
-            
-                                                                                 
         self.mTimer.callback.remove(self.movingLoop)
-               
-     
         self.mTimer = None
         self.scroll_label = None
 

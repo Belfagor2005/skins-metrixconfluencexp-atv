@@ -4,10 +4,14 @@
 # <widget source="session.Event_Now" render="XInfoEvents"/>
 # <widget source="session.Event_Next" render="XInfoEvents"/>
 # <widget source="Event" render="XInfoEvents"/>
-from Components.Renderer.Renderer import Renderer
+try:
+    from Components.Renderer.Renderer import Renderer
+except:
+    from Renderer import Renderer
 from Components.VariableText import VariableText
 from enigma import eLabel, eTimer, eEPGCache, getBestPlayableServiceReference
 from time import gmtime
+from Components.config import config
 import sys
 import os
 import re
@@ -15,9 +19,15 @@ import socket
 import json
 import requests
 
-tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
+import glob
+import shutil
+global cur_skin, my_cur_skin, tmdb_api
+
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 epgcache = eEPGCache.getInstance()
+my_cur_skin = False
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 if os.path.isdir("/tmp"):
         pathLoc = "/tmp/infos/"
@@ -26,6 +36,17 @@ else:
 if not os.path.exists(pathLoc):
         os.mkdir(pathLoc)
 
+try:
+    if my_cur_skin == False:
+        myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
+        print('skinz namez', myz_skin)
+        if os.path.exists(myz_skin):
+            with open(myz_skin, "r") as f:
+                tmdb_api = f.read()
+                my_cur_skin = True
+except:
+    my_cur_skin = False
+    # tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 PY3 = (sys.version_info[0] == 3)
 
 if PY3:
@@ -109,9 +130,13 @@ class XInfoEvents(Renderer, VariableText):
                                         Actors = data["Actors"]
 
                                         if Title != "N/A" or Title != "":
-                                                self.text = "Nome: %s\nAnno: %s\nNazione: %s\nValutazione imdb: %s\nQualifica di età: %s\ngenere: %s\nPremi: %s\nDirettore: %s\nScenario: %s\nattori: %s" % (str(Title),str(Year),str(Country),str(imdbRating),str(Rated),str(Genre),str(Awards),str(Director),str(Writer),str(Actors))
+                                                self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year),str(Country),str(Genre),str(Director),str(Actors))
                                         else:
                                                 self.text = None
+                                        # if Title != "N/A" or Title != "":
+                                                # self.text = "Nome: %s\nAnno: %s\nNazione: %s\nValutazione imdb: %s\nQualifica di età: %s\ngenere: %s\nPremi: %s\nDirettore: %s\nScenario: %s\nattori: %s" % (str(Title),str(Year),str(Country),str(imdbRating),str(Rated),str(Genre),str(Awards),str(Director),str(Writer),str(Actors))
+                                        # else:
+                                                # self.text = None  
                 else:
                         self.text = None
 

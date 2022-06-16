@@ -12,16 +12,25 @@
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1778,844" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="175,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="633,475" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
+		
+		<panel position="670,950" size="360,40">
+			<panel name="Red-New-Button" />
+		</panel>
+		<panel position="970,950" size="360,40">
+			<panel name="Green-New-Button" />
+		</panel>
+		<panel position="1270,950" size="360,40">
+			<panel name="Yellow-New-Button" />
+		</panel>
+		<panel position="1570,950" size="360,40">
+			<panel name="Blue-New-Button" />
+		</panel>
+<!-- 		
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_red.png" position="670,999" size="230,8" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_green.png" position="970,999" size="230,8" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_yellow.png" position="1278,999" size="230,8" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/button_blue.png" position="1582,999" size="230,8" alphatest="blend" />
-		<!--
- 		<widget source="key_red" render="Label" position="695,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_green" render="Label" position="950,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_yellow" render="Label" position="1208,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		<widget source="key_blue" render="Label" position="1469,950" size="225,38" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
-		-->
+
 		<widget render="Label" source="key_red" position="633,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
 		  <convert type="ConditionalShowHide" />
 		</widget>
@@ -34,6 +43,9 @@
 		<widget render="Label" source="key_blue" position="1537,965" size="300,36" zPosition="1" font="Regular; 24" halign="center" backgroundColor="background20" noWrap="1" transparent="1">
 		  <convert type="ConditionalShowHide" />
 		</widget>
+		 -->
+		
+		
 		<widget source="key_help" render="Label" position="1790,908" size="45,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 		  <convert type="ConditionalShowHide" />
 		</widget>
@@ -76,7 +88,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="252,117" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="690,92" size="1143,68" font="Regular; 44" halign="left" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>

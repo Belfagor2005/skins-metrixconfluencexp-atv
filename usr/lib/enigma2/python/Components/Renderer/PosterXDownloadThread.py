@@ -4,6 +4,30 @@ import sys
 import re
 import requests
 import threading
+import glob
+import shutil
+from Components.config import config
+global cur_skin, my_cur_skin, tmdb_api
+
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
+omdb_api = "cb1d9f55"
+my_cur_skin = False
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+
+# isz="185,278"
+isz="342,320"
+
+try:
+    if my_cur_skin == False:
+        myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
+        print('skinz namez', myz_skin)
+        if os.path.exists(myz_skin):
+            with open(myz_skin, "r") as f:
+                tmdb_api = f.read()
+                my_cur_skin = True
+except:
+    my_cur_skin = False
+    # tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 
 PY3 = (sys.version_info[0] == 3)
 try:
@@ -20,12 +44,6 @@ try:
 except:
 	lng = None
 	pass
-
-
-tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
-
-# isz="185,278"
-isz="342,320"
 
 class PosterXDownloadThread(threading.Thread):
 	def __init__(self):

@@ -11,7 +11,7 @@
 			<convert type="pliExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
+			<convert type="ServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="1217,544" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
 			<convert type="EventTime">StartTime</convert>
@@ -38,16 +38,16 @@
 		<widget source="key_blue" render="Label" font="RegularLight;30" position="1639,1025" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<widget source="ServiceEvent" render="Picon" position="1760,430" zPosition="4" size="100,60" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1491,72" size="380,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="xServiceName2">Provider</convert>
+			<convert type="ServiceName2">Provider</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="1270,800" zPosition="3" size="550,200" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="xServiceName2">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="1225,440" size="50,50" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget render="XParental" source="Event" position="1225,440" size="50,50" zPosition="3" transparent="1"/>
