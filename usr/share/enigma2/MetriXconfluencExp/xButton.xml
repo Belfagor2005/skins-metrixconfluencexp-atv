@@ -16,21 +16,21 @@
 	</screen>
 	-->
 	<screen name="Red-New-Button">
-		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="key_red,Button,Label" zPosition="2" />
-		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="red,Button,Label" zPosition="2" />
-		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="languagetext,Button,Label" zPosition="2" />
-		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="ButtonRedtext,Button,Label" zPosition="2" />
-		<widget source="key_red" render="Label" position="0,3" size="350,50" backgroundColor="black" font="Regular; 30" halign="center" noWrap="1" zPosition="9" transparent="1" valign="top" objectTypes="key_red,StaticText" foregroundColor="foreground" />
-		<widget name="initialize" pixmap="buttons/button_red.png" position="50,43" size="350,50" halign="center" valign="top" foregroundColor="foreground" alphatest="blend" transparent="1" objectTypes="initializetext,Button,Label" zPosition="5" />
-		<widget name="cancel" pixmap="buttons/button_red.png" position="50,43" size="350,50" halign="center" valign="top" foregroundColor="foreground" alphatest="blend" transparent="1" objectTypes="canceltext,Button,Label" zPosition="5" />
+		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="key_red,Button,Label" zPosition="2"/>
+		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="red,Button,Label" zPosition="2"/>
+		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="languagetext,Button,Label" zPosition="2"/>
+		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="ButtonRedtext,Button,Label" zPosition="2"/>
+		<widget source="key_red" render="Label" position="0,3" size="350,50" backgroundColor="black" font="Regular; 30" halign="center" noWrap="1" zPosition="9" transparent="1" valign="top" objectTypes="key_red,StaticText" foregroundColor="foreground"/>
+		<widget name="initialize" pixmap="buttons/button_red.png" position="50,43" size="350,50" halign="center" valign="top" foregroundColor="foreground" alphatest="blend" transparent="1" objectTypes="initializetext,Button,Label" zPosition="5"/>
+		<widget name="cancel" pixmap="buttons/button_red.png" position="50,43" size="350,50" halign="center" valign="top" foregroundColor="foreground" alphatest="blend" transparent="1" objectTypes="canceltext,Button,Label" zPosition="5"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/button_red.png" position="50,43" size="350,50" halign="center" valign="top" foregroundColor="foreground" alphatest="blend" transparent="1" objectTypes="key_red,StaticText" zPosition="5">
-			<convert type="ConditionalShowHide" />
+			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="key_red" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="key_red,Button,Label" zPosition="5" />
-		<widget name="red" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="red,Button,Label" zPosition="5" />
-		<widget name="initializetext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="initializetext,Button,Label" zPosition="5" />
-		<widget name="canceltext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="canceltext,Button,Label" zPosition="5" />
-		<widget name="languagetext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="languagetext,Button,Label" zPosition="5" />
+		<widget name="key_red" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="key_red,Button,Label" zPosition="5"/>
+		<widget name="red" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="red,Button,Label" zPosition="5"/>
+		<widget name="initializetext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="initializetext,Button,Label" zPosition="5"/>
+		<widget name="canceltext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="canceltext,Button,Label" zPosition="5"/>
+		<widget name="languagetext" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="foreground" backgroundColor="black" objectTypes="languagetext,Button,Label" zPosition="5"/>
 	</screen>
 	<screen name="Green-New-Button">
 		<ePixmap pixmap="buttons/button_green.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="key_green,Button,Label" zPosition="3"/>
