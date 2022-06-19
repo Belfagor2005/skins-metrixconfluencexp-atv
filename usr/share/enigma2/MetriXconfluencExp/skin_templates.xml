@@ -28,12 +28,15 @@
 						"fonts": [gFont("3d",40)],	"itemHeight": 80}
 		</convert>
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1275,904" size="50,50" alphatest="blend" zPosition="2"/>
+<!-- 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1275,904" size="50,50" alphatest="blend" zPosition="2"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1315,944" size="50,50" alphatest="blend" zPosition="2"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1356,983" size="50,50" alphatest="blend" zPosition="2"/>
 		<widget name="green" position="1323,904" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
 		<widget name="yellow" position="1363,944" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="blue" position="1403,983" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
+		<widget name="blue" position="1403,983" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/> -->
+		
+		
+		<widget name="description" position="80,1029" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
 	</screen>
 	<screen name="MenuSystem">
 		<!--
@@ -93,6 +96,32 @@
 			<convert type="StringList"/>
 		</widget>
 	</screen>
+		
+	<screen name="MenuWeather">	
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget alphatest="blend" render="MSNWeatherPixmap" position="720,926" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
+			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 60" render="Label" position="870,945" size="140,90" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="unfcc000">
+			<convert type="MSNWeather">temperature_current</convert>
+		</widget>
+		<eLabel name="new eLabel" position="395,958" size="70,40" font="Regular; 26" transparent="1" halign="left" text="max." zPosition="3" foregroundColor="grey" backgroundColor="black"/>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 28" render="Label" position="464,958" size="90,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1" foregroundColor="white">
+			<convert type="MSNWeather">temperature_high,day1</convert>
+		</widget>
+		<eLabel name="new eLabel" position="547,958" size="70,40" font="Regular; 26" transparent="1" halign="left" text="min." zPosition="3" foregroundColor="grey" backgroundColor="black"/>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 28" render="Label" position="614,958" size="90,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1" foregroundColor="white">
+			<convert type="MSNWeather">temperature_low,day1</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="background" font="Regular; 32" render="Label" position="78,956" size="314,72" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="white">
+			<convert type="MSNWeather">temperature_text,current</convert>
+		</widget>
+	</screen>	
 	<!-- ************* config Templates ************* -->
 	<screen name="config1">
 		<widget name="config" position="105,180" size="1050,700" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
@@ -155,46 +184,49 @@
 	<!-- ************* Button Templates ************* -->
 	<screen name="btCRYB">
 		<panel position="92,965" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,965" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,965" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,965" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
+	 
 	</screen>
+	
 	<screen name="btRG">
 		<panel position="92,965" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,965" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
+		 
 	</screen>
 	<screen name="btRGB">
 		<panel position="92,965" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,965" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1495,965" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btCRY">
 		<panel position="92,965" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,965" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,965" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btCRYGrad">
@@ -218,60 +250,67 @@
 		<widget source="options" render="Label" position="1380,749" size="415,190" font="Regular;20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<widget source="description" render="Label" position="85,777" size="1230,150" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="foreground" halign="center" valign="center" transparent="1"/>
 		<eLabel position="70,200" size="1230,1" zPosition="1" backgroundColor="layer-b-foreground"/>
+		
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,935" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,935" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btCRYGSoft">
 		<panel position="105,950" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,950" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,950" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,950" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel>
+			<panel name="Blue-New-Button" />
+		</panel>		
+		
 	</screen>
 	<screen name="btCRYGEpg">
-		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
+	
+	  <panel position="105,935" size="360,40">
+		<panel name="Red-New-Button" />
+	  </panel>
+
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,935" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,935" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
+
 	</screen>
 	<screen name="btCRYBbotTop">
+
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,935" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,935" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
+	
 	</screen>
 	<screen name="btRGYbotTop">
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
@@ -305,42 +344,44 @@
 	</screen>
 	<screen name="btRGYTmdb">
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,935" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1495,935" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btRGYTop">
+	
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1038,935" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btRGTop">
+	
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,935" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 	</screen>
 	<screen name="btPIMO" position="0,0">
-		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>
-		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
-		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
-		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+	  <ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
 	</screen>
 	<!-- 
 	<ePixmap position="1732,906" size="53,38" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_radio.png" transparent="1" alphatest="blend"/>   
