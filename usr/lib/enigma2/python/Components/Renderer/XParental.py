@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # by digiteng...04.2020
 # file for skin MetriXconfluencExp by sunriser 07.2021
-# <widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" alphatest="blend"/>
+
 from Components.Renderer.Renderer import Renderer
 from Tools.Directories import resolveFilename
 from enigma import eLabel, ePixmap, eTimer, loadPNG
@@ -101,5 +101,5 @@ class XParental(Renderer):
 	def delay(self):
 		self.timer = eTimer()
 		self.timer.callback.append(self.showParental)
-		self.timer.start(300, True)
+		self.timer.start(200, True)
 

@@ -230,8 +230,8 @@ class XperiencEServiceInfoEX(Poll, Converter, object):
 		self.tpdata = info.getInfoObject(iServiceInformation.sTransponderData)
 		if self.tpdata:
 			self.stream['ttype'] = self.tpdata.get('tuner_type', '')
-			if self.stream['ttype'] == 'DVB-S' and service.streamed() == None:
-				if self.tpdata.get('system', 0) == 1:
+			if self.stream['ttype'] == 'DVB-S' and service.streamed() is None:
+				if self.tpdata.get('system', 0) is 1:
 					self.stream['ttype'] = 'DVB-S2'
 		else:
 			self.stream['ttype'] = 'IP-TV'
@@ -368,15 +368,15 @@ class XperiencEServiceInfoEX(Poll, Converter, object):
 			if type == 'DVB-T':
 				return True
 		elif self.type == self.IS_STREAMTV:
-			if service.streamed() != None:
+			if service.streamed() is not None:
 				return True
 		elif self.type == self.IS_SATELLITE_S:
-			if type == 'DVB-S' and service.streamed() == None:
-				if self.tpdata.get('system', 0) == 0:
+			if type == 'DVB-S' and service.streamed() is None:
+				if self.tpdata.get('system', 0) is 0:
 					return True
 		elif self.type == self.IS_SATELLITE_S2:
-			if type == 'DVB-S' and service.streamed() == None:
-				if self.tpdata.get('system', 0) == 1:
+			if type == 'DVB-S' and service.streamed() is None:
+				if self.tpdata.get('system', 0) is 1:
 					return True
 		return False
 	boolean = property(getBoolean)

@@ -2,10 +2,10 @@
 # by digiteng
 # v1 07.2020, 11.2021
 #edit lululla 05-2022
-# <ePixmap pixmap="MetriXconfluencExp/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
-# <widget render="xtraStarX" source="session.Event_Now" pixmap="MetriXconfluencExp/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
-# <ePixmap pixmap="MetriXconfluencExp/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
-# <widget render="xtraStarX" source="session.Event_Next" pixmap="MetriXconfluencExp/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+# <ePixmap pixmap="MetriXconfluencEatv/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
+# <widget render="xtraStarX" source="session.Event_Now" pixmap="MetriXconfluencEatv/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+# <ePixmap pixmap="MetriXconfluencEatv/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
+# <widget render="xtraStarX" source="session.Event_Next" pixmap="MetriXconfluencEatv/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from Components.VariableValue import VariableValue

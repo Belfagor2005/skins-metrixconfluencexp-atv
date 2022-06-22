@@ -356,7 +356,7 @@ class PosterX(Renderer):
 					if os.path.getsize(pstrNm) > 0:
 						loop = 0
 						found = True
-				time.sleep(0.6)
+				time.sleep(0.5)
 				loop = loop - 1
 			if found:
 				self.timer.start(10, True)		

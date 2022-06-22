@@ -7,7 +7,7 @@
 	<output id="0">
 		<resolution xres="1920" yres="1080" bpp="32"/>
 	</output>
-	<colors> 
+	<colors>
 		<color name="#1a27408b" value="#1a27408b"/>
 		<color name="#31000000" value="#31000000"/>
 		<color name="#555555" value="#00555555"/>
@@ -175,7 +175,7 @@
 		<parameter name="ChoicelistName" value="70,0,900,50"/>
 		<parameter name="ServiceInfoLeft" value="0,0,450,40"/>
 		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
-		<parameter name="VirtualKeyBoard" value="76,72"/>
+		<parameter name="VirtualKeyboard" value="76,72"/>
 		<parameter name="AutotimerEnabledIcon" value="2,1,25,25"/>
 		<parameter name="AutotimerRecordIcon" value="30,1,25,25"/>
 	</parameters>
@@ -463,9 +463,9 @@
 		<widget render="XParental" source="Event" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
-		<!-- 		
+		<!--
 		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
-		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="1257,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>									   
+		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="1257,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
 		-->
 		<!-- <widget source="session.Event_Now" render="XInfoEvents"/> -->
 		<!-- <widget source="session.Event_Next" render="XInfoEvents"/> -->
@@ -739,8 +739,7 @@
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/iptv.png" alphatest="blend" position="813,1037" size="35,35" zPosition="4" transparent="1">
 			<convert type="ServiceInfo">IsStream</convert>
-			<convert type="ConditionalShowHide">
-		</convert>
+			<convert type="ConditionalShowHide"></convert>
 		</widget>
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="Label" size="110,34" source="session.CurrentService" text="DVB-S2" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName2">%s </convert>
@@ -867,7 +866,7 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
-		<!-- 		
+		<!--
 		<widget name="list2" valign="bottom" position="59,770" size="500,235" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png"/>
 		 -->
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents1" position="59,770" zPosition="3" size="500,235" font="LCD;24" foregroundColor="white" backgroundColor="black" transparent="1">
@@ -929,7 +928,7 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
-		<!-- 		
+		<!--
 		<widget name="list2" valign="bottom" position="59,770" size="500,235" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png"/>
 		 -->
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents1" position="59,770" zPosition="3" size="500,235" font="LCD;24" foregroundColor="white" backgroundColor="black" transparent="1">
@@ -1008,7 +1007,7 @@
 		<widget source="Title" render="Label" position="30,876" size="1910,215" font="Regular; 150" backgroundColor="metrixPreTrans3" transparent="1" foregroundColor="metrixPreTrans3" valign="top" zPosition="-50"/>
 		<eLabel name="new eLabel" position="center,30" zPosition="-10" size="1860,758" backgroundColor="background20"/>
 		<panel name="ClockTime"/>
-		<!-- 		
+		<!--
 		<panel name="btCRYGrad"/>
 		 -->
 		<panel position="92,720" size="360,40">
@@ -1102,7 +1101,6 @@
 		<!-- EDIT LULULLA -->
 		<!-- <panel name="MenuTemplate" /> -->
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
 		<widget name="Mlist" borderWidth="2" position="1256,99" size="570,879" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2" selectionPixmap="MetriXconfluencExp/icons/menusel2.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (5, 0), size = (390, 75), flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 0) ],
@@ -1112,6 +1110,13 @@
 			</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="Info" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -1286,10 +1291,16 @@
 	</screen>
 	<screen name="Menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1299,6 +1310,12 @@
 		<panel name="ClockTimeTop"/>
 		<panel name="MenuWeather"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_mainmenu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -1306,6 +1323,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="10">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="-2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1314,6 +1337,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1322,6 +1351,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1330,6 +1365,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1338,6 +1379,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,65" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1346,6 +1393,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1354,6 +1407,12 @@
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,65" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -1363,19 +1422,33 @@
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<panel name="MenuWeather"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
+
 	<screen name="menu_shutdown" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- EDIT LULULLA -->
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<panel name="MenuWeather"/>
+		<widget source="session.Event_Now" render="Label" position="374,697" size="538,48" borderWidth="2" font="RegularB; 30" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,754" size="1150,188" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_osd_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1384,7 +1457,7 @@
 	</screen>
 	<screen name="menu_display" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1393,7 +1466,7 @@
 	</screen>
 	<screen name="menu_audio_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1402,7 +1475,7 @@
 	</screen>
 	<screen name="menu_video_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1411,16 +1484,22 @@
 	</screen>
 	<screen name="menu_rec" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
+
+	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder">
+		<ePixmap pixmap="MetriXconfluencExp/logos/dragon.png" position="center,center" size="900,720" zPosition="-1" transparent="1"/>
+		<widget name="text" position="58,34" size="1740,142" font="Regular;30" halign="center" transparent="1" foregroundColor="grey"/>
+		<eLabel text="by @dragon @ Lululla" position="512,905" size="898,68" font="Regular; 44" foregroundColor="grey" backgroundColor="transparent" transparent="1" halign="center"/>
+	</screen>
 	<screen name="menu_openspa_-8" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1435,7 +1514,7 @@
 	</screen>
 	<screen name="menu_openspa_-20" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1450,7 +1529,7 @@
 	</screen>
 	<screen name="menu_openspa_-13" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1465,7 +1544,7 @@
 	</screen>
 	<screen name="menu_openspa_-1" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
@@ -1480,18 +1559,13 @@
 	</screen>
 	<screen name="menu_openspa_-4" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- EDIT LULULLA -->
-		<panel name="MenuTemplate1"/>
+		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
 		<panel name="MenuWeather"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,64" zPosition="2" size="1150,670" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
-	</screen>
-	<screen name="QuitMainloopScreen" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/logos/dragon.png" position="center,center" size="900,720" zPosition="-1" transparent="1"/>
-		<widget name="text" position="58,34" size="1740,142" font="Regular;30" halign="center" transparent="1" foregroundColor="grey"/>
-		<eLabel text="by @dragon @ Lululla" position="512,905" size="898,68" font="Regular; 44" foregroundColor="grey" backgroundColor="transparent" transparent="1" halign="center"/>
-	</screen>
+	</screen>	
 	<screen name="UpdatePluginMenu" position="0,0" size="1920,1080" title="Softwaremanager..." backgroundColor="transparent" flags="wfNoBorder">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
@@ -1502,7 +1576,7 @@
 		<panel position="105,950" size="360,40">
 			<panel name="Red-New-Button"/>
 		</panel>
-		<!-- 
+		<!--
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="105,953" size="45,60" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="158,956" size="360,36" zPosition="1" font="RegularLight; 30" halign="left" backgroundColor="background20" transparent="1"/>
 		-->
@@ -2222,7 +2296,7 @@
 		<widget name="capacity" position="105,300" size="1050,38" font="Regular;35" transparent="1"/>
 		<widget name="bus" position="105,375" size="1050,38" font="Regular;35" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position=" 105,953" size="45,60" alphatest="blend"/>
-		<!-- 		
+		<!--
 		<widget name="initializetext" position="158,956" size="360,36" zPosition="1" font="Regular;30" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/hdd.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		 -->
@@ -2569,9 +2643,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<eLabel text="Leave message" position="1279,876" size="370,38" backgroundColor="secondBG" font="Regular;34" halign="left" transparent="1" zPosition="1"/>
 	</screen>
 	<screen name="NumberZap" position="0,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="background90">
+		<!-- 	
 		<widget name="number" position="center,293" size="609,296" halign="center" font="Regular; 210" backgroundColor="metrixPreTrans3" foregroundColor="metrixPreTrans3" transparent="1"/>
 		<widget name="ServiceName2" position="center,573" size="1421,255" backgroundColor="metrixPreTrans3" transparent="1" font="Regular; 180" valign="top" halign="center" foregroundColor="metrixPreTrans3"/>
-	</screen>
+		 -->
+		<panel name="NumberZapPicon"/>
+	</screen>	
+	
+	<screen name="NumberZapPicon" position="0,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="background90">
+		<widget name="number" position="650,296" size="609,296" halign="center" font="Regular; 210" backgroundColor="metrixPreTrans3" foregroundColor="metrixPreTrans3" transparent="1" />
+		<widget name="servicename" position="231,10" size="1421,136" backgroundColor="metrixPreTrans3" transparent="1" font="Regular; 80" halign="center" foregroundColor="metrixPreTrans3" />
+		<widget position="10,10" render="Picon" size="220,132" source="Service" transparent="1" alphatest="blend" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>		
+	
 	<screen name="NumberZapWithName" position="-4,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="servicenumber" position="669,411" size="581,258" font="Regular; 225" halign="right" backgroundColor="background" transparent="1" valign="center" foregroundColor="metrixPreBlack2" text="5" zPosition="-1"/>
 		<widget name="ServiceName2" position="585,410" size="750,120" font="Regular; 75" halign="left" backgroundColor="background" transparent="1"/>
@@ -3223,7 +3309,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_exit.png" position="1792,910" size="50,50" zPosition="10" transparent="1" alphatest="blend"/>
 		<widget name="list_head" position="115,180" size="1050,720" font="Regular;24" valign="center" halign="center" foregroundColor="yellow" backgroundColor="un202020" transparent="0"/>
 	</screen>
-	<screen name="VirtualKeyBoard" position="0,0" size="1920,1080" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="VirtualKeyboard" position="0,0" size="1920,1080" zPosition="99" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="432,71" size="1052,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<eLabel name="new eLabel" position="392,52" zPosition="-10" size="1142,973" backgroundColor="background20"/>
 		<widget name="header" position="448,968" size="1050,60" font="Regular;42" halign="center" transparent="1" noWrap="1"/>
@@ -3246,6 +3332,91 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_green" render="Label" position="709,935" size="140,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1"/>
 		<widget source="key_yellow" render="Label" position="922,935" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1"/>
 		<widget source="key_blue" render="Label" position="1138,935" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1"/>
+	</screen>
+	<screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
+		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="MetriXconfluencExp/menu/teclado-fs8.png" zPosition="-10" alphatest="off"/>
+		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="MetriXconfluencExp/menu/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
+		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="und3d3d3" backgroundColor="black" noWrap="1"/>
+		<widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
+		<widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
+		<widget name="key_texto" position="21,70" size="1086,132" transparent="0" text=" " valign="top" halign="left" font="Regular; 35" foregroundColor="white" backgroundColor="black"/>
+		<!--<widget name="key_texto0" position="21,70" size="1086,132" transparent="1" text=" " valign="top" halign="left" font="Console; 18" foregroundColor="#ffffff" backgroundColor="#1e1e1e" zPosition="1"/>-->
+		<!-- teclas -->
+		<!-- fila 1 -->
+		<widget name="key_1" position="16,220" size="82,48" transparent="1" text="1" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_2" position="100,220" size="82,48" transparent="1" text="2" valign="bottom" halign="center" font="Regular; 39" backgroundColor="white" zPosition="22" foregroundColor="background"/>
+		<widget name="key_3" position="184,220" size="82,48" transparent="1" text="3" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_4" position="268,220" size="82,48" transparent="1" text="4" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_5" position="352,220" size="82,48" transparent="1" text="5" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_6" position="436,220" size="82,48" transparent="1" text="6" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_7" position="520,220" size="82,48" transparent="1" text="7" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_8" position="604,220" size="82,48" transparent="1" text="8" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_9" position="688,220" size="82,48" transparent="1" text="9" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_10" position="772,220" size="82,48" transparent="1" text="0" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<!-- fila 2 -->
+		<widget name="key_11" position="16,277" size="82,48" transparent="1" text="q" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_12" position="100,277" size="82,48" transparent="1" text="w" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_13" position="184,277" size="82,48" transparent="1" text="e" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_14" position="268,277" size="82,48" transparent="1" text="r" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_15" position="352,277" size="82,48" transparent="1" text="t" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_16" position="436,277" size="82,48" transparent="1" text="y" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_17" position="520,277" size="82,48" transparent="1" text="u" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_18" position="604,277" size="82,48" transparent="1" text="i" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_19" position="688,277" size="82,48" transparent="1" text="o" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_20" position="772,277" size="82,48" transparent="1" text="p" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<!-- fila 3 -->
+		<widget name="key_21" position="16,334" size="82,48" transparent="1" text="a" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_22" position="100,334" size="82,48" transparent="1" text="s" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_23" position="184,334" size="82,48" transparent="1" text="d" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_24" position="268,334" size="82,48" transparent="1" text="f" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_25" position="352,334" size="82,48" transparent="1" text="g" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_26" position="436,334" size="82,48" transparent="1" text="h" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_27" position="520,334" size="82,48" transparent="1" text="j" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_28" position="604,334" size="82,48" transparent="1" text="k" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_29" position="688,334" size="82,48" transparent="1" text="l" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_30" position="772,334" size="82,48" transparent="1" text="ñ" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<!-- fila 4 -->
+		<widget name="key_31" position="16,391" size="82,48" transparent="1" text="z" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_32" position="100,391" size="82,48" transparent="1" text="x" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_33" position="184,391" size="82,48" transparent="1" text="c" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_34" position="268,391" size="82,48" transparent="1" text="v" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_35" position="352,391" size="82,48" transparent="1" text="b" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_36" position="436,391" size="82,48" transparent="1" text="n" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_37" position="520,391" size="82,48" transparent="1" text="m" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_38" position="604,391" size="82,48" transparent="1" text="," valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_39" position="688,391" size="82,48" transparent="1" text="." valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<widget name="key_40" position="772,391" size="82,48" transparent="1" text="-" valign="bottom" halign="center" font="Regular; 39" foregroundColor="background" backgroundColor="white" zPosition="22"/>
+		<!-- especiales -->
+		<widget name="key_stop" position="345,480" size="97,27" transparent="1" text="espacio" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_play" position="429,480" size="97,27" transparent="1" text="ABC" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_red" position="513,480" size="97,27" transparent="1" text="Borrar" font="Regular; 21" foregroundColor="black" backgroundColor="unff0000" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_green" position="597,466" size="97,27" transparent="1" text="OK" font="Regular; 22" foregroundColor="black" backgroundColor="undcaaaa" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_yellow" position="681,466" size="97,27" transparent="1" text="Limpiar" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_blue" position="765,466" size="97,27" transparent="1" text="#@&amp;:" font="Regular; 22" foregroundColor="black" backgroundColor="undcaaaa" noWrap="1" halign="center" zPosition="22"/>
+		<!-- teclado -->
+		<widget name="key_teclado1" position="21,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado2" position="300,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado3" position="577,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado4" position="21,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado5" position="300,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado6" position="577,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 19" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado7" position="21,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado8" position="300,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado9" position="577,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="OpenStarHD/extensions/seleccion-fs8.png"/>
+		<widget name="key_record" position="850,480" size="97,27" transparent="1" text="Hist." font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_delete" position="933,469" size="97,27" transparent="1" text="Delete" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_clear" position="1018,469" size="97,27" transparent="1" text="Clear" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="cajalista" position="859,219" size="570,505" transparent="0" backgroundColor="StarBackground" zPosition="39" font="Regular;26"/>
+		<widget name="lista" backgroundColor="StarBackground" foregroundColorSelected="StarAccent1" backgroundColorSelected="StarBackground" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionPixmap="OpenStarHD/sep/sep3.png" itemHeight="30" font="Regular;26"/>
+		<widget name="listapred" backgroundColor="StarBackground" foregroundColorSelected="StarAccent1" backgroundColorSelected="StarBackground" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionPixmap="OpenStarHD/sep/sep3.png" itemHeight="30"/>
+		<widget name="text_info" position="10,60" size="1099,457" transparent="0" foregroundColor="white" backgroundColor="black" font="Regular; 33" zPosition="50"/>
+		<eLabel name="ayu" position="0,531" size="1128,45" backgroundColor="background" zPosition="-9"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/spazeMenu/imgvk/menuHD.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
+		<widget name="in_menu" position="67,534" size="277,37" font="Regular; 16" valign="center" halign="left" transparent="1" foregroundColor="white" backgroundColor="black" zPosition="-8"/>
+		<widget name="in_green" position="265,534" size="855,37" font="Regular; 16" valign="center" halign="right" transparent="1" foregroundColor="grey" text="Ayuda" backgroundColor="black" zPosition="-8" noWrap="1"/>
+		<widget name="barrapix_arr" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>
+		<widget name="barrapix_abj" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>
 	</screen>
 	<screen name="AutoTimeshift" position="0,0" size="1920,1080" title="Auto Timeshift Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
@@ -3668,7 +3839,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/background.png" position="60,38" zPosition="-10" size="1808,975"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
-		<!-- 		
+		<!--
 		<panel name="btRGYTmdb"/>
 		-->
 		<panel position="105,935" size="360,40">
@@ -3700,7 +3871,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap pixmap="MetriXconfluencExp/menu/background.png" position="60,38" zPosition="-10" size="1808,975"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
-		<!-- 
+		<!--
 		<panel name="btRGYTmdb"/>
 		 -->
 		<panel position="105,935" size="360,40">
@@ -4018,9 +4189,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel position="1495,935" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel>
-		<!-- 		
+		<!--
 		<panel name="btCRYBbotTop"/>
-		
+
 		 -->
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_ok.png" position="1792,910" size="50,50" zPosition="10" transparent="1" alphatest="blend"/>
 		<eLabel text="Virtual KeyBoard" position="1205,749" size="405,38" zPosition="1" font="Regular;33" halign="left" backgroundColor="black" transparent="1"/>
@@ -4046,7 +4217,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel position="1495,935" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel>
-		<!-- 
+		<!--
 		<panel name="btRGbotTop"/>
 		 -->
 	</screen>
@@ -6779,7 +6950,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
 		<widget name="text" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" selectionDisabled="1" scrollbarMode="showOnDemand" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
-	</screen>	
+	</screen>
 	<screen name="OpenScript" position="0,0" size="1920,1080" title="OpenScript" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
@@ -6787,9 +6958,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<panel name="ClockTime"/>
 		<panel name="btCRYGSoft"/>
 		<widget name="list" position="105,180" size="1050,550" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
-		<!--
-		<widget name="list" position="134,185" size="765,670" scrollbarMode="showOnDemand" itemHeight="70" font="Regular; 25" transparent="0" borderWidth="2" alphatest="blend" noWrap="1" backgroundColor="black" foregroundColor="white" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/plugselect.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
-		-->
+
 		<ePixmap pixmap="MetriXconfluencExp/icons/info.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="SetupMenu" position="0,0" size="1920,1080" title="ClearMem" flags="wfNoBorder" backgroundColor="transparent">
@@ -7610,7 +7779,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_ok" render="Label" position="1010,715" size="150,30" font="Regular;20" foregroundColor="layer-b-foreground" halign="left" backgroundColor="layer-b-background" valign="center" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/info.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
-
 	<screen name="DevicePanelConf" position="center,center" size="1920,1080" title="UserManager" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/info.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
@@ -7680,7 +7848,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="HelpWindow" position="1686,961" zPosition="10" size="100,20"/>
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
-		<!-- 		
+		<!--
 		<panel name="btRG"/>
 		 -->
 		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="55,965" size="45,60" alphatest="blend" zPosition="2"/>
@@ -7706,7 +7874,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<panel name="config2"/>
-		<!-- 		
+		<!--
 		<panel name="btCRYB"/>
 		 -->
 		<widget name="Picture" position="1181,297" size="600,335" alphatest="blend"/>
