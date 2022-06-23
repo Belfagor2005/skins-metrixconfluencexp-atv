@@ -22,19 +22,19 @@
 	<!-- **************************************  -->
 	<!-- ************* Menu Templates ************* -->
 	<screen name="MenuTemplate">
-		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,800" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
+		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,780" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
 			<convert type="TemplatedMultiContent">
-					{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
-						"fonts": [gFont("3d",40)],	"itemHeight": 80}
-		</convert>
+						{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
+							"fonts": [gFont("3d",40)],	"itemHeight": 80}
+			</convert>
 		</widget>
- 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1275,904" size="50,50" alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1315,944" size="50,50" alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1356,983" size="50,50" alphatest="blend" zPosition="2"/>
-		<widget name="green" position="1323,904" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="yellow" position="1363,944" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="blue" position="1403,983" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="description" position="80,1029" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1255,884" size="50,50" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1300,929" size="50,50" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1351,973" size="50,50" alphatest="blend" zPosition="2" />
+		<widget name="green" position="1304,889" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
+		<widget name="yellow" position="1352,933" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
+		<widget name="blue" position="1403,978" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center" />
+		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
 	</screen>
 	<screen name="MenuSystem">
 		<!--
@@ -125,7 +125,7 @@
 		<widget name="config" position="105,180" size="1050,700" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 	</screen>
 	<screen name="config2">
-		<widget name="config" position="105,180" size="1050,550" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="config" position="105,180" size="1050,550" itemHeight="65" font="Regular;38" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 	</screen>
 	<screen name="configCom">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" alphatest="off" transparent="1" drawMode="stretch"/>
@@ -390,16 +390,16 @@
 	</screen>	
 
 	<screen name="btIBAR" position="0,0">
-		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
-		<ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
-		<ePixmap position="756,1031" size="50,55" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
-		<ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />	
-		<ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
-		<eLabel text="Plugins" position="243,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
-		<ePixmap pixmap="buttons/yellow.png" position="322,1036" size="44,33" alphatest="blend" zPosition="3" />
-		<eLabel text="Audio" position="371,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
-		<ePixmap pixmap="buttons/blue.png" position="456,1036" size="44,33" alphatest="blend" zPosition="3" />
-		<eLabel text="Extensions" position="506,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+	  <ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="756,1031" size="50,55" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+	  <ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />
+	  <ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
+	  <eLabel text="Plugins" position="248,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+	  <ePixmap pixmap="buttons/yellow.png" position="327,1036" size="44,33" alphatest="blend" zPosition="3" />
+	  <eLabel text="Audio" position="376,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+	  <ePixmap pixmap="buttons/blue.png" position="441,1036" size="44,33" alphatest="blend" zPosition="3" />
+	  <eLabel text="Extensions" position="491,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
 	</screen>
 
 	<!-- 

@@ -63,10 +63,10 @@
 		<color name="rds_text_bg" value="#00003258"/>
 		<color name="red" value="#00c20000"/>
 		<color name="rssviewtop" value="#45005050"/>
-		<color name="transparent" value="#ffffffff"/>
-		<color name="transparent2" value="#ff000000"/>
 		<color name="transpBlack" value="#80000000"/>
 		<color name="transpWhite" value="#77ffffff"/>
+		<color name="transparent" value="#ffffffff"/>
+		<color name="transparent2" value="#ff000000"/>
 		<color name="transpyellow" value="#33bab329"/>
 		<color name="un18080911" value="#18080911"/>
 		<color name="un1c1c1c" value="#001c1c1c"/>
@@ -123,61 +123,86 @@
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100"/>
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100"/>
 		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100"/>
-		<alias name="ChoiceList" font="Regular" size="32" height="75"/>
 		<alias name="ChoiceBoxDescription" font="Regular" size="32" height="75"/>
+		<alias name="ChoiceList" font="Regular" size="32" height="75"/>
+		<alias name="Dreamexplorer" font="Regular" size="32" height="50"/>
+		<alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
+		<alias name="FallbackReceiverList1" font="Regular" size="28"/>		
 		<alias name="FileList" font="Regular" size="32" height="50"/>
-		<alias name="FileListMulti" font="Regular" size="32" height="45"/>
-		<alias name="PlayList" font="Regular" size="30" height="50"/>
-		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
-		<alias name="PiconManagerList" font="Regular" size="32" height="45"/>
-		<alias name="PluginBrowser1" font="Regular" size="22"/>
-		<alias name="ServiceInfo" font="Regular" size="30" height="50"/>
-		<alias name="SelectionList" font="Regular" size="32" height="32"/>
-		<alias name="PartnerBoxEntryList0" font="Regular" size="28" height="38"/>
-		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
-		<alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="50"/>
-		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
-		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="VirtualKeyboard" font="Regular" size="40" height="75"/>
+		<alias name="FileListMulti" font="Regular" size="32" height="50"/>
 		<alias name="HelpMenuList" font="Regular" size="32" height="45"/>
 		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 		<alias name="HelpMenuListExt1" font="Regular" size="32"/>
-		<alias name="Dreamexplorer" font="Regular" size="32" height="38"/>
+		<alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="50"/>
+		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
+		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="50"/>
+		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
+		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
+		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
+		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
+		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
+		<alias name="PartnerBoxEntryList0" font="Regular" size="28" height="50"/>
+		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
+		<alias name="PiconManagerList" font="Regular" size="32" height="50"/>
+		<alias name="PlayList" font="Regular" size="30" height="50"/>
+		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
+		<alias name="PluginBrowser1" font="Regular" size="22"/>
+		<alias name="SelectionList" font="Regular" size="32" height="50"/>
+		<alias name="ServiceInfo" font="Regular" size="30" height="50"/>
+		<alias name="TextNormal" font="Regular" size="28" height="38"/>		
+		<alias name="VirtualKeyboard" font="Regular" size="40" height="75"/>
 	</fonts>
+		
 	<parameters>
-		<parameter name="FileListMultiLock" value="2,0,25,25"/>
-		<parameter name="FileListMultiIcon" value="45,0,25,25"/>
-		<parameter name="FileListMultiName" value="80,0,700,40"/>
-		<parameter name="FileListIcon" value="10,7,30,37"/>
-		<parameter name="FileListName" value="40,2,800,37"/>
-		<parameter name="PlayListIcon" value="10,7,30,37"/>
-		<parameter name="PlayListName" value="40,0,800,37"/>
-		<parameter name="PluginBrowserIcon" value="10,8,150,60"/>
-		<parameter name="PluginBrowserName" value="180,2,35"/>
-		<parameter name="PluginBrowserDescr" value="180,38,30"/>
-		<parameter name="PluginBrowserDownloadIcon" value="0,0,90,60"/>
-		<parameter name="PluginBrowserDownloadName" value="90,3,50"/>
-		<parameter name="PluginBrowserDownloadDescr" value="90,40,30"/>
-		<parameter name="SelectionListLock" value="10,2,35,35"/>
-		<parameter name="SelectionListLockOff" value="10,2,35,35"/>
-		<parameter name="SelectionListDescr" value="60,2,820,32"/>
-		<parameter name="HelpMenuListHlp" value="0,0,840,42"/>
-		<parameter name="HelpMenuListExtHlp0" value="0,0,840,39"/>
-		<parameter name="HelpMenuListExtHlp1" value="0,42,840,30"/>
-		<parameter name="ConfigListSeperator" value="500"/>
-		<parameter name="ChoicelistIcon" value="0,0,50,50"/>
-		<parameter name="ChoicelistDash" value="0,0,900,50"/>
-		<parameter name="ChoicelistName" value="70,0,900,50"/>
-		<parameter name="ServiceInfoLeft" value="0,0,450,40"/>
-		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
-		<parameter name="VirtualKeyboard" value="76,72"/>
 		<parameter name="AutotimerEnabledIcon" value="2,1,25,25"/>
 		<parameter name="AutotimerRecordIcon" value="30,1,25,25"/>
+		<parameter name="ChoicelistDash" value="0,0,900,50"/>
+		<parameter name="ChoicelistIcon" value="0,0,50,50"/>
+		<parameter name="ChoicelistName" value="70,0,900,50"/>
+		<parameter name="ConfigListSeperator" value="500"/>
+		<parameter name="ConfigListSlider" value="10,3"/>
+		<parameter name="DreamexplorerIcon" value="10,5,40,40"/>
+		<parameter name="DreamexplorerName" value="70,2,1200,50"/>
+		<parameter name="EpgListIcon" value="2,12,25,25,2"/>
+		<parameter name="EpgListMulti" value="360,170,170,10"/>
+		<parameter name="EpgListMultiProgressBar" value="170,15,1"/>
+		<parameter name="EpgListSingle" value="80,220"/>
+		<parameter name="ExpandableListDescr" value="55,0,1000,40"/>
+		<parameter name="ExpandableListIcon" value="5,5,90,75"/>
+		<parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
+		<parameter name="FileListIcon" value="10,7,30,37"/>
+		<parameter name="FileListMultiIcon" value="45,0,25,25"/>
+		<parameter name="FileListMultiLock" value="2,0,25,25"/>
+		<parameter name="FileListMultiName" value="80,0,700,40"/>
+		<parameter name="FileListName" value="40,2,800,37"/>
+		<parameter name="HelpMenuListExtHlp0" value="0,0,840,39"/>
+		<parameter name="HelpMenuListExtHlp1" value="0,42,840,30"/>
+		<parameter name="HelpMenuListHlp" value="0,0,840,42"/>
+		<parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
+		<parameter name="ImsSelectionListLock" value="5,2,36,36"/>
+		<parameter name="PiconManagerList" value="10,0,1120,40"/>
+		<parameter name="PiconManagerListFont" value="Regular;28"/>
+		<parameter name="PlayListIcon" value="10,7,30,37"/>
+		<parameter name="PlayListName" value="40,0,800,37"/>
+		<parameter name="PluginBrowserDescr" value="180,38,30"/>
+		<parameter name="PluginBrowserDownloadDescr" value="90,40,30"/>
+		<parameter name="PluginBrowserDownloadIcon" value="0,0,90,60"/>
+		<parameter name="PluginBrowserDownloadName" value="90,3,50"/>
+		<parameter name="PluginBrowserIcon" value="10,8,150,60"/>
+		<parameter name="PluginBrowserName" value="180,2,35"/>
+		<parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40"/>
+		<parameter name="ProgrammlistenUpdaterListFont" value="Regular;26"/>
+		<parameter name="SelectionListDescr" value="60,2,820,32"/>
+		<parameter name="SelectionListLock" value="10,2,35,35"/>
+		<parameter name="SelectionListLockOff" value="10,2,35,35"/>
+		<parameter name="ServiceInfo" value="0,0,1200,40"/>
+		<parameter name="ServiceInfoFont" value="Regular;26"/>
+		<parameter name="ServiceInfoLeft" value="0,0,450,40"/>
+		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
+		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+		<parameter name="VirtualKeyBoardPadding" value="4,4"/>
+		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>	
+		<parameter name="VirtualKeyboard" value="76,72"/>
 	</parameters>
 	<windowstyle type="skinned" id="0">
 		<title offset="45,11" font="Regular;45"/>
@@ -2397,12 +2422,14 @@
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="MessageBox" position="center,252" size="1200,120" zPosition="1" title="Message" backgroundColor="background20" alphatest="blend">
-		<widget name="text" position="165,12" size="1020,0" font="Regular;25" backgroundColor="background20"/>
+		<widget name="text" position="165,12" size="1020,0" font="Regular;28" backgroundColor="background20"/>
 		<widget name="ErrorPixmap" pixmap="MetriXconfluencExp/icons/message/attention-53.png" position="45,15" size="80,80" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="MetriXconfluencExp/icons/message/question-53.png" position="45,15" size="80,80" alphatest="blend"/>
 		<widget name="InfoPixmap" pixmap="MetriXconfluencExp/icons/message/info-53.png" position="45,15" size="80,80" alphatest="blend"/>
 		<widget name="list" position="30,143" size="1140,480" itemHeight="50" transparent="1"/>
-		<applet type="onLayoutFinish">
+ 		<applet type="onLayoutFinish">
+
+<!--
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
 orgwidth = self.instance.size().width() + 40
@@ -2429,14 +2456,80 @@ self["list"].instance.resize(eSize(*listsize))
 # center window
 newwidth = wsize[0]
 self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
-		</applet>
+		</applet> -->
+# this should be factored out into some helper code,but currently demonstrates applets.
+from __future__ import division
+from enigma import eSize, ePoint, getDesktop
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 10
+offset_listposy = 60
+offset_listwidth = 10
+offset_listheight = 40
+offset_textwidth = 10
+offset_textheight = 30
+min_width = 100
+min_height = 90
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+listwidth = 0
+listheight = 0
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) > listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+if (min_height &gt;textheight):
+	textheight = min_height
+if (min_width &gt;textwidth):
+	textwidth = min_width
+if (listheight &gt;0):
+	offset = 21
+else:
+	offset = 13
+if (textwidth &gt;listwidth):
+	wsizex = textwidth + offset_listposx * 2 + 120
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+wsizey = textheight + listheight + offset
+if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+if (wsizex &gt;deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+# resize
+self.instance.resize(eSize(*wsize))
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+# move list
+listsize = (wsizex - offset_listposx * 2,listheight)
+self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+self["list"].instance.resize(eSize(*listsize))
+# center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
+		</applet>		
 	</screen>
 	<screen name="MessageBoxGenuine" position="525,180" size="750,675" title="Message" backgroundColor="background20">
 		<widget name="text" position="98,12" size="630,42" font="Regular;33"/>
 		<widget name="ErrorPixmap" pixmap="MetriXconfluencExp/icons/error.png" position="8,8" size="96,96" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="MetriXconfluencExp/icons/question.png" position="8,8" size="96,96" alphatest="blend"/>
 		<widget name="InfoPixmap" pixmap="MetriXconfluencExp/icons/info.png" position="8,8" size="96,96" alphatest="blend"/>
-		<widget name="list" font="Regular; 25" position="98,98" size="570,563" transparent="1"/>
+		<widget name="list" font="Regular; 28" position="98,98" size="570,563" transparent="1"/>
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -4632,12 +4725,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="list" render="Listbox" position="105,180" size="1050,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png">
 			<convert type="TemplatedMultiContent">
 					{"template": [
-							MultiContentEntryPixmapAlphaTest(pos = (27, 8), size = (72, 72), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
-							MultiContentEntryText(pos = (135, 8), size = (885, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (150, 58), size = (885, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaTest(pos = (27, 10), size = (72, 72), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryText(pos = (135, 10), size = (885, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (150, 60), size = (885, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 							MultiContentEntryPixmapAlphaTest(pos = (8, 87), size = (0, 0), png = 5, flags = BT_SCALE), # index 4 is the div pixmap
 						],
-					"fonts": [gFont("Regular", 26),gFont("Regular", 20)],
+					"fonts": [gFont("Regular", 26),gFont("Regular", 22)],
 					"itemHeight": 90
 					}
 			</convert>
@@ -4668,16 +4761,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<convert type="TemplatedMultiContent">
 					{"templates":
 						{"default": (150,[
-								MultiContentEntryPixmapAlphaTest(pos = (27, 20), size = (72, 72), png = 5, flags = BT_SCALE), # index 5 is the status pixmap
-								MultiContentEntryText(pos = (135, 15), size = (848, 54), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-								MultiContentEntryText(pos = (135, 60), size = (833, 57), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+								MultiContentEntryPixmapAlphaTest(pos = (27, 39), size = (72, 72), png = 5, flags = BT_SCALE), # index 5 is the status pixmap
+								MultiContentEntryText(pos = (135, 20), size = (848, 54), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+								MultiContentEntryText(pos = (135, 90), size = (833, 57), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
 							]),
 						"category": (150,[
-								MultiContentEntryText(pos = (23, 15), size = (848, 54), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-								MultiContentEntryText(pos = (23, 60), size = (848, 45), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
+								MultiContentEntryText(pos = (23, 20), size = (848, 54), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+								MultiContentEntryText(pos = (23, 90), size = (848, 45), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
 							])
 						},
-						"fonts": [gFont("Regular", 28),gFont("Regular", 22)],
+						"fonts": [gFont("Regular", 32),gFont("Regular", 26)],
 						"itemHeight": 150
 					}
 			</convert>
@@ -6916,13 +7009,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="list" render="Listbox" position="95,180" size="885,616" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="scrollbarSlidercolor" scrollbarSliderBorderColor="scrollbarSliderbordercolor" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
-							MultiContentEntryText(pos = (5, 1), size = (690, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (5, 26), size = (690, 21), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaBlend(pos = (725, 1), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
-							MultiContentEntryPixmapAlphaBlend(pos = (0, 50), size = (700, 2), png = 5), # index 5 is the div pixmap
+							MultiContentEntryText(pos = (5, 1), size = (690, 30), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (5, 40), size = (690, 26), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (725, 11), size = (48, 48), png = 4, flags = BT_SCALE), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaBlend(pos = (0, 75), size = (700, 2), png = 5), # index 5 is the div pixmap
 						],
-					"fonts": [gFont("Regular",24),gFont("Regular",16)],
-					"itemHeight": 50
+					"fonts": [gFont("Regular",28),gFont("Regular",24)],
+					"itemHeight": 75
 					}
 			</convert>
 		</widget>
@@ -7758,7 +7851,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="description" position="105,724" zPosition="4" size="1278,234" font="Regular; 24" backgroundColor="background20" transparent="1" valign="top" halign="left"/>
 		<panel name="ClockTimeTop"/>
 		<panel name="btCRYB"/>
-		<widget name="list" position="104,180" size="1278,534" itemHeight="50" font="Regular; 26" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
+		<widget name="list" position="104,180" size="1278,534" itemHeight="40" font="Regular; 32" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" transparent="1" scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="black" foregroundColor="white" backgroundColorSelected="barColor" foregroundColorSelected="white"/>
 	</screen>
 	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
