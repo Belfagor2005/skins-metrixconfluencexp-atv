@@ -1,21 +1,32 @@
 # -*- coding: utf-8 -*-
 # by digiteng...04.2020, 11.2020, 06.2021
 # file by sunriser 07.2021
-
-from Components.Renderer.Renderer import Renderer
+# <widget source="session.Event_Now" render="XInfoEvents"/>
+# <widget source="session.Event_Next" render="XInfoEvents"/>
+# <widget source="Event" render="XInfoEvents"/>
+try:
+    from Components.Renderer.Renderer import Renderer
+except:
+    from Renderer import Renderer
 from Components.VariableText import VariableText
 from enigma import eLabel, eTimer, eEPGCache, getBestPlayableServiceReference
 from time import gmtime
+from Components.config import config
 import sys
 import os
 import re
 import socket
 import json
 import requests
+import glob
+import shutil
+global cur_skin, my_cur_skin, tmdb_api
 
-tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 epgcache = eEPGCache.getInstance()
+my_cur_skin = False
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 if os.path.isdir("/tmp"):
         pathLoc = "/tmp/infos/"
@@ -24,6 +35,16 @@ else:
 if not os.path.exists(pathLoc):
         os.mkdir(pathLoc)
 
+try:
+    if my_cur_skin == False:
+        myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
+        print('skinz namez', myz_skin)
+        if os.path.exists(myz_skin):
+            with open(myz_skin, "r") as f:
+                tmdb_api = f.read()
+                my_cur_skin = True
+except:
+    my_cur_skin = False
 PY3 = (sys.version_info[0] == 3)
 
 if PY3:
@@ -107,9 +128,13 @@ class XInfoEvents(Renderer, VariableText):
                                         Actors = data["Actors"]
 
                                         if Title != "N/A" or Title != "":
-                                                self.text = "Nome: %s\nAnno: %s\nNazione: %s\nValutazione imdb: %s\nQualifica di età: %s\ngenere: %s\nPremi: %s\nDirettore: %s\nScenario: %s\nattori: %s" % (str(Title),str(Year),str(Country),str(imdbRating),str(Rated),str(Genre),str(Awards),str(Director),str(Writer),str(Actors))
+                                                self.text = "Anno: %s\nNazione: %s\nGenere: %s\nRegista: %s\nAttori: %s" % (str(Year),str(Country),str(Genre),str(Director),str(Actors))
                                         else:
                                                 self.text = None
+                                        # if Title != "N/A" or Title != "":
+                                                # self.text = "Nome: %s\nAnno: %s\nNazione: %s\nValutazione imdb: %s\nQualifica di età: %s\ngenere: %s\nPremi: %s\nDirettore: %s\nScenario: %s\nattori: %s" % (str(Title),str(Year),str(Country),str(imdbRating),str(Rated),str(Genre),str(Awards),str(Director),str(Writer),str(Actors))
+                                        # else:
+                                                # self.text = None
                 else:
                         self.text = None
 
@@ -142,6 +167,38 @@ class XInfoEvents(Renderer, VariableText):
                                 # if(data_omdb["Plot"]):
                                         # dwn_infos = "{}{}.json".format(pathLoc, eventNm)
                                         # open(dwn_infos,"w").write(json.dumps(data_omdb))
+                                        
+                                        
+                                        
+                                        
+        # def google(self):
+            # try:
+                # url = "https://www.google.com/search?q={}&tbm=isch&tbs=sbd:0+poster".format(quote(eventNm))    #.format(self.title.replace(" ", "+"))
+                # if self.year != None:
+                    # url += "+{}".format(self.year)
+                                    
+                # headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+                # try:
+                    # ff = requests.get(url, stream=True, headers=headers).text
+                    # p = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)
+                # except:
+                    # pass
+                # # n = 9
+                # # downloaded = 0
+                # # for i in range(n):
+                    # try:
+                        # url = "https://{}".format(p[i+1])
+                        # dwnldFile = "{}mSearch/{}-{}-{}.jpg".format(pathLoc, self.title, config.plugins.xtraEvent.PB.value, i+1)
+                        # open(dwnldFile, 'wb').write(requests.get(url, stream=True, allow_redirects=True).content)
+                        # # downloaded += 1
+                        # # self.prgrs(downloaded, n)
+                    # except:
+                        # pass
+                # config.plugins.xtraEvent.imgNmbr.value = 0
+            # except Exception as err:
+                # self['status'].setText(_(str(err)))
+                # return
+            
 
         def filterSearch(self):
                 try:
@@ -186,7 +243,7 @@ class XInfoEvents(Renderer, VariableText):
         def delay2(self):
                 self.timer = eTimer()
                 self.timer.callback.append(self.dwn)
-                self.timer.start(2000, True)
+                self.timer.start(2500, True)
 
         def dwn(self):
                 start_new_thread(self.epgs, ())

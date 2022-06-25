@@ -303,7 +303,11 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
-		
+<!-- # for infobar,
+# <widget source="session.Event_Now" render="PosterX" position="100,100" size="185,278" />
+# <widget source="session.Event_Next" render="PosterX" position="100,100" size="100,150" />
+# <widget source="session.Event_Now" render="PosterX" position="100,100" size="185,278" nexts="2" />
+# <widget source="session.CurrentService" render="PosterX" position="100,100" size="185,278" nexts="3" /> -->
 		
 		<widget source="Event" render="XInfoEvents" position="0,0" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />

@@ -28,9 +28,7 @@ from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
-
 from Components.Renderer.bannerXDownloadThread import bannerXDownloadThread
-
 import NavigationInstance
 import os
 import sys
@@ -51,7 +49,7 @@ except:
 	pass
 
 epgcache = eEPGCache.getInstance()
-
+apdb = dict()
 try:
 	from Components.config import config
 	lng = config.osd.language.value
@@ -59,7 +57,7 @@ except:
 	lng = None
 	pass
 
-apdb = dict()
+
 #
 # SET YOUR PREFERRED BOUQUET FOR AUTOMATIC banner GENERATION
 # WITH THE NUMBER OF ITEMS EXPECTED (BLANK LINE IN BOUQUET CONSIDERED)
@@ -87,7 +85,7 @@ else:
 					apdb[i] = service
 
 
-path_folder = ""
+path_folder = "/tmp/banner/"
 if os.path.isdir("/media/hdd"):
 	path_folder = "/media/hdd/banner/"
 elif not os.path.isdir("/media/usb"):

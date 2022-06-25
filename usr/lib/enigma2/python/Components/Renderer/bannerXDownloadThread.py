@@ -6,6 +6,7 @@ import requests
 import threading
 import glob
 import shutil
+import json
 from Components.config import config
 global cur_skin, my_cur_skin, tmdb_api
 
@@ -27,7 +28,6 @@ try:
                 my_cur_skin = True
 except:
     my_cur_skin = False
-    # tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
     
 PY3 = (sys.version_info[0] == 3)
 try:

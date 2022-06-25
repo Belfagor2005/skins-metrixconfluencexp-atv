@@ -67,6 +67,7 @@
 		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1" />
 		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="118,641" size="330,30" alphatest="blend" zPosition="19" transparent="1" />
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="330,30" alphatest="blend" zPosition="20" transparent="1" />
+		
 		<!-- xtraEvent plugin -->
 	</screen>
 </skin>

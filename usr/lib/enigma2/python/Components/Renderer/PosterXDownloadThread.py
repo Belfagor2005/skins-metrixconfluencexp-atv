@@ -6,14 +6,20 @@ import requests
 import threading
 import glob
 import shutil
-from Components.config import config
+import json
+try:
+	from Components.config import config
+	lng = config.osd.language.value
+except:
+	lng = None
+	pass
+
 global cur_skin, my_cur_skin, tmdb_api
 
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
-
 # isz="185,278"
 isz="342,320"
 
@@ -27,7 +33,6 @@ try:
                 my_cur_skin = True
 except:
     my_cur_skin = False
-    # tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 
 PY3 = (sys.version_info[0] == 3)
 try:
@@ -36,13 +41,6 @@ try:
 	else:
 		from urllib2 import quote
 except:
-	pass
-
-try:
-	from Components.config import config
-	lng = config.osd.language.value
-except:
-	lng = None
 	pass
 
 class PosterXDownloadThread(threading.Thread):
@@ -71,13 +69,13 @@ class PosterXDownloadThread(threading.Thread):
 					break
 			
 			checkTV = [ "serial", "series", "serie", "serien", "série", "séries", "serious",
-			"folge", "episodio", "episode", "épisode", "l'épisode", "ep.", 
-			"staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela", 
-			"dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality", 
-			"program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
-			"magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
-			"information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
-			"société", "clips" ]
+                        "folge", "episodio", "episode", "épisode", "l'épisode", "ep.", 
+                        "staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela", 
+                        "dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality", 
+                        "program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
+                        "magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
+                        "information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
+                        "société", "clips" ]
 			if srch != "movie":
 				for i in checkTV:
 					if i in fd.lower():

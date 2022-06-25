@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-metrixconfluencexp-pro-atv-dragon-lululla
-Version: 1.8
-Section: extra
+Version: 1.9
+Section: base
 Priority: optional
 Architecture: all
 Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
-Description: Skin MetrixConfluencexp-Pro modded by dragon-lululla
+Description: Skin MetrixConfluencexp-Pro mod. by dragon-lululla
 OE: enigma2
 License: Proprietary

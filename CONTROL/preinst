@@ -1,12 +1,12 @@
 #!/bin/sh
-echo "* Install Please *"
-echo "* E2 Restart Is Required *"
-
-if [ -f /usr/share/enigma2/Remove_MetriXconfluencExp ]; then
-    echo
-    echo "Renaming python modules ... from .pyc to .pyo"
-	rm -rf /usr/share/enigma2/Remove_MetriXconfluencExp
-	rm -rf /usr/uninstall/Remove_Remove_MetriXconfluencExp.del
+echo
+echo "--- PreInst * IPK Scripting v1.0 - date 10.08.2021 ---"
+echo
+echo "Remove old folders..."
+if [ -f /usr/share/enigma2/MetriXconfluencExp/skin.xml ]; then
+    cp -R /usr/share/enigma2/MetriXconfluencExp/ /tmp
+    rm -rf /usr/share/enigma2/MetriXconfluencExp
+# rm -rf /usr/share/enigma2/MetriXconfluencExp &> /dev/null
+fi
 
 exit 0
-

@@ -50,11 +50,11 @@ except:
 
 path_folder = ""
 if os.path.isdir("/media/hdd"):
-	path_folder = "/media/hdd/movie/"
+	path_folder = "/media/hdd/xemc/"
 elif not os.path.isdir("/media/usb"):
-	path_folder = "/media/usb/movie/"
+	path_folder = "/media/usb/xemc/"
 else:
-	path_folder = "/tmp/movie/"
+	path_folder = "/tmp/xemc/"
 
 
 if PY3:
@@ -188,7 +188,7 @@ class PosterXEMC(Renderer):
 					if os.path.getsize(self.canal[5]) > 0:
 						loop = 0
 						found = True
-				time.sleep(0.5)
+				time.sleep(0.8)
 				loop = loop - 1
 			if found:
 				self.timer.start(10, True)		

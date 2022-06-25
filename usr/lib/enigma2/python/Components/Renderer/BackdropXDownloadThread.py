@@ -4,10 +4,17 @@ import sys
 import re
 import requests
 import threading
-from Components.config import config
+# from Components.config import config
+try:
+	from Components.config import config
+	lng = config.osd.language.value
+except:
+	lng = None
+	pass
 
 import glob
 import shutil
+import json
 global cur_skin, my_cur_skin, tmdb_api
 
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
@@ -26,9 +33,7 @@ try:
                 my_cur_skin = True
 except:
     my_cur_skin = False
-    # tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
-    
-    
+
 PY3 = (sys.version_info[0] == 3)
 try:
 	if PY3:
@@ -36,14 +41,6 @@ try:
 	else:
 		from urllib2 import quote
 except:
-	pass
-
-
-try:
-	from Components.config import config
-	lng = config.osd.language.value
-except:
-	lng = None
 	pass
 
 class BackdropXDownloadThread(threading.Thread):
@@ -72,13 +69,13 @@ class BackdropXDownloadThread(threading.Thread):
 					break
 			
 			checkTV = [ "serial", "series", "serie", "serien", "série", "séries", "serious",
-			"folge", "episodio", "episode", "épisode", "l'épisode", "ep.", 
-			"staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela", 
-			"dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality", 
-			"program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
-			"magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
-			"information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
-			"société", "clips" ]
+                        "folge", "episodio", "episode", "épisode", "l'épisode", "ep.", 
+                        "staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela", 
+                        "dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality", 
+                        "program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
+                        "magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
+                        "information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
+                        "société", "clips" ]
 			if srch != "movie":
 				for i in checkTV:
 					if i in fd.lower():
@@ -90,8 +87,6 @@ class BackdropXDownloadThread(threading.Thread):
 				url_tmdb += "&year={}".format(year)
 			if lng:
 				url_tmdb += "&language={}".format(lng[:-3])
-			
-			
 			backdrop = requests.get(url_tmdb).json()['results'][0]['backdrop_path'] #backdrop = json.load(urlopen(url_tmdb))['results'][0]['backdrop_path']
 			if backdrop:
 				url_backdrop = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), backdrop)
@@ -103,14 +98,12 @@ class BackdropXDownloadThread(threading.Thread):
 			if os.path.exists(dwn_backdrop):
 				os.remove(dwn_backdrop)
 			return False, "[ERROR : tmdb] {} => {} ({})".format(title,url_tmdb,str(e))
-			
 				
 	def search_molotov_google(self,dwn_backdrop,title,shortdesc,fulldesc,channel=None):
 		try:
 			headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
 			fd = "{}\n{}".format(shortdesc,fulldesc)
 			year = None
-			
 			try:
 				pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
 				pattern = re.findall('\d{4}', pattern[0])
@@ -118,7 +111,6 @@ class BackdropXDownloadThread(threading.Thread):
 			except:
 				year = None
 				pass
-			
 			url_tmdb = "site:molotov.tv+" + quote(title)
 			if year:
 				url_tmdb += "+{}".format(year)
@@ -142,7 +134,7 @@ class BackdropXDownloadThread(threading.Thread):
 			headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
 			fd = "{}\n{}".format(shortdesc,fulldesc)
 			year = None
-			
+
 			try:
 				pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
 				pattern = re.findall('\d{4}', pattern[0])
@@ -150,7 +142,7 @@ class BackdropXDownloadThread(threading.Thread):
 			except:
 				year = None
 				pass
-			
+
 			#url_tmdb = quote(title) + "%20" + quote(channel)
 			url_tmdb = quote(title)
 			if year:
