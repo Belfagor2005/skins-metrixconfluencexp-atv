@@ -15,7 +15,7 @@
 			<panel name="Blue-New-Button" />
 		</panel>
 		
-		<widget source="session.CurrentService" render="Label" position="85,875" size="1650,48" font="3d; 42" foregroundColor="#66CCCC" valign="top" noWrap="1" backgroundColor="black" transparent="1" halign="center">
+		<widget source="session.CurrentService" render="Label" position="85,875" size="1650,48" font="3d; 42" foregroundColor="#66CCCC" halign="center" valign="top" noWrap="1" backgroundColor="black" transparent="1"  zPosition="3" >
 			<convert type="FhromagExtraTuner">ServiceNumberName</convert>
 		</widget>
 		<widget pixmap="MetriXconfluencExp/icons/pbar.png" position="375,983" render="Progress" size="1120,12" source="session.Event_Now" transparent="1" zPosition="3">
@@ -45,7 +45,7 @@
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Picon" position="94,933" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+		<widget source="ServiceEvent" render="Picon" position="94,933" zPosition="4" size="220,132" transparent="1" >
 			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1720,875" size="150,48" font="3d; 46" halign="right" backgroundColor="black" transparent="1" valign="center">

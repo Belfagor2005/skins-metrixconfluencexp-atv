@@ -28,16 +28,19 @@
 		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,770" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<!-- 	EDIT LULULLA -->
-		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="52,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="52,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="545,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="545,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1105,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1105,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1628,1030" size="360,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1628,1030" size="180,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
-		
+
+		<panel position="47,1025" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,1025" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1108,1025" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1630,1025" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>		
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1" />
 		
 		<widget source="ServiceEvent" render="Picon" position="49,71" zPosition="4" size="220,132" transparent="1" alphatest="blend">
@@ -57,17 +60,12 @@
 
 		<widget source="session.Event_Now" render="XInfoEvents" />
 		<widget source="session.Event_Next" render="XInfoEvents" />
-		<!-- 		
-		<ePixmap pixmap="/usr/share/enigma2/MetriXconfluencExp/noBackdrop.png" position="59,770" zPosition="1" size="500,235" alphatest="blend" transparent="1"/>
-		 -->
-		<widget source="ServiceEvent" render="BackdropX" position="50,69" size="1075,610" zPosition="10" borderWidth="2" borderColor="background20" />
-		
 
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="60,624" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
+		<widget source="ServiceEvent" render="BackdropX" position="50,69" size="1075,610" zPosition="10" borderWidth="2" borderColor="background20" />
+
 		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="118,641" size="330,30" alphatest="blend" zPosition="19" transparent="1" />
+
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="330,30" alphatest="blend" zPosition="20" transparent="1" />
-		
-		<!-- xtraEvent plugin -->
+
 	</screen>
 </skin>

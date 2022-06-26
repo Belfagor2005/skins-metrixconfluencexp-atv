@@ -173,7 +173,7 @@
 	<screen name="pNetwork4">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<!-- EDIT LULULLA -->
-		<panel name="ClockTime"/>
+		<panel name="ClockTimeTop"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYGEpg"/>

@@ -15,24 +15,37 @@ except:
 import glob
 import shutil
 import json
-global cur_skin, my_cur_skin, tmdb_api
-
-tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
-omdb_api = "cb1d9f55"
+global cur_skin, my_cur_skin, tmdb_api, omdb_api
+tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
+omdb_api = "6a4c9432"
+epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
-isz="680,1000"
+
+if os.path.isdir("/tmp"):
+        pathLoc = "/tmp/infos/"
+else:
+        pathLoc = "/tmp/infos/"
+if not os.path.exists(pathLoc):
+        os.mkdir(pathLoc)
 
 try:
     if my_cur_skin == False:
         myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
         print('skinz namez', myz_skin)
+        omdb_skin = "/usr/share/enigma2/%s/omdbkey" %cur_skin
+        print('skinz namez', omdb_skin)
         if os.path.exists(myz_skin):
             with open(myz_skin, "r") as f:
                 tmdb_api = f.read()
-                my_cur_skin = True
+        if os.path.exists(omdb_skin):
+            with open(omdb_skin, "r") as f:
+                omdb_api = f.read()
 except:
     my_cur_skin = False
+
+
+isz="680,1000"
 
 PY3 = (sys.version_info[0] == 3)
 try:

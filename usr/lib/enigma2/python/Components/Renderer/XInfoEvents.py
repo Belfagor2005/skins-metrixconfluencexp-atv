@@ -4,6 +4,7 @@
 # <widget source="session.Event_Now" render="XInfoEvents"/>
 # <widget source="session.Event_Next" render="XInfoEvents"/>
 # <widget source="Event" render="XInfoEvents"/>
+#edit by lululla 06.2022
 try:
     from Components.Renderer.Renderer import Renderer
 except:
@@ -20,10 +21,10 @@ import json
 import requests
 import glob
 import shutil
-global cur_skin, my_cur_skin, tmdb_api
+global cur_skin, my_cur_skin, tmdb_api, omdb_api
 
-tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
-omdb_api = "cb1d9f55"
+tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
+omdb_api = "6a4c9432"
 epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -39,12 +40,17 @@ try:
     if my_cur_skin == False:
         myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
         print('skinz namez', myz_skin)
+        omdb_skin = "/usr/share/enigma2/%s/omdbkey" %cur_skin
+        print('skinz namez', omdb_skin)
         if os.path.exists(myz_skin):
             with open(myz_skin, "r") as f:
                 tmdb_api = f.read()
-                my_cur_skin = True
+        if os.path.exists(omdb_skin):
+            with open(omdb_skin, "r") as f:
+                omdb_api = f.read()
 except:
     my_cur_skin = False
+
 PY3 = (sys.version_info[0] == 3)
 
 if PY3:
@@ -110,8 +116,8 @@ class XInfoEvents(Renderer, VariableText):
                         eventNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё','е')
                         infos_file = "{}{}.json".format(pathLoc, eventNm)
                         if not os.path.exists(infos_file):
-                                self.downloadInfos(eventNm)
-
+                                self.downloadInfos(eventNm, infos_file)
+                        # else:
                         if os.path.exists(infos_file):
                                 with open(infos_file) as f:
                                         data = json.load(f)
@@ -138,21 +144,119 @@ class XInfoEvents(Renderer, VariableText):
                 else:
                         self.text = None
 
-        def downloadInfos(self, eventNm):
+        def downloadInfos(self, eventNm, infos_file):
                 self.year = self.filterSearch()
                 try:
-                        url_tmdb = "http://api.tmdb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
+                    try:
+                        url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
+                        # url_tmdb = "http://api.tmdb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
                         if self.year != None:
-                                url_tmdb += "&year={}".format(self.year)
-                                try:
-                                        title = json.load(urlopen(url_tmdb))["results"][0]["title"]
-                                except:
-                                        title = json.load(urlopen(url_tmdb))["results"][0]["original_name"]
-                                url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quote(title))
-                                data_omdb = json.load(urlopen(url_omdb))
-                                if(data_omdb["Plot"]):
-                                        dwn_infos = "{}{}.json".format(pathLoc, eventNm)
-                                        open(dwn_infos,"w").write(json.dumps(data_omdb))
+                            url_tmdb += "&year={}".format(self.year)
+                            print('url_tmdb1: ', url_tmdb)
+                        try:
+                            title = json.load(urlopen(url_tmdb))["results"][0]["title"]
+                        except:
+                            title = json.load(urlopen(url_tmdb))["results"][0]["original_name"]
+                        print('Title1: ', title)
+                    except:
+                        pass
+                    # {
+                        # "Title": "CSI: Miami",
+                        # "Year": "2002–2012",
+                        # "Rated": "TV-14",
+                        # "Released": "23 Sep 2002",
+                        # "Runtime": "43 min",
+                        # "Genre": "Action, Crime, Drama",
+                        # "Director": "N/A",
+                        # "Writer": "Ann Donahue, Carol Mendelsohn, Anthony E. Zuiker",
+                        # "Actors": "David Caruso, Emily Procter, Adam Rodriguez",
+                        # "Plot": "The cases of the Miami-Dade, Florida police department's Crime Scene Investigations unit.",
+                        # "Language": "English, Spanish, Greek",
+                        # "Country": "United States",
+                        # "Awards": "Won 2 Primetime Emmys. 28 wins & 44 nominations total",
+                        # "Poster": "https://m.media-amazon.com/images/M/MV5BOTU3ZTI5ZGEtYjhiMy00ODU4LTgyM2UtNDhlYjBhMjc4MjIwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_SX300.jpg",
+                        # "Ratings": [
+                            # {
+                                # "Source": "Internet Movie Database",
+                                # "Value": "6.4/10"
+                            # }
+                        # ],
+                        # "Metascore": "N/A",
+                        # "imdbRating": "6.4",
+                        # "imdbVotes": "56,990",
+                        # "imdbID": "tt0313043",
+                        # "Type": "series",
+                        # "totalSeasons": "10",
+                        # "Response": "True"
+                    # }
+
+                    ###### for future
+                    # Title=None
+                    # Type = None
+                    # Genre = None
+                    # Language = None
+                    # Country = None
+                    # imdbRating = None
+                    # imdbID = None
+                    # Rated = None
+                    # Duration = None
+                    # Year = None
+                    # Released=None
+                    # Director = None
+                    # Writer = None
+                    # Actors = None
+                    # Awards=None
+                    # Plot = ""
+                    # Description = None
+                    # Rating = ""
+
+                    # url_tmdb += "&year={}".format(self.year)
+                    # try:
+                            # title = json.load(urlopen(url_tmdb))["results"][0]["title"]
+                    # except:
+                            # title = json.load(urlopen(url_tmdb))["results"][0]["original_title"]
+
+                    # try:
+                        # for omdb_api in omdb_api:
+
+                            # url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quote(title))
+                            # data_omdb = json.load(urlopen(url_omdb))
+                            # if(data_omdb["Plot"]):
+                                    # dwn_infos = "{}{}.json".format(pathLoc, eventNm)
+                                    # open(dwn_infos,"w").write(json.dumps(data_omdb))
+                    # except:
+                        # pass
+                    # omdb_api = "6a4c9432"
+
+                    try:
+                        url_omdb = "http://www.omdbapi.com/?apikey={}&t={}".format(omdb_api, quote(title))
+                        print('data_omdb ', url_omdb)
+                        # info_omdb = requests.get(url_omdb, timeout=5)
+                        # if info_omdb.status_code == 200:
+                            # # break
+                            # Title = info_omdb.json()["Title"]
+                            # Year = info_omdb.json()["Year"]
+                            # Rated = info_omdb.json()["Rated"]
+                            # Duration = info_omdb.json()["Runtime"]
+                            # Released = info_omdb.json()["Released"]
+                            # Genre = info_omdb.json()["Genre"]
+                            # Director = info_omdb.json()["Director"]
+                            # Writer = info_omdb.json()["Writer"]
+                            # Actors = info_omdb.json()["Actors"]
+                            # Plot = info_omdb.json()["Plot"]
+                            # Country = info_omdb.json()["Country"]
+                            # Awards = info_omdb.json()["Awards"]
+                            # imdbRating = info_omdb.json()["imdbRating"]
+                            # imdbID = info_omdb.json()["imdbID"]
+                            # Type = info_omdb.json()["Type"]
+
+                        data_omdb = json.load(urlopen(url_omdb))
+                        print('data_omdb ', data_omdb)
+                        # if(data_omdb["Plot"]):
+                        dwn_infos = "{}{}.json".format(pathLoc, eventNm)
+                        open(dwn_infos,"w").write(json.dumps(data_omdb))
+                    except:
+                        pass
                 except Exception as e:
                     print('error ', str(e))
                         # url_ggl = "https://www.google.it/search?q={}+imdb".format(quote(eventNm))
@@ -167,38 +271,6 @@ class XInfoEvents(Renderer, VariableText):
                                 # if(data_omdb["Plot"]):
                                         # dwn_infos = "{}{}.json".format(pathLoc, eventNm)
                                         # open(dwn_infos,"w").write(json.dumps(data_omdb))
-                                        
-                                        
-                                        
-                                        
-        # def google(self):
-            # try:
-                # url = "https://www.google.com/search?q={}&tbm=isch&tbs=sbd:0+poster".format(quote(eventNm))    #.format(self.title.replace(" ", "+"))
-                # if self.year != None:
-                    # url += "+{}".format(self.year)
-                                    
-                # headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-                # try:
-                    # ff = requests.get(url, stream=True, headers=headers).text
-                    # p = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)
-                # except:
-                    # pass
-                # # n = 9
-                # # downloaded = 0
-                # # for i in range(n):
-                    # try:
-                        # url = "https://{}".format(p[i+1])
-                        # dwnldFile = "{}mSearch/{}-{}-{}.jpg".format(pathLoc, self.title, config.plugins.xtraEvent.PB.value, i+1)
-                        # open(dwnldFile, 'wb').write(requests.get(url, stream=True, allow_redirects=True).content)
-                        # # downloaded += 1
-                        # # self.prgrs(downloaded, n)
-                    # except:
-                        # pass
-                # config.plugins.xtraEvent.imgNmbr.value = 0
-            # except Exception as err:
-                # self['status'].setText(_(str(err)))
-                # return
-            
 
         def filterSearch(self):
                 try:
@@ -223,7 +295,7 @@ class XInfoEvents(Renderer, VariableText):
                                 else:
                                         self.srch = "multi"
                         yr = [ _y for _y in re.findall(r'\d{4}', sd) if '1930' <= _y <= '%s' % gmtime().tm_year ]
-                        return '%s' % yr[-1] if yr else ''
+                        return '%s' % yr[-1] if yr else None
                 except:
                         pass
 
@@ -237,7 +309,7 @@ class XInfoEvents(Renderer, VariableText):
                         eventNm = REGEX.sub('', titleNxt).rstrip().replace('ё','е')
                         infos_file = "{}{}.json".format(pathLoc, eventNm)
                         if not os.path.exists(infos_file):
-                                self.downloadInfos(eventNm)
+                                self.downloadInfos(eventNm, infos_file)
                 return
 
         def delay2(self):

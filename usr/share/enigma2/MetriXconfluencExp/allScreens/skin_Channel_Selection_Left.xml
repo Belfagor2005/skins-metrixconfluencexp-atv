@@ -54,8 +54,9 @@
 		</widget>
 		
 		<widget source="Event" render="XInfoEvents" />
-		
+<!-- 		
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="786,632" size="50,50" zPosition="3" transparent="1" alphatest="blend" />
+		 -->
 		<widget render="XParental" source="ServiceEvent" position="786,632" size="50,50" zPosition="4" transparent="1" />
 		<!-- <ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1455,650" size="350,30" alphatest="blend" zPosition="19" transparent="1" /> -->
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="836,653" size="350,30" alphatest="blend" zPosition="20" transparent="1" />

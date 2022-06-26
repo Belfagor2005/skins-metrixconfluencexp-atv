@@ -1,9 +1,7 @@
 <skin>
-	<!-- InfoBar default c FHD -->
 	<!--  InfoBar  -->
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
-		
 		
 		<panel position="105,1090" size="360,40">
 			<panel name="Red-New-Button" />
@@ -76,6 +74,7 @@
 			<convert type="ClockToText">Format: %H:%M</convert>
 		</widget>
 		<widget render="VideoSize" borderWidth="2" source="session.CurrentService" position="240,1033" size="172,38" backgroundColor="black" font="Regular;30" foregroundColor="grey" halign="center" valign="center" transparent="1" zPosition="2" />
+		
 		<eLabel text="SNR:" position="860,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center" />
 		<eLabel text="AGC:" position="1015,1037" size="68,34" halign="right" font="Regular; 26" backgroundColor="background20" transparent="1" valign="center" />
 		<widget source="session.FrontendStatus" pixmap="MetriXconfluencExp/icons/snr.png" render="Progress" position="931,1035" size="80,30" transparent="1" alphatest="blend">
@@ -211,9 +210,6 @@
 		</widget>
 		<!-- Weather */-->
 
-		<!-- Cover Anzeige Jetzt -->
-		<!-- Kein Cover  -->
-		<!-- Cover Anzeige Jetzt END -->
 		<widget backgroundColor="metrixBackground" font="Regular; 26" halign="left" position="1066,999" render="FixedLabel" size="100,34" source="session.FrontendInfo" text="DVB-S" transparent="1" valign="center">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
@@ -242,7 +238,7 @@
 		<widget position="1279,993" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="right" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
 			<convert type="ServiceName2">TpansponderInfo</convert>
 		</widget>
-		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="40,515" size="621,255" font="Regular; 30" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top" />
+
 		<eLabel position="375,934" size="790,2" backgroundColor="grey" foregroundColor="grey" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="931,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend" noWrap="1" />
 		<ePixmap pixmap="MetriXconfluencExp/icons/snragc.png" position="1087,1035" zPosition="-2" size="80,30" transparent="0" alphatest="blend" noWrap="1" />
@@ -261,17 +257,7 @@
 		<widget noWrap="1" backgroundColor="background" font="Regular; 33" render="Label" typeSpeed="1500" typeCaret="_" position="619,53" size="450,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
-		<!--
-		<widget alphatest="blend" render="MSNWeatherPixmap" position="1377,851" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
-			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1528,887" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
-			<convert type="MSNWeather">temperature_current</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1424,953" size="270,39" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-			<convert type="MSNWeather">temperature_text,current</convert>
-		</widget>
-		-->
+
 		<!-- ***** Temperature day-3 ***** -->
 		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1069,16" size="80,80" zPosition="12" alphatest="blend">
 			<convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
@@ -305,23 +291,21 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
+<!-- 
+		<widget source="Event" render="XInfoEvents" position="0,0" />	
+	 -->
+		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />		
+		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />				
+		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1" />
+		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1" />
+		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="3" />
+		<widget source="session.Event_Now" render="PosterX" position="1701,808" size="180,245" nexts="1" zPosition="3" />
+	    <!-- <widget source="session.Event_Now" render="XInfoEvents" /> -->
 		
-		<widget source="Event" render="XInfoEvents" position="0,0" />			
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" />
+		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="32,530" size="736,245" font="Regular; 30" halign="left" valign="top" transparent="1" zPosition="2" backgroundColor="black" />
+		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="1140,530" size="736,245" font="Regular; 30" halign="right" valign="top" transparent="1" zPosition="2" backgroundColor="black" />	
 		
-	
-		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" />
-		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1" />
-<!-- 																												   
-	    <widget source="session.Event_Now" render="XInfoEvents" />
-        <widget source="session.Event_Next" render="XInfoEvents" />
-													 -->																																							 
-		
-		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="2" />
-		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="2" />
-	
-		<ePixmap pixmap="MetriXconfluencExp/logos/stars/0.png" position="1365,883" size="320,30" alphatest="blend" zPosition="19" transparent="1" />
-		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1365,881" size="320,30" alphatest="blend" zPosition="20" transparent="1" />		
+		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="232,835" size="320,30" alphatest="blend" zPosition="3" transparent="1" />	
+		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1370,835" size="320,30" alphatest="blend" zPosition="3" transparent="1" />
 	</screen>
 </skin>
