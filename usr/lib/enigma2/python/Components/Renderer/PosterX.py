@@ -99,7 +99,7 @@ else:
                                         apdb[i] = service
 
 
-path_folder = ""
+path_folder = "/tmp/poster/"
 if os.path.isdir("/media/hdd"):
         path_folder = "/media/hdd/poster/"
 elif not os.path.isdir("/media/usb"):

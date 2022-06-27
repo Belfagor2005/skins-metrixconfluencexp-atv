@@ -48,7 +48,7 @@ except:
 	lng = None
 	pass
 
-path_folder = ""
+path_folder = "/tmp/xemc/"
 if os.path.isdir("/media/hdd"):
 	path_folder = "/media/hdd/xemc/"
 elif not os.path.isdir("/media/usb"):

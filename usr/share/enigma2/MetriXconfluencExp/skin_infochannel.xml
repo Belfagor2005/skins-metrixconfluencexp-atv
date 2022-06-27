@@ -254,9 +254,9 @@
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		 -->
-<!-- 		 
-		<widget render="XParental" source="Event" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
-		 -->
+		 
+		<widget render="XParental" source="Event" position="21,1109" size="50,50" zPosition="0" transparent="1"/>
+
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="3" transparent="1"/>
 		<!--

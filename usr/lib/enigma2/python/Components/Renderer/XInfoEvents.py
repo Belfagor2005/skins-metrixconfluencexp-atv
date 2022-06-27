@@ -23,8 +23,8 @@ import glob
 import shutil
 global cur_skin, my_cur_skin, tmdb_api, omdb_api
 
-tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
-omdb_api = "6a4c9432"
+tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
+omdb_api = "cb1d9f55"
 epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -149,7 +149,6 @@ class XInfoEvents(Renderer, VariableText):
                 try:
                     try:
                         url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
-                        # url_tmdb = "http://api.tmdb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
                         if self.year != None:
                             url_tmdb += "&year={}".format(self.year)
                             print('url_tmdb1: ', url_tmdb)
