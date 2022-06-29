@@ -1,16 +1,16 @@
 <skin>
 	<!--
 	<screen name="New-Buttons">
-		<panel position="260,1033" size="350,50">
+		<panel position="92,950" size="360,40">
 			<panel name="Red-New-Button"/>
 		</panel>
-		<panel position="610,1033" size="350,50">
+		<panel position="544,950" size="360,40">
 			<panel name="Green-New-Button"/>
 		</panel>
-		<panel position="960,1033" size="350,50">
+		<panel position="1038,950" size="360,40">
 			<panel name="Yellow-New-Button"/>
 		</panel>
-		<panel position="1310,1033" size="350,50">
+		<panel position="1495,950" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel>
 	</screen>

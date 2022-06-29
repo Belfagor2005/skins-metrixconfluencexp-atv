@@ -830,6 +830,8 @@
 	<screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent" alphatest="blend">
 	  <widget source="Title" render="Label" position="641,93" size="1140,68" font="Regular; 44" backgroundColor="background20" transparent="1" />
 	  <ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
+	  <panel name="ClockTimeEvent"/>
+	  <!-- 	  
 	  <widget source="global.CurrentTime" render="Label" position="317,893" size="284,120" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
 		<convert type="ClockToText">Default</convert>
 	  </widget>
@@ -839,6 +841,7 @@
 	  <widget source="global.CurrentTime" render="Label" position="107,911" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 		<convert type="ClockToText">Format:%A</convert>
 	  </widget>
+	   -->
 	  <widget name="list" position="645,165" size="1173,693" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" itemHeights="76,53,33" fontSizesOriginal="24,18,18" fontSizesCompact="24,18" fontSizesMinimal="25,20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
 	  <widget name="freeDiskSpace" position="645,876" size="1050,38" font="Regular;30" valign="center" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent1" />
 	  <widget name="DescriptionBorder" position="0,0" size="0,0" />
@@ -3322,7 +3325,7 @@
 		<eLabel name="new eLabel" position="45,795" zPosition="-2" size="1830,240" backgroundColor="background20"/>
 		<widget backgroundColor="transparent" name="video" position="23,9" size="300,180" zPosition="1"/>
 		<widget source="global.CurrentTime" render="Label" position="1514,15" size="119,35" font="Regular;35" halign="right" backgroundColor="black" transparent="1">
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget backgroundColor="black" font="Regular;27" foregroundColor="white" halign="left" position="1635,18" render="Label" size="56,32" source="global.CurrentTime" transparent="1" valign="top">
 			<convert type="ClockToText">Format::%S</convert>
@@ -3344,7 +3347,7 @@
 		<eLabel name="new eLabel" position="45,795" zPosition="-2" size="1830,240" backgroundColor="background20"/>
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/VirtualZap/menu/Zap.png" position="96,20" size="150,60" zPosition="0"/>
 		<widget source="global.CurrentTime" render="Label" position="1514,15" size="119,35" font="Regular;35" halign="right" backgroundColor="black" transparent="1">
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget backgroundColor="black" font="Regular;27" foregroundColor="white" halign="left" position="1635,18" render="Label" size="56,32" source="global.CurrentTime" transparent="1" valign="top">
 			<convert type="ClockToText">Format::%S</convert>
@@ -4289,5 +4292,14 @@
 		<widget name="key_yellow" render="Label" position="1106,985" size="360,40" backgroundColor="black" font="Regular; 30" halign="center" noWrap="1" zPosition="9" transparent="1" valign="top" foregroundColor="foreground"/>
 		<widget name="key_blue" render="Label" position="1629,985" size="360,40" backgroundColor="black" font="Regular; 30" halign="center" noWrap="1" zPosition="9" transparent="1" valign="top" foregroundColor="foreground"/>
 	</screen>
+	
+	
+	<screen name="ChannelContextMenu" title="Settings" position="0,0" size="1920,1080" backgroundColor="#FF000000" flags="wfNoBorder">
+		<widget source="Title" render="Label" position="105,72" size="1200,60" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/menu_system_channelselection_setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget name="menu" position="230,150" size="810,720" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
+	</screen>	
+	
 	
 </skin>

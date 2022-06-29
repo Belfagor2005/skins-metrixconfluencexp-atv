@@ -720,17 +720,7 @@ self.instance.move(ePoint(0,0))
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 	</screen>
-	<screen name="setup_common" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<ePixmap position="153,122" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/setup.png" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<panel name="ClockTimeLeft"/>
-		<panel name="btCRYB"/>
-		<widget name="config" position="659,92" size="1149,621" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" backgroundColor="background20" enableWrapAround="1" transparent="1"/>
-		<widget name="description" position="659,743" size="1149,181" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30"/>
-		<widget name="HelpWindow" alphatest="blend" position="76,748" size="574,200" transparent="1"/>
-		<widget name="footnote" position="660,928" size="1147,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3"/>
-	</screen>
+
 	<screen name="Setup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<panel name="setup_common"/>
@@ -1388,7 +1378,7 @@ self['config'].l.setSeperation(int(300*f))
 		<widget source="key_yellow" render="Label" position="922,935" size="150,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1"/>
 		<widget source="key_blue" render="Label" position="1138,935" size="170,26" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1"/>
 	</screen>
-	<screen name="MessageBoxTemp" position="center,252" size="1200,120" zPosition="1" title="Message" backgroundColor="background20" alphatest="blend">
+	<screen name="MessageBoxTemp" position="360,252" size="1200,250" zPosition="1" title="Message" backgroundColor="background20" alphatest="blend">
 		<widget name="text" position="165,12" size="1020,0" font="Regular;28" backgroundColor="background20"/>
 		<widget name="ErrorPixmap" pixmap="MetriXconfluencExp/icons/message/attention-53.png" position="45,15" size="80,80" alphatest="blend"/>
 		<widget name="QuestionPixmap" pixmap="MetriXconfluencExp/icons/message/question-53.png" position="45,15" size="80,80" alphatest="blend"/>
@@ -1490,14 +1480,14 @@ newheight = wsize[1]
 self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
 		</applet>
 	</screen>
-	<screen name="MessageBox" position="240,160" size="800,400" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
-		<panel name="MessageBoxTemp"/>
+	<screen name="MessageBox" position="240,160" size="1213,750" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
+	  <panel name="MessageBoxTemp" />
 	</screen>
-	<screen name="MessageBoxExt" position="240,160" size="800,400" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
-		<panel name="MessageBoxTemp"/>
+	<screen name="MessageBoxExt" position="240,160" size="1213,506" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
+	  <panel name="MessageBoxTemp" />
 	</screen>
-	<screen name="MessageBoxSimple" position="240,160" size="800,400" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
-		<panel name="MessageBoxTemp"/>
+	<screen name="MessageBoxSimple" position="240,160" size="1209,493" zPosition="10" title="Message" flags="wfNoBorder" backgroundColor="layer-a-background">
+	  <panel name="MessageBoxTemp" />
 	</screen>
 	<screen name="MessageBoxGenuine" position="525,180" size="750,675" title="Message" backgroundColor="background20">
 		<panel name="MessageBoxTemp"/>
@@ -1564,6 +1554,13 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="session.CurrentService" render="Label" position="1255,557" size="175,40" font="LCD;36" halign="right" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
 		</widget>
+		<!--
+ 		[Screen] Warning: Skin is missing element 'eventname' in <class 'Screens.PVRState.TimeshiftState'>.
+		[Screen] Warning: Skin is missing element 'speed' in <class 'Screens.PVRState.TimeshiftState'>.
+		[Screen] Warning: Skin is missing element 'statusicon' in <class 'Screens.PVRState.TimeshiftState'>.
+		[Screen] Warning: Skin is missing element 'PTSSeekBack' in <class 'Screens.PVRState.TimeshiftState'>.
+		[Screen] Warning: Skin is missing element 'PTSSeekPointer' in <class 'Screens.PVRState.TimeshiftState'>.
+		-->		
 	</screen>
 	<screen name="Volume" position="0,480" size="300,180" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/icons/sound/volume.png" position="0,0" size="4,105" backgroundColor="background20" zPosition="-11"/>
@@ -1706,15 +1703,15 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="761,510" size="60,30" foregroundColor="epg-timeline-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19" halign="right">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1160,510" size="60,30" foregroundColor="epg-timeline-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19">
 			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="761,560" size="60,30" foregroundColor="epg-timeline-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19" halign="right">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="831,560" size="290,30" foregroundColor="epg-event-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19" noWrap="1">
 			<convert type="EventName">Name</convert>
@@ -1725,7 +1722,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="761,590" size="60,30" foregroundColor="epg-timeline-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19" halign="right">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="831,590" size="290,30" foregroundColor="epg-event-foreground" backgroundColor="epg-background" valign="center" font="RegularLight;19" noWrap="1">
 			<convert type="EventName">Name</convert>
@@ -1742,7 +1739,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget name="list" position="105,756" size="1725,137" itemHeight="90" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1"/>
 		<widget pixmap="MetriXconfluencExp/epg/timeline-now2.png" name="timeline_now" position="100,757" zPosition="22" size="20,136" alphatest="blend"/>
 		<widget source="global.CurrentTime" render="Label" position="1685,656" size="150,42" font="Regular;39" halign="right" backgroundColor="background20" transparent="1">
-			<convert type="ClockToText">Default</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1160,656" size="525,38" font="RegularLight; 30" halign="right" backgroundColor="background20" transparent="1">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -1886,7 +1883,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1"/>
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
-		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
+		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/camselect.png"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin.png" position="0,-1" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/tv.png" position="224,326" size="384,384" transparent="1" alphatest="blend"/>
 	</screen>

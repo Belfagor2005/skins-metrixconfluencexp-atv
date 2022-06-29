@@ -8,7 +8,10 @@ from enigma import eLabel, ePixmap, eTimer, loadPNG
 import re, os, sys, tempfile
 import json
 
-pratePath = '/usr/share/enigma2/MetriXconfluencExp/logos/parentalrating'
+# pratePath = '/usr/share/enigma2/MetriXconfluencExp/logos/parentalrating'
+import config
+cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
+pratePath = cur_skin + '/logos/parentalrating'
 
 if os.path.isdir("/tmp"):
 	pathLoc = "/tmp/infos/"

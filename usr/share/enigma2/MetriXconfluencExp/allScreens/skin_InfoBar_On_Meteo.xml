@@ -166,7 +166,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.CurrentService" render="Label" borderWidth="2" font="Regular; 20" position="544,1002" size="430,30" backgroundColor="black" foregroundColor="grey" transparent="1" zPosition="10" halign="left">
-			<convert type="MetrixHDCaidDisplay">Default</convert>
+			<convert type="xHDCaidDisplay">Default</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_tv.png" position="1182,1033" size="508,36" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/hbbtv_on.png" position="1261,1033" size="48,36" zPosition="2" alphatest="blend" noWrap="1">

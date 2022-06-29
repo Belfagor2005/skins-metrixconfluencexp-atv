@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
 	<!-- Original author of this skin is iMaxxx -->
 	<!-- mod by Adrenalinnrw -->
@@ -5,8 +6,46 @@
 	<!-- mod by @Lululla 10-05-2022 -->
 	<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
 	<output id="0">
-		<resolution xres="1920" yres="1080" bpp="32"/>
+		<resolution bpp="32" xres="1920" yres="1080"/>
 	</output>
+	<fonts>
+		<font filename="/usr/share/fonts/lcd.ttf" name="LCD" scale="100"/>
+		<font filename="/usr/share/fonts/ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1"/>
+		<font filename="/usr/share/fonts/tuxtxt.ttf" name="Console" scale="100"/>
+		<font filename="/usr/share/fonts/nmsbd.ttf" name="Arial" scale="100"/>
+		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="Regular" scale="100"/>
+		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100"/>
+		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100"/>
+		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100"/>
+		<alias name="ChoiceBoxDescription" font="Regular" size="28" height="38"/>
+		<alias name="ChoiceList" font="Regular" size="28" height="38"/>
+		<alias name="Dreamexplorer" font="Regular" size="34" height="50"/>
+		<alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
+		<alias name="FallbackReceiverList1" font="Regular" size="28"/>
+		<alias name="FileList" font="Regular" size="28" height="40"/>
+		<alias name="FileListMulti" font="Regular" size="28" height="40"/>
+		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
+		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
+		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
+		<alias name="PartnerBoxBouquetList0" font="Regular" size="28" height="38"/>
+		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
+		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
+		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
+		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
+		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
+		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
+		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
+		<alias name="PartnerBoxEntryList0" font="Regular" size="32" height="45"/>
+		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
+		<alias name="PiconManagerList" font="Regular" size="32" height="50"/>
+		<alias name="PlayList" font="Regular" size="28" height="40"/>
+		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
+		<alias name="PluginBrowser1" font="Regular" size="22"/>
+		<alias name="SelectionList" font="Regular" size="28" height="40"/>
+		<alias name="ServiceInfo" font="Regular" size="28" height="45"/>
+		<alias name="TextNormal" font="Regular" size="28" height="38"/>
+		<alias name="VirtualKeyboard" font="Regular" size="42" height="75"/>
+	</fonts>
 	<colors>
 		<color name="#1a27408b" value="#1a27408b"/>
 		<color name="#2f4974" value="#002f4974"/>
@@ -194,73 +233,46 @@
 		<color name="whiteFix" value="#00fefefe"/>
 		<color name="yellow" value="#00bab329"/>
 	</colors>
-	<fonts>
-		<font filename="/usr/share/fonts/lcd.ttf" name="LCD" scale="100"/>
-		<font filename="/usr/share/fonts/ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1"/>
-		<font filename="/usr/share/fonts/tuxtxt.ttf" name="Console" scale="100"/>
-		<font filename="/usr/share/fonts/nmsbd.ttf" name="Arial" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="Regular" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100"/>
-		<alias name="ChoiceBoxDescription" font="Regular" size="32" height="75"/>
-		<alias name="ChoiceList" font="Regular" size="32" height="75"/>
-		<alias name="Dreamexplorer" font="Regular" size="32" height="50"/>
-		<alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
-		<alias name="FallbackReceiverList1" font="Regular" size="28"/>
-		<alias name="FileList" font="Regular" size="32" height="50"/>
-		<alias name="FileListMulti" font="Regular" size="32" height="50"/>
-		<alias name="HelpMenuList" font="Regular" size="32" height="45"/>
-		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
-		<alias name="HelpMenuListExt1" font="Regular" size="32"/>
-		<alias name="PartnerBoxBouquetList0" font="Regular" size="32" height="50"/>
-		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="50"/>
-		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
-		<alias name="PartnerBoxEntryList0" font="Regular" size="28" height="50"/>
-		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
-		<alias name="PiconManagerList" font="Regular" size="32" height="50"/>
-		<alias name="PlayList" font="Regular" size="30" height="50"/>
-		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
-		<alias name="PluginBrowser1" font="Regular" size="22"/>
-		<alias name="SelectionList" font="Regular" size="32" height="50"/>
-		<alias name="ServiceInfo" font="Regular" size="30" height="50"/>
-		<alias name="TextNormal" font="Regular" size="28" height="38"/>
-		<alias name="VirtualKeyboard" font="Regular" size="40" height="75"/>
-	</fonts>
+
 	<parameters>
-		<parameter name="AutotimerEnabledIcon" value="2,1,25,25"/>
+		<parameter name="AllowUserDatesAndTimes" value="5,5"/>
+		<parameter name="AutotimerEnabledIcon" value="2,1,38,36"/>
 		<parameter name="AutotimerRecordIcon" value="30,1,25,25"/>
-		<parameter name="ChoicelistDash" value="0,0,900,50"/>
 		<parameter name="ChoicelistIcon" value="0,0,50,50"/>
 		<parameter name="ChoicelistName" value="70,0,900,50"/>
-		<parameter name="ConfigListSeperator" value="500"/>
+		<parameter name="ChoicelistDash" value="0,0,900,50"/>
+		<parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
+		<parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
+		<parameter name="ChoicelistNameSingle" value="10,0,690,38"/>
 		<parameter name="ConfigListSlider" value="10,3"/>
-		<parameter name="DreamexplorerIcon" value="10,5,40,40"/>
+		<parameter name="ConfigListSeperator" value="500"/>
 		<parameter name="DreamexplorerName" value="70,2,1200,50"/>
+		<parameter name="DreamexplorerIcon" value="10,5,40,40"/>
+
 		<parameter name="EpgListIcon" value="2,12,25,25,2"/>
 		<parameter name="EpgListMulti" value="360,170,170,10"/>
 		<parameter name="EpgListMultiProgressBar" value="170,15,1"/>
+
 		<parameter name="EpgListSingle" value="80,220"/>
-		<parameter name="ExpandableListDescr" value="55,0,1000,40"/>
 		<parameter name="ExpandableListIcon" value="5,5,90,75"/>
-		<parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
+		<parameter name="ExpandableListDescr" value="55,0,1000,40"/>
+		<parameter name="FileListName" value="40,2,800,37"/>
 		<parameter name="FileListIcon" value="10,7,30,37"/>
+		<parameter name="FileListMultiName" value="80,0,700,40"/>
 		<parameter name="FileListMultiIcon" value="45,0,25,25"/>
 		<parameter name="FileListMultiLock" value="2,0,25,25"/>
-		<parameter name="FileListMultiName" value="80,0,700,40"/>
-		<parameter name="FileListName" value="40,2,800,37"/>
 		<parameter name="HelpMenuListExtHlp0" value="0,0,840,39"/>
 		<parameter name="HelpMenuListExtHlp1" value="0,42,840,30"/>
 		<parameter name="HelpMenuListHlp" value="0,0,840,42"/>
+		<parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
+
+
+
 		<parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
 		<parameter name="ImsSelectionListLock" value="5,2,36,36"/>
 		<parameter name="PiconManagerList" value="10,0,1120,40"/>
 		<parameter name="PiconManagerListFont" value="Regular;28"/>
+		<parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
 		<parameter name="PlayListIcon" value="10,7,30,37"/>
 		<parameter name="PlayListName" value="40,0,800,37"/>
 		<parameter name="PluginBrowserDescr" value="180,38,30"/>
@@ -275,15 +287,20 @@
 		<parameter name="SelectionListLock" value="10,2,35,35"/>
 		<parameter name="SelectionListLockOff" value="10,2,35,35"/>
 		<parameter name="ServiceInfo" value="0,0,1200,40"/>
-		<parameter name="ServiceInfoFont" value="Regular;26"/>
 		<parameter name="ServiceInfoLeft" value="0,0,450,40"/>
 		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
+		<parameter name="ServiceInfoFont" value="Regular;26"/>
+		<parameter name="VirtualKeyboard" value="76,72"/>
 		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
 		<parameter name="VirtualKeyBoardPadding" value="4,4"/>
 		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
-		<parameter name="VirtualKeyboard" value="76,72"/>
 	</parameters>
+	<switchpixmap>
+		<pixmap name="menu_on" filename="MetriXconfluencExp/icons/menu_on.png"/>
+		<pixmap name="menu_off" filename="MetriXconfluencExp/icons/menu_off.png"/>
+	</switchpixmap>
 	<windowstyle type="skinned" id="0">
+		<configList entryFont="Regular;30" valueFont="Regular;28"/>															 
 		<title offset="45,11" font="Regular;45"/>
 		<color name="Background" color="background20"/>
 		<color name="LabelForeground" color="white"/>
@@ -307,18 +324,31 @@
 			<pixmap pos="bpBottom" filename="MetriXconfluencExp/window/bs_b.png"/>
 			<pixmap pos="bpBottomRight" filename="MetriXconfluencExp/window/bs_br.png"/>
 		</borderset>
+		<scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1"/>
+		<listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1"/>									 
 	</windowstyle>
-	<switchpixmap>
-		<pixmap name="menu_on" filename="MetriXconfluencExp/icons/menu_on.png"/>
-		<pixmap name="menu_off" filename="MetriXconfluencExp/icons/menu_off.png"/>
-	</switchpixmap>
+
 	<!--  Screens  -->
 	<!-- -->
-
 	<screen name="Pic_Setup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeLeft"/>
 		<panel name="configCom"/>
+	</screen>
+	<screen name="setup_common" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+		<!-- EDIT LULULLA -->
+		<panel name="ClockTimeLeft"/>
+		<panel name="configCom"/>
+		<!--
+ 		<ePixmap position="153,122" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/setup.png" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
+		<panel name="ClockTimeLeft"/>
+		<panel name="btCRYB"/>
+		<widget name="config" position="659,147" size="1149,547" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" backgroundColor="background20" enableWrapAround="1" transparent="1" />
+		<widget name="description" position="659,743" size="1149,181" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30"/>
+		<widget name="HelpWindow" alphatest="blend" position="76,748" size="574,200" transparent="1"/>
+		<widget name="footnote" position="660,928" size="1147,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3"/>
+		 -->
 	</screen>
 	<screen name="setup_epgsettings" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<!-- EDIT LULULLA -->
@@ -656,8 +686,8 @@
 	</menus>
 	<!-- Include Files -->
 	<include filename="MetriXconfluencExp/skin_plugins.xml"/>
-	<include filename="MetriXconfluencExp/skin_oatv.xml"/>	
-	<include filename="MetriXconfluencExp/skin_infochannel.xml"/>		
+	<include filename="MetriXconfluencExp/skin_oatv.xml"/>
+	<include filename="MetriXconfluencExp/skin_infochannel.xml"/>
 	<include filename="MetriXconfluencExp/skin_templates.xml"/>
 	<include filename="MetriXconfluencExp/skin_button.xml"/>
 </skin>

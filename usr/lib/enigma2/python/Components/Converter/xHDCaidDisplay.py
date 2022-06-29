@@ -30,7 +30,7 @@ class xHDCaidDisplay(Poll, Converter, object):
                 self.type = type
                 self.systemCaids = {
                         "26" : "BiSS",
-            "01" : "SEC",
+                        "01" : "SEC",
                         "06" : "IRD",
                         "17" : "BET",
                         "05" : "VIA",
@@ -38,7 +38,7 @@ class xHDCaidDisplay(Poll, Converter, object):
                         "09" : "NDS",
                         "0B" : "CON",
                         "0D" : "CRW",
-            "55" : "DRE2",
+                        "55" : "DRE2",
                         "4A" : "DRE" }
 
                 self.poll_interval = 2000

@@ -25,7 +25,8 @@
 		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,780" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
 			<convert type="TemplatedMultiContent">
 						{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
-							"fonts": [gFont("3d",40)],	"itemHeight": 80}
+							"fonts": [gFont("3d",34)],
+							"itemHeight": 80}
 			</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1255,884" size="50,50" alphatest="blend" zPosition="2" />
@@ -63,7 +64,7 @@
 					{"template": [
 						MultiContentEntryText(pos = (10,0),size = (800,50),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1),# index 0 is the MenuText,
 						],
-						"fonts": [gFont("Regular",32)],
+						"fonts": [gFont("Regular",34)],
 						"itemHeight": 50
 					}
 				</convert>
@@ -73,7 +74,7 @@
 					{"template": [
 						MultiContentEntryText(pos = (0,0),size = (810,200),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 2),# index 0 is the MenuText,
 						],
-						"fonts": [gFont("Regular",24)],
+						"fonts": [gFont("Regular",32)],
 						"itemHeight": 200
 					}
 				</convert>
@@ -83,14 +84,14 @@
 		<widget source="list" render="Listbox" position="765,644" size="1050,240" zPosition="13" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 0), size = (1140, 44), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
-				"fonts": [gFont("Regular",34)],
+				"fonts": [gFont("Regular",32)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
 	</screen>
 	<screen name="MenuStr">
-		<widget source="list" render="Listbox" itemHeight="65" font="Regular; 36" position="107,248" size="1050,557" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="layer-a-background" foregroundColorSelected="white">
+		<widget source="list" render="Listbox" itemHeight="65" font="Regular; 34" position="107,248" size="1050,557" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="layer-a-background" foregroundColorSelected="white">
 			<convert type="StringList"/>
 		</widget>
 	</screen>
@@ -122,21 +123,21 @@
 	</screen>	
 	<!-- ************* config Templates ************* -->
 	<screen name="config1">
-		<widget name="config" position="105,180" size="1050,700" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="config" position="105,180" size="1050,700" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 	</screen>
 	<screen name="config2">
-		<widget name="config" position="105,180" size="1050,550" itemHeight="65" font="Regular;38" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="config" position="105,180" size="1050,550" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 	</screen>
 	<screen name="configCom">
-		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" alphatest="off" transparent="1" drawMode="stretch"/>
-		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="153,122" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeLeft"/>
-		<widget name="description" position="659,743" size="1149,225" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30"/>
-		<widget name="config" position="659,92" size="1149,621" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
-		<panel name="btRG"/>
-		<widget alphatest="blend" name="HelpWindow" position="76,748" size="574,179" transparent="1"/>
-		<widget name="footnote" position="92,934" size="550,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3"/>
+	  <ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" alphatest="off" transparent="1" drawMode="stretch" />
+	  <ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="153,122" size="384,384" zPosition="2" transparent="1" alphatest="blend" />
+	  <!-- EDIT LULULLA -->
+	  <panel name="ClockTimeLeft" />
+	  <widget name="description" position="689,723" size="1117,225" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30" />
+	  <widget name="config" position="696,188" size="1112,513" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png" />
+	  <panel name="btRG" />
+	  <widget alphatest="blend" name="HelpWindow" position="101,730" size="574,179" transparent="1" />
+	  <widget name="footnote" position="104,915" size="570,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3" />
 	</screen>
 	<screen name="pNetwork">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
@@ -148,7 +149,7 @@
 		<widget name="lab2" position="383,603" size="150,30" font="Regular;22" zPosition="2" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
 		<widget name="labstop" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
 		<widget name="labrun" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
-		<widget name="infolist" position="105,180" size="1050,720" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="infolist" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYGEpg"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 	</screen>
@@ -157,7 +158,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="menulist" position="105,180" size="1050,720" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="menulist" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYGEpg"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 	</screen>
@@ -166,7 +167,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYGEpg"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 	</screen>
@@ -175,7 +176,7 @@
 		<!-- EDIT LULULLA -->
 		<panel name="ClockTimeTop"/>
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular;34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYGEpg"/>
 		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
 	</screen>
@@ -407,42 +408,42 @@
 	-->
 	<!-- ************* Clock Templates ************* -->
 	<screen name="ClockTime">
-		<widget source="global.CurrentTime" render="Label" position="1680,56" size="150,42" font="Regular;39" halign="right" backgroundColor="background20" transparent="1">
-			<convert type="ClockToText">Default</convert>
+		<widget source="global.CurrentTime" render="Label" position="1680,56" size="150,42" font="3d;40" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1305,101" size="525,38" font="RegularLight; 30" halign="right" backgroundColor="background20" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1305,101" size="525,38" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
 	</screen>
 	<screen name="ClockTimeBig">
-		<widget source="global.CurrentTime" render="Label" position="1389,515" size="242,90" font="Regular; 68" halign="right" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1658,561" size="222,30" font="RegularLight; 24" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
-			<convert type="ClockToText">Format:%d. %B</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1658,533" size="188,30" font="RegularLight; 24" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
-			<convert type="ClockToText">Format:%A</convert>
-		</widget>
+	  <widget source="global.CurrentTime" render="Label" position="1423,529" size="242,90" font="3d; 68" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+	  <convert type="ClockToText">Format:%H:%M</convert>
+	</widget>
+	  <widget source="global.CurrentTime" render="Label" position="1658,561" size="222,30" font="3d; 30" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+		<convert type="ClockToText">Format:%d. %B</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="1658,533" size="188,30" font="3d; 30" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+		<convert type="ClockToText">Format:%A</convert>
+	  </widget>
 	</screen>
 	<screen name="ClockTimeTop">
-		<widget source="global.CurrentTime" render="Label" position="3,0" borderWidth="2" size="309,45" font="3d; 36" halign="right" backgroundColor="black" transparent="1" foregroundColor="grey">
+		<widget source="global.CurrentTime" render="Label" position="3,0" borderWidth="2" size="309,45" font="3d; 40" halign="right" backgroundColor="black" transparent="1" foregroundColor="metrixAccent">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1708,0" borderWidth="2" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
+		<widget source="global.CurrentTime" render="Label" position="1708,0" borderWidth="2" size="129,45" font="3d; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="metrixAccent">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 	</screen>
 	<screen name="ClockTimeCool">
-		<widget source="global.CurrentTime" render="Label" position="1719,39" size="150,42" font="Regular;39" halign="right" backgroundColor="background20" transparent="1">
-			<convert type="ClockToText">Default</convert>
+		<widget source="global.CurrentTime" render="Label" position="1719,39" size="150,42" font="3d;40" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1344,84" size="525,38" font="RegularLight; 30" halign="right" backgroundColor="background20" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1344,84" size="525,38" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
 	</screen>
-	<screen name="ClockTimeBigLab">
-		<widget source="global.CurrentTime" render="Label" position="1595,54" size="285,120" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
+<!-- 	<screen name="ClockTimeBigLab">
+		<widget source="global.CurrentTime" render="Label" position="1595,54" size="285,120" font="RegularLight; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1368,110" size="222,44" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="grey" transparent="1">
@@ -451,19 +452,36 @@
 		<widget source="global.CurrentTime" render="Label" position="1403,69" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="grey" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
-	</screen>
-	<screen name="ClockTimeBigRadio">
-		<widget source="global.CurrentTime" render="Label" position="1637,47" size="268,120" font="Regular; 90" halign="right" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
+	</screen> -->
+	
+	
+	<screen name="ClockTimeBigLab">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1595,54" size="268,120" font="3d; 90" valign="center" halign="center" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1678,218" size="222,44" font="Regular; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1368,110" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%e. %B</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1713,176" size="188,45" font="Regular; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1403,69" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>	
+	
+	<screen name="ClockTimeBigRadio">
+<!-- 		<widget source="global.CurrentTime" render="Label" position="1637,47" size="268,120" font="Regular; 90" halign="right" backgroundColor="background20" transparent="1" valign="top">
+			<convert type="ClockToText">Default</convert>
+		</widget> -->
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1637,47" size="268,120" font="3d; 90" valign="center" halign="center" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>		
+		<widget source="global.CurrentTime" render="Label" position="1678,218" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%e. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1713,176" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 	</screen>
-	<screen name="ClockTimeBigLeft">
+<!-- 	<screen name="ClockTimeBigLeft">
 		<widget source="global.CurrentTime" render="Label" position="1622,47" size="268,120" font="Regular; 90" halign="left" backgroundColor="background20" transparent="1" valign="top">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -473,48 +491,60 @@
 		<widget source="global.CurrentTime" render="Label" position="1415,68" size="188,45" font="Regular; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
-	</screen>
+	</screen> -->
 	<screen name="ClockTimeEvent">
-		<widget source="global.CurrentTime" render="Label" position="352,918" size="284,120" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
+		<widget source="global.CurrentTime" render="Label" position="352,918" size="284,120" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="112,973" size="222,44" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="112,973" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%d. %B</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="147,922" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="147,922" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 	</screen>
 	<screen name="ClockTimeEvent2">
-		<widget source="global.CurrentTime" render="Label" position="352,843" size="284,120" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
+		<widget source="global.CurrentTime" render="Label" position="352,843" size="284,120" font="3d; 80" halign="left" backgroundColor="background20" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="115,898" size="222,44" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="115,898" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%d. %B</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="147,852" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="147,852" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 	</screen>
 	<screen name="ClockTimeLeft">
-		<widget source="global.CurrentTime" render="Label" position="353,612" size="320,104" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
+		<widget source="global.CurrentTime" render="Label" position="353,612" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="110,665" size="222,44" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="110,665" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%d. %B</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="144,632" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="144,632" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 	</screen>
-	<screen name="ClockTimeLeft2">
-		<widget source="global.CurrentTime" render="Label" position="630,612" size="320,104" font="Regular; 83" halign="left" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ClockToText">Default</convert>
+	<screen name="ClockTimeBigLeft">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1622,47" size="268,120" font="3d; 90" valign="center" halign="center" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="385,665" size="222,44" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1382,110" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%e. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1415,68" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+
+	<screen name="ClockTimeLeft2">
+		<widget source="global.CurrentTime" render="Label" position="630,612" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="385,665" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%d. %B</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="420,632" size="188,45" font="RegularLight; 30" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="420,632" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
 	</screen>
