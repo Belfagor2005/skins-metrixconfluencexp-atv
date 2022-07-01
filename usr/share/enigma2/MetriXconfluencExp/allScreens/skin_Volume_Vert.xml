@@ -1,8 +1,8 @@
 <skin>
-<screen name="Volume" position="1,202" size="45,551" title="Volume" backgroundColor="transparent" zPosition="99" flags="wfNoBorder">
-  <ePixmap pixmap="MetriXconfluencExp/icons/sound/vol_vert.png" position="2,6" size="45,540" zPosition="100" backgroundColor="transparent" alphatest="blend" />
-  <ePixmap pixmap="MetriXconfluencExp/icons/sound/Volume_Progress2_Vert.png" position="18,30" size="8,418" zPosition="102" backgroundColor="transparent" alphatest="blend" />
-  <widget name="Volume" pixmap="MetriXconfluencExp/icons/sound/Volume_Progress_Vert.png" position="18,33" size="12,418" orientation="orBottomToTop" zPosition="101" alphatest="blend" transparent="1" />
-  <widget render="Volume" source="global.CurrentTime" font="Regular; 20" position="0,13" size="34,24" borderWidth="1" borderColor="black" backgroundColor="background" halign="center" valign="center" foregroundColor="yellow" transparent="1" zPosition="101" />
-</screen>
+	<screen name="Volume" position="1,202" size="45,551" title="Volume" backgroundColor="transparent" zPosition="99" flags="wfNoBorder">
+		<ePixmap pixmap="MetriXconfluencExp/icons/sound/vol_vert.png" position="2,6" size="45,540" zPosition="100" backgroundColor="transparent" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/sound/Volume_Progress2_Vert.png" position="18,30" size="8,418" zPosition="102" backgroundColor="transparent" alphatest="blend"/>
+		<widget name="Volume" pixmap="MetriXconfluencExp/icons/sound/Volume_Progress_Vert.png" position="18,33" size="12,418" orientation="orBottomToTop" zPosition="101" alphatest="blend" transparent="1"/>
+		<widget render="Volume" source="global.CurrentTime" font="Regular; 20" position="0,13" size="34,24" borderWidth="1" borderColor="black" backgroundColor="background" halign="center" valign="center" foregroundColor="yellow" transparent="1" zPosition="101"/>
+	</screen>
 </skin>

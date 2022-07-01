@@ -1,693 +1,576 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-	<!-- Original author of this skin is iMaxxx -->
-	<!-- mod by Adrenalinnrw -->
-	<!-- mod by @Dragon@ -->
-	<!-- mod by @Lululla 10-05-2022 -->
-	<!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
-	<output id="0">
-		<resolution bpp="32" xres="1920" yres="1080"/>
-	</output>
-	<fonts>
-		<font filename="/usr/share/fonts/lcd.ttf" name="LCD" scale="100"/>
-		<font filename="/usr/share/fonts/ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1"/>
-		<font filename="/usr/share/fonts/tuxtxt.ttf" name="Console" scale="100"/>
-		<font filename="/usr/share/fonts/nmsbd.ttf" name="Arial" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="Regular" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100"/>
-		<font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100"/>
-		<alias name="ChoiceBoxDescription" font="Regular" size="28" height="38"/>
-		<alias name="ChoiceList" font="Regular" size="28" height="38"/>
-		<alias name="Dreamexplorer" font="Regular" size="34" height="50"/>
-		<alias name="FallbackReceiverList0" font="Regular" size="28" height="38"/>
-		<alias name="FallbackReceiverList1" font="Regular" size="28"/>
-		<alias name="FileList" font="Regular" size="28" height="40"/>
-		<alias name="FileListMulti" font="Regular" size="28" height="40"/>
-		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
-		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
-		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
-		<alias name="PartnerBoxBouquetList0" font="Regular" size="28" height="38"/>
-		<alias name="PartnerBoxBouquetList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
-		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
-		<alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114"/>
-		<alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28"/>
-		<alias name="PartnerBoxEntryList0" font="Regular" size="32" height="45"/>
-		<alias name="PartnerBoxEntryList1" font="Regular" size="28"/>
-		<alias name="PiconManagerList" font="Regular" size="32" height="50"/>
-		<alias name="PlayList" font="Regular" size="28" height="40"/>
-		<alias name="PluginBrowser0" font="Regular" size="32" height="76"/>
-		<alias name="PluginBrowser1" font="Regular" size="22"/>
-		<alias name="SelectionList" font="Regular" size="28" height="40"/>
-		<alias name="ServiceInfo" font="Regular" size="28" height="45"/>
-		<alias name="TextNormal" font="Regular" size="28" height="38"/>
-		<alias name="VirtualKeyboard" font="Regular" size="42" height="75"/>
-	</fonts>
-	<colors>
-		<color name="#1a27408b" value="#1a27408b"/>
-		<color name="#2f4974" value="#002f4974"/>
-		<color name="#31000000" value="#31000000"/>
-		<color name="#555555" value="#00555555"/>
-		<color name="#b0b0b0" value="#00b0b0b0"/>
-		<color name="#c3c5d5" value="#00c3c5d5"/>
-		<color name="#f4f4f4" value="#00f4f4f4"/>
-		<color name="#ffff00" value="#00ffff00"/>
-		<color name="amarillo" value="#00ffffc6"/>
-		<color name="background" value="#40000000"/>
-		<color name="background20" value="#20000000"/>
-		<color name="background40" value="#40000000"/>
-		<color name="background90" value="#90000000"/>
-		<color name="bg" value="#33000000"/>
-		<color name="black" value="#00000000"/>
-		<color name="blue" value="#00003eff"/>
-		<color name="celadon" value="#004bf423"/>
-		<color name="cyan" value="#000090e6"/>
-		<color name="cyan1" value="#0000deff"/>
-		<color name="cyan2" value="#0000d2ff"/>
-		<color name="dark" value="#50000000"/>
-		<color name="darkgrey" value="#00999999"/>
-		<color name="foreground" value="#00dddddd"/>
-		<color name="green" value="#0000c200"/>
-		<color name="grey" value="#00cccccc"/>
-		<color name="grey2" value="#00aaaaaa"/>
-		<color name="h2" value="#00cccccc"/>
-		<color name="lightblue" value="#004d78ff"/>
-		<color name="lightgreen" value="#0010ff10"/>
-		<color name="lightred" value="#00ff1010"/>
-		<color name="lightyellow" value="#00dad356"/>
-		<color name="layer-a-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Foreground layer a -->
-		<color name="layer-a-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Background layer a -->
-		<color name="layer-a-selection-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Foreground layer a for selected items -->
-		<color name="layer-a-selection-background" value="#1A27408B"/>
-		<!-- MetrixColors - Background layer a for selected items -->
-		<color name="layer-a-accent1" value="#00BDBDBD"/>
-		<!-- MetrixColors - First accent layer a -->
-		<color name="layer-a-accent2" value="#006E6E6E"/>
-		<!-- MetrixColors - Second accent layer a -->
-		<color name="layer-a-extendedinfo1" value="#00BDBDBD"/>
-		<!-- MetrixColors - First extended info layer a -->
-		<color name="layer-a-extendedinfo2" value="#006E6E6E"/>
-		<!-- MetrixColors - Second extended info layer a -->
-		<color name="layer-a-progress" value="#1A27408B"/>
-		<!-- MetrixColors - Progress layer a -->
-		<color name="layer-a-underline" value="#00BDBDBD"/>
-		<!-- MetrixColors - color underline screen title text -->
-		<color name="layer-b-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Foreground layer b -->
-		<color name="layer-b-background" value="#1A27408B"/>
-		<!-- MetrixColors - Background layer b -->
-		<color name="layer-b-selection-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Foreground layer b for selected items -->
-		<color name="layer-b-selection-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Background layer b for selected items -->
-		<color name="layer-b-accent1" value="#00BDBDBD"/>
-		<!-- MetrixColors - First accent layer b -->
-		<color name="layer-b-accent2" value="#006E6E6E"/>
-		<!-- MetrixColors - Second accent layer b -->
-		<color name="layer-b-progress" value="#1AFFFFFF"/>
-		<!-- MetrixColors - Progress layer b -->
-		<color name="background-text" value="#34FFFFFF"/>
-		<!-- MetrixColors - Primary color for texts in background -->
-		<color name="text-background" value="#67FFFFFF"/>
-		<!-- MetrixColors - Background color for texts in background -->
-		<color name="title-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Foreground color for window title -->
-		<color name="title-background" value="#000F0F0F"/>
-		<!-- MetrixColors - Background color for window title -->
-		<color name="epg-eventdescription-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event description font color -->
-		<color name="epg-eventdescription-background" value="#1A27408B"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event description background color -->
-		<color name="epg-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG layer back color -->
-		<color name="epg-event-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event font color -->
-		<color name="epg-event-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event back color -->
-		<color name="epg-event-now-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event now font color -->
-		<color name="epg-event-now-background" value="#1A000000"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event now back color -->
-		<color name="epg-event-selected-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event selected font color -->
-		<color name="epg-event-selected-background" value="#1A27408B"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event selected back color -->
-		<color name="epg-service-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Event font color -->
-		<color name="epg-service-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Service back color -->
-		<color name="epg-service-now-foreground" value="#00FFFFFF"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Servive now font color -->
-		<color name="epg-service-now-background" value="#1A27408B"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Servive now back color -->
-		<color name="epg-timeline-foreground" value="#00F0A30A"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG timeline font color -->
-		<color name="epg-timeline-background" value="#1A000000"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG timeline back color -->
-		<color name="epg-primetime-foreground" value="#00008A00"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Primetime font color -->
-		<color name="epg-primetime-background" value="#1A0F0F0F"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG Primetime back color -->
-		<color name="epg-borderlines" value="#1ABDBDBD"/>
-		<!-- MetrixColors - Graphical and Vertivcal EPG border line color -->
-		<color name="metrixAccent" value="#0018b9ce"/>
-		<color name="metrixAccent1" value="#00bbbbbb"/>
-		<color name="metrixAccent2" value="#00999999"/>
-		<color name="metrixBackground" value="#40000000"/>
-		<color name="metrixBackground2" value="#40111111"/>
-		<color name="metrixBlue" value="#00149baf"/>
-		<color name="metrixCyan" value="#00149baf"/>
-		<color name="metrixDeepGrey" value="#00222222"/>
-		<color name="metrixForeground" value="#00ffffff"/>
-		<color name="metrixGreen" value="#0070ad11"/>
-		<color name="metrixOrange" value="#00c3461b"/>
-		<color name="metrixPink" value="#00a61d4d"/>
-		<color name="metrixPreBlack" value="#40000000"/>
-		<color name="metrixPreBlack2" value="#df000000"/>
-		<color name="metrixPreTrans" value="#ccffffff"/>
-		<color name="metrixPreTrans2" value="#dfffffff"/>
-		<color name="metrixPreTrans3" value="#bbffffff"/>
-		<color name="metrixPurple" value="#006c0aab"/>
-		<color name="metrixRed" value="#00911d10"/>
-		<color name="metrixSelection" value="#00149baf"/>
-		<color name="metrixYellow" value="#00bf9217"/>
-		<color name="orange" value="#00f47d19"/>
-		<color name="purple" value="#003366cc"/>
-		<color name="rds_text_bg" value="#00003258"/>
-		<color name="red" value="#00c20000"/>
-		<color name="rssviewtop" value="#45005050"/>
-		<color name="transparent" value="#ffffffff"/>
-		<color name="transparent2" value="#ff000000"/>
-		<color name="transpBlack" value="#80000000"/>
-		<color name="transpWhite" value="#77ffffff"/>
-		<color name="transpyellow" value="#33bab329"/>
-		<color name="un18080911" value="#18080911"/>
-		<color name="un1c1c1c" value="#001c1c1c"/>
-		<color name="un1c202b" value="#001c202b"/>
-		<color name="un1e28b6" value="#001e28b6"/>
-		<color name="un1f771f" value="#001f771f"/>
-		<color name="un202020" value="#00202020"/>
-		<color name="un240e1014" value="#240e1014"/>
-		<color name="un293133" value="#00293133"/>
-		<color name="un364348" value="#00364348"/>
-		<color name="un3658a4" value="#003658a4"/>
-		<color name="un444444" value="#00444444"/>
-		<color name="un4d5375" value="#004d5375"/>
-		<color name="un5678a4" value="#005678a4"/>
-		<color name="un56c856" value="#0056c856"/>
-		<color name="un605f5e" value="#00605f5e"/>
-		<color name="un62e3c" value="#00062e3c"/>
-		<color name="un6699ff" value="#006699ff"/>
-		<color name="un777777" value="#00777777"/>
-		<color name="un7a7a7a" value="#007a7a7a"/>
-		<color name="un800000" value="#00800000"/>
-		<color name="un808080" value="#00808080"/>
-		<color name="un808888" value="#00808888"/>
-		<color name="un9f1313" value="#009f1313"/>
-		<color name="una08500" value="#00a08500"/>
-		<color name="unb59e01" value="#00b59e01"/>
-		<color name="unbab329" value="#00bab329"/>
-		<color name="unbbbbbb" value="#00bbbbbb"/>
-		<color name="unc6e0f3" value="#00c6e0f3"/>
-		<color name="unc8eaff" value="#00c8eaff"/>
-		<color name="uncccccc" value="#00cccccc"/>
-		<color name="und3d3d3" value="#00d3d3d3"/>
-		<color name="undcaaaa" value="#00dcaaaa"/>
-		<color name="undcdcdc" value="#00dcdcdc"/>
-		<color name="undddddd" value="#00dddddd"/>
-		<color name="unececec" value="#00ececec"/>
-		<color name="unf0b400" value="#00f0b400"/>
-		<color name="unf2e000" value="#00f2e000"/>
-		<color name="unfcc000" value="#00fcc000"/>
-		<color name="unff0000" value="#00ff0000"/>
-		<color name="unff000000" value="#ff000000"/>
-		<color name="unffbf00" value="#00ffbf00"/>
-		<color name="unffffff" value="#00ffffff"/>
-		<color name="white" value="#00ffffff"/>
-		<color name="whiteFix" value="#00fefefe"/>
-		<color name="yellow" value="#00bab329"/>
-	</colors>
-
-	<parameters>
-		<parameter name="AllowUserDatesAndTimes" value="5,5"/>
-		<parameter name="AutotimerEnabledIcon" value="2,1,38,36"/>
-		<parameter name="AutotimerRecordIcon" value="30,1,25,25"/>
-		<parameter name="ChoicelistIcon" value="0,0,50,50"/>
-		<parameter name="ChoicelistName" value="70,0,900,50"/>
-		<parameter name="ChoicelistDash" value="0,0,900,50"/>
-		<parameter name="ChoicelistIconVerticalline" value="10,0,30,38"/>
-		<parameter name="ChoicelistIconExpanded" value="10,3,30,35"/>
-		<parameter name="ChoicelistNameSingle" value="10,0,690,38"/>
-		<parameter name="ConfigListSlider" value="10,3"/>
-		<parameter name="ConfigListSeperator" value="500"/>
-		<parameter name="DreamexplorerName" value="70,2,1200,50"/>
-		<parameter name="DreamexplorerIcon" value="10,5,40,40"/>
-
-		<parameter name="EpgListIcon" value="2,12,25,25,2"/>
-		<parameter name="EpgListMulti" value="360,170,170,10"/>
-		<parameter name="EpgListMultiProgressBar" value="170,15,1"/>
-
-		<parameter name="EpgListSingle" value="80,220"/>
-		<parameter name="ExpandableListIcon" value="5,5,90,75"/>
-		<parameter name="ExpandableListDescr" value="55,0,1000,40"/>
-		<parameter name="FileListName" value="40,2,800,37"/>
-		<parameter name="FileListIcon" value="10,7,30,37"/>
-		<parameter name="FileListMultiName" value="80,0,700,40"/>
-		<parameter name="FileListMultiIcon" value="45,0,25,25"/>
-		<parameter name="FileListMultiLock" value="2,0,25,25"/>
-		<parameter name="HelpMenuListExtHlp0" value="0,0,840,39"/>
-		<parameter name="HelpMenuListExtHlp1" value="0,42,840,30"/>
-		<parameter name="HelpMenuListHlp" value="0,0,840,42"/>
-		<parameter name="FTPFileEntryComponent" value="100,2,700,40,30"/>
-
-
-
-		<parameter name="ImsSelectionListDescr" value="46,4,1000,45"/>
-		<parameter name="ImsSelectionListLock" value="5,2,36,36"/>
-		<parameter name="PiconManagerList" value="10,0,1120,40"/>
-		<parameter name="PiconManagerListFont" value="Regular;28"/>
-		<parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
-		<parameter name="PlayListIcon" value="10,7,30,37"/>
-		<parameter name="PlayListName" value="40,0,800,37"/>
-		<parameter name="PluginBrowserDescr" value="180,38,30"/>
-		<parameter name="PluginBrowserDownloadDescr" value="90,40,30"/>
-		<parameter name="PluginBrowserDownloadIcon" value="0,0,90,60"/>
-		<parameter name="PluginBrowserDownloadName" value="90,3,50"/>
-		<parameter name="PluginBrowserIcon" value="10,8,150,60"/>
-		<parameter name="PluginBrowserName" value="180,2,35"/>
-		<parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40"/>
-		<parameter name="ProgrammlistenUpdaterListFont" value="Regular;26"/>
-		<parameter name="SelectionListDescr" value="60,2,820,32"/>
-		<parameter name="SelectionListLock" value="10,2,35,35"/>
-		<parameter name="SelectionListLockOff" value="10,2,35,35"/>
-		<parameter name="ServiceInfo" value="0,0,1200,40"/>
-		<parameter name="ServiceInfoLeft" value="0,0,450,40"/>
-		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
-		<parameter name="ServiceInfoFont" value="Regular;26"/>
-		<parameter name="VirtualKeyboard" value="76,72"/>
-		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
-		<parameter name="VirtualKeyBoardPadding" value="4,4"/>
-		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
-	</parameters>
-	<switchpixmap>
-		<pixmap name="menu_on" filename="MetriXconfluencExp/icons/menu_on.png"/>
-		<pixmap name="menu_off" filename="MetriXconfluencExp/icons/menu_off.png"/>
-	</switchpixmap>
-	<windowstyle type="skinned" id="0">
-		<configList entryFont="Regular;30" valueFont="Regular;28"/>															 
-		<title offset="45,11" font="Regular;45"/>
-		<color name="Background" color="background20"/>
-		<color name="LabelForeground" color="white"/>
-		<color name="ListboxBackground" color="background20"/>
-		<color name="ListboxForeground" color="white"/>
-		<color name="ListboxSelectedBackground" color="cyan"/>
-		<color name="ListboxSelectedForeground" color="white"/>
-		<color name="ListboxMarkedBackground" color="metrixGreen"/>
-		<color name="ListboxMarkedForeground" color="unff0000"/>
-		<color name="ListboxMarkedAndSelectedBackground" color="metrixBlue"/>
-		<color name="ListboxMarkedAndSelectedForeground" color="un800000"/>
-		<color name="WindowTitleForeground" color="foreground"/>
-		<color name="WindowTitleBackground" color="background20"/>
-		<borderset name="bsWindow">
-			<pixmap pos="bpTopLeft" filename="MetriXconfluencExp/window/bs_tl.png"/>
-			<pixmap pos="bpTop" filename="MetriXconfluencExp/window/bs_t.png"/>
-			<pixmap pos="bpTopRight" filename="MetriXconfluencExp/window/bs_tr.png"/>
-			<pixmap pos="bpLeft" filename="MetriXconfluencExp/window/bs_l.png"/>
-			<pixmap pos="bpRight" filename="MetriXconfluencExp/window/bs_r.png"/>
-			<pixmap pos="bpBottomLeft" filename="MetriXconfluencExp/window/bs_bl.png"/>
-			<pixmap pos="bpBottom" filename="MetriXconfluencExp/window/bs_b.png"/>
-			<pixmap pos="bpBottomRight" filename="MetriXconfluencExp/window/bs_br.png"/>
-		</borderset>
-		<scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1"/>
-		<listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1"/>									 
-	</windowstyle>
-
-	<!--  Screens  -->
-	<!-- -->
-	<screen name="Pic_Setup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeLeft"/>
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_common" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeLeft"/>
-		<panel name="configCom"/>
-		<!--
- 		<ePixmap position="153,122" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/setup.png" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<panel name="ClockTimeLeft"/>
-		<panel name="btCRYB"/>
-		<widget name="config" position="659,147" size="1149,547" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" backgroundColor="background20" enableWrapAround="1" transparent="1" />
-		<widget name="description" position="659,743" size="1149,181" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30"/>
-		<widget name="HelpWindow" alphatest="blend" position="76,748" size="574,200" transparent="1"/>
-		<widget name="footnote" position="660,928" size="1147,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3"/>
-		 -->
-	</screen>
-	<screen name="setup_epgsettings" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeLeft"/>
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_filecommander" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="ClockTimeLeft"/>
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_epgmulti" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_epginfobar" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_epginfobargraphical" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_epggraphical" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_subtitlesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_dvdplayer" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_logs" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_time" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_keyboard" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_userinterface" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_recording" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_timeshift" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_specialfeatures" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_display" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_channelselection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_usage" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_remotesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_channelselectionskin" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_autolanguagesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<screen name="setup_harddisk" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
-		<!-- EDIT LULULLA -->
-		<panel name="configCom"/>
-	</screen>
-	<setups>
-		<setup key="default" image="icons/setup.png"/>
-		<setup key="Recording" image="icons/menu_extended_recording_setup.png"/>
-		<setup key="Timeshift" image="icons/menu_extended_timshift_setup.png"/>
-		<setup key="Usage" image="icons/menu_system_usage_setup.png"/>
-		<setup key="Subtitle" image="icons/menu_extended_subtitle_setup.png"/>
-		<setup key="AutoLanguage" image="icons/menu_system_autolanguage_setup.png"/>
-		<setup key="UserInterface" image="icons/menu_osd_menu_user_interface.png"/>
-		<setup key="RemoteButton" image="icons/menu_system_remote_setup.png"/>
-		<setup key="ChannelSelection" image="icons/menu_system_channelselection_setup.png"/>
-		<setup key="Display" image="icons/menu_display_display_setup.png"/>
-		<setup key="Keyboard" image="icons/menu_extended_keyboard.png"/>
-		<setup key="EPGMulti" image="icons/menu_epg_setup_epgmulti.png"/>
-		<setup key="EPGEnhanced" image="icons/menu_epg_setup_epgenhanced.png"/>
-		<setup key="EPGInfobar" image="icons/menu_epg_setup_epginfobar.png"/>
-		<setup key="EPGInfobarGraphical" image="icons/menu_epg_setup_epginfobargraphical.png"/>
-		<setup key="EPGGraphical" image="icons/menu_epg_setup_epggraphical.png"/>
-		<setup key="EPGVertical" image="icons/menu_epg_setup_epgmulti.png"/>
-		<setup key="EPG" image="icons/menu_epg_epg_setup.png"/>
-		<setup key="HardDisk" image="icons/hdd.png"/>
-		<setup key="Time" image="icons/menu_extended_time_setup.png"/>
-		<setup key="Logs" image="icons/menu_extended_logs_setup.png"/>
-		<setup key="dvdplayer" image="icons/menu_extended_dvdplayer_setup.png"/>
-		<setup key="SpecialFeatures" image="icons/menu_extended_specialfeatures_menu.png"/>
-		<setup key="OSD3D" image="icons/menu_osd_menu_osd3dsetup.png"/>
-		<setup key="OscamInfo" image="icons/softcam.png"/>
-		<setup key="HDMICEC" image="icons/hdmicec.png"/>
-		<setup key="Audio" image="icons/audio.png"/>
-		<setup key="SleepTimer" image="icons/power_timer.png"/>
-		<setup key="VolumeAdjust" image="icons/menu_system_AutomaticVolumeAdjustment.png"/>
-	</setups>
-	<menus>
-		<menu key="default" image="icons/default.png"/>
-		<menu key="about_screen" image="icons/menu_information_about.png"/>
-		<menu key="animation_setup" image="icons/usage_setup.png"/>
-		<menu key="audio_menu" image="icons/menu_setup_audio.png"/>
-		<menu key="audio_setup" image="icons/menu_setup_audio.png"/>
-		<menu key="auto_scan" image="icons/menu_scan_auto_scan.png"/>
-		<menu key="autobouquetsmakermaker" image="icons/menu_scan_autobouquetsmakermaker.png"/>
-		<menu key="autolanguage_setup" image="icons/menu_system_autolanguage_setup.png"/>
-		<menu key="AutomaticVolumeAdjustment" image="icons/menu_system_AutomaticVolumeAdjustment.png"/>
-		<menu key="autores_setup" image="icons/menu_system_autores_setup.png"/>
-		<menu key="autotimer_setup" image="icons/menu_timermenu_autotimers.png"/>
-		<menu key="av_setup" image="icons/menu_system_av_setup.png"/>
-		<menu key="blindscan" image="icons/menu_scan_blindscan.png"/>
-		<menu key="bluetooth_setup" image="icons/bluetooth.png"/>
-		<menu key="build_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="buttonsetup_setup" image="icons/menu_osd_menu_buttonsetup.png"/>
-		<menu key="cablescan" image="icons/search.png"/>
-		<menu key="channelselection_setup" image="icons/menu_system_channelselection_setup.png"/>
-		<menu key="Chromium Plugin" image="icons/browser.png"/>
-		<menu key="ci_assign" image="icons/menu_setup_ci.png"/>
-		<menu key="ci_setup" image="icons/menu_setup_ci.png"/>
-		<menu key="crontimer_edit" image="icons/menu_timermenu_crontimers.png"/>
-		<menu key="Dazn" image="icons/dazn.png"/>
-		<menu key="deep_standby" image="icons/power_off.png"/>
-		<menu key="deleteepgcache" image="icons/menu_epgloadsave_menu_deleteepgcache.png"/>
-		<menu key="device_screen" image="icons/menu_information_device.png"/>
-		<menu key="device_setup" image="icons/menu_network_device_setup.png"/>
-		<menu key="Disney Plugin" image="icons/disney.png"/>
-		<menu key="display_setup" image="icons/menu_display_display_setup.png"/>
-		<menu key="dmc_mainmenu" image="icons/menu_mainmenu_dmc_mainmenu.png"/>
-		<menu key="dreamplex" image="icons/plex.png"/>
-		<menu key="drives_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="dual_mode" image="icons/dualmode.png"/>
-		<menu key="dvd_player" image="icons/dvd.png"/>
-		<menu key="dvdplayer_setup" image="icons/menu_extended_dvdplayer_setup.png"/>
-		<menu key="emc" image="icons/emc.png"/>
-		<menu key="epg_setup" image="icons/menu_epg_epg_setup.png"/>
-		<menu key="epgimporter" image="icons/menu_epgloadsave_menu_loadepgcache.png"/>
-		<menu key="epgloadsave_menu" image="icons/menu_epg_epgloadsave_menu.png"/>
-		<menu key="epgrefresh" image="icons/menu_epg_refresh.png"/>
-		<menu key="factory_reset" image="icons/menu_setup_reset.png"/>
-		<menu key="fansetup_config" image="icons/fan.png"/>
-		<menu key="fastscan" image="icons/menu_scan_fast_scan.png"/>
-		<menu key="FCCSetup" image="icons/fcc.png"/>
-		<menu key="filecommand" image="icons/filecom.png"/>
-		<menu key="googlemaps" image="icons/google.png"/>
-		<menu key="harddisk_check" image="icons/menu_harddisk_harddisk_check.png"/>
-		<menu key="harddisk_convert" image="icons/menu_harddisk_harddisk_convert.png"/>
-		<menu key="harddisk_init" image="icons/menu_harddisk_harddisk_init.png"/>
-		<menu key="harddisk_setup" image="icons/menu_harddisk_harddisk_setup.png"/>
-		<menu key="Hardreset" image="icons/restart.png"/>
-		<menu key="hdmicec" image="icons/menu_extended_hdmicec.png"/>
-		<menu key="hdmirecord_setup" image="icons/menu_extended_hdmirecord_setup.png"/>
-		<menu key="Inadyn_setup" image="icons/menu_network_Inadyn_setup.png"/>
-		<menu key="Infopanel" image="icons/menu_information_about.png"/>
-		<menu key="input_device_setup" image="icons/menu_extended_input_device_setup.png"/>
-		<menu key="ipbox_client_Start" image="icons/menu_scan_streamconvert.png"/>
-		<menu key="IPTV Bouquet Maker" image="icons/menu_mainmenu_pluginmanager.png"/>
-		<menu key="iptv_config" image="icons/setup.png"/>
-		<menu key="iptv_main" image="icons/pplayer.png"/>
-		<menu key="keyboard" image="icons/menu_extended_keyboard.png"/>
-		<menu key="keymap" image="icons/menu_extended_input_device_setup.png"/>
-		<menu key="lcd4linux" image="icons/menu_display_lcd_skin_setup.png"/>
-		<menu key="lcd_skin_setup" image="icons/menu_display_lcd_skin_setup.png"/>
-		<menu key="LED_Giga" image="icons/menu_display_LED_Giga.png"/>
-		<menu key="ledManager" image="icons/led.png"/>
-		<menu key="loadepgcache" image="icons/menu_epgloadsave_menu_loadepgcache.png"/>
-		<menu key="locale_setup" image="icons/menu_system_language_setup.png"/>
-		<menu key="logs_setup" image="icons/menu_extended_logs_setup.png"/>
-		<menu key="maintenance_mode" image="icons/usage_setup.png"/>
-		<menu key="manual_scan" image="icons/menu_scan_manual_scan.png"/>
-		<menu key="media_player" image="icons/media.png"/>
-		<menu key="memory_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="merlin_music_player" image="icons/music.png"/>
-		<menu key="minidlna_setup" image="icons/menu_network_minidlna_setup.png"/>
-		<menu key="mount_manager" image="icons/menu_extended_hardisk_selection.png"/>
-		<menu key="moviebrowser" image="icons/service_info.png"/>
-		<menu key="multi_quick" image="icons/remotecontrol.png"/>
-		<menu key="multiboot" image="icons/restart.png"/>
-		<menu key="multiboot_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="netafp_setup" image="icons/menu_network_netafp_setup.png"/>
-		<menu key="Netflix Plugin" image="icons/menu_mainmenu_netflix.png"/>
-		<menu key="netftp_setup" image="icons/menu_network_netftp_setup.png"/>
-		<menu key="netmounts_setup" image="icons/menu_network_netmounts_setup.png"/>
-		<menu key="netnfs_setup" image="icons/menu_network_netnfs_setup.png"/>
-		<menu key="netrts_setup" image="icons/menu_network_netnfs_setup.png"/>
-		<menu key="netsabnzbd_setup" image="icons/menu_network_netsabnzbd_setup.png"/>
-		<menu key="netsatpi_setup" image="icons/menu_scan_satip.png"/>
-		<menu key="netsmba_setup" image="icons/menu_network_netsmba_setup.png"/>
-		<menu key="nettelnet_setup" image="icons/menu_network_nettelnet_setup.png"/>
-		<menu key="netushare_setup" image="icons/menu_network_netushare_setup.png"/>
-		<menu key="netvpn_setup" image="icons/menu_network_netvpn_setup.png"/>
-		<menu key="network_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="numzapext_setup" image="icons/menu_numzapext_setup.png"/>
-		<menu key="OpenStore" image="icons/menu_mainmenu_openstore.png"/>
-		<menu key="openwebif" image="icons/menu_network_webif.png"/>
-		<menu key="osdsetup" image="icons/menu_osd_menu_osdsetup.png"/>
-		<menu key="parental_setup" image="icons/menu_setup_parental.png"/>
-		<menu key="password_setup" image="icons/menu_network_passwd_setup.png"/>
-		<menu key="permanent_clock" image="icons/menu_extended_time_setup.png"/>
-		<menu key="pip_setup" image="icons/setup.png"/>
-		<menu key="play_cd" image="icons/dvd.png"/>
-		<menu key="plugin_selection" image="icons/menu_mainmenu_pluginmanager.png"/>
-		<menu key="pluginhider_setup" image="icons/menu_mainmenu_pluginhider.png"/>
-		<menu key="positioner_setup" image="icons/menu_scan_positioner_setup.png"/>
-		<menu key="powertimer_edit" image="icons/menu_timermenu_powertimers.png"/>
-		<menu key="PrimeVideo" image="icons/prime.png"/>
-		<menu key="pvmc_mainmenu" image="icons/pvmc.png"/>
-		<menu key="RCU Select" image="icons/remotecontrol.png"/>
-		<menu key="receiver_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="recording_setup" image="icons/menu_extended_recording_setup.png"/>
-		<menu key="remote_setup" image="icons/menu_system_remote_setup.png"/>
-		<menu key="remotecode" image="icons/menu_extended_remotecode.png"/>
-		<menu key="remotecontrolcode" image="icons/remotecontrol.png"/>
-		<menu key="remotetimer" image="icons/menu_timermenu_timers.png"/>
-		<menu key="restart" image="icons/restart.png"/>
-		<menu key="restart_enigma" image="icons/reboot.png"/>
-		<menu key="rfmod_setup" image="icons/menu_extended_rfmod_setup.png"/>
-		<menu key="run_kodi" image="icons/menu_kodi.png"/>
-		<menu key="sat_ip_client" image="icons/menu_scan_satip.png"/>
-		<menu key="satellite_equipment_setup" image="icons/setup.png"/>
-		<menu key="satfinder" image="icons/menu_scan_satfinder.png"/>
-		<menu key="saveepgcache" image="icons/menu_epgloadsave_menu_saveepgcache.png"/>
-		<menu key="scart_switch" image="icons/menu_mainmenu_scart.png"/>
-		<menu key="script_manager" image="icons/menu_setup_software_manager.png"/>
-		<menu key="service_info_screen" image="icons/info.png"/>
-		<menu key="serviceapp_setup" image="icons/pplayer.png"/>
-		<menu key="setup_epgenhanced" image="icons/menu_epg_setup_epgenhanced.png"/>
-		<menu key="setup_epggraphical" image="icons/menu_epg_setup_epggraphical.png"/>
-		<menu key="setup_epginfobar" image="icons/menu_epg_setup_epginfobar.png"/>
-		<menu key="setup_epginfobargraphical" image="icons/menu_epg_setup_epginfobargraphical.png"/>
-		<menu key="setup_epgmulti" image="icons/menu_epg_setup_epgmulti.png"/>
-		<menu key="setup_epgvertical" image="icons/menu_epg_setup_epgmulti.png"/>
-		<menu key="setup_osd3d" image="icons/menu_osd_menu_osd3dsetup.png"/>
-		<menu key="shutdown" image="icons/power_off.png"/>
-		<menu key="skin_setup" image="icons/menu_osd_menu_skin_setup.png"/>
-		<menu key="sleep" image="icons/power_timer.png"/>
-		<menu key="softcam_setup" image="icons/softcam.png"/>
-		<menu key="specialfeatures_menu" image="icons/menu_extended_specialfeatures_menu.png"/>
-		<menu key="Stalker Plugin" image="icons/portal.png"/>
-		<menu key="standby" image="icons/power.png"/>
-		<menu key="start_kodi" image="icons/menu_kodi.png"/>
-		<menu key="startimport" image="icons/iptvimport.png"/>
-		<menu key="startsetup" image="icons/alexa.png"/>
-		<menu key="streamconvert" image="icons/menu_scan_streamconvert.png"/>
-		<menu key="streaming_clients_info_screen" image="icons/info.png"/>
-		<menu key="subtitle_selection" image="icons/sub.png"/>
-		<menu key="subtitle_setup" image="icons/menu_extended_subtitle_setup.png"/>
-		<menu key="sundtek_control_enter" image="icons/menu_mainmenu_pluginmanager.png"/>
-		<menu key="supportchannel_YTChannel" image="icons/menu_information_supportchannel.png"/>
-		<menu key="swap_manager" image="icons/menu_harddisk_ram.png"/>
-		<menu key="tempfancontrol" image="icons/fan.png"/>
-		<menu key="time_setup" image="icons/menu_extended_time_setup.png"/>
-		<menu key="timer_edit" image="icons/menu_timermenu_timers.png"/>
-		<menu key="timshift_setup" image="icons/menu_extended_timshift_setup.png"/>
-		<menu key="tuner_info_screen" image="icons/menu_information_device.png"/>
-		<menu key="tuner_screen" image="icons/menu_information_device.png"/>
-		<menu key="tuner_setup" image="icons/menu_scan_tuner_setup.png"/>
-		<menu key="usage_setup" image="icons/menu_system_usage_setup.png"/>
-		<menu key="user_interface" image="icons/menu_osd_menu_user_interface.png"/>
-		<menu key="vfd_ew" image="icons/menu_system_VFD_INI.png"/>
-		<menu key="VFD_INI" image="icons/menu_system_VFD_INI.png"/>
-		<menu key="video_clipping" image="icons/service_info.png"/>
-		<menu key="video_finetune" image="icons/menu_system_videofinetune_setup.png"/>
-		<menu key="video_menu" image="icons/service_info.png"/>
-		<menu key="video_setup" image="icons/service_info.png"/>
-		<menu key="videoenhancement_setup" image="icons/menu_system_videoenhancement_setup.png"/>
-		<menu key="vmc_init_setup" image="icons/menu_setup_vmc_setup.png"/>
-		<menu key="vmc_init_startvmc" image="icons/menu_mainmenu_vmc.png"/>
-		<menu key="volume_adjust" image="icons/menu_system_AutomaticVolumeAdjustment.png"/>
-		<menu key="vps" image="icons/menu_scan_streamconvert.png"/>
-		<menu key="Weather_MSN" image="icons/weather.png"/>
-		<menu key="webradioFS" image="icons/webradioFS.png"/>
-		<menu key="wol_standby" image="icons/power_off.png"/>
-		<menu key="XCplugin" image="icons/menu_mainmenu_pluginmanager.png"/>
-		<menu key="XStreamity" image="icons/menu_mainmenu_pluginmanager.png"/>
-		<menu key="youtubetv" image="icons/youtube.png"/>
-		<menu key="software_manager" image="icons/menu_setup_software_manager.png"/>
-		<menu key="manage_extensions" image="icons/menu_manage_extensions.png"/>
-		<menu key="software_update" image="icons/menu_software_update.png"/>
-		<menu key="software_restore" image="icons/menu_software_restore.png"/>
-		<menu key="flash_online" image="icons/menu_flash_online.png"/>
-		<menu key="backup_image_dflash" image="icons/menu_backup_image.png"/>
-		<menu key="backup_image_dbackup" image="icons/menu_backup_image.png"/>
-		<menu key="backup_image" image="icons/menu_setup_backup_image.png"/>
-		<menu key="multiboot" image="icons/menu_multiboot.png"/>
-		<menu key="backup_system" image="icons/menu_backup_system.png"/>
-		<menu key="restore_system" image="icons/menu_restore_system.png"/>
-		<menu key="install_local" image="icons/menu_install_local.png"/>
-		<menu key="advanced_software" image="icons/menu_advanced_software.png"/>
-		<menu key="advanced_restore" image="icons/menu_advanced_restore.png"/>
-		<menu key="backup_location" image="icons/menu_backup_location.png"/>
-		<menu key="backup_default" image="icons/menu_backup_default.png"/>
-		<menu key="backup_additional" image="icons/menu_backup_additional.png"/>
-		<menu key="backup_excluded" image="icons/menu_backup_excluded.png"/>
-		<menu key="package_manager" image="icons/package_manager.png"/>
-		<menu key="upgrade_source" image="icons/upgrade_source.png"/>
-		<menu key="information" image="icons/info.png"/>
-		<menu key="timermenu" image="icons/menu_mainmenu_timer.png"/>
-		<menu key="setup" image="icons/setup.png"/>
-		<menu key="rec" image="icons/menu_extended_recording_setup.png"/>
-		<menu key="display" image="icons/menu_extended_display_selection.png"/>
-		<menu key="osd_menu" image="icons/menu_extended_osd_setup.png"/>
-		<menu key="scan" image="icons/menu_setup_tuner.png"/>
-		<menu key="cam" image="icons/menu_setup_ci.png"/>
-		<menu key="extended" image="icons/menu_system_extended_selection.png"/>
-		<menu key="harddisk" image="icons/menu_extended_hardisk_selection.png"/>
-		<menu key="network" image="icons/menu_system_network_menu.png"/>
-		<menu key="shutdown" image="icons/reset.png"/>
-		<menu key="epg" image="icons/menu_epg_epg_setup.png"/>
-		<menu key="system" image="icons/menu_setup_setup.png"/>
-	</menus>
-	<!-- Include Files -->
-	<include filename="MetriXconfluencExp/skin_plugins.xml"/>
-	<include filename="MetriXconfluencExp/skin_oatv.xml"/>
-	<include filename="MetriXconfluencExp/skin_infochannel.xml"/>
-	<include filename="MetriXconfluencExp/skin_templates.xml"/>
-	<include filename="MetriXconfluencExp/skin_button.xml"/>
+  <!-- Original author of this skin is iMaxxx -->
+  <!-- mod by Adrenalinnrw -->
+  <!-- mod by @Dragon@ -->
+  <!-- mod by @Lululla 10-05-2022 -->
+  <!-- You can modify and redistribute it as long as you keep this License for the skin and all of your modifications -->
+  <output id="0">
+    <resolution bpp="32" xres="1920" yres="1080" />
+  </output>
+  <fonts>
+    <font filename="/usr/share/fonts/lcd.ttf" name="LCD" scale="100" />
+    <font filename="/usr/share/fonts/ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1" />
+    <font filename="/usr/share/fonts/tuxtxt.ttf" name="Console" scale="100" />
+    <font filename="/usr/share/fonts/nmsbd.ttf" name="Arial" scale="100" />
+    <font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="Regular" scale="100" />
+    <font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeui.ttf" name="RegularLight" scale="100" />
+    <font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/segoeb.ttf" name="RegularB" scale="100" />
+    <font filename="/usr/share/enigma2/MetriXconfluencExp/fonts/3d.ttf" name="3d" scale="100" />
+    <alias name="ChoiceBoxDescription" font="Regular" size="28" height="38" />
+    <alias name="ChoiceList" font="Regular" size="28" height="38" />
+    <alias name="Dreamexplorer" font="Regular" size="34" height="50" />
+    <alias name="FallbackReceiverList0" font="Regular" size="28" height="38" />
+    <alias name="FallbackReceiverList1" font="Regular" size="28" />
+    <alias name="FileList" font="Regular" size="28" height="40" />
+    <alias name="FileListMulti" font="Regular" size="28" height="40" />
+    <alias name="HelpMenuList" font="Regular" size="30" height="45" />
+    <alias name="HelpMenuListExt0" font="Regular" size="32" height="75" />
+    <alias name="HelpMenuListExt1" font="Regular" size="28" />
+    <alias name="PartnerBoxBouquetList0" font="Regular" size="28" height="38" />
+    <alias name="PartnerBoxBouquetList1" font="Regular" size="28" />
+    <alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38" />
+    <alias name="PartnerBoxChannelEPGList1" font="Regular" size="24" />
+    <alias name="PartnerBoxChannelList0" font="Regular" size="32" height="114" />
+    <alias name="PartnerBoxChannelList1" font="Regular" size="28" />
+    <alias name="PartnerBoxE2TimerMenu0" font="Regular" size="32" height="114" />
+    <alias name="PartnerBoxE2TimerMenu1" font="Regular" size="28" />
+    <alias name="PartnerBoxEntryList0" font="Regular" size="32" height="45" />
+    <alias name="PartnerBoxEntryList1" font="Regular" size="28" />
+    <alias name="PiconManagerList" font="Regular" size="32" height="50" />
+    <alias name="PlayList" font="Regular" size="28" height="40" />
+    <alias name="PluginBrowser0" font="Regular" size="32" height="76" />
+    <alias name="PluginBrowser1" font="Regular" size="22" />
+    <alias name="SelectionList" font="Regular" size="28" height="40" />
+    <alias name="ServiceInfo" font="Regular" size="28" height="45" />
+    <alias name="TextNormal" font="Regular" size="28" height="38" />
+    <alias name="VirtualKeyboard" font="Regular" size="42" height="75" />
+  </fonts>
+  <colors>
+    <color name="#1a27408b" value="#1a27408b" />
+    <color name="#2f4974" value="#002f4974" />
+    <color name="#31000000" value="#31000000" />
+    <color name="#555555" value="#00555555" />
+    <color name="#b0b0b0" value="#00b0b0b0" />
+    <color name="#c3c5d5" value="#00c3c5d5" />
+    <color name="#f4f4f4" value="#00f4f4f4" />
+    <color name="#ffff00" value="#00ffff00" />
+    <color name="amarillo" value="#00ffffc6" />
+    <color name="background" value="#40000000" />
+    <color name="background20" value="#20000000" />
+    <color name="background40" value="#40000000" />
+    <color name="background90" value="#90000000" />
+    <color name="background-text" value="#34ffffff" />
+    <color name="bg" value="#33000000" />
+    <color name="black" value="#00000000" />
+    <color name="blue" value="#00003eff" />
+    <color name="celadon" value="#004bf423" />
+    <color name="cyan" value="#000090e6" />
+    <color name="cyan1" value="#0000deff" />
+    <color name="cyan2" value="#0000d2ff" />
+    <color name="dark" value="#50000000" />
+    <color name="darkgrey" value="#00999999" />
+    <color name="epg-background" value="#1a0f0f0f" />
+    <color name="epg-borderlines" value="#1abdbdbd" />
+    <color name="epg-event-background" value="#1a0f0f0f" />
+    <color name="epg-eventdescription-background" value="#1a27408b" />
+    <color name="epg-eventdescription-foreground" value="#00ffffff" />
+    <color name="epg-event-foreground" value="#00ffffff" />
+    <color name="epg-event-now-background" value="#1a000000" />
+    <color name="epg-event-now-foreground" value="#00ffffff" />
+    <color name="epg-event-selected-background" value="#1a27408b" />
+    <color name="epg-event-selected-foreground" value="#00ffffff" />
+    <color name="epg-primetime-background" value="#1a0f0f0f" />
+    <color name="epg-primetime-foreground" value="#00008a00" />
+    <color name="epg-service-background" value="#1a0f0f0f" />
+    <color name="epg-service-foreground" value="#00ffffff" />
+    <color name="epg-service-now-background" value="#1a27408b" />
+    <color name="epg-service-now-foreground" value="#00ffffff" />
+    <color name="epg-timeline-background" value="#1a000000" />
+    <color name="epg-timeline-foreground" value="#00f0a30a" />
+    <color name="foreground" value="#00dddddd" />
+    <color name="green" value="#0000c200" />
+    <color name="grey" value="#00cccccc" />
+    <color name="grey2" value="#00aaaaaa" />
+    <color name="header" value="#00ffffff" />	
+    <color name="h2" value="#00cccccc" />
+    <color name="layer-a-accent1" value="#00bdbdbd" />
+    <color name="layer-a-accent2" value="#006e6e6e" />
+    <color name="layer-a-background" value="#1a0f0f0f" />
+    <color name="layer-a-extendedinfo1" value="#00bdbdbd" />
+    <color name="layer-a-extendedinfo2" value="#006e6e6e" />
+    <color name="layer-a-foreground" value="#00ffffff" />
+    <color name="layer-a-progress" value="#1a27408b" />
+    <color name="layer-a-selection-background" value="#1a27408b" />
+    <color name="layer-a-selection-foreground" value="#00ffffff" />
+    <color name="layer-a-underline" value="#00bdbdbd" />
+    <color name="layer-b-accent1" value="#00bdbdbd" />
+    <color name="layer-b-accent2" value="#006e6e6e" />
+    <color name="layer-b-background" value="#1a27408b" />
+    <color name="layer-b-foreground" value="#00ffffff" />
+    <color name="layer-b-progress" value="#1affffff" />
+    <color name="layer-b-selection-background" value="#1a0f0f0f" />
+    <color name="layer-b-selection-foreground" value="#00ffffff" />
+    <color name="lightblue" value="#004d78ff" />
+    <color name="lightgreen" value="#0010ff10" />
+    <color name="lightred" value="#00ff1010" />
+    <color name="lightyellow" value="#00dad356" />
+    <color name="metrixAccent" value="#0018b9ce" />
+    <color name="metrixAccent1" value="#00bbbbbb" />
+    <color name="metrixAccent2" value="#00999999" />
+    <color name="metrixBackground" value="#40000000" />
+    <color name="metrixBackground2" value="#40111111" />
+    <color name="metrixBlue" value="#00149baf" />
+    <color name="metrixCyan" value="#00149baf" />
+    <color name="metrixDeepGrey" value="#00222222" />
+    <color name="metrixForeground" value="#00ffffff" />
+    <color name="metrixGreen" value="#0070ad11" />
+    <color name="metrixOrange" value="#00c3461b" />
+    <color name="metrixPink" value="#00a61d4d" />
+    <color name="metrixPreBlack" value="#40000000" />
+    <color name="metrixPreBlack2" value="#df000000" />
+    <color name="metrixPreTrans" value="#ccffffff" />
+    <color name="metrixPreTrans2" value="#dfffffff" />
+    <color name="metrixPreTrans3" value="#bbffffff" />
+    <color name="metrixPurple" value="#006c0aab" />
+    <color name="metrixRed" value="#00911d10" />
+    <color name="metrixSelection" value="#00149baf" />
+    <color name="metrixYellow" value="#00bf9217" />
+    <color name="orange" value="#00f47d19" />
+    <color name="rds_text_bg" value="#00003258" />
+    <color name="text-background" value="#67ffffff" />
+    <color name="title-background" value="#000f0f0f" />
+    <color name="title-foreground" value="#00ffffff" />
+    <color name="transparent" value="#ffffffff" />
+    <color name="transparent2" value="#ff000000" />
+    <color name="transpBlack" value="#80000000" />
+    <color name="transpWhite" value="#77ffffff" />
+    <color name="transpyellow" value="#33bab329" />
+    <color name="un202020" value="#00202020" />
+    <color name="un605f5e" value="#00605f5e" />
+    <color name="un777777" value="#00777777" />
+    <color name="un800000" value="#00800000" />
+    <color name="un808080" value="#00808080" />
+    <color name="un808888" value="#00808888" />
+    <color name="unff0000" value="#00ff0000" />
+    <color name="unffbf00" value="#00ffbf00" />
+    <color name="unffffff" value="#00ffffff" />
+    <color name="white" value="#00ffffff" />
+  </colors>
+  <parameters>
+    <parameter name="AllowUserDatesAndTimes" value="5,5" />
+    <parameter name="AutotimerEnabledIcon" value="2,1,38,36" />
+    <parameter name="AutotimerRecordIcon" value="30,1,25,25" />
+    <parameter name="ChoicelistIcon" value="0,0,50,50" />
+    <parameter name="ChoicelistName" value="70,0,900,50" />
+    <parameter name="ChoicelistDash" value="0,0,900,50" />
+    <parameter name="ChoicelistIconVerticalline" value="10,0,30,38" />
+    <parameter name="ChoicelistIconExpanded" value="10,3,30,35" />
+    <parameter name="ChoicelistNameSingle" value="10,0,690,38" />
+    <parameter name="ConfigListSlider" value="10,3" />
+    <parameter name="ConfigListSeperator" value="500" />
+    <parameter name="DreamexplorerName" value="70,2,1200,50" />
+    <parameter name="DreamexplorerIcon" value="10,5,40,40" />
+    <parameter name="EpgListIcon" value="2,12,25,25,2" />
+    <parameter name="EpgListMulti" value="360,170,170,10" />
+    <parameter name="EpgListMultiProgressBar" value="170,15,1" />
+    <parameter name="EpgListSingle" value="80,220" />
+    <parameter name="ExpandableListIcon" value="5,5,90,75" />
+    <parameter name="ExpandableListDescr" value="55,0,1000,40" />
+    <parameter name="FileListName" value="40,2,800,37" />
+    <parameter name="FileListIcon" value="10,7,30,37" />
+    <parameter name="FileListMultiName" value="80,0,700,40" />
+    <parameter name="FileListMultiIcon" value="45,0,25,25" />
+    <parameter name="FileListMultiLock" value="2,0,25,25" />
+    <parameter name="HelpMenuListExtHlp0" value="0,0,840,39" />
+    <parameter name="HelpMenuListExtHlp1" value="0,42,840,30" />
+    <parameter name="HelpMenuListHlp" value="0,0,840,42" />
+    <parameter name="FTPFileEntryComponent" value="100,2,700,40,30" />
+    <parameter name="ImsSelectionListDescr" value="46,4,1000,45" />
+    <parameter name="ImsSelectionListLock" value="5,2,36,36" />
+    <parameter name="PiconManagerList" value="10,0,1120,40" />
+    <parameter name="PiconManagerListFont" value="Regular;28" />
+    <parameter name="PicturePlayerThumb" value="35,190,30,200,20,14" />
+    <parameter name="PlayListIcon" value="10,7,30,37" />
+    <parameter name="PlayListName" value="40,0,800,37" />
+    <parameter name="PluginBrowserDescr" value="180,38,30" />
+    <parameter name="PluginBrowserDownloadDescr" value="90,40,30" />
+    <parameter name="PluginBrowserDownloadIcon" value="0,0,90,60" />
+    <parameter name="PluginBrowserDownloadName" value="90,3,50" />
+    <parameter name="PluginBrowserIcon" value="10,8,150,60" />
+    <parameter name="PluginBrowserName" value="180,2,35" />
+    <parameter name="ProgrammlistenUpdaterList" value="10,8,600,200,40" />
+    <parameter name="ProgrammlistenUpdaterListFont" value="Regular;26" />
+    <parameter name="SelectionListDescr" value="60,2,820,32" />
+    <parameter name="SelectionListLock" value="10,2,35,35" />
+    <parameter name="SelectionListLockOff" value="10,2,35,35" />
+    <parameter name="ServiceInfo" value="0,0,1200,40" />
+    <parameter name="ServiceInfoLeft" value="0,0,450,40" />
+    <parameter name="ServiceInfoRight" value="460,0,800,40" />
+    <parameter name="ServiceInfoFont" value="Regular;26" />
+    <parameter name="VirtualKeyboard" value="76,72" />
+    <parameter name="VirtualKeyBoardAlignment" value="0,0" />
+    <parameter name="VirtualKeyBoardPadding" value="4,4" />
+    <parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff" />
+  </parameters>
+  <switchpixmap>
+    <pixmap name="menu_on" filename="MetriXconfluencExp/icons/menu_on.png" />
+    <pixmap name="menu_off" filename="MetriXconfluencExp/icons/menu_off.png" />
+  </switchpixmap>
+  <windowstyle type="skinned" id="0">
+    <configList entryFont="Regular;30" valueFont="Regular;28" />
+    <title offset="45,11" font="Regular;45" />
+    <color name="Background" color="background20" />
+    <color name="LabelForeground" color="white" />
+    <color name="ListboxBackground" color="background20" />
+    <color name="ListboxForeground" color="white" />
+    <color name="ListboxSelectedBackground" color="cyan" />
+    <color name="ListboxSelectedForeground" color="white" />
+    <color name="ListboxMarkedBackground" color="metrixGreen" />
+    <color name="ListboxMarkedForeground" color="unff0000" />
+    <color name="ListboxMarkedAndSelectedBackground" color="metrixBlue" />
+    <color name="ListboxMarkedAndSelectedForeground" color="un800000" />
+    <color name="WindowTitleForeground" color="foreground" />
+    <color name="WindowTitleBackground" color="background20" />
+    <borderset name="bsWindow">
+      <pixmap pos="bpTopLeft" filename="MetriXconfluencExp/window/bs_tl.png" />
+      <pixmap pos="bpTop" filename="MetriXconfluencExp/window/bs_t.png" />
+      <pixmap pos="bpTopRight" filename="MetriXconfluencExp/window/bs_tr.png" />
+      <pixmap pos="bpLeft" filename="MetriXconfluencExp/window/bs_l.png" />
+      <pixmap pos="bpRight" filename="MetriXconfluencExp/window/bs_r.png" />
+      <pixmap pos="bpBottomLeft" filename="MetriXconfluencExp/window/bs_bl.png" />
+      <pixmap pos="bpBottom" filename="MetriXconfluencExp/window/bs_b.png" />
+      <pixmap pos="bpBottomRight" filename="MetriXconfluencExp/window/bs_br.png" />
+    </borderset>
+    <scrolllabel scrollbarWidth="10" scrollbarBorderWidth="1" />
+    <listbox scrollbarWidth="10" scrollbarBorderWidth="1" enableWrapAround="1" />
+  </windowstyle>
+  <!--  Screens  -->
+  <!-- -->
+  <screen name="Pic_Setup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ClockTimeLeft" />
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_common" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ClockTimeLeft" />
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_epgsettings" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ClockTimeLeft" />
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_filecommander" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ClockTimeLeft" />
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_epgmulti" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_epginfobar" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_epginfobargraphical" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_epggraphical" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_subtitlesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_dvdplayer" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_logs" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_time" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_keyboard" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_userinterface" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_recording" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_timeshift" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_specialfeatures" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_display" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_channelselection" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_usage" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_remotesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_channelselectionskin" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_autolanguagesetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <screen name="setup_harddisk" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="configCom" />
+  </screen>
+  <setups>
+    <setup key="default" image="icons/setup.png" />
+    <setup key="Recording" image="icons/menu_extended_recording_setup.png" />
+    <setup key="Timeshift" image="icons/menu_extended_timshift_setup.png" />
+    <setup key="Usage" image="icons/menu_system_usage_setup.png" />
+    <setup key="Subtitle" image="icons/menu_extended_subtitle_setup.png" />
+    <setup key="AutoLanguage" image="icons/menu_system_autolanguage_setup.png" />
+    <setup key="UserInterface" image="icons/menu_osd_menu_user_interface.png" />
+    <setup key="RemoteButton" image="icons/menu_system_remote_setup.png" />
+    <setup key="ChannelSelection" image="icons/menu_system_channelselection_setup.png" />
+    <setup key="Display" image="icons/menu_display_display_setup.png" />
+    <setup key="Keyboard" image="icons/menu_extended_keyboard.png" />
+    <setup key="EPGMulti" image="icons/menu_epg_setup_epgmulti.png" />
+    <setup key="EPGEnhanced" image="icons/menu_epg_setup_epgenhanced.png" />
+    <setup key="EPGInfobar" image="icons/menu_epg_setup_epginfobar.png" />
+    <setup key="EPGInfobarGraphical" image="icons/menu_epg_setup_epginfobargraphical.png" />
+    <setup key="EPGGraphical" image="icons/menu_epg_setup_epggraphical.png" />
+    <setup key="EPGVertical" image="icons/menu_epg_setup_epgmulti.png" />
+    <setup key="EPG" image="icons/menu_epg_epg_setup.png" />
+    <setup key="HardDisk" image="icons/hdd.png" />
+    <setup key="Time" image="icons/menu_extended_time_setup.png" />
+    <setup key="Logs" image="icons/menu_extended_logs_setup.png" />
+    <setup key="dvdplayer" image="icons/menu_extended_dvdplayer_setup.png" />
+    <setup key="SpecialFeatures" image="icons/menu_extended_specialfeatures_menu.png" />
+    <setup key="OSD3D" image="icons/menu_osd_menu_osd3dsetup.png" />
+    <setup key="OscamInfo" image="icons/softcam.png" />
+    <setup key="HDMICEC" image="icons/hdmicec.png" />
+    <setup key="Audio" image="icons/audio.png" />
+    <setup key="SleepTimer" image="icons/power_timer.png" />
+    <setup key="VolumeAdjust" image="icons/menu_system_AutomaticVolumeAdjustment.png" />
+  </setups>
+  <menus>
+    <menu key="default" image="icons/default.png" />
+    <menu key="about_screen" image="icons/menu_information_about.png" />
+    <menu key="animation_setup" image="icons/usage_setup.png" />
+    <menu key="audio_menu" image="icons/menu_setup_audio.png" />
+    <menu key="audio_setup" image="icons/menu_setup_audio.png" />
+    <menu key="auto_scan" image="icons/menu_scan_auto_scan.png" />
+    <menu key="autobouquetsmakermaker" image="icons/menu_scan_autobouquetsmakermaker.png" />
+    <menu key="autolanguage_setup" image="icons/menu_system_autolanguage_setup.png" />
+    <menu key="AutomaticVolumeAdjustment" image="icons/menu_system_AutomaticVolumeAdjustment.png" />
+    <menu key="autores_setup" image="icons/menu_system_autores_setup.png" />
+    <menu key="autotimer_setup" image="icons/menu_timermenu_autotimers.png" />
+    <menu key="av_setup" image="icons/menu_system_av_setup.png" />
+    <menu key="blindscan" image="icons/menu_scan_blindscan.png" />
+    <menu key="bluetooth_setup" image="icons/bluetooth.png" />
+    <menu key="build_info_screen" image="icons/menu_information_device.png" />
+    <menu key="buttonsetup_setup" image="icons/menu_osd_menu_buttonsetup.png" />
+    <menu key="cablescan" image="icons/search.png" />
+    <menu key="channelselection_setup" image="icons/menu_system_channelselection_setup.png" />
+    <menu key="Chromium Plugin" image="icons/browser.png" />
+    <menu key="ci_assign" image="icons/menu_setup_ci.png" />
+    <menu key="ci_setup" image="icons/menu_setup_ci.png" />
+    <menu key="crontimer_edit" image="icons/menu_timermenu_crontimers.png" />
+    <menu key="Dazn" image="icons/dazn.png" />
+    <menu key="deep_standby" image="icons/power_off.png" />
+    <menu key="deleteepgcache" image="icons/menu_epgloadsave_menu_deleteepgcache.png" />
+    <menu key="device_screen" image="icons/menu_information_device.png" />
+    <menu key="device_setup" image="icons/menu_network_device_setup.png" />
+    <menu key="Disney Plugin" image="icons/disney.png" />
+    <menu key="display_setup" image="icons/menu_display_display_setup.png" />
+    <menu key="dmc_mainmenu" image="icons/menu_mainmenu_dmc_mainmenu.png" />
+    <menu key="dreamplex" image="icons/plex.png" />
+    <menu key="drives_info_screen" image="icons/menu_information_device.png" />
+    <menu key="dual_mode" image="icons/dualmode.png" />
+    <menu key="dvd_player" image="icons/dvd.png" />
+    <menu key="dvdplayer_setup" image="icons/menu_extended_dvdplayer_setup.png" />
+    <menu key="emc" image="icons/emc.png" />
+    <menu key="epg_setup" image="icons/menu_epg_epg_setup.png" />
+    <menu key="epgimporter" image="icons/menu_epgloadsave_menu_loadepgcache.png" />
+    <menu key="epgloadsave_menu" image="icons/menu_epg_epgloadsave_menu.png" />
+    <menu key="epgrefresh" image="icons/menu_epg_refresh.png" />
+    <menu key="factory_reset" image="icons/menu_setup_reset.png" />
+    <menu key="fansetup_config" image="icons/fan.png" />
+    <menu key="fastscan" image="icons/menu_scan_fast_scan.png" />
+    <menu key="FCCSetup" image="icons/fcc.png" />
+    <menu key="filecommand" image="icons/filecom.png" />
+    <menu key="googlemaps" image="icons/google.png" />
+    <menu key="harddisk_check" image="icons/menu_harddisk_harddisk_check.png" />
+    <menu key="harddisk_convert" image="icons/menu_harddisk_harddisk_convert.png" />
+    <menu key="harddisk_init" image="icons/menu_harddisk_harddisk_init.png" />
+    <menu key="harddisk_setup" image="icons/menu_harddisk_harddisk_setup.png" />
+    <menu key="Hardreset" image="icons/restart.png" />
+    <menu key="hdmicec" image="icons/menu_extended_hdmicec.png" />
+    <menu key="hdmirecord_setup" image="icons/menu_extended_hdmirecord_setup.png" />
+    <menu key="Inadyn_setup" image="icons/menu_network_Inadyn_setup.png" />
+    <menu key="Infopanel" image="icons/menu_information_about.png" />
+    <menu key="input_device_setup" image="icons/menu_extended_input_device_setup.png" />
+    <menu key="ipbox_client_Start" image="icons/menu_scan_streamconvert.png" />
+    <menu key="IPTV Bouquet Maker" image="icons/menu_mainmenu_pluginmanager.png" />
+    <menu key="iptv_config" image="icons/setup.png" />
+    <menu key="iptv_main" image="icons/pplayer.png" />
+    <menu key="keyboard" image="icons/menu_extended_keyboard.png" />
+    <menu key="keymap" image="icons/menu_extended_input_device_setup.png" />
+    <menu key="lcd4linux" image="icons/menu_display_lcd_skin_setup.png" />
+    <menu key="lcd_skin_setup" image="icons/menu_display_lcd_skin_setup.png" />
+    <menu key="LED_Giga" image="icons/menu_display_LED_Giga.png" />
+    <menu key="ledManager" image="icons/led.png" />
+    <menu key="loadepgcache" image="icons/menu_epgloadsave_menu_loadepgcache.png" />
+    <menu key="locale_setup" image="icons/menu_system_language_setup.png" />
+    <menu key="logs_setup" image="icons/menu_extended_logs_setup.png" />
+    <menu key="maintenance_mode" image="icons/usage_setup.png" />
+    <menu key="manual_scan" image="icons/menu_scan_manual_scan.png" />
+    <menu key="media_player" image="icons/media.png" />
+    <menu key="memory_info_screen" image="icons/menu_information_device.png" />
+    <menu key="merlin_music_player" image="icons/music.png" />
+    <menu key="minidlna_setup" image="icons/menu_network_minidlna_setup.png" />
+    <menu key="mount_manager" image="icons/menu_extended_hardisk_selection.png" />
+    <menu key="moviebrowser" image="icons/service_info.png" />
+    <menu key="multi_quick" image="icons/remotecontrol.png" />
+    <menu key="multiboot" image="icons/restart.png" />
+    <menu key="multiboot_info_screen" image="icons/menu_information_device.png" />
+    <menu key="netafp_setup" image="icons/menu_network_netafp_setup.png" />
+    <menu key="Netflix Plugin" image="icons/menu_mainmenu_netflix.png" />
+    <menu key="netftp_setup" image="icons/menu_network_netftp_setup.png" />
+    <menu key="netmounts_setup" image="icons/menu_network_netmounts_setup.png" />
+    <menu key="netnfs_setup" image="icons/menu_network_netnfs_setup.png" />
+    <menu key="netrts_setup" image="icons/menu_network_netnfs_setup.png" />
+    <menu key="netsabnzbd_setup" image="icons/menu_network_netsabnzbd_setup.png" />
+    <menu key="netsatpi_setup" image="icons/menu_scan_satip.png" />
+    <menu key="netsmba_setup" image="icons/menu_network_netsmba_setup.png" />
+    <menu key="nettelnet_setup" image="icons/menu_network_nettelnet_setup.png" />
+    <menu key="netushare_setup" image="icons/menu_network_netushare_setup.png" />
+    <menu key="netvpn_setup" image="icons/menu_network_netvpn_setup.png" />
+    <menu key="network_info_screen" image="icons/menu_information_device.png" />
+    <menu key="numzapext_setup" image="icons/menu_numzapext_setup.png" />
+    <menu key="OpenStore" image="icons/menu_mainmenu_openstore.png" />
+    <menu key="openwebif" image="icons/menu_network_webif.png" />
+    <menu key="osdsetup" image="icons/menu_osd_menu_osdsetup.png" />
+    <menu key="parental_setup" image="icons/menu_setup_parental.png" />
+    <menu key="password_setup" image="icons/menu_network_passwd_setup.png" />
+    <menu key="permanent_clock" image="icons/menu_extended_time_setup.png" />
+    <menu key="pip_setup" image="icons/setup.png" />
+    <menu key="play_cd" image="icons/dvd.png" />
+    <menu key="plugin_selection" image="icons/menu_mainmenu_pluginmanager.png" />
+    <menu key="pluginhider_setup" image="icons/menu_mainmenu_pluginhider.png" />
+    <menu key="positioner_setup" image="icons/menu_scan_positioner_setup.png" />
+    <menu key="powertimer_edit" image="icons/menu_timermenu_powertimers.png" />
+    <menu key="PrimeVideo" image="icons/prime.png" />
+    <menu key="pvmc_mainmenu" image="icons/pvmc.png" />
+    <menu key="RCU Select" image="icons/remotecontrol.png" />
+    <menu key="receiver_info_screen" image="icons/menu_information_device.png" />
+    <menu key="recording_setup" image="icons/menu_extended_recording_setup.png" />
+    <menu key="remote_setup" image="icons/menu_system_remote_setup.png" />
+    <menu key="remotecode" image="icons/menu_extended_remotecode.png" />
+    <menu key="remotecontrolcode" image="icons/remotecontrol.png" />
+    <menu key="remotetimer" image="icons/menu_timermenu_timers.png" />
+    <menu key="restart" image="icons/restart.png" />
+    <menu key="restart_enigma" image="icons/reboot.png" />
+    <menu key="rfmod_setup" image="icons/menu_extended_rfmod_setup.png" />
+    <menu key="run_kodi" image="icons/menu_kodi.png" />
+    <menu key="sat_ip_client" image="icons/menu_scan_satip.png" />
+    <menu key="satellite_equipment_setup" image="icons/setup.png" />
+    <menu key="satfinder" image="icons/menu_scan_satfinder.png" />
+    <menu key="saveepgcache" image="icons/menu_epgloadsave_menu_saveepgcache.png" />
+    <menu key="scart_switch" image="icons/menu_mainmenu_scart.png" />
+    <menu key="script_manager" image="icons/menu_setup_software_manager.png" />
+    <menu key="service_info_screen" image="icons/info.png" />
+    <menu key="serviceapp_setup" image="icons/pplayer.png" />
+    <menu key="setup_epgenhanced" image="icons/menu_epg_setup_epgenhanced.png" />
+    <menu key="setup_epggraphical" image="icons/menu_epg_setup_epggraphical.png" />
+    <menu key="setup_epginfobar" image="icons/menu_epg_setup_epginfobar.png" />
+    <menu key="setup_epginfobargraphical" image="icons/menu_epg_setup_epginfobargraphical.png" />
+    <menu key="setup_epgmulti" image="icons/menu_epg_setup_epgmulti.png" />
+    <menu key="setup_epgvertical" image="icons/menu_epg_setup_epgmulti.png" />
+    <menu key="setup_osd3d" image="icons/menu_osd_menu_osd3dsetup.png" />
+    <menu key="shutdown" image="icons/power_off.png" />
+    <menu key="skin_setup" image="icons/menu_osd_menu_skin_setup.png" />
+    <menu key="sleep" image="icons/power_timer.png" />
+    <menu key="softcam_setup" image="icons/softcam.png" />
+    <menu key="specialfeatures_menu" image="icons/menu_extended_specialfeatures_menu.png" />
+    <menu key="Stalker Plugin" image="icons/portal.png" />
+    <menu key="standby" image="icons/power.png" />
+    <menu key="start_kodi" image="icons/menu_kodi.png" />
+    <menu key="startimport" image="icons/iptvimport.png" />
+    <menu key="startsetup" image="icons/alexa.png" />
+    <menu key="streamconvert" image="icons/menu_scan_streamconvert.png" />
+    <menu key="streaming_clients_info_screen" image="icons/info.png" />
+    <menu key="subtitle_selection" image="icons/sub.png" />
+    <menu key="subtitle_setup" image="icons/menu_extended_subtitle_setup.png" />
+    <menu key="sundtek_control_enter" image="icons/menu_mainmenu_pluginmanager.png" />
+    <menu key="supportchannel_YTChannel" image="icons/menu_information_supportchannel.png" />
+    <menu key="swap_manager" image="icons/menu_harddisk_ram.png" />
+    <menu key="tempfancontrol" image="icons/fan.png" />
+    <menu key="time_setup" image="icons/menu_extended_time_setup.png" />
+    <menu key="timer_edit" image="icons/menu_timermenu_timers.png" />
+    <menu key="timshift_setup" image="icons/menu_extended_timshift_setup.png" />
+    <menu key="tuner_info_screen" image="icons/menu_information_device.png" />
+    <menu key="tuner_screen" image="icons/menu_information_device.png" />
+    <menu key="tuner_setup" image="icons/menu_scan_tuner_setup.png" />
+    <menu key="usage_setup" image="icons/menu_system_usage_setup.png" />
+    <menu key="user_interface" image="icons/menu_osd_menu_user_interface.png" />
+    <menu key="vfd_ew" image="icons/menu_system_VFD_INI.png" />
+    <menu key="VFD_INI" image="icons/menu_system_VFD_INI.png" />
+    <menu key="video_clipping" image="icons/service_info.png" />
+    <menu key="video_finetune" image="icons/menu_system_videofinetune_setup.png" />
+    <menu key="video_menu" image="icons/service_info.png" />
+    <menu key="video_setup" image="icons/service_info.png" />
+    <menu key="videoenhancement_setup" image="icons/menu_system_videoenhancement_setup.png" />
+    <menu key="vmc_init_setup" image="icons/menu_setup_vmc_setup.png" />
+    <menu key="vmc_init_startvmc" image="icons/menu_mainmenu_vmc.png" />
+    <menu key="volume_adjust" image="icons/menu_system_AutomaticVolumeAdjustment.png" />
+    <menu key="vps" image="icons/menu_scan_streamconvert.png" />
+    <menu key="Weather_MSN" image="icons/weather.png" />
+    <menu key="webradioFS" image="icons/webradioFS.png" />
+    <menu key="wol_standby" image="icons/power_off.png" />
+    <menu key="XCplugin" image="icons/menu_mainmenu_pluginmanager.png" />
+    <menu key="XStreamity" image="icons/menu_mainmenu_pluginmanager.png" />
+    <menu key="youtubetv" image="icons/youtube.png" />
+    <menu key="software_manager" image="icons/menu_setup_software_manager.png" />
+    <menu key="manage_extensions" image="icons/menu_manage_extensions.png" />
+    <menu key="software_update" image="icons/menu_software_update.png" />
+    <menu key="software_restore" image="icons/menu_software_restore.png" />
+    <menu key="flash_online" image="icons/menu_flash_online.png" />
+    <menu key="backup_image_dflash" image="icons/menu_backup_image.png" />
+    <menu key="backup_image_dbackup" image="icons/menu_backup_image.png" />
+    <menu key="backup_image" image="icons/menu_setup_backup_image.png" />
+    <menu key="multiboot" image="icons/menu_multiboot.png" />
+    <menu key="backup_system" image="icons/menu_backup_system.png" />
+    <menu key="restore_system" image="icons/menu_restore_system.png" />
+    <menu key="install_local" image="icons/menu_install_local.png" />
+    <menu key="advanced_software" image="icons/menu_advanced_software.png" />
+    <menu key="advanced_restore" image="icons/menu_advanced_restore.png" />
+    <menu key="backup_location" image="icons/menu_backup_location.png" />
+    <menu key="backup_default" image="icons/menu_backup_default.png" />
+    <menu key="backup_additional" image="icons/menu_backup_additional.png" />
+    <menu key="backup_excluded" image="icons/menu_backup_excluded.png" />
+    <menu key="package_manager" image="icons/package_manager.png" />
+    <menu key="upgrade_source" image="icons/upgrade_source.png" />
+    <menu key="information" image="icons/info.png" />
+    <menu key="timermenu" image="icons/menu_mainmenu_timer.png" />
+    <menu key="setup" image="icons/setup.png" />
+    <menu key="rec" image="icons/menu_extended_recording_setup.png" />
+    <menu key="display" image="icons/menu_extended_display_selection.png" />
+    <menu key="osd_menu" image="icons/menu_extended_osd_setup.png" />
+    <menu key="scan" image="icons/menu_setup_tuner.png" />
+    <menu key="cam" image="icons/menu_setup_ci.png" />
+    <menu key="extended" image="icons/menu_system_extended_selection.png" />
+    <menu key="harddisk" image="icons/menu_extended_hardisk_selection.png" />
+    <menu key="network" image="icons/menu_system_network_menu.png" />
+    <menu key="shutdown" image="icons/reset.png" />
+    <menu key="epg" image="icons/menu_epg_epg_setup.png" />
+    <menu key="system" image="icons/menu_setup_setup.png" />
+  </menus>
+  <!-- Include Files -->
+  <include filename="MetriXconfluencExp/skin_plugins.xml" />
+  <include filename="MetriXconfluencExp/skin_oatv.xml" />
+  <include filename="MetriXconfluencExp/skin_infochannel.xml" />
+  <include filename="MetriXconfluencExp/skin_templates.xml" />
+  <include filename="MetriXconfluencExp/skin_button.xml" />
 </skin>

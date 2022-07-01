@@ -1,21 +1,19 @@
 <skin>
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
-		<ePixmap position="-9,755" zPosition="-2" size="1920,1080" pixmap="MetriXconfluencExp/icons/infobar_hd.png" />
-		
+		<ePixmap position="-9,755" zPosition="-2" size="1920,1080" pixmap="MetriXconfluencExp/icons/infobar_hd.png"/>
 		<panel position="105,1090" size="360,40">
-			<panel name="Red-New-Button" />
+			<panel name="Red-New-Button"/>
 		</panel>
 		<panel position="544,1090" size="360,40">
-			<panel name="Green-New-Button" />
+			<panel name="Green-New-Button"/>
 		</panel>
 		<panel position="1038,1090" size="360,40">
-			<panel name="Yellow-New-Button" />
+			<panel name="Yellow-New-Button"/>
 		</panel>
 		<panel position="1495,1090" size="360,40">
-			<panel name="Blue-New-Button" />
+			<panel name="Blue-New-Button"/>
 		</panel>
-		
-		<widget source="session.CurrentService" render="Label" position="85,875" size="1650,48" font="3d; 42" foregroundColor="#66CCCC" halign="center" valign="top" noWrap="1" backgroundColor="black" transparent="1"  zPosition="3" >
+		<widget source="session.CurrentService" render="Label" position="85,875" size="1650,48" font="3d; 42" foregroundColor="#66CCCC" halign="center" valign="top" noWrap="1" backgroundColor="black" transparent="1" zPosition="3">
 			<convert type="FhromagExtraTuner">ServiceNumberName</convert>
 		</widget>
 		<widget pixmap="MetriXconfluencExp/icons/pbar.png" position="375,983" render="Progress" size="1120,12" source="session.Event_Now" transparent="1" zPosition="3">
@@ -25,7 +23,7 @@
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="422,930" size="20,36" font="3d; 30" halign="left" backgroundColor="black" transparent="1" foregroundColor="white" />
+		<eLabel text="-" position="422,930" size="20,36" font="3d; 30" halign="left" backgroundColor="black" transparent="1" foregroundColor="white"/>
 		<widget source="session.Event_Now" render="Label" position="446,930" size="900,40" font="3d; 32" halign="left" backgroundColor="black" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -37,7 +35,7 @@
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="422,1010" size="20,36" font="3d; 30" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1" />
+		<eLabel text="-" position="422,1010" size="20,36" font="3d; 30" halign="left" foregroundColor="#808080" backgroundColor="black" transparent="1"/>
 		<widget source="session.Event_Next" render="Label" position="446,1010" size="900,40" font="3d; 32" halign="left" backgroundColor="black" transparent="1" foregroundColor="#808080">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -45,7 +43,7 @@
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Picon" position="94,933" zPosition="4" size="220,132" transparent="1" >
+		<widget source="ServiceEvent" render="Picon" position="94,933" zPosition="4" size="220,132" transparent="1">
 			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1720,875" size="150,48" font="3d; 46" halign="right" backgroundColor="black" transparent="1" valign="center">
@@ -54,11 +52,11 @@
 		<widget backgroundColor="black" font="3d; 28" halign="right" position="1470,918" foregroundColor="white" render="Label" size="400,35" source="global.CurrentTime" transparent="1" valign="center" noWrap="1">
 			<convert type="ClockToText">Format:%d %B %Y </convert>
 		</widget>
-		<eLabel text="SNR:" position="1620,960" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1" />
+		<eLabel text="SNR:" position="1620,960" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1"/>
 		<widget source="session.FrontendStatus" render="Label" position="1840,960" size="60,25" font="RegularLight; 22" halign="left" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="green">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel text="AGC:" position="1620,985" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1" />
+		<eLabel text="AGC:" position="1620,985" size="55,25" font="RegularLight; 22" backgroundColor="black" halign="left" transparent="1"/>
 		<widget source="session.FrontendStatus" render="Label" position="1840,982" size="60,25" font="RegularLight; 22" halign="left" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="green">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
