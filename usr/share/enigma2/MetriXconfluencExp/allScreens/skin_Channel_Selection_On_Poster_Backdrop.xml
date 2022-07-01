@@ -54,7 +54,10 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1140,14" size="541,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="left" foregroundColor="#ffff00">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
+<!-- 		
 		<ePixmap pixmap="/usr/share/enigma2/MetriXconfluencExp/noBackdrop.png" position="59,770" zPosition="1" size="500,235" alphatest="blend" transparent="1" />
+		 -->
+		
 		<widget source="ServiceEvent" borderWidth="2" render="BackdropX" position="59,770" zPosition="2" size="500,235" borderColor="background20" transparent="1" />
 		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1" />
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="330,30" alphatest="blend" zPosition="20" transparent="1" />

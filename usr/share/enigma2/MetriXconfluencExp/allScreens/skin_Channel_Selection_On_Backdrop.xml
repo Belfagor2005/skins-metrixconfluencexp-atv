@@ -56,8 +56,8 @@
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
 		
-		<widget source="Event" render="XInfoEvents" />
-
+<!-- 		<widget source="Event" render="XInfoEvents" />
+ -->
 		<widget source="session.Event_Now" render="XInfoEvents" />
 		<widget source="session.Event_Next" render="XInfoEvents" />
 

@@ -490,14 +490,14 @@
 		</widget>
 	</screen>
 	<screen name="ClockTimeLeft2">
-		<widget source="global.CurrentTime" render="Label" position="605,612" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="382,667" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
-			<convert type="ClockToText">Format:%d. %B</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="417,622" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
-			<convert type="ClockToText">Format:%A</convert>
-		</widget>
+	  <widget source="global.CurrentTime" render="Label" position="605,612" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+		<convert type="ClockToText">Format:%H:%M</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="377,667" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<convert type="ClockToText">Format:%d. %B</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="410,622" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+		<convert type="ClockToText">Format:%A</convert>
+	  </widget>
 	</screen>
 </skin>

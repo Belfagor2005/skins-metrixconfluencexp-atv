@@ -7,11 +7,12 @@ from Tools.Directories import resolveFilename
 from enigma import eLabel, ePixmap, eTimer, loadPNG
 import re, os, sys, tempfile
 import json
-# import config
-
 pratePath = '/usr/share/enigma2/MetriXconfluencExp/logos/parentalrating'
-# curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
-# pratePath = curskin + '/parental'
+
+
+# from Components.config import config
+# curskin = config.skin.primary_skin.value.replace('skin.xml', '')
+# pratePath = curskin + 'parental'
 
 if os.path.isdir("/tmp"):
 	pathLoc = "/tmp/infos/"
