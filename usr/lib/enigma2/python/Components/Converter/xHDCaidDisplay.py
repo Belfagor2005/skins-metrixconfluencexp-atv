@@ -1,4 +1,4 @@
-#
+# -*- coding: utf-8 -*-
 #  CaidDisplay - Converter
 #
 #  Coded by Dr.Best & weazle (c) 2010

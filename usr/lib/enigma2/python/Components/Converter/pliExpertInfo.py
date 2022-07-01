@@ -1,4 +1,4 @@
-#
+# -*- coding: utf-8 -*-
 #  Coded by Vali, updated by Mirakels for openpli
 #
 

@@ -1,4 +1,5 @@
-﻿#	NitroAccess converter
+﻿# -*- coding: utf-8 -*-
+#	NitroAccess converter
 #	Modded and recoded by MCelliotG for use in Glamour skins or standalone, added Python3 support
 #	Based on CaidInfo2 converter coded by bigroma & 2boom
 #	If you use this Converter for other skins and rename it, please keep the lines above adding your credits below

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders
 # for channel,

@@ -5,10 +5,7 @@
 # <widget source="session.Event_Next" render="XInfoEvents"/>
 # <widget source="Event" render="XInfoEvents"/>
 #edit by lululla 06.2022
-try:
-    from Components.Renderer.Renderer import Renderer
-except:
-    from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from Components.VariableText import VariableText
 from enigma import eLabel, eTimer, eEPGCache, getBestPlayableServiceReference
 from time import gmtime

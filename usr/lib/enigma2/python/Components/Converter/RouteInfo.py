@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # RouteInfo
 # Copyright (c) 2boom 2012-13
 # v.0.8
