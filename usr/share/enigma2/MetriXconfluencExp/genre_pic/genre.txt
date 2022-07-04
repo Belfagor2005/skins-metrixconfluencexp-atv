@@ -1,0 +1,82 @@
+﻿Adult
+Adventure
+Animals
+Arts
+Athletics
+Ballet
+Black & White
+Cartoon
+Children
+Childrens
+Cinema
+Classic Music
+Comedy
+Cooking
+Culture
+Detective
+Disc
+Docu
+Economics
+Education
+entertainment (10-16)
+entertainment (6-14)
+Equestrian
+Expeditions
+ExpFilm
+Fashion
+Fine Arts
+Fitness
+Folk
+Football
+Further Education
+Gardening
+Handicraft
+Hobbies
+Information
+Jazz
+Languages
+Literature
+Live Broadcast
+Magazine
+Magazines
+Martial Sports
+Medicine
+Motor Sport
+Motoring
+Movie
+Music
+Musical
+Nature
+New Media
+News
+Opera
+Original Language
+Performing Arts
+PopCulture
+Press
+Quiz
+Religion
+Remarkable People
+Rock/Pop
+Romance
+Science
+Serie
+Serious
+Shopping
+Show
+Social
+Social
+Special
+Sports
+Sports Magazine
+Talk
+Team Sports
+Technology
+Tennis
+Thriller
+Travel
+Unpublished
+Variety
+Water Sport
+Weather
+Winter Sport

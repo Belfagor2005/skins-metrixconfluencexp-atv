@@ -113,7 +113,7 @@ class XInfoEvents(Renderer, VariableText):
                         eventNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё','е')
                         infos_file = "{}{}.json".format(pathLoc, eventNm)
                         if not os.path.exists(infos_file):
-                                self.downloadInfos(eventNm, infos_file)
+                            self.downloadInfos(eventNm, infos_file)
                         # else:
                         if os.path.exists(infos_file):
                                 with open(infos_file) as f:
@@ -311,7 +311,7 @@ class XInfoEvents(Renderer, VariableText):
         def delay2(self):
                 self.timer = eTimer()
                 self.timer.callback.append(self.dwn)
-                self.timer.start(2500, True)
+                self.timer.start(1500, True)
 
         def dwn(self):
                 start_new_thread(self.epgs, ())

@@ -287,16 +287,22 @@
 		</widget>
 		<!-- 
 		<widget source="Event" render="XInfoEvents" position="0,0" />	
-	 -->
+		-->
+		
+		<widget render="XParental" source="ServiceEvent" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
+		
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1"/>
 		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1"/>
 		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="3"/>
 		<widget source="session.Event_Now" render="PosterX" position="1701,808" size="180,245" nexts="1" zPosition="3"/>
+		
 		<!-- <widget source="session.Event_Now" render="XInfoEvents" /> -->
+<!-- 		
 		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="32,530" size="736,245" font="Regular; 30" halign="left" valign="top" transparent="1" zPosition="2" backgroundColor="black"/>
 		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="1140,530" size="736,245" font="Regular; 30" halign="right" valign="top" transparent="1" zPosition="2" backgroundColor="black"/>
+		 -->
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="232,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1370,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
 	</screen>

@@ -6,7 +6,6 @@
 # for epg, event
 # <widget source="session.Event_Now" render="PosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
 # <widget source="Event" render="PosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
-
 from Components.VariableText import VariableText
 from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, eEPGCache

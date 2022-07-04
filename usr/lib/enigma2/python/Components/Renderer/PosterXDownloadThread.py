@@ -19,7 +19,8 @@ global cur_skin, my_cur_skin, tmdb_api, omdb_api
 
 tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
 omdb_api = "6a4c9432"
-# epgcache = eEPGCache.getInstance()
+
+from Components.config import config
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -46,8 +47,8 @@ except:
     my_cur_skin = False
     
     
-# isz="185,278"
-isz="342,320"
+isz="185,278"
+# isz="342,320"
 
 PY3 = (sys.version_info[0] == 3)
 try:

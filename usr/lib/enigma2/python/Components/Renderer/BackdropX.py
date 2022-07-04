@@ -22,15 +22,12 @@
 
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, eTimer, loadJPG, eEPGCache
-
 from ServiceReference import ServiceReference
 from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
-
 from Components.Renderer.BackdropXDownloadThread import BackdropXDownloadThread
-
 import NavigationInstance
 import os
 import sys
@@ -38,7 +35,7 @@ import re
 import time
 import socket
 import unicodedata
-
+from Components.config import config
 PY3 = (sys.version_info[0] == 3)
 try:
 	if PY3:
@@ -53,7 +50,6 @@ except:
 epgcache = eEPGCache.getInstance()
 
 try:
-	from Components.config import config
 	lng = config.osd.language.value
 except:
 	lng = None

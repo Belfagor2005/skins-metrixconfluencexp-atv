@@ -29,7 +29,6 @@
 # <widget source="session.Event_Next" render="PosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
 # for epg, event
 # <widget source="Event" render="PosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
- 
 from __future__ import absolute_import
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
@@ -39,10 +38,7 @@ from Components.Sources.EventInfo import EventInfo
 from ServiceReference import ServiceReference
 from Components.Sources.CurrentService import CurrentService
 from enigma import ePixmap, eTimer, loadJPG, eEPGCache
-
-
 from Components.Renderer.PosterXDownloadThread import PosterXDownloadThread
-
 import NavigationInstance
 import os
 import sys
@@ -50,26 +46,25 @@ import re
 import time
 import socket
 import unicodedata
-
+from Components.config import config
 PY3 = (sys.version_info[0] == 3)
 try:
-        if PY3:
-                import queue
-                from _thread import start_new_thread
-        else:
-                import Queue
-                from thread import start_new_thread
+    if PY3:
+            import queue
+            from _thread import start_new_thread
+    else:
+            import Queue
+            from thread import start_new_thread
 except:
-        pass
+    pass
 
 epgcache = eEPGCache.getInstance()
 
 try:
-        from Components.config import config
-        lng = config.osd.language.value
+    lng = config.osd.language.value
 except:
-        lng = None
-        pass
+    lng = None
+    pass
 
 apdb = dict()
 #

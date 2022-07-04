@@ -4,9 +4,8 @@ import sys
 import re
 import requests
 import threading
-# from Components.config import config
+from Components.config import config
 try:
-	from Components.config import config
 	lng = config.osd.language.value
 except:
 	lng = None

@@ -277,37 +277,6 @@ class PosterX(Renderer):
                 self.skinAttributes = attribs
                 return Renderer.applySkin(self, desktop, parent)
 
-
-        # def applySkin(self, desktop, parent):
-            # attribs = []
-            # # if self.skinAttributes:
-                # for (attrib, value) in self.skinAttributes:
-                    # if attrib == "path":
-                        # self.path = value
-                        # attribs.append((attrib, value))
-                    # if attrib == "language":
-                        # self.language = value
-                        # attribs.append((attrib, value))
-                    # if attrib == "nexts":
-                        # self.nexts = int(value)
-                        # attribs.append((attrib, value))
-                    # if attrib == "size":
-                        # self.postersize = str(value.split(",")[0])
-                        # if int(self.postersize) >= 342:
-                            # self.size = "500"
-                        # elif int(self.postersize) >= 301:
-                            # self.size = "342"
-                        # elif int(self.postersize) >= 201:
-                            # self.size = "300"
-                        # elif int(self.postersize) >= 186:
-                            # self.size = "200"
-                        # else:
-                            # self.size = "185"
-                        # attribs.append((attrib, value))
-                        
-                # self.skinAttributes = attribs    
-                # return Renderer.applySkin(self, desktop, parent)
-
         def intCheck(self):
                 try:
                         socket.setdefaulttimeout(1)

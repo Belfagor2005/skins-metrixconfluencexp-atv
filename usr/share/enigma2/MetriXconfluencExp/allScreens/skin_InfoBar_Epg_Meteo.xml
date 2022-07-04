@@ -3,7 +3,7 @@
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
 		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
-		<panel position="105,1090" size="360,40">
+<!-- 		<panel position="105,1090" size="360,40">
 			<panel name="Red-New-Button"/>
 		</panel>
 		<panel position="544,1090" size="360,40">
@@ -14,7 +14,29 @@
 		</panel>
 		<panel position="1495,1090" size="360,40">
 			<panel name="Blue-New-Button"/>
-		</panel>
+		</panel> -->
+		
+<!--  
+		<widget source="session.Event_Now" render="XInfoEvents"/>
+  -->
+		<widget render="XParental" source="ServiceEvent" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
+
+		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="3"/>
+		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="3"/>
+<!-- 		
+		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="38,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
+		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="1701,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
+		 -->
+		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="232,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
+		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1370,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
+		
+		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1"/>
+		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1"/>	
+
+		
+		
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,86" size="1084,55" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
 			<convert type="ServiceName2">Name</convert>
 		</widget>
@@ -300,21 +322,10 @@
 # <widget source="session.Event_Next" render="PosterX" position="100,100" size="100,150" />
 # <widget source="session.Event_Now" render="PosterX" position="100,100" size="185,278" nexts="2" />
 # <widget source="session.CurrentService" render="PosterX" position="100,100" size="185,278" nexts="3" /> -->
-		<!-- 		
-		<widget source="Event" render="XInfoEvents" position="0,0" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,874" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
-		<ePixmap pixmap="MetriXconfluencExp/logos/parentalrating/FSK_NA.png" position="315,945" size="50,50" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
-		 -->
-		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1"/>
-		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1"/>
-		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="3"/>
-		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="3"/>
-<!-- 		<widget source="session.Event_Now" render="XInfoEvents"/> -->
-		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="38,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
-		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="1701,809" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
-		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="232,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1370,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
+
+<!-- 		<widget source="Event" render="XInfoEvents" position="0,0" />
+ -->
+
+	
 	</screen>
 </skin>
