@@ -240,18 +240,13 @@
  		<widget source="session.Event_Now" render="XInfoEvents" position="-1,2" size="1920,1080"/>
 		<widget source="session.Event_Next" render="XInfoEvents" position="-1,2" size="1920,1080"/>
 		-->
-
-
 		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" zPosition="3" transparent="1" />
 		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" zPosition="3" transparent="1" />			
-	  		 
-		<!--
+<!-- 	  		 
  		<widget render="xExtraGenrePic" source="ServiceEvent" position="793,703" size="50,50" zPosition="3" transparent="1" />
 		<widget render="xExtraGenrePic" source="session.Event_Now" position="430,690" size="50,50" zPosition="3" transparent="1" />
 		<widget render="xExtraGenrePic" source="session.Event_Next" position="1167,710" size="50,50" zPosition="3" transparent="1" />
-		--> 
-
-
+		  -->
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		
@@ -566,12 +561,8 @@
 		<panel position="1630,1100" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel> -->
-		
-		<!-- 		
-		<widget render="xExtraGenrePic" source="session.Event_Now" position="54,315" size="125,110" zPosition="22" transparent="1" />
-		<widget render="xExtraGenrePic" source="session.Event_Next" position="54,429" size="125,110" zPosition="22" transparent="1" />  
-		-->
-
+		<widget render="xExtraGenrePic" source="session.Event_Now" position="753,685" size="145,120" zPosition="22" transparent="1" />
+		<widget render="xExtraGenrePic" source="session.Event_Next" position="1618,688" size="145,120" zPosition="22" transparent="1" />  
 	</screen>
 	
 	<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
@@ -707,7 +698,7 @@
 	  <widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
 		<convert type="EventName">Name</convert>
 	  </widget>
-	  <widget source="session.CurrentService" borderWidth="2" render="Label" position="124,635" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
+	  <widget source="session.CurrentService" borderWidth="2" render="Label" position="187,633" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
 		<convert type="pliExpertInfo">CryptoInfo</convert>
 	  </widget>
 	  <widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
@@ -729,7 +720,7 @@
 		<convert type="EventName">FullDescription</convert>
 	  </widget>
 	  <ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1" />
-	  <widget source="ServiceEvent" render="Picon" position="874,525" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+	  <widget source="ServiceEvent" render="Picon" position="892,528" zPosition="4" size="220,132" transparent="1" alphatest="blend">
 		<convert type="ServiceName2">Reference</convert>
 	  </widget>
 	  <widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
@@ -738,17 +729,19 @@
 	  <widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 		<convert type="ServiceName2">Provider</convert>
 	  </widget>
+	  <!-- 
 	  <widget name="list2" valign="bottom" position="1141,757" size="720,216" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" />
+	   -->
 	  <widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="LCD;24" foregroundColor="white" backgroundColor="black" transparent="1">
 		<convert type="ServiceName2">Reference</convert>
 	  </widget>
-	  <widget source="Event" render="XParental" position="61,617" size="50,50" zPosition="10" transparent="1" />
+	  <widget source="Event" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1" />
 	  <widget source="session.Event_Now" render="XInfoEvents" />
 	  <widget source="session.Event_Next" render="XInfoEvents" />
 	  
+	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
 	  
-	  <widget source="Event" render="xExtraGenrePic" position="51,76" size="125,110" zPosition="22" alphatest="blend" transparent="1" />
-
+	  <widget source="Event" render="xExtraGenrePic" position="52,545" size="125,110" scale="1" zPosition="22" alphatest="blend" transparent="1" />
 
 	  <panel position="42,1025" size="360,40">
 		<panel name="Red-New-Button" />
@@ -762,6 +755,5 @@
 	  <panel position="1520,1025" size="360,40">
 		<panel name="Blue-New-Button" />
 	  </panel>
-	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
 	</screen>
 </skin>
