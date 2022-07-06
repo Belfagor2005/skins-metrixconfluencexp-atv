@@ -2989,7 +2989,7 @@
 		<widget name="config" position="105,180" size="1050,493" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<widget source="help" render="Label" font="Regular;33" position="105,695" size="1050,240" transparent="1" foregroundColor="grey" backgroundColor="background20"/>
 	</screen>
-	<screen name="VPS_Screen_Info" position="0,0" size="1920,1080" title="VPS-Plugin Information" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="VPS_Regular" position="0,0" size="1920,1080" title="VPS-Plugin Information" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" font="Regular; 53" position="105,71" size="1200,65" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="background20"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
@@ -3979,19 +3979,70 @@
 		<ePixmap pixmap="MetriXconfluencExp/icons/menu_system_channelselection_setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
 		<widget name="menu" position="230,150" size="810,720" font="Regular;36" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" backgroundColorSelected="#124b97"/>
 	</screen>
-	
 	<screen name="PiconsUpdaterView" position="0,0" size="1920,1080" title="Picons Updater View" flags="wfNoBorder" backgroundColor="transparent">
-	  <widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
-	  <ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
-	  <ePixmap pixmap="MetriXconfluencExp/icons/skin_selector.png" position="1318,545" size="384,384" zPosition="2" transparent="1" alphatest="blend" />	
-	  <widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
-	  <panel name="ClockTime" />
-	  <panel name="btCRYBbotTop" />
-	  <eLabel position="1180,180" size="650,368" zPosition="2" backgroundColor="white" />
-	  <eLabel position="1188,183" size="639,360" zPosition="3" backgroundColor="background20" />
-	  <widget name="backgroundImage" position="1185,180" size="639,360" backgroundColor="layer-a-background" zPosition="1" transparent="1" alphatest="blend" />
-	  <widget name="previewImage" position="1183,183" size="639,360" zPosition="4" alphatest="blend" />
-	  <widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/skin_selector.png" position="1318,545" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget name="HelpWindow" position="774,10" size="486,102" zPosition="1" transparent="1" alphatest="blend"/>
+		<panel name="ClockTime"/>
+		<panel name="btCRYBbotTop"/>
+		<eLabel position="1180,180" size="650,368" zPosition="2" backgroundColor="white"/>
+		<eLabel position="1188,183" size="639,360" zPosition="3" backgroundColor="background20"/>
+		<widget name="backgroundImage" position="1185,180" size="639,360" backgroundColor="layer-a-background" zPosition="1" transparent="1" alphatest="blend"/>
+		<widget name="previewImage" position="1183,183" size="639,360" zPosition="4" alphatest="blend"/>
+		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 	</screen>
-	
+	<screen name="PiconManagerScreen" position="0,0" size="1920,1080" title="Picon Manager" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
+		<ePixmap pixmap="MetriXconfluencExp/icons/skin_selector.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend" />
+		<panel name="ClockTime" />
+		<panel name="btCRYBbotTop" />
+		<eLabel position="1062,184" size="404,244" backgroundColor="metrixBackground" />
+		<eLabel position="1062,184" size="400,240" backgroundColor="layer-a-background" />
+		<widget name="picon" position="1062,184" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="layer-a-background" alphatest="blend" />
+		<widget name="piconpath" position="101,191" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="piconpath2" position="544,193" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="spiconname" position="101,237" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="spicon" position="544,237" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="selectedname" position="100,281" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="selected" position="543,281" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="creatorname" position="100,325" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="creator" position="545,324" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="sizename" position="99,372" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="size" position="545,371" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="bitname" position="98,415" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="bit" position="546,413" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="piconspace" position="99,460" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="piconcount" position="547,457" size="500,40" font="Regular; 24" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="picondownload" position="97,504" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="piconerror" position="547,502" size="500,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
+		<widget name="piconslidername" position="110,585" size="0,0" font="Regular;20" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="5" halign="left" />
+		<widget name="piconslider" position="110,602" size="1140,5" zPosition="2" borderWidth="0" foregroundColor="layer-a-progress" borderColor="metrixBackground" transparent="1" />
+		<eLabel position="110,602" size="1140,1" backgroundColor="metrixBackground" zPosition="1" />
+		<widget name="list" position="110,614" zPosition="2" size="1142,278" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" backgroundColor="metrixBackground" />
+		<widget name="HelpWindow" pixmap="MetriXconfluencExp/buttons/key_help.png" position="1661,876" zPosition="1" size="50,50" transparent="1" />
+		<ePixmap position="1736,875" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+		<ePixmap position="1500,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+		<ePixmap position="1582,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+	</screen>
+	<screen name="pm_conf" position="0,0" size="1920,1080" title="Picon Manager Config" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/setup.png" transparent="1" alphatest="blend"/>		
+		<panel name="ClockTime"/>
+		<panel name="btCRYBbotTop"/>
+		<widget name="config" position="127,200" size="936,597" zPosition="3" itemHeight="50" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1"/>
+	</screen>
+	<screen name="PiconManagerFolderScreen" position="0,0" size="1920,1080" title="Picon Manager Folder" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/search.png" transparent="1" alphatest="blend" name="ù"/>		
+		<panel name="ClockTime"/>
+		<panel name="btCRYBbotTop"/>
+		<widget name="media" position="131,199" size="939,64" font="Regular; 28" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
+		<eLabel position="131,273" size="932,4" backgroundColor="metrixBackground"/>
+		<widget name="folderlist" position="133,291" size="929,505" zPosition="3" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1"/>
+		<ePixmap position="1727,865" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+	</screen>
 </skin>

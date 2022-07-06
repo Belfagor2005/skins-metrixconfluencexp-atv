@@ -476,13 +476,13 @@
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
 		<!-- Weather */-->
-		<widget render="MSNWeatherPixmap" position="1693,871" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
+		<widget render="MSNWeatherPixmap" position="1571,904" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1702,1002" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
+		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1696,936" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1550,839" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" alphatest="blend">
+		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1550,877" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" alphatest="blend">
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
 		<!-- Cover Anzeige Jetzt END -->
@@ -561,8 +561,8 @@
 		<panel position="1630,1100" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel> -->
-		<widget render="xExtraGenrePic" source="session.Event_Now" position="753,685" size="145,120" zPosition="22" transparent="1" />
-		<widget render="xExtraGenrePic" source="session.Event_Next" position="1618,688" size="145,120" zPosition="22" transparent="1" />  
+		<widget source="session.Event_Now" render="xExtraGenrePic" position="714,683" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />
+		<widget source="session.Event_Next" render="xExtraGenrePic" position="1576,679" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />  
 	</screen>
 	
 	<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
@@ -698,7 +698,7 @@
 	  <widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
 		<convert type="EventName">Name</convert>
 	  </widget>
-	  <widget source="session.CurrentService" borderWidth="2" render="Label" position="187,633" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
+	  <widget source="session.CurrentService" borderWidth="2" render="Label" position="52,631" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
 		<convert type="pliExpertInfo">CryptoInfo</convert>
 	  </widget>
 	  <widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
@@ -726,7 +726,7 @@
 	  <widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
 		<convert type="ClockToText">Format:%H:%M</convert>
 	  </widget>
-	  <widget source="session.CurrentService" render="Label" borderWidth="2" position="730,98" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
+	  <widget source="session.CurrentService" render="Label" borderWidth="2" position="738,75" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 		<convert type="ServiceName2">Provider</convert>
 	  </widget>
 	  <!-- 
@@ -740,8 +740,9 @@
 	  <widget source="session.Event_Next" render="XInfoEvents" />
 	  
 	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
-	  
-	  <widget source="Event" render="xExtraGenrePic" position="52,545" size="125,110" scale="1" zPosition="22" alphatest="blend" transparent="1" />
+      
+		
+	  <widget source="Event" render="xExtraGenrePic" position="50,69" size="210,170" scale="1" zPosition="22" alphatest="blend" transparent="1" />
 
 	  <panel position="42,1025" size="360,40">
 		<panel name="Red-New-Button" />
