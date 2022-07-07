@@ -9,7 +9,7 @@
 			<convert type="ServiceName2">Name</convert>
 		</widget>
 		 -->
-		<widget source="session.CurrentService" emptyText="Label" borderWidth="1" render="cnEmptyEpg" position="260,61" size="1084,55" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="grey" noWrap="1" font="LCD; 50" halign="left">
+		<widget source="session.CurrentService" emptyText="Label" borderWidth="1" render="xEmptyEpg" position="260,61" size="1084,55" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="grey" noWrap="1" font="LCD; 50" halign="left">
 			<convert type="ServiceName2">Name</convert>
 		</widget>
 
@@ -244,18 +244,10 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1472,38" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
- 
-		<!--
- 		<widget source="session.Event_Now" render="XInfoEvents" position="-1,2" size="1920,1080"/>
-		<widget source="session.Event_Next" render="XInfoEvents" position="-1,2" size="1920,1080"/>
-		-->
+
 		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" zPosition="3" transparent="1" />
 		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" zPosition="3" transparent="1" />			
-<!-- 	  		 
- 		<widget render="xExtraGenrePic" source="ServiceEvent" position="793,703" size="50,50" zPosition="3" transparent="1" />
-		<widget render="xExtraGenrePic" source="session.Event_Now" position="430,690" size="50,50" zPosition="3" transparent="1" />
-		<widget render="xExtraGenrePic" source="session.Event_Next" position="1167,710" size="50,50" zPosition="3" transparent="1" />
-		  -->
+
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1" />
 		
@@ -572,8 +564,11 @@
 		<panel position="1630,1100" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel> -->
+		
+<!-- 		
 		<widget source="session.Event_Now" render="xExtraGenrePic" position="714,683" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />
 		<widget source="session.Event_Next" render="xExtraGenrePic" position="1576,679" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />  
+		 -->
 	</screen>
 	
 	<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
@@ -752,8 +747,9 @@
 	  
 	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
       
-		
+<!-- 		
 	  <widget source="Event" render="xExtraGenrePic" position="50,69" size="210,170" scale="1" zPosition="22" alphatest="blend" transparent="1" />
+ -->
 
 	  <panel position="42,1025" size="360,40">
 		<panel name="Red-New-Button" />
