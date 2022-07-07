@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #edit lululla to 03.07.2022
 #channelselections 
 # <widget render="xExtraGenrePic" source="ServiceEvent" position="793,703" size="50,50" zPosition="3" transparent="1" />
@@ -6,6 +5,7 @@
 #infobar
 # <widget render="xExtraGenrePic" source="session.Event_Now" position="54,315" size="125,110" zPosition="22" transparent="1" />
 # <widget render="xExtraGenrePic" source="session.Event_Next" position="54,429" size="125,110" zPosition="22" transparent="1" />  
+from __future__ import unicode_literals
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap

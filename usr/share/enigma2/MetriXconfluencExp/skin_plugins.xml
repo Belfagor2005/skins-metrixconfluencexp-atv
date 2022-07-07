@@ -923,10 +923,10 @@
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_exit.png" position="1792,910" size="50,50" zPosition="10" transparent="1" alphatest="blend"/>
 		<widget name="list_head" position="115,180" size="1050,720" font="Regular;24" valign="center" halign="center" foregroundColor="yellow" backgroundColor="un202020" transparent="0"/>
 	</screen>
-	<screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual KeyBoard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
+	<screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
 		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="MetriXconfluencExp/menu/teclado-fs8.png" zPosition="-10" alphatest="off"/>
 		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="MetriXconfluencExp/menu/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
-		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="#00d3d3" backgroundColor="black" noWrap="1"/>
+		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="und3d3d3" backgroundColor="black" noWrap="1"/>
 		<widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
 		<widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
 		<widget name="key_texto" position="21,70" size="1086,132" transparent="0" text=" " valign="top" halign="left" font="Regular; 35" foregroundColor="white" backgroundColor="black"/>
@@ -979,10 +979,10 @@
 		<!-- especiales -->
 		<widget name="key_stop" position="345,480" size="97,27" transparent="1" text="espacio" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
 		<widget name="key_play" position="429,480" size="97,27" transparent="1" text="ABC" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
-		<widget name="key_red" position="513,480" size="97,27" transparent="1" text="Borrar" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
-		<widget name="key_green" position="597,466" size="97,27" transparent="1" text="OK" font="Regular; 22" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_red" position="513,480" size="97,27" transparent="1" text="Borrar" font="Regular; 21" foregroundColor="black" backgroundColor="unff0000" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_green" position="597,466" size="97,27" transparent="1" text="OK" font="Regular; 22" foregroundColor="black" backgroundColor="undcaaaa" noWrap="1" halign="center" zPosition="22"/>
 		<widget name="key_yellow" position="681,466" size="97,27" transparent="1" text="Limpiar" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
-		<widget name="key_blue" position="765,466" size="97,27" transparent="1" text="#@&amp;:" font="Regular; 22" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_blue" position="765,466" size="97,27" transparent="1" text="#@&amp;:" font="Regular; 22" foregroundColor="black" backgroundColor="undcaaaa" noWrap="1" halign="center" zPosition="22"/>
 		<!-- teclado -->
 		<widget name="key_teclado1" position="21,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
 		<widget name="key_teclado2" position="300,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
