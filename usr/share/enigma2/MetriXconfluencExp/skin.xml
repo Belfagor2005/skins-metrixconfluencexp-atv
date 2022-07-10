@@ -213,15 +213,9 @@
 		<parameter name="ServiceInfoRight" value="460,0,800,40"/>
 		<parameter name="ServiceInfoFont" value="Regular;26"/>
 		<parameter name="VirtualKeyboard" value="76,72"/>
-		<parameter name="VirtualKeyboardAlignment" value="0,0"/>
-		<parameter name="VirtualKeyboardPadding" value="4,4"/>
-		<parameter name="VirtualKeyboardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
-		<!--
- 		<parameter name="WeatherPluginSearchResultListFont1" value="Regular;32"/>
-		<parameter name="WeatherPluginSearchResultListFont2" value="Regular;32"/>		
-		<parameter name="WeatherPluginCity" value="5, 0, 400, 20"/>
-		<parameter name="WeatherPluginDegreetype" value="410, 0, 80, 20"/>
-		-->
+		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+		<parameter name="VirtualKeyBoardPadding" value="4,4"/>
+		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
 			
 	</parameters>
 	<switchpixmap>

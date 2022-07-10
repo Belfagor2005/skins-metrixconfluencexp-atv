@@ -271,8 +271,7 @@
 	</screen>
 	<screen name="btCRYGEpg">
 		<panel position="105,935" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
+		<panel name="Red-New-Button"/></panel>
 		<panel position="544,935" size="360,40">
 			<panel name="Green-New-Button"/>
 		</panel>

@@ -924,8 +924,8 @@
 		<widget name="list_head" position="115,180" size="1050,720" font="Regular;24" valign="center" halign="center" foregroundColor="yellow" backgroundColor="un202020" transparent="0"/>
 	</screen>
 	<screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="MetriXconfluencExp/menu/teclado-fs8.png" zPosition="-10" alphatest="off"/>
-		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="MetriXconfluencExp/menu/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
+		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="menu/teclado-fs8.png" zPosition="-10" alphatest="off"/>
+		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="menu/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
 		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="und3d3d3" backgroundColor="black" noWrap="1"/>
 		<widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
 		<widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
@@ -2993,6 +2993,14 @@
 		<widget source="Title" render="Label" font="Regular; 53" position="105,71" size="1200,65" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="background20"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<panel name="ClockTime"/>
+		<widget name="text" font="Regular;33" position="105,180" size="1050,675" transparent="1" backgroundColor="background20"/>
+	</screen>
+	<screen name="VPS_Screen_Info" position="0,0" size="1920,1080" title="VPS-Plugin Information" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="Title" render="Label" font="Regular; 53" position="105,71" size="1200,65" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="white" backgroundColor="background20"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<!-- EDIT LULULLA -->
 		<panel name="ClockTime"/>
 		<widget name="text" font="Regular;33" position="105,180" size="1050,675" transparent="1" backgroundColor="background20"/>
 	</screen>
