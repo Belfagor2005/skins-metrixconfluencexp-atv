@@ -534,8 +534,8 @@
 		<widget source="ServiceEvent" render="XInfoEvents"/> -->
 		<widget source="session.Event_Now" render="XInfoEvents"/>
 		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" zPosition="3" transparent="1"/>
+		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
+		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
 		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
@@ -623,7 +623,7 @@
 		
 		
 		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1"/>
+		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" alphatest="blend" transparent="1"/>
 		
 <!-- 
 		<panel position="42,1025" size="360,40">
@@ -685,7 +685,7 @@
 
 
 		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1"/>
+		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" alphatest="blend" transparent="1"/>
 		
 		<!--
  		<panel position="42,1025" size="360,40">
@@ -745,7 +745,7 @@
 		</widget>
 		
 		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1"/>
+		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" alphatest="blend" transparent="1"/>
 
 
 <!-- 
