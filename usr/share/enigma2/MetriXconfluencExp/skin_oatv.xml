@@ -689,12 +689,12 @@ self.instance.move(ePoint(0,0))
 	</screen>
 	<screen name="VideoEnhancementSetup" position="0,0" size="1920,1080" title="VideoEnhancementSetup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<panel name="ClockTimeTop"/>
-		<panel name="config2"/>
+		<panel name="ClockTimeLeft"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" alphatest="off" transparent="1" drawMode="stretch"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="153,122" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget name="config" position="696,188" size="1112,513" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
 		<panel name="btCRYB"/>
-		<widget name="introduction" position="105,900" size="1050,38" font="Regular;33" halign="center" backgroundColor="background20" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget name="introduction" position="689,723" size="1117,225"  font="Regular;33" halign="center" backgroundColor="background20" transparent="1"/>
 	</screen>
 	<screen name="VideoEnhancementPreview" position="center,720" size="900,285" title="VideoEnhancementPreview">
 		<widget name="config" position="15, 15" size="870,135" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand"/>
@@ -1824,7 +1824,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<panel name="ClockTimeEvent"/>
 		<widget name="channel" position="119,283" size="542,82" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixPink"/>
 		
-  <widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5" />
+  <widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="#0099cc" backgroundColor="#000000" transparent="1" zPosition="5" />
   <widget name="duration" position="1030,200" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5" />
   <widget source="session.Event_Now" render="Label" position="1180,200" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
     <convert type="EventTime">Remaining</convert>
@@ -1901,8 +1901,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<panel name="ClockTimeEvent"/>
-		<widget name="channel" position="119,283" size="542,82" font="Regular; 38" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="StarGreen"/>
-		<widget name="datetime" position="688,105" size="480,50" font="Regular;30" halign="left" foregroundColor="ltbluette" backgroundColor="#000000" transparent="1" zPosition="5"/>
+		<widget name="channel" position="119,283" size="542,82" font="Regular; 38" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="#00cc33"/>
+		<widget name="datetime" position="688,105" size="480,50" font="Regular;30" halign="left" foregroundColor="#0099cc" backgroundColor="#000000" transparent="1" zPosition="5"/>
 		<widget name="duration" position="1199,105" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5"/>
 		<widget source="session.Event_Now" render="Label" position="1351,105" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
 			<convert type="EventTime">Remaining</convert>
@@ -1974,7 +1974,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="EventViewSimple" position="0,0" size="1920,1080" title="EventViewSimple" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<panel name="ClockTimeEvent"/>
-		<widget name="channel" position="119,283" size="542,82" font="Regular; 38" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="StarGreen"/>
+		<widget name="channel" position="119,283" size="542,82" font="Regular; 38" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="#00cc33"/>
 		<widget name="datetime" position="228,471" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
 		<widget name="duration" position="225,522" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
 		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,624" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
