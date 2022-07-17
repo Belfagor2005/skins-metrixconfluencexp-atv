@@ -11,6 +11,7 @@
 # <ePixmap pixmap="MetriXconfluencExp/star.png" position="136,104" size="200,20" alphatest="blend" zPosition="10" transparent="1" />
 # <widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/star.png" position="560,367" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
 from __future__ import absolute_import
+from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
 from Components.VariableValue import VariableValue
 from enigma import eSlider
@@ -27,28 +28,28 @@ if not os.path.exists(pathLoc):
 	os.mkdir(pathLoc)
     
 REGEX = re.compile(
-		r'([\(\[]).*?([\)\]])|'
-		r'(: odc.\d+)|'
-		r'(\d+: odc.\d+)|'
-		r'(\d+ odc.\d+)|(:)|'
-		
-		r'!|'
-		r'/.*|'
-		r'\|\s[0-9]+\+|'
-		r'[0-9]+\+|'
-		r'\s\d{4}\Z|'
-		r'([\(\[\|].*?[\)\]\|])|'
-		r'(\"|\"\.|\"\,|\.)\s.+|'
-		r'\"|:|'
-		r'\*|'
-		r'Премьера\.\s|'
-		r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
-		r'(х|Х|м|М|т|Т|д|Д)/с\s|'
-		r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
-		r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-		r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
-		r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
-		r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+        r'([\(\[]).*?([\)\]])|'
+        r'(: odc.\d+)|'
+        r'(\d+: odc.\d+)|'
+        r'(\d+ odc.\d+)|(:)|'
+        r'( -(.*?).*)|(,)|'
+        r'!|'
+        r'/.*|'
+        r'\|\s[0-9]+\+|'
+        r'[0-9]+\+|'
+        r'\s\d{4}\Z|'
+        r'([\(\[\|].*?[\)\]\|])|'
+        r'(\"|\"\.|\"\,|\.)\s.+|'
+        r'\"|:|'
+        
+        r'Премьера\.\s|'
+        r'(х|Х|м|М|т|Т|д|Д)/ф\s|'
+        r'(х|Х|м|М|т|Т|д|Д)/с\s|'
+        r'\s(с|С)(езон|ерия|-н|-я)\s.+|'
+        r'\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+        r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
+        r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
+        r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
 
 class xtraStarX(VariableValue, Renderer):
 	def __init__(self):

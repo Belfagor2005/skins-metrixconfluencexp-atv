@@ -569,9 +569,9 @@
 		<menu key="system" image="icons/menu_setup_setup.png"/>
 	</menus>
 	<!-- Include Files -->
-	<include filename="MetriXconfluencExp/skin_plugins.xml"/>
-	<include filename="MetriXconfluencExp/skin_oatv.xml"/>
-	<include filename="MetriXconfluencExp/skin_infochannel.xml"/>
-	<include filename="MetriXconfluencExp/skin_templates.xml"/>
-	<include filename="MetriXconfluencExp/skin_button.xml"/>
+	<include filename="mSkin/skin_plugins.xml"/>
+	<include filename="mSkin/skin_oatv.xml"/>
+	<include filename="mSkin/skin_infochannel.xml"/>
+	<include filename="mSkin/skin_templates.xml"/>
+	<include filename="mSkin/skin_button.xml"/>
 </skin>

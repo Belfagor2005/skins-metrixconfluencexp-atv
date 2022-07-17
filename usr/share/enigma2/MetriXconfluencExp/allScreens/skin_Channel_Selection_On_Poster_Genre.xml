@@ -24,9 +24,7 @@
 	  <widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,734" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
 		<convert type="EventTime">Progress</convert>
 	  </widget>
-	  <widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,768" size="550,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-		<convert type="EventName">FullDescription</convert>
-	  </widget>
+
 	  <ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1" />
 	  <widget source="ServiceEvent" render="Picon" position="892,528" zPosition="4" size="220,132" transparent="1" alphatest="blend">
 		<convert type="ServiceName2">Reference</convert>
@@ -37,12 +35,21 @@
 	  <widget source="session.CurrentService" render="Label" borderWidth="2" position="738,75" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
 		<convert type="ServiceName2">Provider</convert>
 	  </widget>
-	  <!-- 
-	  <widget name="list2" valign="bottom" position="1141,757" size="720,216" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" />
-	   -->
+
+	  <widget name="list2" valign="bottom" zPosition="-20" position="1141,757" size="720,216" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" />
+
+	   <!-- 
 	  <widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="LCD;24" foregroundColor="white" backgroundColor="black" transparent="1">
 		<convert type="ServiceName2">Reference</convert>
 	  </widget>
+	   -->
+		<widget source="ServiceEvent" render="EventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+				<convert type="EventList">primetime=yed,eventcount=5</convert>
+		</widget>
+		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	  
 	  <widget source="Event" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1" />
 	  <widget source="session.Event_Now" render="XInfoEvents" />
 	  <widget source="session.Event_Next" render="XInfoEvents" />

@@ -1,62 +1,62 @@
 <skin>
 	<!--  EventView  -->
 	<screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="-2,0" zPosition="-15" size="1920,1080" alphatest="off"/>
-		<panel name="ClockTimeEvent"/>
-		<widget name="channel" position="197,317" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixOrange"/>
-		<widget name="datetime" position="225,497" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="duration" position="225,557" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="epg_description" position="690,111" borderWidth="2" size="1140,291" font="Regular; 35" alphatest="blend" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1240,885" size="55,55" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="1064,885" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="1407,885" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="-2,0" zPosition="-15" size="1920,1080" alphatest="off" />
+		<panel name="ClockTimeEvent" />
+		<widget name="channel" position="197,317" size="465,95" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixOrange" />
+		<widget name="datetime" position="225,497" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
+		<widget name="duration" position="225,557" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1" />
+		<widget name="epg_description" position="690,111" borderWidth="2" size="1140,291" font="Regular; 35" alphatest="blend" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1240,885" size="55,55" zPosition="10" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="1064,885" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="1407,885" size="54,54" zPosition="10" transparent="1" alphatest="blend" />
 		<panel position="670,950" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="970,950" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1270,950" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1570,950" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
 		<widget source="key_help" render="Label" position="1793,911" size="45,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="275,711" size="62,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="275,711" size="62,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" position="275,711" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="265,632" size="84,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="265,632" size="84,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="265,632" size="84,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="280,752" size="48,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="280,752" size="48,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_format_on.png" position="280,752" size="48,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="288,830" size="35,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="288,830" size="35,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_txt_on.png" position="288,830" size="35,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="265,670" size="80,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="265,670" size="80,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" position="265,670" size="80,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hbbtv_on.png" alphatest="blend">
 			<convert type="ServiceInfo">HasHBBTV</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="285,790" size="41,30" zPosition="1" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="285,790" size="41,30" zPosition="1" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_sub_on.png" position="285,790" size="41,30" zPosition="2" alphatest="blend">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel position="195,489" size="465,2" backgroundColor="grey" foregroundColor="grey"/>
+		<eLabel position="195,489" size="465,2" backgroundColor="grey" foregroundColor="grey" />
 		<widget source="session.Event_Now" render="Progress" position="195,486" size="465,8" pixmap="MetriXconfluencExp/icons/p_bar.png" borderWidth="1" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
@@ -66,7 +66,7 @@
 		<widget source="Event" render="Label" borderWidth="2" position="110,413" size="580,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="PosterX" position="442,628" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="BackdropX" position="930,512" size="640,360" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="PosterX" position="432,628" size="190,278" zPosition="2" alphatest="blend" />
+		<widget source="Event" render="BackdropX" position="930,512" size="640,360" zPosition="2" alphatest="blend" />
 	</screen>
 </skin>

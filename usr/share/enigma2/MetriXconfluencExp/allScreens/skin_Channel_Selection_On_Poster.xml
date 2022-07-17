@@ -1,9 +1,9 @@
 <skin>
 	<!--  ChannelSelection  -->
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="black">
-		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="#00149baf"/>
-		<widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
-		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="grey" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
+		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="#00149baf" />
+		<widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
+		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="grey" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1" />
 		<widget source="ServiceEvent" render="Label" position="199,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -21,27 +21,25 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<eLabel position="199,737" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
+		<eLabel position="199,737" size="790,2" backgroundColor="grey" foregroundColor="grey" />
 		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,727" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="564,770" size="350,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
+
 		<!-- 	EDIT LULULLA -->
 		<panel position="47,1025" size="360,40">
-			<panel name="Red-New-Button"/>
+			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="544,1025" size="360,40">
-			<panel name="Green-New-Button"/>
+			<panel name="Green-New-Button" />
 		</panel>
 		<panel position="1108,1025" size="360,40">
-			<panel name="Yellow-New-Button"/>
+			<panel name="Yellow-New-Button" />
 		</panel>
 		<panel position="1630,1025" size="360,40">
-			<panel name="Blue-New-Button"/>
+			<panel name="Blue-New-Button" />
 		</panel>
-		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1" />
 		<widget source="ServiceEvent" render="Picon" position="49,71" zPosition="4" size="220,132" transparent="1" alphatest="blend">
 			<convert type="xServiceName2">Reference</convert>
 		</widget>
@@ -52,15 +50,25 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1139,15" size="549,42" font="RegularLight; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="left" foregroundColor="#ffff00">
 			<convert type="xServiceName2">Provider</convert>
 		</widget>
+		<!-- 
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">
 			<convert type="xServiceName2">Reference</convert>
 		</widget>
-		<ePixmap pixmap="nocover.png" position="925,745" size="185,278" alphatest="blend" zPosition="1" transparent="1"/>
-		<widget source="ServiceEvent" render="PosterX" position="925,745" size="185,278" zPosition="10" borderWidth="2" borderColor="background20"/>
+		 -->
+		<widget source="ServiceEvent" render="EventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+				<convert type="EventList">primetime=yed,eventcount=5</convert>
+		</widget>
+		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="329,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		
+		
+		<ePixmap pixmap="nocover.png" position="925,745" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
+		<widget source="ServiceEvent" render="PosterX" position="925,745" size="185,278" zPosition="10" borderWidth="2" borderColor="background20" />
 		<!-- 		
 		<widget source="Event" render="XInfoEvents"/>	
 		 -->
-		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1"/>
-		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="115,640" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
+		<widget render="XParental" source="Event" position="61,622" size="50,50" zPosition="4" transparent="1" />
+		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="115,640" size="320,30" alphatest="blend" zPosition="20" transparent="1" />
 	</screen>
 </skin>

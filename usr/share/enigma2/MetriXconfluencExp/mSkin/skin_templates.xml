@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<skin>
+	<!-- **************************************  -->
+	<!-- released for use on Open images         -->
+	<!-- Currently Tested on ATV v6.X - 7.X      -->
+	<!-- Don't Remove this Disclaimer            -->
+	<!-- You can modify and redistribute it as   -->
+	<!-- long as you keep this License for the   -->
+	<!-- skin and all of your modifications      -->
+	<!-- **************************************  -->
+	<copyright>
+		<abouth name="@LulullaSkin">
+			author="Lululla"
+			license="Open"
+			Support="openATV 6.x/7.X"
+			Release="1.0.0 10/04/2022"
+			supporturl="http://corvone.altervista.org/forum/"
+		</abouth>
+	</copyright>
+	<!-- *************************************** -->
+	<!--  TEMPLATES *  LULULLA  * TEMPLATES *    -->
+	<!-- **************************************  -->
+	<!-- ************* Menu Templates ************* -->
+	<screen name="MenuTemplate">
+		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,780" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
+			<convert type="TemplatedMultiContent">
+						{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
+							"fonts": [gFont("3d",34)],
+							"itemHeight": 80}
+			</convert>
+		</widget>
+		<!-- 
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1255,884" size="50,50" alphatest="blend" zPosition="2"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1300,929" size="50,50" alphatest="blend" zPosition="2"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1351,973" size="50,50" alphatest="blend" zPosition="2"/>
+		<widget name="green" position="1304,889" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
+		<widget name="yellow" position="1352,933" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
+		<widget name="blue" position="1403,978" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
+		-->
+		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
+	</screen>
+	<!-- ************* Menu System ************* -->
+	<screen name="MenuSystem">
+		<!--
+		<widget source="menu" render="Listbox" position="105,180" size="603,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
+		  <convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (23, 10), size = (575, 45), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
+						],
+					"fonts": [gFont("Regular", 26)],
+					"itemHeight": 60
+					}
+				</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="105,690" size="585,255" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="grey" backgroundColor="background20" transparent="1">
+		  <convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (0, 0), size = (585, 225), flags = RT_HALIGN_CENTER|RT_VALIGN_TOP|RT_WRAP, text = 2), # index 2 is the Description,
+						],
+					"fonts": [gFont("Regular", 20)],
+					"itemHeight": 255
+					}
+				</convert>
+		</widget> -->
+		<widget source="menu" render="Listbox" position="105,178" size="672,480" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColorSelected="#124b97" alphatest="blend">
+			<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (10,0),size = (800,50),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1),# index 0 is the MenuText,
+						],
+						"fonts": [gFont("Regular",34)],
+						"itemHeight": 50
+					}
+				</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="104,678" size="679,255" transparent="1" enableWrapAround="1" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="yellow" backgroundColor="background40" zPosition="3" alphatest="blend">
+			<convert type="TemplatedMultiContent">
+					{"template": [
+						MultiContentEntryText(pos = (0,0),size = (810,200),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 2),# index 0 is the MenuText,
+						],
+						"fonts": [gFont("Regular",32)],
+						"itemHeight": 200
+					}
+				</convert>
+		</widget>
+	</screen>
+	<screen name="Menu1000">
+		<widget source="list" render="Listbox" position="765,644" size="1050,240" zPosition="13" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (30, 0), size = (1140, 44), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
+				"fonts": [gFont("Regular",32)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+	<screen name="MenuStr">
+		<widget source="list" render="Listbox" itemHeight="65" font="Regular; 34" position="107,248" size="1050,557" scrollbarMode="showOnDemand" transparent="1" backgroundColorSelected="layer-a-background" foregroundColorSelected="yellow">
+			<convert type="StringList"/>
+		</widget>
+	</screen>
+	<screen name="MenuWeather">
+		<widget source="session.Event_Now" render="Label" position="86,726" size="1150,48" borderWidth="2" font="RegularB; 32" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="85,773" size="1150,169" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget alphatest="blend" render="MSNWeatherPixmap" position="609,921" size="125,125" source="session.MSNWeather" transparent="1" zPosition="5">
+			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="black" font="Regular; 60" render="Label" position="735,945" size="140,90" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="white">
+			<convert type="MSNWeather">temperature_current</convert>
+		</widget>
+		<widget noWrap="1" backgroundColor="background" font="Regular; 32" render="Label" position="94,957" size="343,72" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" foregroundColor="white">
+			<convert type="MSNWeather">temperature_text,current</convert>
+		</widget>
+		<ePixmap position="453,948" size="28,75" pixmap="MetriXconfluencExp/msn/temp_high_low.png" alphatest="blend" zPosition="1"/>
+		<widget source="session.MSNWeather" render="Label" position="481,943" size="200,40" font="Regular;34" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="3">
+			<convert type="MSNWeather">temperature_high,current</convert>
+		</widget>
+		<widget source="session.MSNWeather" render="Label" position="481,978" size="200,40" font="Regular;34" foregroundColor="blue" backgroundColor="header" transparent="1" zPosition="3">
+			<convert type="MSNWeather">temperature_low,current</convert>
+		</widget>
+	</screen>
+	<!-- ************* config Templates ************* -->
+	<screen name="config1">
+		<widget name="config" position="105,180" size="1050,700" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+	</screen>
+	<screen name="config2">
+		<widget name="config" position="105,180" size="1050,550" itemHeight="65" font="Regular; 36" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+	</screen>
+	<screen name="configCom">
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" alphatest="off" transparent="1" drawMode="stretch"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="153,122" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<panel name="ClockTimeLeft"/>
+		<widget name="description" position="689,723" size="1117,225" backgroundColor="background20" transparent="1" foregroundColor="cyan" font="Regular; 30"/>
+		<widget name="config" position="696,188" size="1112,513" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="layer-a-background" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<panel name="btRG"/>
+		<widget alphatest="blend" name="HelpWindow" position="101,730" size="574,179" transparent="1"/>
+		<widget name="footnote" position="104,915" size="570,40" halign="center" valign="center" transparent="1" font="Regular; 26" foregroundColor="unff00" backgroundColor="black" zPosition="3"/>
+	</screen>
+	<screen name="pNetwork">
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<panel name="ClockTimeTop"/>
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<widget name="lab1" position="384,522" size="150,30" font="Regular;22" zPosition="2" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
+		<widget name="labactive" position="545,520" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="layer-a-background" zPosition="2"/>
+		<widget name="lab2" position="383,603" size="150,30" font="Regular;22" zPosition="2" valign="center" halign="left" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>
+		<widget name="labstop" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
+		<widget name="labrun" position="545,600" size="172,30" font="Regular;22" valign="center" halign="center" backgroundColor="green" zPosition="2"/>
+		<widget name="infolist" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<panel name="btCRYGEpg"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="pNetwork2">
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<panel name="ClockTimeTop"/>
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<widget name="menulist" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<panel name="btCRYGEpg"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="pNetwork3">
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<panel name="ClockTimeTop"/>
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<panel name="btCRYGEpg"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="pNetwork4">
+		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<panel name="ClockTimeTop"/>
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<widget name="infotext" position="105,180" size="1050,720" itemHeight="65" font="Regular; 34" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/menuselect.png"/>
+		<panel name="btCRYGEpg"/>
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/net.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<!-- ************* Button Templates ************* -->
+	<screen name="btCRYB">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,965" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,965" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRG">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGB">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1495,965" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRY">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,965" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGrad">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="30,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="1080,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1132,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1132,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1601,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1660,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1660,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btCRYGMulti">
+		<widget source="Title" render="Label" position="128,83" foregroundColor="foreground" size="572,61" valign="bottom" font="Regular; 38" backgroundColor="metrixBackground" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget source="options" render="Label" position="1380,749" size="415,190" font="Regular;20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
+		<widget source="description" render="Label" position="85,777" size="1230,150" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="foreground" halign="center" valign="center" transparent="1"/>
+		<eLabel position="70,200" size="1230,1" zPosition="1" backgroundColor="layer-b-foreground"/>
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGSoft">
+		<panel position="105,950" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,950" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,950" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,950" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGEpg">
+		<panel position="105,935" size="360,40">
+		<panel name="Red-New-Button"/></panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYBbotTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGYbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="1081,955" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1133,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1133,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGBbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1601,954" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1655,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1655,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGYTmdb">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGYTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btPIMO">
+		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="btEIMO">
+		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="btIBAR">
+		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+		<ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+		<ePixmap position="756,1031" size="50,55" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+		<ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Plugins" position="248,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		<ePixmap pixmap="buttons/yellow.png" position="327,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Audio" position="376,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		<ePixmap pixmap="buttons/blue.png" position="441,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Extensions" position="491,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		
+		<widget source="key_red" render="Label" position="47,1125" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_green" render="Label" position="409,1125" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_yellow" render="Label" position="774,1127" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_blue" render="Label" position="1133,1124" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />		
+	</screen>
+	<!-- 
+	<ePixmap position="1732,906" size="53,38" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_radio.png" transparent="1" alphatest="blend"/>   
+	-->
+	<!-- ************* Clock Templates ************* -->
+	<screen name="ClockTime">
+		<widget source="global.CurrentTime" render="Label" position="1685,59" size="150,42" font="3d;40" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1484,101" size="351,40" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeBig">
+		<widget source="global.CurrentTime" render="Label" position="1408,524" size="242,90" font="3d; 70" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="center">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1658,568" size="220,40" font="3d; 30" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="center">
+			<convert type="ClockToText">Format:%d. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1657,528" size="220,40" font="3d; 30" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="center">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeTop">
+		<widget source="global.CurrentTime" render="Label" position="3,0" borderWidth="2" size="309,45" font="3d; 36" halign="right" backgroundColor="black" transparent="1" foregroundColor="metrixAccent" valign="top">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1708,0" borderWidth="2" size="129,45" font="3d; 48" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="metrixAccent">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeCool">
+		<widget source="global.CurrentTime" render="Label" position="1719,39" size="150,45" font="3d; 48" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1512,84" size="356,38" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeBigLab">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1645,54" size="268,120" font="3d; 90" valign="center" halign="left" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1453,115" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%e. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1453,69" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeBigRadio">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1640,47" size="268,120" font="3d; 90" valign="center" halign="right" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1709,211" size="200,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%e. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1709,166" size="200,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeEvent">
+		<widget source="global.CurrentTime" render="Label" position="342,908" size="284,120" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="center">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="147,967" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%d. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="147,922" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeEvent2">
+		<widget source="global.CurrentTime" render="Label" position="341,837" size="284,120" font="3d; 80" halign="left" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixAccent">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="146,897" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%d. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="145,852" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeLeft">
+		<widget source="global.CurrentTime" render="Label" position="338,610" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="center">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="145,666" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%d. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="145,622" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeBigLeft">
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1622,47" size="268,120" font="3d; 90" valign="center" halign="center" backgroundColor="black" foregroundColor="metrixAccent" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1432,113" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%e. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1430,68" size="190,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	<screen name="ClockTimeLeft2">
+		<widget source="global.CurrentTime" render="Label" position="605,612" size="320,104" font="3d; 80" halign="left" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="377,667" size="222,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%d. %B</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="410,622" size="188,45" font="3d; 32" halign="right" backgroundColor="background20" foregroundColor="metrixAccent" transparent="1">
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+	</screen>
+	
+	<screen name="MeteoOpt">	
+		<widget source="Title" render="Label" position="280,30" size="1600,90" font="Regular;44" halign="left" valign="center" foregroundColor="guidecolor" backgroundColor="transpBlack" transparent="1" zPosition="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/msn/msnlogo.png" position="60,30" size="194,75" alphatest="blend" zPosition="1"/>
+		<widget render="Label" source="observationpoint" position="500,55" size="0,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5"/>
+		<widget render="Label" source="observationtime" position="770,55" size="1080,90" font="Regular;36" halign="right" foregroundColor="unffffff" backgroundColor="header" transparent="1" zPosition="5"/>
+		<widget source="session.MSNWeather" render="MSNWeatherPixmap" position="50,140" size="256,256" zPosition="1" transparent="1" alphatest="blend">
+			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+		</widget>
+		<widget source="caption" render="Label" position="320,180" size="700,50" font="Regular;40" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget source="condition" render="Label" position="320,235" size="700,50" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<ePixmap position="70,420" size="40,80" pixmap="MetriXconfluencExp/msn/temp.png" alphatest="blend" zPosition="1"/>
+		<widget source="currentTemp" render="Label" position="155,405" size="300,80" font="Regular;52" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget source="feelsliketemp" render="Label" position="160,465" size="300,80" font="Regular;28" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
+		<ePixmap position="450,420" size="28,75" pixmap="MetriXconfluencExp/msn/temp_high_low.png" alphatest="blend" zPosition="1"/>
+		<widget source="session.MSNWeather" render="Label" position="515,417" size="200,40" font="Regular;34" foregroundColor="red" backgroundColor="header" transparent="1" zPosition="3">
+			<convert type="MSNWeather">temperature_high,current</convert>
+		</widget>
+		<widget source="session.MSNWeather" render="Label" position="515,453" size="200,40" font="Regular;34" foregroundColor="blue" backgroundColor="header" transparent="1" zPosition="3">
+			<convert type="MSNWeather">temperature_low,current</convert>
+		</widget>
+		<ePixmap position="70,550" size="70,70" pixmap="MetriXconfluencExp/msn/wind.png" alphatest="blend" zPosition="1"/>
+		<widget source="wind_condition" render="Label" position="160,570" size="700,40" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<ePixmap position="70,660" size="50,54" pixmap="MetriXconfluencExp/msn/umbrella.png" alphatest="blend" zPosition="1"/>
+		<widget source="humidity" render="Label" position="160,680" size="600,45" font="Regular;32" foregroundColor="yellow" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!-- Day 2 /-->
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,180" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+			<convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+		</widget>
+		<widget render="Label" source="weekday2" position="1280,200" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget render="Label" source="weekday2_temp" position="1500,200" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!-- Day 3 /-->
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,330" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+			<convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+		</widget>
+		<widget render="Label" source="weekday3" position="1280,350" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget render="Label" source="weekday3_temp" position="1500,350" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!-- Day 4 /-->
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,480" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+			<convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+		</widget>
+		<widget render="Label" source="weekday4" position="1280,500" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget render="Label" source="weekday4_temp" position="1500,500" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!-- Day 5 /-->
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1100,630" size="140,140" alphatest="blend" transparent="1" zPosition="1">
+			<convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/MetriXconfluencExp/msn/msn3d/,png</convert>
+		</widget>
+		<widget render="Label" source="weekday5" position="1280,650" size="250,80" font="Regular;32" foregroundColor="white" backgroundColor="header" transparent="1" zPosition="1"/>
+		<widget render="Label" source="weekday5_temp" position="1500,650" size="350,120" font="Regular;32" halign="right" foregroundColor="#ffff00" backgroundColor="header" transparent="1" zPosition="1"/>
+		<!-- Logo /-->
+		<widget render="Label" source="statustext" position="70,550" size="0,0" font="Regular;30" transparent="1" zPosition="1"/>
+		<eLabel text="Menu" position="1770,1000" size="100,40" font="Regular;30" foregroundColor="un808080" backgroundColor="header" transparent="1" zPosition="1"/>
+	</screen>	
+</skin>

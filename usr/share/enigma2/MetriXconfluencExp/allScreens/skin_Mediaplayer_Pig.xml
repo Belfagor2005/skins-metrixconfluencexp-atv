@@ -1,0 +1,31 @@
+<skin>
+	<screen name="MediaPlayer" position="center,center" size="1920,1080" title="MediaPlayer" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="title" position="87,492" size="488,60" font="Regular; 36" halign="left" backgroundColor="background20" transparent="1" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,0" size="1920,1080" zPosition="-20" />
+		<eLabel position="648,510" size="750,60" text="Playlist" font="Regular; 33" backgroundColor="background20" transparent="1" />
+		<eLabel name="new eLabel" position="107,618" size="450,2" backgroundColor="grey" foregroundColor="grey" zPosition="-1" />
+		<widget name="filelist" position="645,163" size="1173,343" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+		
+		<widget name="artist" position="87,557" size="494,45" font="Regular;33" valign="top" backgroundColor="background20" transparent="1" />
+		<widget name="albumtext" position="86,705" size="180,38" font="RegularLight; 33" valign="top" foregroundColor="grey" backgroundColor="background20" transparent="1" halign="left" />
+		<widget name="album" position="87,750" size="480,45" font="RegularLight; 30" valign="top" backgroundColor="background20" transparent="1" />
+		<widget name="year" position="197,702" size="375,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1" halign="right" />
+		<widget name="genre" position="87,810" size="480,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1" />
+		<widget name="playlist" position="649,570" size="1171,362" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
+		<widget name="repeat" pixmaps="MetriXconfluencExp/buttons/repeat_off.png,MetriXconfluencExp/buttons/repeat_on.png" position="1588,950" size="105,45" transparent="1" alphatest="blend" />
+		<widget source="session.CurrentService" render="Label" position="87,638" size="179,48" zPosition="2" font="Regular; 33" halign="left" backgroundColor="background20" noWrap="1" transparent="1">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="393,638" size="179,48" zPosition="2" font="Regular; 33" halign="right" backgroundColor="background20" noWrap="1" transparent="1">
+			<convert type="ServicePosition">Length,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" pixmap="MetriXconfluencExp/dvr/white-bar.png" position="107,615" size="450,8" zPosition="1" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<ePixmap position="1695,947" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+		<panel name="ClockTimeEvent2" />
+		<eLabel position="85,53" size="750,60" text="Media Player" font="Regular; 39" backgroundColor="background20" transparent="1" />
+		<widget source="session.VideoPicture" render="Pig" position="90,125" zPosition="2" size="540,359" backgroundColor="transparent" transparent="0" />
+
+	</screen>
+</skin>
