@@ -1208,7 +1208,7 @@ self['config'].l.setSeperation(int(300*f))
 					{"template": [
 
 							MultiContentEntryText(pos = (128, 32), size = (10, 30), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
-							MultiContentEntryText(pos = (150, 10), size = (370, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2), # ServiceName2
+							MultiContentEntryText(pos = (150, 10), size = (370, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2), # xServiceName2
 							MultiContentEntryText(pos = (150, 48), size = (370, 30), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
 							MultiContentEntryText(pos = (150, 80), size = (370, 30), font = 3, flags = RT_HALIGN_LEFT, text = 5), # Eventtime
 							MultiContentEntryPixmapAlphaBlend(pos=(30, 40), size=(85, 51), png=6, flags = BT_SCALE) # picon
@@ -1232,7 +1232,7 @@ self['config'].l.setSeperation(int(300*f))
 	</screen>
 	<screen name="NumberZapWithName" position="-4,0" size="1920,1080" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="servicenumber" position="669,411" size="581,258" font="Regular; 225" halign="right" backgroundColor="background" transparent="1" valign="center" foregroundColor="metrixPreBlack2" text="5" zPosition="-1"/>
-		<widget name="ServiceName2" position="585,410" size="750,120" font="Regular; 75" halign="left" backgroundColor="background" transparent="1"/>
+		<widget name="xServiceName2" position="585,410" size="750,120" font="Regular; 75" halign="left" backgroundColor="background" transparent="1"/>
 		<widget name="servicebouquet" position="663,555" size="594,80" font="Regular; 42" halign="left" backgroundColor="background" transparent="1"/>
 		<eLabel position="547,404" size="825,272" backgroundColor="background" zPosition="-5"/>
 	</screen>
@@ -1482,7 +1482,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="498,509" size="900,40" font="LCD;30" halign="left" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1255,557" size="175,40" font="LCD;36" halign="right" valign="center" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2">
 			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
@@ -1554,7 +1554,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<ePixmap pixmap="MetriXconfluencExp/dvr/slider_bg1.png" position="696,990" size="600,21" zPosition="2" alphatest="blend" noWrap="1"/>
 		<panel name="ClockTimeBigRadio"/>
 		<widget source="session.CurrentService" render="Label" position="355,841" size="998,60" font="LCD; 57" valign="top" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1360,841" size="225,60" font="LCD; 57" halign="right" backgroundColor="background20" transparent="1">
 			<convert type="EventTime">Remaining</convert>
@@ -1567,7 +1567,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="345,774" size="461,48" font="LCD; 39" noWrap="1" backgroundColor="background20" transparent="1" valign="top">
-			<convert type="ServiceName2">Provider</convert>
+			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<ePixmap position="343,833" size="1260,147" zPosition="12" pixmap="MetriXconfluencExp/menu/radio_frame.png" alphatest="blend" noWrap="1"/>
 		<ePixmap position="341,830" size="1260,147" zPosition="10" pixmap="MetriXconfluencExp/menu/glass.png" alphatest="blend" noWrap="1"/>
@@ -1587,19 +1587,19 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<panel name="btCRYB"/>
 		<widget enableWrapAround="0" itemHeight="30" font="Regular;0" name="list" position="0,0" size="0,150" zPosition="-10"/>
 		<widget source="piconCh1" render="Picon" position="218,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh2" render="Picon" position="563,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh3" render="Picon" position="923,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh4" render="Picon" position="1288,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="piconCh5" render="Picon" position="1633,160" size="75,45" zPosition="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget font="Regular;33" halign="center" transparent="1" name="currCh1" position="80,205" size="340,45"/>
 		<widget font="Regular;33" halign="center" transparent="1" name="currCh2" position="418,205" size="360,45"/>
@@ -1747,7 +1747,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="QuickEPG" position="0,0" size="1920,1080" title="QuickEPG" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel name="new eLabel" position="-98,842" zPosition="-10" size="2018,240" backgroundColor="background20" alphatest="blend"/>
 		<widget source="Service" render="Label" position="588,849" size="744,53" halign="center" font="LCD;39" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget name="list" position="83,909" size="1754,113" colorServiceDescription="grey" colorServiceDescriptionSelected="white" transparent="1" backgroundColor="background20" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" itemHeight="41" zPosition="2"/>
 		<panel position="92,1035" size="360,40">
@@ -1890,7 +1890,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="220,85" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="74,366" size="616,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
@@ -1963,7 +1963,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="220,85" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="74,366" size="616,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
@@ -2033,7 +2033,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Service" render="Picon" position="220,85" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="ServiceName2">Reference</convert>
+			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" borderWidth="2" position="74,366" size="616,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
@@ -2897,7 +2897,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="DVDPlayer" position="0,0" size="1925,1085" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="ClockTimeBigLab"/>
 		<widget source="session.CurrentService" render="Label" position="252,860" size="1080,54" font="LCD;45" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="53,971" size="150,42" font="Regular;36" halign="center" valign="center" backgroundColor="background20" shadowColor="black" shadowOffset="-1,-1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
@@ -2999,6 +2999,41 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget name="info" position="5,60" size="e-10,130" font="Regular;24" backgroundColor="#54242424"/>
 		<widget name="progress" position="5,e-39" size="e-10,24" backgroundColor="#54242424"/>
 	</screen>
+	<screen name="Animmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel position="0,950" size="1920,130" backgroundColor="#1A0F0F0F" zPosition="-1" />
+		<eLabel position="0,943" size="1920,5" backgroundColor="#1A27408B" zPosition="-1" />
+		<widget name="title" position="0,842" size="1920,100" zPosition="3" halign="center" valign="bottom" font="Regular;60" backgroundColor="#67FFFFFF" transparent="1" foregroundColor="#34FFFFFF" />
+		<widget source="label1" render="Label" position="20,965" size="350,100" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label2" render="Label" position="399,965" size="350,100" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<eLabel position="778,960" size="360,115" zPosition="1" backgroundColor="#1A27408B" font="Regular; 20" />
+		<widget source="label3" render="Label" position="782,965" size="350,100" font="Regular; 32" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="0" />
+		<widget source="label4" render="Label" position="1171,965" size="350,100" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label5" render="Label" position="1552,965" size="350,100" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+	</screen>
+	
+	<screen name="Iconmain" position="0,0" size="1920,1080" title="Mainmenu" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="title" position="0,842" size="1920,100" zPosition="3" halign="center" valign="bottom" font="Regular;60" backgroundColor="#67FFFFFF" transparent="1" foregroundColor="#34FFFFFF" />
+		<eLabel position="0,943" size="1920,5" backgroundColor="#1A27408B" zPosition="-1" font="Regular; 18" />
+		<widget source="label1" render="Label" position="25,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label1s" render="Label" position="25,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap1" position="25,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label2" render="Label" position="348,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label2s" render="Label" position="348,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap2" position="348,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label3" render="Label" position="690,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label3s" render="Label" position="690,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap3" position="690,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label4" render="Label" position="1004,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label4s" render="Label" position="1004,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap4" position="1004,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label5" render="Label" position="1305,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label5s" render="Label" position="1305,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap5" position="1305,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+		<widget source="label6" render="Label" position="1615,955" size="250,125" font="Regular; 24" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget source="label6s" render="Label" position="1615,955" size="250,125" font="Regular; 26" borderWidth="1" borderColor="#00FFFFFF" halign="center" valign="center" zPosition="2" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" transparent="1" />
+		<widget name="pixmap6" position="1615,955" size="250,125" zPosition="1" transparent="1" alphatest="on" />
+	</screen>
+	
 </skin>
 
 

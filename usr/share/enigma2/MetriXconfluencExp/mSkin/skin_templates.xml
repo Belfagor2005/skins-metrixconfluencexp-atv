@@ -29,39 +29,10 @@
 							"itemHeight": 80}
 			</convert>
 		</widget>
-		<!-- 
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_green.png" position="1255,884" size="50,50" alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_yellow.png" position="1300,929" size="50,50" alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_blue.png" position="1351,973" size="50,50" alphatest="blend" zPosition="2"/>
-		<widget name="green" position="1304,889" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="yellow" position="1352,933" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		<widget name="blue" position="1403,978" size="360,40" zPosition="1" font="Regular;25" halign="left" transparent="1" valign="center"/>
-		-->
 		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
 	</screen>
 	<!-- ************* Menu System ************* -->
 	<screen name="MenuSystem">
-		<!--
-		<widget source="menu" render="Listbox" position="105,180" size="603,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
-		  <convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (23, 10), size = (575, 45), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
-						],
-					"fonts": [gFont("Regular", 26)],
-					"itemHeight": 60
-					}
-				</convert>
-		</widget>
-		<widget source="menu" render="Listbox" position="105,690" size="585,255" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" foregroundColor="grey" backgroundColor="background20" transparent="1">
-		  <convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (0, 0), size = (585, 225), flags = RT_HALIGN_CENTER|RT_VALIGN_TOP|RT_WRAP, text = 2), # index 2 is the Description,
-						],
-					"fonts": [gFont("Regular", 20)],
-					"itemHeight": 255
-					}
-				</convert>
-		</widget> -->
 		<widget source="menu" render="Listbox" position="105,178" size="672,480" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="10" foregroundColorSelected="yellow" backgroundColorSelected="#124b97" alphatest="blend">
 			<convert type="TemplatedMultiContent">
 					{"template": [

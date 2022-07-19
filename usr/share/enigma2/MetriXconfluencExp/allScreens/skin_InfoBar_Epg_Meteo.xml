@@ -2,22 +2,6 @@
 	<!--  InfoBar  -->
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
-		<!-- BUTTON OR MISSING IN SKIN TELNET DEBUG -->
-		<!-- 		<panel position="105,1090" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,1090" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1038,1090" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1495,1090" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel> -->
-		<!--  
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-  -->
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,86" size="1084,70" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
 			<convert type="xServiceName2">Name</convert>
 		</widget>
@@ -165,7 +149,8 @@
 			<convert type="xExtremeInfo">BulEcm</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<!-- 		<widget source="session.CurrentService" render="Label" borderWidth="2" font="Regular; 20" position="544,1002" size="430,30" backgroundColor="black" foregroundColor="grey" transparent="1" zPosition="10" halign="left">
+		<!--
+ 		<widget source="session.CurrentService" render="Label" borderWidth="2" font="Regular; 20" position="544,1002" size="430,30" backgroundColor="black" foregroundColor="grey" transparent="1" zPosition="10" halign="left">
 			<convert type="xHDCaidDisplay">Default</convert>
 		</widget> -->
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_tv.png" position="1182,1033" size="508,36" zPosition="1" alphatest="blend"/>

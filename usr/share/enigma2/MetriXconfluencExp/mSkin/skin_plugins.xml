@@ -336,7 +336,7 @@
 		<widget name="chapterLabel" position="222,1029" size="1472,51" font="Regular;33" halign="left" foregroundColor="darkgrey" backgroundColor="black" transparent="1"/>
 		<panel name="ClockTimeBigLeft"/>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1338,84" font="LCD; 57" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="1577,924" size="96,35" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="1577,924" size="96,35" zPosition="2" alphatest="blend">
@@ -415,7 +415,7 @@
 		<eLabel position="108,198" zPosition="3" size="1044,566" backgroundColor="background20"/>
 		<widget name="Video" position="108,198" zPosition="-10" size="1044,566"/>
 		<widget source="session.CurrentService" render="Label" position="105,780" size="1050,45" font="LCD;36" halign="center" valign="center" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="105,840" size="1050,38" font="Regular;30" halign="center" valign="center" backgroundColor="background20" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
@@ -692,7 +692,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_clock.png" position="1370,60" zPosition="-1" size="480,105"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_movie.png" position="-2,857" zPosition="-2" size="1922,225" alphatest="off"/>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1436,84" font="LCD; 60" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="1742,918" size="62,30" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" position="1742,918" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
@@ -834,7 +834,7 @@
 		<eLabel text="Subservices" position="0,0" size="840,42" font="Regular;30" halign="center" valign="center" backgroundColor="background20"/>
 		<widget name="CurrentSubserviceNumber" position="0,42" size="105,72" font="Regular;33" halign="center" valign="center" backgroundColor="background20"/>
 		<widget source="session.CurrentService" render="Label" position="105,42" size="735,72" font="LCD;33" valign="center" backgroundColor="background20">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 	</screen>
 	<screen name="Subtitles" position="0,0" size="1920,1080" title="Subtitle selection" flags="wfNoBorder" backgroundColor="transparent">
@@ -1512,7 +1512,7 @@
 		<eLabel position="108,198" zPosition="3" size="1044,566" backgroundColor="#00ff0000"/>
 		<widget name="Video" position="108,198" zPosition="-10" size="1044,566"/>
 		<widget source="session.CurrentService" render="Label" position="105,780" size="1050,45" font="LCD;36" halign="center" valign="center" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="105,840" size="1050,38" font="Regular;30" halign="center" valign="center" backgroundColor="background20" transparent="1">
 			<convert type="ServicePosition">Position,Detailed</convert>
@@ -1550,10 +1550,10 @@
 		<ePixmap pixmap="MetriXconfluencExp/icons/infobar_movie.png" position="center,852" zPosition="-2" size="1922,225"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/menu_clock.png" position="1370,60" zPosition="-1" size="480,105"/>
 		<widget source="session.CurrentService" render="Label" position="-30,677" size="1875,384" font="LCD; 150" valign="top" noWrap="1" backgroundColor="transparent" transparent="1" foregroundColor="metrixPreTrans3" zPosition="-99">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="224,872" size="1338,84" font="LCD; 60" valign="top" noWrap="1" backgroundColor="background20" transparent="1">
-			<convert type="ServiceName2">Name</convert>
+			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="1577,924" size="96,35" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="1577,924" size="96,35" zPosition="2" alphatest="blend">
