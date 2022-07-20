@@ -249,6 +249,13 @@
 		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="2"/>
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="225,840" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1378,840" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
+<!-- 	
+		<widget source="session.CurrentService" render="Label" text="ip" position="1186,876" size="300,30" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
+			<convert type="ipLoc">ip</convert>
+		</widget>
+		
+	 -->
+	
 	</screen>
 	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080"/>
