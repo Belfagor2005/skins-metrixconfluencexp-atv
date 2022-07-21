@@ -21,7 +21,9 @@
 		<panel name="btPIMO"/>
 		<eLabel position="105,198" size="1665,3" backgroundColor="grey"/>
 		<widget name="list" position="105,206" size="1665,473" scrollbarMode="showOnDemand" colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" selectionPixmap="MetriXconfluencExp/menu/select.png" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="grey" foregroundColorServiceNotAvail="#777777" serviceNumberFont="Regular;35" serviceNameFont="Regular;35" serviceInfoFont="Regular;32" transparent="1"/>
+	
 	</screen>
+	
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="btIBAR"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
@@ -154,189 +156,16 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
+	
+	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
+		<panel name="channel"/>
+	</screen>	
 	<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
-		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="#00149baf"/>
-		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="grey" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
-		<widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png"/>
-		<widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" borderWidth="2" render="Label" position="99,635" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
-			<convert type="xExpertInfo">CryptoInfo</convert>
-		</widget>
-<!-- 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E	  DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
-		</widget> -->
-		<widget source="ServiceEvent" render="Label" position="102,724" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="999,724" size="85,39" font="Regular; 28" backgroundColor="black" transparent="1" valign="center" foregroundColor="unff0000">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<eLabel position="199,742" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
-		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,734" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<widget source="ServiceEvent" render="Picon" position="874,525" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="735,78" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="xServiceName2">Provider</convert>
-		</widget>
-		<!--
-		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="59,770" zPosition="3" size="500,235" font="LCD;24" foregroundColor="white" backgroundColor="black" transparent="1">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		 -->
-		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-			<convert type="xEventList">primetime=yed,eventcount=5</convert>
-		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
-		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="10" alphatest="blend" transparent="1"/>
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<!--
-		<panel position="42,1025" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,1025" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1043,1025" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1520,1025" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel> -->
+		<panel name="channel"/>
 	</screen>
 	<screen name="newChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
-		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="#00149baf"/>
-		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="grey" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;32" serviceInfoFont="RegularLight;24" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
-		<widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png"/>
-		<widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" borderWidth="2" render="Label" position="99,635" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
-			<convert type="xExpertInfo">CryptoInfo</convert>
-		</widget>
-		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E	  DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="102,724" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="999,724" size="85,39" font="Regular; 28" backgroundColor="black" transparent="1" valign="center" foregroundColor="unff0000">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<eLabel position="199,742" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
-		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,734" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<widget source="ServiceEvent" render="Picon" position="874,525" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="735,78" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="xServiceName2">Provider</convert>
-		</widget>
-		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-			<convert type="xEventList">primetime=yed,eventcount=5</convert>
-		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
-		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="3" transparent="1" alphatest="blend"/>
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<!--
-		<panel position="42,1025" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,1025" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1043,1025" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1520,1025" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel> -->
+		<panel name="channel"/>
 	</screen>
-	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
-		<widget source="Title" borderWidth="2" render="Label" position="55,0" size="962,35" font="RegularLight; 32" backgroundColor="black" transparent="1" halign="left" valign="center" foregroundColor="#00149baf"/>
-		<widget name="list" borderWidth="2" backgroundPixmap="MetriXconfluencExp/icons/separator.png" position="1140,68" size="720,910" scrollbarMode="showNever" colorServiceDescription="grey" colorServiceDescriptionSelected="cyan" colorEventProgressbarBorder="metrixAccent" colorEventProgressbar="metrixAccent" colorEventProgressbarBorderSelected="white" foregroundColorServiceNotAvail="grey" serviceNumberFont="Arial;28" serviceNameFont="Regular;30" serviceInfoFont="RegularLight;22" transparent="1" selectionPixmap="MetriXconfluencExp/icons/channelselect.png" itemHeight="50" scrollbarSliderBorderWidth="1" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png" render="Label" backgroundColorSelected="black" backgroundColor="background20" noWrap="1"/>
-		<widget name="list2" zPosition="-10" valign="bottom" position="1140,68" size="720,910" font="Regular;21" backgroundColor="black" foregroundColor="white" backgroundColorSelected="black" transparent="1" posDuration="195" posEvent="235" posyBegin="0" postxt="60" posyEvent="0" itemHeight="50" sizey="42" fontBegin="Regular;23" fontEvent="Regular;23" fontDate="Regular;21" fontDuration="Regular;23" selectionPixmap="MetriXconfluencExp/icons/channelselect.png"/>
-		<widget source="ServiceEvent" render="Label" position="194,677" size="790,48" borderWidth="2" font="RegularB; 26" backgroundColor="black" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="unffbf00">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.CurrentService" borderWidth="2" render="Label" position="99,635" size="700,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="left" noWrap="1" valign="center" zPosition="20" foregroundColor="darkgrey">
-			<convert type="xExpertInfo">CryptoInfo</convert>
-		</widget>
-		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 23" foregroundColor="orange" halign="left" position="1011,8" render="Label" size="750,35" source="ServiceEvent" text="19.2E	  DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="102,724" size="85,39" font="Regular; 28" foregroundColor="metrixGreen" backgroundColor="black" transparent="1" halign="right" valign="center">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="ServiceEvent" render="Label" position="999,724" size="85,39" font="Regular; 28" backgroundColor="black" transparent="1" valign="center" foregroundColor="unff0000">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<eLabel position="199,742" size="790,2" backgroundColor="grey" foregroundColor="grey"/>
-		<widget source="ServiceEvent" alphatest="blend" render="Progress" position="199,734" size="790,25" pixmap="MetriXconfluencExp/icons/pointer.png" transparent="1" zPosition="10">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<widget source="ServiceEvent" render="Picon" position="874,525" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1728,3" size="129,40" font="Arial; 40" halign="center" transparent="1" valign="bottom" backgroundColor="black" foregroundColor="grey">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="735,78" size="380,42" font="LCD; 30" valign="center" backgroundColor="black" zPosition="20" transparent="1" halign="right" foregroundColor="darkgrey">
-			<convert type="xServiceName2">Provider</convert>
-		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
-		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-			<convert type="xEventList">primetime=yed,eventcount=5</convert>
-		</widget>
-		<widget source="ServiceEvent" render="XInfoEvents" position="0,0"/>
-		<widget source="ServiceEvent" render="XParental" position="52,679" size="50,50" zPosition="3" transparent="1" alphatest="blend"/>
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<!--
-		<panel position="42,1025" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,1025" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1043,1025" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1520,1025" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel> -->
-	</screen>
+
+
 </skin>
