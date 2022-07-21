@@ -8,7 +8,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="454,640" size="665,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="right" noWrap="1" valign="center" zPosition="20" foregroundColor="cyan1">
-			<convert type="pliExpertInfo">CryptoInfo</convert>
+			<convert type="xExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 18" foregroundColor="lightgreen" halign="center" position="1137,983" render="Label" size="723,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
 			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
@@ -48,8 +48,8 @@
 			<convert type="xServiceName2">Reference</convert>
 		</widget>
 		 -->
-		<widget source="ServiceEvent" render="EventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-				<convert type="EventList">primetime=yed,eventcount=5</convert>
+		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+				<convert type="xEventList">primetime=yed,eventcount=5</convert>
 		</widget>
 		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>

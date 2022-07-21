@@ -239,6 +239,7 @@ class PosterAutoDB(PosterXDownloadThread):
 
 threadAutoDB = PosterAutoDB()
 threadAutoDB.start()
+
 class PosterX(Renderer):
     def __init__(self):
         Renderer.__init__(self)

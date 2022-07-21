@@ -11,21 +11,23 @@
 # <widget source="Service" render="PosterXEMC" position="100,100" size="185,278" />
 from __future__ import absolute_import
 from __future__ import print_function
-from Components.Renderer.PosterXDownloadThread import PosterXDownloadThread
+
 from Components.Renderer.Renderer import Renderer
-from Components.Sources.CurrentService import CurrentService
-from Components.Sources.Event import Event
-from Components.Sources.EventInfo import EventInfo
-from Components.Sources.ServiceEvent import ServiceEvent
-from ServiceReference import ServiceReference
 from enigma import ePixmap, loadJPG, eEPGCache
-from enigma import eTimer
+from ServiceReference import ServiceReference
+from Components.Sources.ServiceEvent import ServiceEvent
+from Components.Sources.CurrentService import CurrentService
+from Components.Sources.EventInfo import EventInfo
+from Components.Sources.Event import Event
+from Components.Renderer.PosterXDownloadThread import PosterXDownloadThread
 import NavigationInstance
+
 import os
 import sys
 import re
 import time
 import socket
+from enigma import eTimer
 PY3 = (sys.version_info[0] == 3)
 try:
     if PY3:
@@ -140,7 +142,7 @@ class PosterXEMC(Renderer):
             socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
             return True
         except:
-            return
+            return False
 
     GUI_WIDGET = ePixmap
     def changed(self, what):
@@ -175,7 +177,8 @@ class PosterXEMC(Renderer):
                 return
             try:
                 self.logPoster("Service : {} - {}".format(self.canal[1],self.canal[5]))
-                if os.path.exists(self.canal[5]):
+                pstrNm = path_folder + self.canal[5] + ".jpg"                                            
+                if os.path.exists(pstrNm):
                     self.timer.start(100, True)
                 elif self.canal[1]:
                     self.logPoster("Downloading poster...")

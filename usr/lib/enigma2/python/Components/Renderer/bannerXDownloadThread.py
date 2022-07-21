@@ -19,7 +19,7 @@ isz="140,760"
 
 tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
 omdb_api = "6a4c9432"
-# epgcache = eEPGCache.getInstance()
+
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -45,7 +45,6 @@ try:
 except:
     my_cur_skin = False
 
-
 PY3 = (sys.version_info[0] == 3)
 try:
     if PY3:
@@ -55,10 +54,10 @@ try:
 except:
     pass
 
-
 class bannerXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
+        self.intCheck()
 
     def intCheck(self):
         import socket

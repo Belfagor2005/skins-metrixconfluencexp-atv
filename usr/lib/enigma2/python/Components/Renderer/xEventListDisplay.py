@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# EventListDisplay - Renderer
+# xEventListDisplay - Renderer
 #
 # Coded by Dr.Best (c) 2013
 # Support: www.dreambox-tools.info
@@ -19,16 +19,16 @@
 # If you want to use or modify the code or parts of it,
 # you have to keep MY license and inform me about the modifications by mail.
 #
-# <widget source="ServiceEvent" render="EventListDisplay" position="1080,610" size="1070,180" column0="0,100,yellow,Regular,30,0,0" column1="100,950,white,Regular,28,0,1" primetimeoffset="0" 
+# <widget source="ServiceEvent" render="xEventListDisplay" position="1080,610" size="1070,180" column0="0,100,yellow,Regular,30,0,0" column1="100,950,white,Regular,28,0,1" primetimeoffset="0" 
 # rowHeight="35" backgroundColor="#FF101010" transparent="1" zPosition="50">
-# <convert type="EventList">primetime=yed,eventcount=4</convert>
+# <convert type="xEventList">primetime=yed,eventcount=4</convert>
 # </widget>
 
 from Components.Renderer.Renderer import Renderer
 from enigma import eCanvas, eRect, gFont
 from skin import parseColor, parseFont
 
-class EventListDisplay(Renderer):
+class xEventListDisplay(Renderer):
         GUI_WIDGET = eCanvas
 
         def __init__(self):

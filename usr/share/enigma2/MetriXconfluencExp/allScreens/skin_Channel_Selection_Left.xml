@@ -7,7 +7,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" borderWidth="2" render="Label" position="58,964" size="717,35" font="RegularLight; 26" backgroundColor="black" transparent="1" halign="center" noWrap="1" valign="center" zPosition="20" foregroundColor="cyan1">
-			<convert type="pliExpertInfo">CryptoInfo</convert>
+			<convert type="xExpertInfo">CryptoInfo</convert>
 		</widget>
 		<widget backgroundColor="black" borderWidth="2" font="RegularLight; 20" foregroundColor="lightgreen" halign="left" position="782,687" render="Label" size="1072,35" source="ServiceEvent" text="19.2E   DVB-S2  11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="20" noWrap="1">
 			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
@@ -41,8 +41,8 @@
 		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1324,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="EventListDisplay" position="789,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
-				<convert type="EventList">primetime=yed,eventcount=5</convert>
+		<widget source="ServiceEvent" render="xEventListDisplay" position="789,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
+				<convert type="xEventList">primetime=yed,eventcount=5</convert>
 		</widget>
 		<!-- 		
 		<widget source="ServiceEvent" borderWidth="2" render="NextEvents" position="1350,758" zPosition="3" size="500,235" font="Regular;24" foregroundColor="white" backgroundColor="black" transparent="1">

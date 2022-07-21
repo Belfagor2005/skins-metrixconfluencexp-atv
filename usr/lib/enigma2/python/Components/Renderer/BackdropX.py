@@ -234,9 +234,9 @@ class BackdropAutoDB(BackdropXDownloadThread):
             w = open(path_folder + "BackdropAutoDB.log", "a+")
             w.write("%s\n"%logmsg)
             w.close()
+            
 threadAutoDB = BackdropAutoDB()
 threadAutoDB.start()
-
 class BackdropX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
