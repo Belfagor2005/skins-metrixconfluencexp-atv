@@ -1,7 +1,110 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-
-	
+	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+	  <ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080" />
+	  <!--  check	 on test debug -->
+	  <widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2" />
+	  <widget name="epg_description" position="497,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1" />
+	  <widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<convert type="EventName">FullDescription</convert>
+	  </widget>
+	  <widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<convert type="EventName">FullDescription</convert>
+	  </widget>
+	  <!-- end check -->
+	  <widget source="session.Event_Now" render="Label" backgroundColor="black" position="243,704" size="335,32" transparent="1" zPosition="2" foregroundColor="grey" font="Regular;22" halign="center" borderWidth="2">
+		<convert type="EventName">Rating</convert>
+	  </widget>
+	  <widget source="session.Event_Next" render="Label" backgroundColor="black" position="1134,694" size="335,32" transparent="1" zPosition="2" foregroundColor="grey" font="Regular;22" halign="center" borderWidth="2">
+		<convert type="EventName">Rating</convert>
+	  </widget>
+	  <widget source="session.Event_Now" borderWidth="2" render="Label" position="96,75" size="1441,50" font="Regular; 32" halign="left" backgroundColor="background20" transparent="1" valign="center" zPosition="1" foregroundColor="metrixSelection">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="session.Event_Next" borderWidth="2" render="Label" position="1037,114" size="800,50" font="Regular; 28" halign="left" backgroundColor="background40" transparent="1" valign="center" zPosition="1" foregroundColor="metrixSelection">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="750,11" size="450,50" borderWidth="2" font="RegularLight; 38" halign="center" backgroundColor="black" transparent="1" foregroundColor="grey" valign="center">
+		<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+	  </widget>
+	  <widget source="session.CurrentService" render="Picon" position="76,874" zPosition="4" size="180,120" transparent="1">
+		<convert type="xServiceName2">Reference</convert>
+	  </widget>
+	  <!-- s infobar two -->
+	  <panel name="secondBar" />
+	  <!-- Weather */-->
+	  <!--
+			<widget render="MSNWeatherPixmap" position="1571,904" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
+				<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
+			</widget>
+			<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1696,936" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
+				<convert type="MSNWeather">temperature_current</convert>
+			</widget>
+							
+			<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1550,877" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" alphatest="blend">
+				<convert type="MSNWeather">temperature_text,current</convert>
+											
+			</widget>
+			-->
+	  <!-- end s ibar -->
+	  <panel position="47,1100" size="360,40">
+		<panel name="Red-New-Button" />
+	  </panel>
+	  <panel position="544,1100" size="360,40">
+		<panel name="Green-New-Button" />
+	  </panel>
+	  <panel position="1108,1090" size="360,40">
+		<panel name="Yellow-New-Button" />
+	  </panel>
+	  <panel position="1630,1100" size="360,40">
+		<panel name="Blue-New-Button" />
+	  </panel>
+	  <widget position="1191,909" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="left" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
+		<convert type="xServiceName2">TpansponderInfo</convert>
+	  </widget>
+	  <widget source="session.CurrentService" render="Label" text="camname" position="1193,865" size="328,41" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
+		<convert type="xNOVAccess">CamName</convert>
+	  </widget>
+	  <widget source="session.Event_Now" render="XInfoEvents" />
+	  <widget source="session.Event_Next" render="XInfoEvents" />
+	  <widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1" />
+	  <widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1" />
+	  <widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2" />
+	  <widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2" />
+	  <widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1" />
+	  <widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1510,650" size="320,30" alphatest="blend" zPosition="20" transparent="1" />
+	  <!-- OPTIONAL LAN VPN WIFI TEMP -->
+	  <ePixmap position="417,1033" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/wifi_off.png" alphatest="blend" />
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/wifi_on.png" position="417,1033" zPosition="6" size="42,42" transparent="1" alphatest="blend">
+		<convert type="RouteInfo">Wifi</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap position="477,1035" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/lan_off.png" alphatest="blend" />
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/lan.png" position="477,1035" zPosition="6" size="42,42" transparent="1" alphatest="blend">
+		<convert type="RouteInfo">Lan</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap position="542,1024" size="70,70" zPosition="8" pixmap="MetriXconfluencExp/icons/vpn.png" alphatest="blend" />
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/vpn_on.png" position="541,1024" zPosition="9" size="70,70" transparent="1" alphatest="blend">
+		<convert type="xSatVpn">vpn</convert>
+		<convert type="ConditionalShowHide" />
+	  </widget>
+	  <ePixmap pixmap="icons/cpu_temp.png" position="744,1038" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
+	  <widget source="session.CurrentService" render="Label" position="768,1037" size="200,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Temperature" noWrap="1" halign="left">
+		<convert type="zExtra">Temperature</convert>
+	  </widget>
+	  <ePixmap pixmap="icons/cpu_load.png" position="623,1039" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
+	  <widget source="session.CurrentService" render="Label" position="649,1036" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="CPUload" halign="left" noWrap="1">
+		<convert type="zExtra">CPULoad</convert>
+	  </widget>
+	  <ePixmap pixmap="icons/cpu_ip.png" position="68,1005" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
+	  <widget source="session.CurrentService" render="Label" position="96,1004" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#cc0033" text="Iplocal" halign="left" noWrap="1">
+		<convert type="zExtra">Iplocal</convert>
+	  </widget>
+	  <widget source="session.CurrentService" render="Label" position="71,1040" size="325,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#33ccff" text="Ipwan" halign="left" noWrap="1">
+		<convert type="zExtra">Ipwan</convert>
+	  </widget>
+	</screen>
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="btIBAR"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
@@ -17,9 +120,11 @@
 		<!--
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="1755,26" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
+										
 		</widget>
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1614,81" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
+										
 		</widget>
 		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1472,38" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
@@ -39,102 +144,6 @@
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="225,840" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1378,840" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
 	</screen>
-	<screen name="SecondInfoBar" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/menu/secondinfobar.png" position="0,1" zPosition="-10" size="1920,1080"/>
-		<!--  check	 on test debug -->
-		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2"/>
-		<widget name="epg_description" position="497,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1"/>
-		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<!-- end check -->
-		<widget source="session.Event_Now" render="Label" backgroundColor="black" position="243,704" size="335,32" transparent="1" zPosition="2" foregroundColor="grey" font="Regular;22" halign="center" borderWidth="2">
-			<convert type="EventName">Rating</convert>
-		</widget>
-		<widget source="session.Event_Next" render="Label" backgroundColor="black" position="1134,694" size="335,32" transparent="1" zPosition="2" foregroundColor="grey" font="Regular;22" halign="center" borderWidth="2">
-			<convert type="EventName">Rating</convert>
-		</widget>
-		<widget source="session.Event_Now" borderWidth="2" render="Label" position="96,75" size="1441,50" font="Regular; 32" halign="left" backgroundColor="background20" transparent="1" valign="center" zPosition="1" foregroundColor="metrixSelection">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="session.Event_Next" borderWidth="2" render="Label" position="1037,114" size="800,50" font="Regular; 28" halign="left" backgroundColor="background40" transparent="1" valign="center" zPosition="1" foregroundColor="metrixSelection">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget backgroundColor="black" borderWidth="2" font="Regular; 23" foregroundColor="grey" halign="left" position="79,824" render="Label" size="840,35" source="session.CurrentService" text="19.2E	 DVB-S2	 11288 27500 3/4 8PSK" transparent="1" valign="center" zPosition="3" noWrap="1">
-			<convert type="xServiceName2">%S %s %F %p %Y %f %M %b %o %r</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="750,11" size="450,50" borderWidth="2" font="RegularLight; 38" halign="center" backgroundColor="black" transparent="1" foregroundColor="grey" valign="center">
-			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Picon" position="76,874" zPosition="4" size="180,120" transparent="1">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		<!-- s infobar two -->
-		<panel name="secondBar"/>
-		<!-- Weather */-->
-		<!--
-		<widget render="MSNWeatherPixmap" position="1571,904" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8" alphatest="blend">
-			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1696,936" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
-			<convert type="MSNWeather">temperature_current</convert>
-		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1550,877" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" alphatest="blend">
-			<convert type="MSNWeather">temperature_text,current</convert>
-		</widget>
-		-->
-		<!-- end s ibar -->
-		<panel position="47,1100" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,1100" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1108,1090" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1630,1100" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel>
-		<widget position="1191,909" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="left" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
-			<convert type="xServiceName2">TpansponderInfo</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" text="camname" position="79,1035" size="328,41" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
-			<convert type="xNOVAccess">CamName</convert>
-		</widget>
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
-		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
-		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
-		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1510,650" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
-		<!-- OPTIONAL LAN VPN WIFI TEMP -->
-		<eLabel text="Cpu °" position="667,1024" zPosition="5" size="70,42" font="Regular; 20" halign="center" foregroundColor="orange" backgroundColor="background20" transparent="1" valign="center"/>
-		<widget source="session.CurrentService" backgroundColor="grey" font="Regular; 20" foregroundColor="white" halign="left" position="739,1034" render="Label" size="129,42" transparent="1" zPosition="5" noWrap="1">
-			<convert type="xTemp">Temperature</convert>
-		</widget>
-		<ePixmap position="417,1033" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/wifi_off.png" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/wifi_on.png" position="417,1033" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Wifi</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap position="477,1035" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/lan_off.png" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/lan.png" position="477,1035" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Lan</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap position="542,1024" size="70,70" zPosition="8" pixmap="MetriXconfluencExp/icons/vpn.png" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/vpn_on.png" position="541,1024" zPosition="9" size="70,70" transparent="1" alphatest="blend">
-			<convert type="xSatVpn">vpn</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	</screen>
-
 	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<widget source="Title" render="Label" position="105,152" size="1665,42" font="Regular;35" backgroundColor="transparent" transparent="1"/>
@@ -156,16 +165,14 @@
 		<panel name="btPIMO"/>
 		<eLabel position="105,198" size="1665,3" backgroundColor="grey"/>
 		<widget name="list" position="105,206" size="1665,473" scrollbarMode="showOnDemand" colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" selectionPixmap="MetriXconfluencExp/menu/select.png" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="grey" foregroundColorServiceNotAvail="#777777" serviceNumberFont="Regular;35" serviceNameFont="Regular;35" serviceInfoFont="Regular;32" transparent="1"/>
-	</screen>	
+	</screen>
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<panel name="channel"/>
-	</screen>	
+	</screen>
 	<screen name="newChannelSelectionNOPIP" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<panel name="channel"/>
 	</screen>
 	<screen name="newChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<panel name="channel"/>
 	</screen>
-
-
 </skin>
