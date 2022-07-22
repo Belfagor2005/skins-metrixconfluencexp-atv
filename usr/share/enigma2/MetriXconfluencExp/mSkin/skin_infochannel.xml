@@ -1,28 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <skin>
-	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget source="Title" render="Label" position="105,152" size="1665,42" font="Regular;35" backgroundColor="transparent" transparent="1"/>
-		<widget source="Title" render="Label" position="30,876" size="1910,215" font="Regular; 150" backgroundColor="metrixPreTrans3" transparent="1" foregroundColor="metrixPreTrans3" valign="top" zPosition="-50"/>
-		<eLabel name="new eLabel" position="center,30" zPosition="-10" size="1860,758" backgroundColor="background20"/>
-		<panel name="ClockTime"/>
-		<!--
-		<panel name="btCRYGrad"/>
-		 -->
-		<panel position="92,720" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="544,720" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1038,720" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel name="btPIMO"/>
-		<eLabel position="105,198" size="1665,3" backgroundColor="grey"/>
-		<widget name="list" position="105,206" size="1665,473" scrollbarMode="showOnDemand" colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" selectionPixmap="MetriXconfluencExp/menu/select.png" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="grey" foregroundColorServiceNotAvail="#777777" serviceNumberFont="Regular;35" serviceNameFont="Regular;35" serviceInfoFont="Regular;32" transparent="1"/>
-	
-	</screen>
+
 	
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="btIBAR"/>
@@ -156,7 +134,29 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
-	
+
+	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Radio Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<widget source="Title" render="Label" position="105,152" size="1665,42" font="Regular;35" backgroundColor="transparent" transparent="1"/>
+		<widget source="Title" render="Label" position="30,876" size="1910,215" font="Regular; 150" backgroundColor="metrixPreTrans3" transparent="1" foregroundColor="metrixPreTrans3" valign="top" zPosition="-50"/>
+		<eLabel name="new eLabel" position="center,30" zPosition="-10" size="1860,758" backgroundColor="background20"/>
+		<panel name="ClockTime"/>
+		<!--
+		<panel name="btCRYGrad"/>
+		 -->
+		<panel position="92,720" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,720" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,720" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel name="btPIMO"/>
+		<eLabel position="105,198" size="1665,3" backgroundColor="grey"/>
+		<widget name="list" position="105,206" size="1665,473" scrollbarMode="showOnDemand" colorServiceDescription="grey" colorServiceDescriptionSelected="yellow" selectionPixmap="MetriXconfluencExp/menu/select.png" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="grey" foregroundColorServiceNotAvail="#777777" serviceNumberFont="Regular;35" serviceNameFont="Regular;35" serviceInfoFont="Regular;32" transparent="1"/>
+	</screen>	
 	<screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder" transparent="0" borderWidth="1" borderColor="transparent">
 		<panel name="channel"/>
 	</screen>	

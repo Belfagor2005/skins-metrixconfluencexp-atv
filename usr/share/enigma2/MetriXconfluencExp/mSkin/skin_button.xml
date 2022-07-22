@@ -70,4 +70,218 @@
 		<widget name="blue" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="#000080ff" backgroundColor="black" objectTypes="blue,Button,Label" zPosition="5"/>
 		<widget source="key_blue" render="Label" position="0,3" size="350,50" font="Regular;30" halign="center" valign="top" transparent="1" noWrap="1" foregroundColor="#000080ff" backgroundColor="black" objectTypes="key_blue,StaticText" zPosition="5"/>
 	</screen>
+	
+	<!-- ************* Button Templates ************* -->
+	<screen name="btCRYB">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,965" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,965" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRG">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGB">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1495,965" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRY">
+		<panel position="92,965" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,965" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,965" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGrad">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="30,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="1080,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1132,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1132,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1601,724" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1660,749" size="360,36" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1660,749" size="180,36" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btCRYGMulti">
+		<widget source="Title" render="Label" position="128,83" foregroundColor="foreground" size="572,61" valign="bottom" font="Regular; 38" backgroundColor="metrixBackground" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/setup.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<widget source="options" render="Label" position="1380,749" size="415,190" font="Regular;20" foregroundColor="layer-b-foreground" halign="center" backgroundColor="layer-b-background" valign="center" transparent="1"/>
+		<widget source="description" render="Label" position="85,777" size="1230,150" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="foreground" halign="center" valign="center" transparent="1"/>
+		<eLabel position="70,200" size="1230,1" zPosition="1" backgroundColor="layer-b-foreground"/>
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGSoft">
+		<panel position="105,950" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,950" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,950" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,950" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYGEpg">
+		<panel position="105,935" size="360,40">
+		<panel name="Red-New-Button"/></panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btCRYBbotTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGYbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/yellow.png" position="1081,955" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="RegularLight;30" position="1133,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="RegularLight;30" position="1133,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGBbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/blue.png" position="1601,954" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="RegularLight;30" position="1655,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="RegularLight;30" position="1655,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGbotTop">
+		<ePixmap pixmap="MetriXconfluencExp/buttons/red.png" position="35,953" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="RegularLight;30" position="82,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="RegularLight;30" position="82,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/buttons/green.png" position="522,951" size="45,60" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="RegularLight;30" position="572,974" size="360,39" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1"/>
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="RegularLight;30" position="572,974" size="180,39" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1"/>
+	</screen>
+	<screen name="btRGYTmdb">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1495,935" size="360,40">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGYTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="1038,935" size="360,40">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btRGTop">
+		<panel position="105,935" size="360,40">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="544,935" size="360,40">
+			<panel name="Green-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="btPIMO">
+		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="btEIMO">
+		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend"/>
+	</screen>
+	<screen name="btIBAR">
+		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
+		<ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+		<ePixmap position="756,1031" size="50,55" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+		<ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />
+		<ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Plugins" position="248,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		<ePixmap pixmap="buttons/yellow.png" position="327,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Audio" position="376,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		<ePixmap pixmap="buttons/blue.png" position="441,1036" size="44,33" alphatest="blend" zPosition="3" />
+		<eLabel text="Extensions" position="491,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+		
+		<widget source="key_red" render="Label" position="47,1125" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_green" render="Label" position="409,1125" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_yellow" render="Label" position="774,1127" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />
+		<widget source="key_blue" render="Label" position="1133,1124" size="360,40" valign="center" halign="left" zPosition="3" font="Regular; 20" transparent="1" foregroundColor="metrixAccent" />		
+	</screen>
+	
 </skin>

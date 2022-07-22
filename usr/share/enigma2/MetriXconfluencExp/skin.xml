@@ -570,8 +570,8 @@
 	</menus>
 	<!-- Include Files -->
 	<include filename="mSkin/skin_plugins.xml"/>
+	<include filename="mSkin/skin_infochannel.xml"/>	
 	<include filename="mSkin/skin_oatv.xml"/>
-	<include filename="mSkin/skin_infochannel.xml"/>
 	<include filename="mSkin/skin_templates.xml"/>
 	<include filename="mSkin/skin_button.xml"/>
 </skin>
