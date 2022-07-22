@@ -108,7 +108,7 @@ class zExtra(Poll, Converter):
                     load = ''
 
                 cpuload = load.replace('\n', '').replace(' ', '')
-                return 'CPU Load: %s' % cpuload
+                return '%s' % cpuload
         if self.type == self.TEMPERATURE:
             systemp = ""
             cputemp = ""
