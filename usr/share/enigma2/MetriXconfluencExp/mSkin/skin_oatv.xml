@@ -359,7 +359,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="QuickMenu" position="center,center" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">

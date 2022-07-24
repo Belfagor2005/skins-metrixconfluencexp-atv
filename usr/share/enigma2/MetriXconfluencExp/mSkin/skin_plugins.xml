@@ -29,10 +29,7 @@
 			</convert>
 		</widget>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
-		<panel name="MenuWeather"/>
-		<!--
-		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
-		-->
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="CommitInfo" position="0,0" size="1920,1080" title="AboutOE" flags="wfNoBorder" backgroundColor="transparent">
@@ -132,7 +129,7 @@
 	<screen name="Menu1" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
@@ -140,63 +137,63 @@
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_system" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_setup" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_video_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_timermenu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_audio_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_information" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_scan" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_shutdown" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<panel name="MenuTemplate"/>
 		<panel name="ClockTimeTop"/>
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_osd_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -204,7 +201,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_display" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -212,7 +209,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_audio_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -220,7 +217,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_video_menu" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -228,7 +225,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_rec" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -236,7 +233,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_openspa_-8" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -244,7 +241,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_openspa_-20" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -252,7 +249,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_openspa_-13" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -260,7 +257,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_openspa_-1" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -268,7 +265,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="menu_openspa_-4" position="0,0" size="1920,1080" title="Main menu" backgroundColor="transparent" flags="wfNoBorder">
@@ -276,7 +273,7 @@
 		<panel name="ClockTimeTop"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-10" size="1920,1080" transparent="1"/>
 		<!-- Weather */-->
-		<panel name="MenuWeather"/>
+		<!-- <panel name="MenuWeather"/> -->
 		<widget source="session.VideoPicture" render="Pig" position="116,70" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan"/>
 	</screen>
 	<screen name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
