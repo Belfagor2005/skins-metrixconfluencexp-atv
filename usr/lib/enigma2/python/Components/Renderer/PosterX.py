@@ -249,6 +249,10 @@ class PosterX(Renderer):
         self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showPoster)
+        # try:
+            # self.timer.callback.append(self.showPoster)
+        # except:
+            # self.timer_conn = self.timer.timeout.connect(self.showPoster)   
         self.logdbg = None
                       
     def applySkin(self, desktop, parent):

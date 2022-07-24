@@ -545,6 +545,49 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 	</screen>
+	<screen name="GraphicalInfoBarEPG" position="0,0" size="1920,1080" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="Electronic Program Guide" position="369,57" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<panel name="ClockTime"/>
+		<panel name="btCRYB"/>
+		<panel name="btPIMO"/>
+		<widget source="Event" render="RunningTextXposter" position="209,426" size="1590,228" font="Regular;28" foregroundColor="#ffffff" backgroundColor="black" transparent="1" valign="center" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=4000,wrap=1,always=0,repeat=3,oneshot=1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<eLabel position="10,10" size="290,415" backgroundColor="#30000000" zPosition="1"/>
+		<ePixmap pixmap="nocover.png" position="20,20" size="270,395" alphatest="blend" scale="1" zPosition="2"/>
+		<widget source="Event" render="PosterX" position="20,20" size="270,395" zPosition="3"/>
+		<widget name="lab1" position="101,328" size="1725,64" halign="center" valign="center" zPosition="5" backgroundColor="background20" transparent="0"/>
+		<widget name="bouquetlist" position="101,297" size="1900,30" zPosition="2" itemHeight="30" font="Regular;19" borderColor="#202020" borderWidth="1" backgroundColor="#000000" foregroundColor="ltbluette" backgroundColorSelected="barColor" foregroundColorSelected="ltbluette" transparent="0"/>
+		<widget name="timeline_text" position="105,261" size="1717,30" TimelineFont="Regular;26" itemHeight="40" foregroundColor="white" backgroundColor="#2f4974" borderWidth="0" transparent="0" zPosition="11"/>
+		<widget name="timeline0" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline1" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline2" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline3" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline4" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline5" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10"/>
+		<widget name="timeline_now" position="105,678" size="23,220" pixmap="MetriXconfluencExp/epg/timeline-now.png" alphatest="blend" zPosition="10"/>
+		<widget name="list" position="105,692" size="1725,201" itemHeight="90" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget source="Event" render="Label" position="518,139" size="1095,59" font="Regular; 36" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="295,219" size=" 98, 33" font="Regular; 27" halign="center" backgroundColor="background20" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
+		</widget>
+		<widget source="Event" render="Label" position="1713,219" size=" 120, 33" font="Regular; 27" backgroundColor="background20" transparent="1" halign="center">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<eLabel position="404,233" size="1300,2" backgroundColor="grey"/>
+		<widget source="Event" render="Progress" position="404,230" size="1300,8" borderWidth="1" backgroundColor="white" transparent="1" zPosition="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="Label" position="305,155" size="200,50" font="Regular;34" backgroundColor="black" foregroundColor="yellow" transparent="1" halign="left" valign="center" zPosition="2">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText"/>
+		</widget>
+	</screen>
 	<screen name="MovieEpgSetup" position="0,0" size="1920,1080" title="MovieEpg Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,72" size="1200,60" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/settings.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
@@ -581,20 +624,19 @@
 		<widget source="languages" render="Listbox" itemHeight="50" font="Regular; 26" position="977,121" size="826,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/languages.png" position="459,125" size="384,384" transparent="1" alphatest="blend"/>
 	</screen>
-	
 	<screen name="MediaPlayer" position="center,center" size="1920,1080" title="MediaPlayer" backgroundColor="transparent" flags="wfNoBorder">
-		<widget name="title" position="87,492" size="488,60" font="Regular; 36" halign="left" backgroundColor="background20" transparent="1" />
-		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,0" size="1920,1080" zPosition="-20" />
-		<eLabel position="648,510" size="750,60" text="Playlist" font="Regular; 33" backgroundColor="background20" transparent="1" />
-		<eLabel name="new eLabel" position="107,618" size="450,2" backgroundColor="grey" foregroundColor="grey" zPosition="-1" />
-		<widget name="filelist" position="645,163" size="1173,343" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
-		<widget name="artist" position="87,557" size="494,45" font="Regular;33" valign="top" backgroundColor="background20" transparent="1" />
-		<widget name="albumtext" position="86,705" size="180,38" font="RegularLight; 33" valign="top" foregroundColor="grey" backgroundColor="background20" transparent="1" halign="left" />
-		<widget name="album" position="87,750" size="480,45" font="RegularLight; 30" valign="top" backgroundColor="background20" transparent="1" />
-		<widget name="year" position="197,702" size="375,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1" halign="right" />
-		<widget name="genre" position="87,810" size="480,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1" />
-		<widget name="playlist" position="649,570" size="1171,362" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" />
-		<widget name="repeat" pixmaps="MetriXconfluencExp/buttons/repeat_off.png,MetriXconfluencExp/buttons/repeat_on.png" position="1588,950" size="105,45" transparent="1" alphatest="blend" />
+		<widget name="title" position="87,492" size="488,60" font="Regular; 36" halign="left" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,0" size="1920,1080" zPosition="-20"/>
+		<eLabel position="648,510" size="750,60" text="Playlist" font="Regular; 33" backgroundColor="background20" transparent="1"/>
+		<eLabel name="new eLabel" position="107,618" size="450,2" backgroundColor="grey" foregroundColor="grey" zPosition="-1"/>
+		<widget name="filelist" position="645,163" size="1173,343" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
+		<widget name="artist" position="87,557" size="494,45" font="Regular;33" valign="top" backgroundColor="background20" transparent="1"/>
+		<widget name="albumtext" position="86,705" size="180,38" font="RegularLight; 33" valign="top" foregroundColor="grey" backgroundColor="background20" transparent="1" halign="left"/>
+		<widget name="album" position="87,750" size="480,45" font="RegularLight; 30" valign="top" backgroundColor="background20" transparent="1"/>
+		<widget name="year" position="197,702" size="375,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1" halign="right"/>
+		<widget name="genre" position="87,810" size="480,45" font="RegularLight; 33" valign="top" backgroundColor="background20" transparent="1"/>
+		<widget name="playlist" position="649,570" size="1171,362" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
+		<widget name="repeat" pixmaps="MetriXconfluencExp/buttons/repeat_off.png,MetriXconfluencExp/buttons/repeat_on.png" position="1588,950" size="105,45" transparent="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Label" position="87,638" size="179,48" zPosition="2" font="Regular; 33" halign="left" backgroundColor="background20" noWrap="1" transparent="1">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
@@ -604,17 +646,15 @@
 		<widget source="session.CurrentService" render="Progress" pixmap="MetriXconfluencExp/dvr/white-bar.png" position="107,615" size="450,8" zPosition="1" transparent="1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<ePixmap position="1695,947" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
-		<panel name="ClockTimeEvent2" />
-		<eLabel position="85,53" size="750,60" text="Media Player" font="Regular; 39" backgroundColor="background20" transparent="1" />
+		<ePixmap position="1695,947" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<panel name="ClockTimeEvent2"/>
+		<eLabel position="85,53" size="750,60" text="Media Player" font="Regular; 39" backgroundColor="background20" transparent="1"/>
 		<!-- 
 		<widget source="session.VideoPicture" render="Pig" position="90,125" zPosition="2" size="540,359" backgroundColor="transparent" transparent="0" />
 		 -->
 		<widget name="coverArt" position="144,101" size="384,384" pixmap="MetriXconfluencExp/icons/media.png" transparent="1" alphatest="blend"/>
-
 	</screen>
-	
-<!-- 	<screen name="MediaPlayer" position="center,center" size="1920,1080" title="MediaPlayer" backgroundColor="transparent" flags="wfNoBorder">
+	<!-- 	<screen name="MediaPlayer" position="center,center" size="1920,1080" title="MediaPlayer" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="title" position="87,492" size="488,60" font="Regular; 36" halign="left" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/movie.png" position="0,0" size="1920,1080" zPosition="-20"/>
 		<eLabel position="648,510" size="750,60" text="Playlist" font="Regular; 33" backgroundColor="background20" transparent="1"/>
@@ -651,7 +691,6 @@
 	</screen>
 	<screen name="MediaPlayerSettings" position="0,0" size="1920,1080" title="Edit Settings" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/tv.png" position="0,0" size="1920,1080" zPosition="-20"/>
 		<panel name="ClockTimeTop"/>
@@ -960,95 +999,93 @@
 		<widget name="list_head" position="115,180" size="1050,720" font="Regular;24" valign="center" halign="center" foregroundColor="yellow" backgroundColor="un202020" transparent="0"/>
 	</screen>
 	<screen name="spzVirtualKeyboard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="openspa/teclado-fs8.png" zPosition="-10" alphatest="off" />
-		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="openspa/teclado2-fs8.png" zPosition="-7" alphatest="blend" />
-		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="#00d3d3d3" backgroundColor="black" noWrap="1" />
-		<widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5" />
-		<widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5" />
-		<widget name="key_texto" position="21,70" size="1086,132" transparent="0" text=" " valign="top" halign="left" font="Regular; 35" foregroundColor="white" backgroundColor="black" />
+		<ePixmap name="imagenfondo" position="0,0" size="1128,531" pixmap="openspa/teclado-fs8.png" zPosition="-10" alphatest="off"/>
+		<widget name="imagenfondo2" position="0,531" size="865,193" pixmap="openspa/teclado2-fs8.png" zPosition="-7" alphatest="blend"/>
+		<widget name="titulo" position="63,18" size="1044,36" transparent="1" text="spzVirtualKeyboard" font="Regular; 27" foregroundColor="#00d3d3d3" backgroundColor="black" noWrap="1"/>
+		<widget name="tapa_texto" position="15,60" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
+		<widget name="tapa_texto2" position="15,210" size="1096,4" transparent="0" backgroundColor="white" zPosition="-5"/>
+		<widget name="key_texto" position="21,70" size="1086,132" transparent="0" text=" " valign="top" halign="left" font="Regular; 35" foregroundColor="white" backgroundColor="black"/>
 		<!--<widget name="key_texto0" position="21,70" size="1086,132" transparent="1" text=" " valign="top" halign="left" font="Console; 18" foregroundColor="#ffffff" backgroundColor="#1e1e1e" zPosition="1"/>-->
 		<!-- teclas -->
 		<!-- fila 1 -->
-		<widget name="key_1" position="16,220" size="82,48" transparent="1" text="1" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_2" position="100,220" size="82,48" transparent="1" text="2" valign="bottom" halign="center" font="Regular; 39" backgroundColor="white" zPosition="22" foregroundColor="#40000000" />
-		<widget name="key_3" position="184,220" size="82,48" transparent="1" text="3" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_4" position="268,220" size="82,48" transparent="1" text="4" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_5" position="352,220" size="82,48" transparent="1" text="5" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_6" position="436,220" size="82,48" transparent="1" text="6" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_7" position="520,220" size="82,48" transparent="1" text="7" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_8" position="604,220" size="82,48" transparent="1" text="8" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_9" position="688,220" size="82,48" transparent="1" text="9" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_10" position="772,220" size="82,48" transparent="1" text="0" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
+		<widget name="key_1" position="16,220" size="82,48" transparent="1" text="1" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_2" position="100,220" size="82,48" transparent="1" text="2" valign="bottom" halign="center" font="Regular; 39" backgroundColor="white" zPosition="22" foregroundColor="#40000000"/>
+		<widget name="key_3" position="184,220" size="82,48" transparent="1" text="3" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_4" position="268,220" size="82,48" transparent="1" text="4" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_5" position="352,220" size="82,48" transparent="1" text="5" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_6" position="436,220" size="82,48" transparent="1" text="6" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_7" position="520,220" size="82,48" transparent="1" text="7" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_8" position="604,220" size="82,48" transparent="1" text="8" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_9" position="688,220" size="82,48" transparent="1" text="9" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_10" position="772,220" size="82,48" transparent="1" text="0" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
 		<!-- fila 2 -->
-		<widget name="key_11" position="16,277" size="82,48" transparent="1" text="q" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_12" position="100,277" size="82,48" transparent="1" text="w" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_13" position="184,277" size="82,48" transparent="1" text="e" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_14" position="268,277" size="82,48" transparent="1" text="r" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_15" position="352,277" size="82,48" transparent="1" text="t" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_16" position="436,277" size="82,48" transparent="1" text="y" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_17" position="520,277" size="82,48" transparent="1" text="u" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_18" position="604,277" size="82,48" transparent="1" text="i" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_19" position="688,277" size="82,48" transparent="1" text="o" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_20" position="772,277" size="82,48" transparent="1" text="p" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
+		<widget name="key_11" position="16,277" size="82,48" transparent="1" text="q" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_12" position="100,277" size="82,48" transparent="1" text="w" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_13" position="184,277" size="82,48" transparent="1" text="e" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_14" position="268,277" size="82,48" transparent="1" text="r" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_15" position="352,277" size="82,48" transparent="1" text="t" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_16" position="436,277" size="82,48" transparent="1" text="y" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_17" position="520,277" size="82,48" transparent="1" text="u" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_18" position="604,277" size="82,48" transparent="1" text="i" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_19" position="688,277" size="82,48" transparent="1" text="o" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_20" position="772,277" size="82,48" transparent="1" text="p" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
 		<!-- fila 3 -->
-		<widget name="key_21" position="16,334" size="82,48" transparent="1" text="a" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_22" position="100,334" size="82,48" transparent="1" text="s" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_23" position="184,334" size="82,48" transparent="1" text="d" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_24" position="268,334" size="82,48" transparent="1" text="f" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_25" position="352,334" size="82,48" transparent="1" text="g" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_26" position="436,334" size="82,48" transparent="1" text="h" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_27" position="520,334" size="82,48" transparent="1" text="j" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_28" position="604,334" size="82,48" transparent="1" text="k" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_29" position="688,334" size="82,48" transparent="1" text="l" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_30" position="772,334" size="82,48" transparent="1" text="ñ" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
+		<widget name="key_21" position="16,334" size="82,48" transparent="1" text="a" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_22" position="100,334" size="82,48" transparent="1" text="s" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_23" position="184,334" size="82,48" transparent="1" text="d" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_24" position="268,334" size="82,48" transparent="1" text="f" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_25" position="352,334" size="82,48" transparent="1" text="g" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_26" position="436,334" size="82,48" transparent="1" text="h" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_27" position="520,334" size="82,48" transparent="1" text="j" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_28" position="604,334" size="82,48" transparent="1" text="k" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_29" position="688,334" size="82,48" transparent="1" text="l" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_30" position="772,334" size="82,48" transparent="1" text="ñ" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
 		<!-- fila 4 -->
-		<widget name="key_31" position="16,391" size="82,48" transparent="1" text="z" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_32" position="100,391" size="82,48" transparent="1" text="x" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_33" position="184,391" size="82,48" transparent="1" text="c" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_34" position="268,391" size="82,48" transparent="1" text="v" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_35" position="352,391" size="82,48" transparent="1" text="b" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_36" position="436,391" size="82,48" transparent="1" text="n" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_37" position="520,391" size="82,48" transparent="1" text="m" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_38" position="604,391" size="82,48" transparent="1" text="," valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_39" position="688,391" size="82,48" transparent="1" text="." valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
-		<widget name="key_40" position="772,391" size="82,48" transparent="1" text="-" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22" />
+		<widget name="key_31" position="16,391" size="82,48" transparent="1" text="z" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_32" position="100,391" size="82,48" transparent="1" text="x" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_33" position="184,391" size="82,48" transparent="1" text="c" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_34" position="268,391" size="82,48" transparent="1" text="v" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_35" position="352,391" size="82,48" transparent="1" text="b" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_36" position="436,391" size="82,48" transparent="1" text="n" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_37" position="520,391" size="82,48" transparent="1" text="m" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_38" position="604,391" size="82,48" transparent="1" text="," valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_39" position="688,391" size="82,48" transparent="1" text="." valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
+		<widget name="key_40" position="772,391" size="82,48" transparent="1" text="-" valign="bottom" halign="center" font="Regular; 39" foregroundColor="#40000000" backgroundColor="white" zPosition="22"/>
 		<!-- especiales -->
-		<widget name="key_stop" position="345,480" size="97,27" transparent="1" text="espacio" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_play" position="429,480" size="97,27" transparent="1" text="ABC" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_red" position="513,480" size="97,27" transparent="1" text="Borrar" font="Regular; 21" foregroundColor="black" backgroundColor="#00ff0000" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_green" position="597,466" size="97,27" transparent="1" text="OK" font="Regular; 22" foregroundColor="black" backgroundColor="#00dcaaaa" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_yellow" position="681,466" size="97,27" transparent="1" text="Limpiar" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_blue" position="765,466" size="97,27" transparent="1" text="#@&amp;:" font="Regular; 22" foregroundColor="black" backgroundColor="#00dcaaaa" noWrap="1" halign="center" zPosition="22" />
+		<widget name="key_stop" position="345,480" size="97,27" transparent="1" text="espacio" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_play" position="429,480" size="97,27" transparent="1" text="ABC" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_red" position="513,480" size="97,27" transparent="1" text="Borrar" font="Regular; 21" foregroundColor="black" backgroundColor="#00ff0000" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_green" position="597,466" size="97,27" transparent="1" text="OK" font="Regular; 22" foregroundColor="black" backgroundColor="#00dcaaaa" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_yellow" position="681,466" size="97,27" transparent="1" text="Limpiar" font="Regular; 21" foregroundColor="black" backgroundColor="grey" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_blue" position="765,466" size="97,27" transparent="1" text="#@&amp;:" font="Regular; 22" foregroundColor="black" backgroundColor="#00dcaaaa" noWrap="1" halign="center" zPosition="22"/>
 		<!-- teclado -->
-		<widget name="key_teclado1" position="21,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado2" position="300,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado3" position="577,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado4" position="21,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado5" position="300,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado6" position="577,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 19" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado7" position="21,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado8" position="300,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="key_teclado9" position="577,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black" />
-		<widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="openspa/seleccion-fs8.png" />
-		<widget name="key_record" position="850,480" size="97,27" transparent="1" text="Hist." font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_delete" position="933,469" size="97,27" transparent="1" text="Delete" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22" />
-		<widget name="key_clear" position="1018,469" size="97,27" transparent="1" text="Clear" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22" />
-		<widget name="cajalista" position="859,219" size="570,505" transparent="0" backgroundColor="#1c000000" zPosition="39" font="Regular;26" />
-		<widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionPixmap="openspa/sep3.png" itemHeight="30" font="Regular;26" />
-		<widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionPixmap="openspa/sep3.png" itemHeight="30" />
-		<widget name="text_info" position="10,60" size="1099,457" transparent="0" foregroundColor="white" backgroundColor="black" font="Regular; 33" zPosition="50" />
-		<eLabel name="ayu" position="0,531" size="1128,45" backgroundColor="#40000000" zPosition="-9" />
-		<ePixmap pixmap="buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8" />
-		<widget name="in_menu" position="67,534" size="277,37" font="Regular; 16" valign="center" halign="left" transparent="1" foregroundColor="white" backgroundColor="black" zPosition="-8" />
-		<widget name="in_green" position="265,534" size="855,37" font="Regular; 16" valign="center" halign="right" transparent="1" foregroundColor="grey" text="Ayuda" backgroundColor="black" zPosition="-8" noWrap="1" />
-		<widget name="barrapix_arr" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1" />
-		<widget name="barrapix_abj" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1" />
-	</screen>	
-		
+		<widget name="key_teclado1" position="21,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado2" position="300,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado3" position="577,534" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado4" position="21,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado5" position="300,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado6" position="577,592" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 19" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado7" position="21,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado8" position="300,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="key_teclado9" position="577,652" size="273,54" transparent="1" text="abcABC" valign="center" halign="center" font="Regular; 30" foregroundColor="white" backgroundColor="black"/>
+		<widget name="seleccion" position="6,211" size="100,73" transparent="1" alphatest="blend" zPosition="20" pixmap="openspa/seleccion-fs8.png"/>
+		<widget name="key_record" position="850,480" size="97,27" transparent="1" text="Hist." font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_delete" position="933,469" size="97,27" transparent="1" text="Delete" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="key_clear" position="1018,469" size="97,27" transparent="1" text="Clear" font="Regular; 21" foregroundColor="black" backgroundColor="#00c3c5d5" noWrap="1" halign="center" zPosition="22"/>
+		<widget name="cajalista" position="859,219" size="570,505" transparent="0" backgroundColor="#1c000000" zPosition="39" font="Regular;26"/>
+		<widget name="lista" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="40" selectionPixmap="openspa/sep3.png" itemHeight="30" font="Regular;26"/>
+		<widget name="listapred" backgroundColor="#1c000000" foregroundColorSelected="#00ffef" backgroundColorSelected="#1c000000" position="870,228" size="229,210" transparent="0" scrollbarMode="showOnDemand" zPosition="41" selectionPixmap="openspa/sep3.png" itemHeight="30"/>
+		<widget name="text_info" position="10,60" size="1099,457" transparent="0" foregroundColor="white" backgroundColor="black" font="Regular; 33" zPosition="50"/>
+		<eLabel name="ayu" position="0,531" size="1128,45" backgroundColor="#40000000" zPosition="-9"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="15,534" size="52,37" transparent="1" alphatest="blend" zPosition="-8"/>
+		<widget name="in_menu" position="67,534" size="277,37" font="Regular; 16" valign="center" halign="left" transparent="1" foregroundColor="white" backgroundColor="black" zPosition="-8"/>
+		<widget name="in_green" position="265,534" size="855,37" font="Regular; 16" valign="center" halign="right" transparent="1" foregroundColor="grey" text="Ayuda" backgroundColor="black" zPosition="-8" noWrap="1"/>
+		<widget name="barrapix_arr" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>
+		<widget name="barrapix_abj" position="0,0" zPosition="42" size="30,30" alphatest="blend" transparent="1"/>
+	</screen>
 	<screen name="openspaVirtualKeyBoard" position="395,210" size="1429,754" title="Virtual Keyboard" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
 		<panel name="spzVirtualKeyboard"/>
 	</screen>
-	
 	<screen name="AutoTimeshift" position="0,0" size="1920,1080" title="Auto Timeshift Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
 		<widget source="Title" render="Label" position="105,71" size="1095,60" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -4042,43 +4079,43 @@
 		<widget name="config" position="105,180" size="1050,720" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png"/>
 	</screen>
 	<screen name="PiconManagerScreen" position="0,0" size="1920,1080" title="Picon Manager" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
-		<ePixmap pixmap="MetriXconfluencExp/icons/skin_selector.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend" />
-		<panel name="ClockTime" />
-		<panel name="btCRYBbotTop" />
-		<eLabel position="1062,184" size="404,244" backgroundColor="metrixBackground" />
-		<eLabel position="1062,184" size="400,240" backgroundColor="layer-a-background" />
-		<widget name="picon" position="1062,184" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="layer-a-background" alphatest="blend" />
-		<widget name="piconpath" position="101,191" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="piconpath2" position="544,193" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="spiconname" position="101,237" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="spicon" position="544,237" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="selectedname" position="100,281" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="selected" position="543,281" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="creatorname" position="100,325" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="creator" position="545,324" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="sizename" position="99,372" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="size" position="545,371" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="bitname" position="98,415" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="bit" position="546,413" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="piconspace" position="99,460" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="piconcount" position="547,457" size="500,40" font="Regular; 24" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="picondownload" position="97,504" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="piconerror" position="547,502" size="500,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left" />
-		<widget name="piconslidername" position="110,585" size="0,0" font="Regular;20" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="5" halign="left" />
-		<widget name="piconslider" position="110,602" size="1140,5" zPosition="2" borderWidth="0" foregroundColor="layer-a-progress" borderColor="metrixBackground" transparent="1" />
-		<eLabel position="110,602" size="1140,1" backgroundColor="metrixBackground" zPosition="1" />
-		<widget name="list" position="110,614" zPosition="2" size="1142,278" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" backgroundColor="metrixBackground" />
-		<widget name="HelpWindow" pixmap="MetriXconfluencExp/buttons/key_help.png" position="1661,876" zPosition="1" size="50,50" transparent="1" />
-		<ePixmap position="1736,875" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
-		<ePixmap position="1500,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
-		<ePixmap position="1582,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
+		<ePixmap pixmap="MetriXconfluencExp/icons/skin_selector.png" position="1380,345" size="384,384" zPosition="2" transparent="1" alphatest="blend"/>
+		<panel name="ClockTime"/>
+		<panel name="btCRYBbotTop"/>
+		<eLabel position="1062,184" size="404,244" backgroundColor="metrixBackground"/>
+		<eLabel position="1062,184" size="400,240" backgroundColor="layer-a-background"/>
+		<widget name="picon" position="1062,184" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="layer-a-background" alphatest="blend"/>
+		<widget name="piconpath" position="101,191" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="piconpath2" position="544,193" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="spiconname" position="101,237" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="spicon" position="544,237" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="selectedname" position="100,281" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="selected" position="543,281" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="creatorname" position="100,325" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="creator" position="545,324" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="sizename" position="99,372" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="size" position="545,371" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="bitname" position="98,415" size="440,40" font="Regular; 26" foregroundColor="#00fba207" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="bit" position="546,413" size="500,40" font="Regular; 24" foregroundColor="layer-a-foreground" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="piconspace" position="99,460" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="piconcount" position="547,457" size="500,40" font="Regular; 24" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="picondownload" position="97,504" size="440,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="piconerror" position="547,502" size="500,40" font="Regular; 26" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="1" halign="left"/>
+		<widget name="piconslidername" position="110,585" size="0,0" font="Regular;20" foregroundColor="#00fff000" backgroundColor="layer-a-background" transparent="1" zPosition="5" halign="left"/>
+		<widget name="piconslider" position="110,602" size="1140,5" zPosition="2" borderWidth="0" foregroundColor="layer-a-progress" borderColor="metrixBackground" transparent="1"/>
+		<eLabel position="110,602" size="1140,1" backgroundColor="metrixBackground" zPosition="1"/>
+		<widget name="list" position="110,614" zPosition="2" size="1142,278" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" backgroundColor="metrixBackground"/>
+		<widget name="HelpWindow" pixmap="MetriXconfluencExp/buttons/key_help.png" position="1661,876" zPosition="1" size="50,50" transparent="1"/>
+		<ePixmap position="1736,875" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1500,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1582,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="pm_conf" position="0,0" size="1920,1080" title="Picon Manager Config" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/setup.png" transparent="1" alphatest="blend"/>		
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/setup.png" transparent="1" alphatest="blend"/>
 		<panel name="ClockTime"/>
 		<panel name="btCRYBbotTop"/>
 		<widget name="config" position="127,200" size="936,597" zPosition="3" itemHeight="50" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" backgroundColorSelected="layer-a-selection-background" foregroundColorSelected="layer-a-selection-foreground" transparent="1"/>
@@ -4086,7 +4123,7 @@
 	<screen name="PiconManagerFolderScreen" position="0,0" size="1920,1080" title="Picon Manager Folder" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/search.png" transparent="1" alphatest="blend" name="ù"/>		
+		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="icons/search.png" transparent="1" alphatest="blend" name="ù"/>
 		<panel name="ClockTime"/>
 		<panel name="btCRYBbotTop"/>
 		<widget name="media" position="131,199" size="939,64" font="Regular; 28" backgroundColor="layer-a-background" foregroundColor="layer-a-foreground" transparent="1"/>

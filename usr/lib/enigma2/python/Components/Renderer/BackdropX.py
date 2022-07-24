@@ -246,6 +246,12 @@ class BackdropX(Renderer):
         self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showBackdrop)
+        # try:
+            # self.timer.callback.append(self.showBackdrop)
+        # except:
+            # self.timer_conn = self.timer.timeout.connect(self.showBackdrop)          
+        
+        
         self.logdbg = None
 
     def applySkin(self, desktop, parent):

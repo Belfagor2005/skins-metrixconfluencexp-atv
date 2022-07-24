@@ -11,7 +11,6 @@
 # <widget source="Service" render="PosterXEMC" position="100,100" size="185,278" />
 from __future__ import absolute_import
 from __future__ import print_function
-
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, loadJPG, eEPGCache
 from ServiceReference import ServiceReference
@@ -126,6 +125,10 @@ class PosterXEMC(Renderer):
         self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showPoster)
+        # try:
+            # self.timer.callback.append(self.showPoster)
+        # except:
+            # self.timer_conn = self.timer.timeout.connect(self.showPoster)  
         self.logdbg = None
 
     def applySkin(self, desktop, parent):

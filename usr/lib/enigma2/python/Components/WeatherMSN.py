@@ -32,7 +32,11 @@ class WeatherMSN:
 		self.callbacks = []
 		self.callbacksAllIconsDownloaded = []
 		self.timer = eTimer()
-		self.timer.callback.append(self.getData)
+		# self.timer.callback.append(self.getData)
+        try:
+            self.timer.callback.append(self.getData)
+        except:
+            self.timer_conn = self.timer.timeout.connect(self.getData) 
 
 	def getData(self):
 		self.timer.stop()

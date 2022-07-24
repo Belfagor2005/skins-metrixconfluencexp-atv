@@ -34,6 +34,12 @@ class VolumeText(Renderer, VariableText):
 		VariableText.__init__(self)
 		self.vol_timer = eTimer()
 		self.vol_timer.callback.append(self.pollme)
+        # try:
+            # self.vol_timer.callback.append(self.pollme)
+        # except:
+            # self.vol_timer_conn = self.vol_timer.timeout.connect(self.pollme)  
+        
+        
 	GUI_WIDGET = eLabel
 
 	def changed(self, what):

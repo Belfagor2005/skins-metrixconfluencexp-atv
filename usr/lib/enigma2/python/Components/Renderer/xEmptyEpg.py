@@ -31,16 +31,11 @@ class xEmptyEpg(VariableText, Renderer):
                 VariableText.__init__(self)
                 self.EmptyText = ""
                 self.fillTimer = eTimer()
+                self.fillTimer.callback.append(self.__fillText)
                 # try:
-                        # self.fillTimer_conn = self.fillTimer.timeout.connect(self.__fillText)
-                # except AttributeError:
-                        # self.fillTimer.timeout.get().append(self.__fillText)
-            
-                self.fillTimer = eTimer()
-                try:
-                    self.fillTimer.callback.append(self.__fillText)
-                except:
-                    self.fillTimer_conn = self.fillTimer.timeout.connect(self.__fillText)
+                    # self.fillTimer.callback.append(self.__fillText)
+                # except:
+                    # self.fillTimer_conn = self.fillTimer.timeout.connect(self.__fillText)
                                 
             
                 self.backText = ""

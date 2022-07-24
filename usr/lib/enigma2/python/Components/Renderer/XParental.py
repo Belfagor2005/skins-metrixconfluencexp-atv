@@ -107,5 +107,10 @@ class XParental(Renderer):
     def delay(self):
             self.timer = eTimer()
             self.timer.callback.append(self.showParental)
+            # try:
+                # self.timer.callback.append(self.showParental)
+            # except:
+                # self.timer_conn = self.timer.timeout.connect(self.showParental) 
+            
             self.timer.start(200, True)
 

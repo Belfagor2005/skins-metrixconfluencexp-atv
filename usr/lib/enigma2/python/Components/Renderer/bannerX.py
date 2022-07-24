@@ -248,6 +248,10 @@ class bannerX(Renderer):
         self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showbanner)
+        # try:
+            # self.timer.callback.append(self.showbanner)
+        # except:
+            # self.timer_conn = self.timer.timeout.connect(self.showbanner)   
         self.logdbg = None
 
     def applySkin(self, desktop, parent):

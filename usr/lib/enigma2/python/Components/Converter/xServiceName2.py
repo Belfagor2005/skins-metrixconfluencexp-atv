@@ -47,7 +47,13 @@ class xServiceName2(Converter, object):
                 
                 self.what = self.tpdata = None
                 self.Timer = eTimer()
-                self.Timer.callback.append(self.neededChange)
+                # self.Timer.callback.append(self.neededChange)
+                try:
+                    self.Timer.callback.append(self.neededChange)
+                except:
+                    self.Timer_conn = self.Timer.timeout.connect(self.neededChange)   
+                
+                
 
         def getServiceNumber(self, ref):
                 def searchHelper(serviceHandler, num, bouquet):

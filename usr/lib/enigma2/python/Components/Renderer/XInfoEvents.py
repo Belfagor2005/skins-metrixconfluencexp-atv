@@ -317,7 +317,11 @@ class XInfoEvents(Renderer, VariableText):
     def delay2(self):
             self.timer = eTimer()
             self.timer.callback.append(self.dwn)
-            self.timer.start(1500, True)
+            # try:
+                # self.timer.callback.append(self.dwn)
+            # except:
+                # self.timer_conn = self.timer.timeout.connect(self.showParental) 
+            self.timer.start(1000, True)
 
     def dwn(self):
             start_new_thread(self.epgs, ())
