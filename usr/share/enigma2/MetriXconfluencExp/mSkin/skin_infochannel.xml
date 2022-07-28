@@ -67,6 +67,7 @@
 		</widget>
 		<widget source="session.Event_Now" render="XInfoEvents"/>
 		<widget source="session.Event_Next" render="XInfoEvents"/>
+		
 		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>

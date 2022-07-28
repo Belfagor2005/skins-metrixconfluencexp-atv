@@ -23,8 +23,6 @@ from Components.Converter.Poll import Poll
 from enigma import eConsoleAppContainer
 import os, re, socket
 
-
-
 class zExtra(Poll, Converter):
     TEMPERATURE = 0
     HDDTEMP = 1
@@ -71,15 +69,6 @@ class zExtra(Poll, Converter):
         else:
             self.poll_interval = 7000
         self.poll_enabled = True
-
-    # def intCheck(self):
-        # try:
-            # socket.setdefaulttimeout(0.5)
-            # socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
-            # return True
-        # except:
-            # return False
-        # return
             
     def dataAvail(self, strData):
         self.hddtemp_output = self.hddtemp_output.encode('utf-8', 'ignore') + strData
@@ -108,7 +97,7 @@ class zExtra(Poll, Converter):
                     load = ''
 
                 cpuload = load.replace('\n', '').replace(' ', '')
-                return '%s' % cpuload
+                return 'CPU : %s' % cpuload
         if self.type == self.TEMPERATURE:
             systemp = ""
             cputemp = ""
@@ -149,22 +138,29 @@ class zExtra(Poll, Converter):
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             s.connect((gw[2], 0))
             ipaddr = s.getsockname()[0]
-            return "%s" % ipaddr
+            return "Lan Ip " + "%s" % ipaddr
+            
         if self.type == self.IPWAN:
             try:
                 # if self.intCheck():
                     # import requests
                     # publicIp = requests.get('https://checkip.amazonaws.com').text.strip()
                     # print("Il mio indirizzo IP pubblico:", publicIp)  
-                    if not os.path.exists('/tmp/currentip'):
+                    if not os.path.isfile('/tmp/currentip'):
                         os.system('wget -qO- https://checkip.amazonaws.com > /tmp/currentip')        
-                    publicIp = open('/tmp/currentip', 'r')
-                    public = publicIp.read()
-                    publicIp = "WAN IP %s" %(str(public))
-                    print('publicIp= ', publicIp) 
+                        publicIp = open('/tmp/currentip', 'r')
+                        public = publicIp.read()
+                        publicIp = "Wan Ip %s" %(str(public))
+                        # print('publicIp= ', publicIp) 
+                        
+                    else:
+                        if os.path.isfile("/tmp/currentip"):
+                            os.remove("/tmp/currentip")
+                        publicIp = 'NO FOUND'
                     return "%s" % publicIp  
+                    
             except:
-                if os.path.exists("/tmp/currentip"):
+                if os.path.isfile("/tmp/currentip"):
                     os.remove("/tmp/currentip")
                 return 'NO IP FOUND'        
         
