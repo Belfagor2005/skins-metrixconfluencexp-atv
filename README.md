@@ -24,5 +24,5 @@
 
 Version Pro: option with Plugin Metrix from Atv 
 
-v.2.7
+v.2.8
 enjoy
