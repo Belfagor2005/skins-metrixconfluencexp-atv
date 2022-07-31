@@ -22,14 +22,15 @@
 	<!-- **************************************  -->
 	<!-- ************* Menu Templates ************* -->
 	<screen name="MenuTemplate">
-		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,99" size="570,780" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
+		<widget name="menuimage" position="1258,67" size="110,110" scale="1" alphatest="blend" zPosition="2" />
+		<widget source="menu" render="Listbox" borderWidth="2" backgroundColor="black" foregroundColor="darkgrey" position="1256,179" size="570,780" backgroundColorSelected="#124b97" transparent="1" zPosition="2" scrollbarMode="showNever" enableWrapAround="1" selectionPixmap="MetriXconfluencExp/icons/menusel2.png" alphatest="on">
 			<convert type="TemplatedMultiContent">
 						{"template": [ MultiContentEntryText(pos = (5, 0), size = (570, 80),flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER,text = 0) ],
 							"fonts": [gFont("3d",34)],
 							"itemHeight": 80}
 			</convert>
 		</widget>
-		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5"/>
+		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
 	</screen>
 	<!-- ************* Menu System ************* -->
 	<screen name="MenuSystem">
