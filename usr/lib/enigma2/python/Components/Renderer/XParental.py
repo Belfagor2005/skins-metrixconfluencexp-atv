@@ -111,6 +111,5 @@ class XParental(Renderer):
                 # self.timer.callback.append(self.showParental)
             # except:
                 # self.timer_conn = self.timer.timeout.connect(self.showParental) 
-            
             self.timer.start(200, True)
 
