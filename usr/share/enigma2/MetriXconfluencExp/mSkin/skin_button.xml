@@ -258,18 +258,18 @@
 		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
-		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="btEIMO">
 		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
-		<ePixmap position="1577,876" size="50,50" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1577,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="btIBAR">
 		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
 		<ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
-		<ePixmap position="756,1031" size="50,55" zPosition="3" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
+		<ePixmap position="756,1031" size="50,55" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
 		<ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
 		<eLabel text="Plugins" position="248,1036" size="150,33" font="Regular;28" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />

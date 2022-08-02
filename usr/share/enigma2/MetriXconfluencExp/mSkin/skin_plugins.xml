@@ -74,6 +74,7 @@
 		<ePixmap position="1436,89" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/info.png" transparent="1" alphatest="blend"/>
 		<!--
 		<ePixmap pixmap="MetriXconfluencExp/logos/openpli_logo.png" position="111,905" size="180,51" alphatest="blend" />
+		<ePixmap pixmap="MetriXconfluencExp/logos/openspa_logo.png" position="111,905" size="189,74" alphatest="blend" />
 		-->
 		<ePixmap pixmap="MetriXconfluencExp/logos/openatv_logo.png" position="1061,905" size="199,52" alphatest="blend"/>
 	</screen>
@@ -91,6 +92,7 @@
 		<ePixmap pixmap="MetriXconfluencExp/logos/openatv_logo.png" position="1061,905" size="199,52" alphatest="blend"/>
 		<!--
 		<ePixmap pixmap="MetriXconfluencExp/logos/openpli_logo.png" position="111,905" size="180,51" alphatest="blend"/>
+		<ePixmap pixmap="MetriXconfluencExp/logos/openspa_logo.png" position="111,905" size="189,74" alphatest="blend"/>
 		-->
 	</screen>
 	<screen name="AboutReleaseNotes" position="center,center" size="1920,1080" title="About Release Notes" flags="wfNoBorder" backgroundColor="transparent">
@@ -585,6 +587,41 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 	</screen>
+	
+	<screen name="GraphicalEPGPIG" position="0,0" size="1920,1080" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel text="Electronic Program Guide" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,18" zPosition="-20" size="1920,1080" alphatest="off" />
+		<panel name="ClockTime" />
+		<panel name="btCRYB" />
+		<panel name="btPIMO" />
+		<widget name="lab1" position="108,308" size="1725,624" halign="center" valign="center" zPosition="5" backgroundColor="background20" transparent="0" />
+		<widget name="timeline_text" position="105,261" size="1717,30" TimelineFont="Regular;26" itemHeight="40" foregroundColor="white" backgroundColor="#2f4974" borderWidth="0" transparent="0" zPosition="11" />
+		<widget name="timeline0" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline1" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline2" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline3" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline4" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline5" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline.png" alphatest="blend" zPosition="10" />
+		<widget name="timeline_now" position="105,296" size="23,605" pixmap="MetriXconfluencExp/epg/timeline-now.png" alphatest="blend" zPosition="10" />
+		<widget name="list" position="105,308" size="1725,585" itemHeight="90" EntryBorderColor="grey" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="Event" render="Label" position="105,135" size="1050,59" font="Regular; 36" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="105,204" size=" 98, 33" font="Regular; 27" halign="center" backgroundColor="background20" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M </convert>
+		</widget>
+		<widget source="Event" render="Label" position="1188,204" size=" 120, 33" font="Regular; 27" backgroundColor="background20" transparent="1" halign="center">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<eLabel position="219,218" size="950,2" backgroundColor="grey" />
+		<widget source="Event" render="Progress" position="219,215" size="950,8" borderWidth="1" backgroundColor="white" transparent="1" zPosition="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="1330,83" zPosition="5" size="291,170" backgroundColor="transparent" transparent="0" />
+	</screen>	
+	
 	<screen name="GraphicalInfoBarEPG" position="0,0" size="1920,1080" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel text="Electronic Program Guide" position="369,57" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
