@@ -7,7 +7,8 @@
 # <widget render="xExtraGenrePic" source="session.Event_Next" position="54,429" size="300,438" zPosition="22" transparent="1" />
 # <widget source="session.Event_Now" render="xExtraGenrePic" position="1620,505" size="300,438" alphatest="blend" zPosition="9" />
 # <widget source="session.Event_Next" render="xExtraGenrePic" position="1620,505" size="300,438" alphatest="blend" zPosition="9" />
-
+from __future__ import print_function
+from __future__ import absolute_import
 from __future__ import unicode_literals
 from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, ePixmap, eTimer, loadPNG, ePicLoad
