@@ -17,6 +17,30 @@
 	</screen>
 	-->
 
+	<screen name="New-Buttons">
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="390,e-50" size="180,40" backgroundColor="key_yellow" conditional="key_yellow" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Label" position="580,e-50" size="180,40" backgroundColor="key_blue" conditional="key_blue" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_menu" render="Label" position="e-300,e-50" size="90,40" backgroundColor="key_back" conditional="key_menu" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_info" render="Label" position="e-200,e-50" size="90,40" backgroundColor="key_back" conditional="key_info" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" conditional="key_help" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>	
+	</screen>
+	
 	<screen name="Red-New-Button">
 		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="key_red,Button,Label" zPosition="2"/>
 		<ePixmap pixmap="buttons/button_red.png" position="50,43" size="350,50" alphatest="blend" transparent="1" objectTypes="red,Button,Label" zPosition="2"/>

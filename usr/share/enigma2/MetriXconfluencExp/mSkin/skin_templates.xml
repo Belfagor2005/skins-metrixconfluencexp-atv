@@ -30,7 +30,8 @@
 							"itemHeight": 80}
 			</convert>
 		</widget>
-		<widget name="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
+		<widget name="description" render="Label" conditional="description" position="61,9" size="1763,46" font="Regular;24" halign="center" valign="center" foregroundColor="yellow" backgroundColor="#202020" transparent="1" zPosition="5" />
+		<panel name="New-Buttons"/>
 	</screen>
 	<!-- ************* Menu System ************* -->
 	<screen name="MenuSystem">

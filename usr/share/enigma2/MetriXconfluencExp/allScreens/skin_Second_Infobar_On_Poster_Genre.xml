@@ -302,8 +302,8 @@
 		<panel position="1630,1100" size="360,40">
 			<panel name="Blue-New-Button"/>
 		</panel> -->
-		<widget source="session.Event_Now" render="xExtraGenrePic" position="714,683" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />
-		<widget source="session.Event_Next" render="xExtraGenrePic" position="1576,679" size="210,170" scale="1" zPosition="22" transparent="1" alphatest="blend" />  
+		<widget source="session.Event_Now" render="xExtraGenrePic" position="670,510" size="285,93" scale="1" zPosition="22" transparent="1" alphatest="blend" />
+		<widget source="session.Event_Next" render="xExtraGenrePic" position="1526,536" size="285,93" scale="1" zPosition="22" transparent="1" alphatest="blend" />  
 
 	</screen>
 </skin>

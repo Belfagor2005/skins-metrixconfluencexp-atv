@@ -1798,85 +1798,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="ServiceInfoSimple" position="0,0" size="1920,720" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="ServiceInfo"/>
 	</screen>
-	<!-- <screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
-		<panel name="ClockTimeEvent"/>
-		<widget name="channel" position="119,283" size="542,82" font="Regular; 45" halign="center" backgroundColor="background20" transparent="1" valign="center" foregroundColor="metrixPink"/>
-		
-  <widget name="datetime" position="660,200" size="350,50" font="Regular;30" halign="left" foregroundColor="#0099cc" backgroundColor="#000000" transparent="1" zPosition="5" />
-  <widget name="duration" position="1030,200" size="300,50" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="5" />
-  <widget source="session.Event_Now" render="Label" position="1180,200" size="300,50" font="Regular;34" foregroundColor="red" backgroundColor="#000000" halign="right" transparent="1" zPosition="5">
-    <convert type="EventTime">Remaining</convert>
-    <convert type="RemainingToText">InMinutes</convert>
-  </widget>
-  
-		
-		<widget name="datetime" position="200,460" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="duration" position="200,520" size="405,60" font="Regular; 36" halign="center" backgroundColor="background20" transparent="1"/>
-		<widget name="epg_description" position="690,176" borderWidth="2" size="1140,702" font="Regular; 35" backgroundColor="black" transparent="1" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
-		<widget source="key_help" render="Label" position="1768,77" size="55,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1703,74" size="55,55" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/left_m.png" position="216,706" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/right_m.png" position="496,704" size="54,54" zPosition="10" transparent="1" alphatest="blend"/>
-		<panel position="650,969" size="230,8">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="950,969" size="230,8">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1253,969" size="230,8">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1552,969" size="230,8">
-			<panel name="Blue-New-Button"/>
-		</panel>
-		<widget source="Event" render="PosterX" position="287,588" size="190,278" zPosition="2" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="568,875" size="62,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" position="569,875" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">721,1980</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_dolby_off.png" position="184,875" size="84,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_dolby_on.png" position="184,875" size="84,30" zPosition="2" alphatest="blend">
-			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_format_off.png" position="290,875" size="48,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_format_on.png" position="290,875" size="48,30" zPosition="2" alphatest="blend">
-			<convert type="ServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_txt_off.png" position="456,875" size="35,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_txt_on.png" position="456,875" size="35,30" zPosition="2" alphatest="blend">
-			<convert type="ServiceInfo">HasTelext</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hbbtv_off.png" position="358,875" size="80,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" position="358,875" size="80,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hbbtv_on.png" alphatest="blend">
-			<convert type="ServiceInfo">HasHBBTV</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<ePixmap pixmap="MetriXconfluencExp/icons/ico_sub_off.png" position="513,875" size="41,30" zPosition="1" alphatest="blend"/>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/ico_sub_on.png" position="513,875" size="41,30" zPosition="2" alphatest="blend">
-			<convert type="ServiceInfo">SubservicesAvailable</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<eLabel position="170,444" size="465,2" backgroundColor="grey" foregroundColor="grey"/>
-		<widget source="session.Event_Now" render="Progress" position="170,441" size="465,8" pixmap="MetriXconfluencExp/icons/p_bar.png" borderWidth="1" transparent="1" zPosition="1">
-			<convert type="EventTime">Progress</convert>
-		</widget>
-		<widget source="Service" render="Picon" position="220,85" zPosition="1" size="330,198" transparent="1" alphatest="blend">
-			<convert type="xServiceName2">Reference</convert>
-		</widget>
-		<widget source="Event" render="Label" borderWidth="2" position="74,366" size="616,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
-			<convert type="EventName">Name</convert>
-		</widget>
-		
 
-	</screen> -->
 	<screen name="EventView" position="0,0" size="1920,1080" title="Eventview" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<panel name="ClockTimeEvent"/>
@@ -2298,20 +2220,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	<screen name="PluginBrowser" position="center,center" size="1920,1080" title="Plugin Browser" flags="wfNoBorder" backgroundColor="black">
 		<ePixmap pixmap="MetriXconfluencExp/menu/plugin1.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
 		<widget name="list" position="895,100" size="728,851" itemHeight="90" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="white" enableWrapAround="1" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection2.png" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="MetriXconfluencExp/icons/scrollbar.png"/>
-		<panel position="587,5" size="360,40">
-			<panel name="Red-New-Button"/>
-		</panel>
-		<panel position="919,5" size="360,40">
-			<panel name="Green-New-Button"/>
-		</panel>
-		<panel position="1238,5" size="360,40">
-			<panel name="Yellow-New-Button"/>
-		</panel>
-		<panel position="1550,5" size="360,40">
-			<panel name="Blue-New-Button"/>
-		</panel>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1701,910" size="45,45" zPosition="10" transparent="1" alphatest="blend"/>
-		<ePixmap pixmap="MetriXconfluencExp/buttons/key_exit.png" position="1648,910" size="45,45" zPosition="10" transparent="1" alphatest="blend"/>
+		<panel name="New-Buttons"/>
+	
 	</screen>
 	<screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>

@@ -56,7 +56,7 @@
 	  
 	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
  		
-	  <widget source="Event" render="xExtraGenrePic" position="50,69" size="210,170" scale="1" zPosition="22" alphatest="blend" transparent="1" />
+	  <widget source="Event" render="xExtraGenrePic" position="50,69" size="285,93" scale="1" zPosition="22" alphatest="blend" transparent="1" />
 	  <panel position="42,1025" size="360,40">
 		<panel name="Red-New-Button" />
 	  </panel>

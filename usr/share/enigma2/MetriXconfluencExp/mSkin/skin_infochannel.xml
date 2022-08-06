@@ -40,10 +40,8 @@
 			<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1696,936" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 C" valign="top" alphatest="blend">
 				<convert type="MSNWeather">temperature_current</convert>
 			</widget>
-							
 			<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1550,877" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" alphatest="blend">
 				<convert type="MSNWeather">temperature_text,current</convert>
-											
 			</widget>
 			-->
 		<!-- end s ibar -->
@@ -67,7 +65,6 @@
 		</widget>
 		<widget source="session.Event_Now" render="XInfoEvents"/>
 		<widget source="session.Event_Next" render="XInfoEvents"/>
-		
 		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
@@ -121,11 +118,11 @@
 		<!--
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="1755,26" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
-										
+
 		</widget>
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="1614,81" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
-										
+
 		</widget>
 		<widget noWrap="1" backgroundColor="black" font="Regular; 24" render="Label" borderWidth="2" position="1472,38" size="270,39" source="session.MSNWeather" zPosition="3" halign="right" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
