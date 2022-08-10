@@ -9,16 +9,16 @@
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 #
 # for infobar,
-# <widget source="session.Event_Now" render="BackdropX" position="100,100" size="680,1000" />
-# <widget source="session.Event_Next" render="BackdropX" position="100,100" size="680,1000" />
-# <widget source="session.Event_Now" render="BackdropX" position="100,100" size="680,1000" nexts="2" />
-# <widget source="session.CurrentService" render="BackdropX" position="100,100" size="680,1000" nexts="3" />
+# <widget source="session.Event_Now" render="xBackdropX" position="100,100" size="680,1000" />
+# <widget source="session.Event_Next" render="xBackdropX" position="100,100" size="680,1000" />
+# <widget source="session.Event_Now" render="xBackdropX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="session.CurrentService" render="xBackdropX" position="100,100" size="680,1000" nexts="3" />
 # for ch,
-# <widget source="ServiceEvent" render="BackdropX" position="100,100" size="680,1000" />
-# <widget source="ServiceEvent" render="BackdropX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="ServiceEvent" render="xBackdropX" position="100,100" size="680,1000" />
+# <widget source="ServiceEvent" render="xBackdropX" position="100,100" size="680,1000" nexts="2" />
 # for epg, event
-# <widget source="Event" render="BackdropX" position="100,100" size="680,1000" />
-# <widget source="Event" render="BackdropX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="Event" render="xBackdropX" position="100,100" size="680,1000" />
+# <widget source="Event" render="xBackdropX" position="100,100" size="680,1000" nexts="2" />
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -29,7 +29,7 @@ from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
-from Components.Renderer.BackdropXDownloadThread import BackdropXDownloadThread
+from Components.Renderer.xBackdropXDownloadThread import xBackdropXDownloadThread
 import NavigationInstance
 import os
 import sys
@@ -137,9 +137,9 @@ if PY3:
 else:
     pdb = Queue.LifoQueue()
 
-class BackdropDB(BackdropXDownloadThread):
+class BackdropDB(xBackdropXDownloadThread):
     def __init__(self):
-        BackdropXDownloadThread.__init__(self)
+        xBackdropXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
@@ -169,9 +169,9 @@ class BackdropDB(BackdropXDownloadThread):
 threadDB = BackdropDB()
 threadDB.start()
 
-class BackdropAutoDB(BackdropXDownloadThread):
+class BackdropAutoDB(xBackdropXDownloadThread):
     def __init__(self):
-        BackdropXDownloadThread.__init__(self)
+        xBackdropXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
@@ -237,7 +237,7 @@ class BackdropAutoDB(BackdropXDownloadThread):
             
 threadAutoDB = BackdropAutoDB()
 threadAutoDB.start()
-class BackdropX(Renderer):
+class xBackdropX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
         self.nxts = 0
@@ -371,6 +371,6 @@ class BackdropX(Renderer):
 
     def logBackdrop(self, logmsg):
         if self.logdbg:
-            w = open(path_folder + "BackdropX.log", "a+")
+            w = open(path_folder + "xBackdropX.log", "a+")
             w.write("%s\n"%logmsg)
             w.close()

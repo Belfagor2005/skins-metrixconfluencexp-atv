@@ -54,7 +54,7 @@ CENTER = 2
 BLOCK = 3
 
 
-class RunningTextXposter(Renderer):
+class xRunningTextXposter(Renderer):
 	def __init__(self):
 		Renderer.__init__(self)
 		self.type = NONE

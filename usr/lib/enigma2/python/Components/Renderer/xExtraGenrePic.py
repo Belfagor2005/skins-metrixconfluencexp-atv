@@ -5,12 +5,12 @@
 #infobar
 # <widget render="xExtraGenrePic" source="session.Event_Now" position="54,315" size="300,438" zPosition="22" transparent="1" />
 # <widget render="xExtraGenrePic" source="session.Event_Next" position="54,429" size="300,438" zPosition="22" transparent="1" />
-# <widget source="session.Event_Now" render="xExtraGenrePic" position="1620,505" size="300,438" alphatest="blend" zPosition="9" />
-# <widget source="session.Event_Next" render="xExtraGenrePic" position="1620,505" size="300,438" alphatest="blend" zPosition="9" />
 from __future__ import print_function
-from __future__ import absolute_import
 from __future__ import unicode_literals
-from Components.Renderer.Renderer import Renderer
+try:
+	from Components.Renderer.Renderer import Renderer
+except:
+	from Renderer import Renderer
 from enigma import eLabel, ePixmap, eTimer, loadPNG, ePicLoad
 from Components.config import config
 from Components.AVSwitch import AVSwitch
@@ -18,6 +18,8 @@ import re
 import glob
 import json
 import os
+import sys
+PY3 = (sys.version_info[0] == 3)
 
 global cur_skin, found
 curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
@@ -26,9 +28,9 @@ PIC_PATH = '/usr/share/enigma2/%s/genre_pic/' %curskin
 found = False
 
 if os.path.isdir("/tmp"):
-		pathLoc = "/tmp/infos/"
+    pathLoc = "/tmp/infos/"
 else:
-		pathLoc = "/tmp/infos/"
+    pathLoc = "/tmp/infos/"
 
 
 REGEX = re.compile(
@@ -99,7 +101,19 @@ class xExtraGenrePic(Renderer):
 				# print('PNG name: ', png)
 				if os.path.exists(png):
 					found = True
-					self.showPoster(genreTxt)
+					# self.showPoster(genreTxt)
+					print('PNG name: ', png)
+					# print(type(png))
+
+					if PY3:
+						png = png
+					else:
+						png = png.encode()
+					# print(type(png))
+
+					self.instance.setPixmap(loadPNG(png))
+					self.instance.setScale(1)
+					self.instance.show()
 				# print('Found Genre : ', found)
 				if not found:
 					try:
@@ -108,18 +122,7 @@ class xExtraGenrePic(Renderer):
 					except :
 						# print('except No Found GenreTxt: ')
 						self.instance.hide()
-
 			except Exception as e:
 					print('error get event: ',	str(e))
+
 					pass
-
-	def showPoster(self, genreTxt):
-		# print('Genre Txt: ', genreTxt)
-		png = "%s%s.png" % (PIC_PATH, re.sub("[^0-9a-z]+", "_", genreTxt.lower()).replace("__", "_").strip("_"))
-		# print('PNG name: ', png)
-		if os.path.exists(png):
-			self.instance.setPixmapFromFile(png)
-			self.instance.setScale(1)
-			self.instance.show()
-		return
-

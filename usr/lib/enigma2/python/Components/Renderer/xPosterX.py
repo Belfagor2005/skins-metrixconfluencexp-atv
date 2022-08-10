@@ -9,17 +9,17 @@
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 #
 # for infobar,
-# <widget source="session.Event_Now" render="PosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
-# <widget source="session.Event_Next" render="PosterX" position="100,100" size="185,278" />
-# <widget source="session.Event_Now" render="PosterX" position="100,100" size="185,278" nexts="2" />
-# <widget source="session.CurrentService" render="PosterX" position="100,100" size="185,278" nexts="3" />
+# <widget source="session.Event_Now" render="xPosterX" position="0,125" size="185,278" path="/media/hdd/poster/" nexts="10" language="en" zPosition="9" />
+# <widget source="session.Event_Next" render="xPosterX" position="100,100" size="185,278" />
+# <widget source="session.Event_Now" render="xPosterX" position="100,100" size="185,278" nexts="2" />
+# <widget source="session.CurrentService" render="xPosterX" position="100,100" size="185,278" nexts="3" />
 # for ch,
-# <widget source="ServiceEvent" render="PosterX" position="820,100" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="ServiceEvent" render="xPosterX" position="820,100" size="100,150" path="/media/hdd/poster/" zPosition="9" />
 # for secondInfobar,
-# <widget source="session.Event_Now" render="PosterX" position="20,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
-# <widget source="session.Event_Next" render="PosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="session.Event_Now" render="xPosterX" position="20,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="session.Event_Next" render="xPosterX" position="1080,155" size="100,150" path="/media/hdd/poster/" zPosition="9" />
 # for epg, event
-# <widget source="Event" render="PosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
+# <widget source="Event" render="xPosterX" position="931,184" size="185,278" path="/media/hdd/poster/" zPosition="9" />
 from __future__ import print_function
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
@@ -29,7 +29,7 @@ from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
-from Components.Renderer.PosterXDownloadThread import PosterXDownloadThread
+from Components.Renderer.xPosterXDownloadThread import xPosterXDownloadThread
 import NavigationInstance
 import os
 import sys
@@ -137,9 +137,9 @@ if PY3:
 else:
 	pdb = Queue.LifoQueue()
 
-class PosterDB(PosterXDownloadThread):
+class PosterDB(xPosterXDownloadThread):
 	def __init__(self):
-		PosterXDownloadThread.__init__(self)
+		xPosterXDownloadThread.__init__(self)
 		self.logdbg = None
 
 	def run(self):
@@ -170,9 +170,9 @@ class PosterDB(PosterXDownloadThread):
 threadDB = PosterDB()
 threadDB.start()
 
-class PosterAutoDB(PosterXDownloadThread):
+class PosterAutoDB(xPosterXDownloadThread):
 	def __init__(self):
-		PosterXDownloadThread.__init__(self)
+		xPosterXDownloadThread.__init__(self)
 		self.logdbg = None
 
 	def run(self):
@@ -238,7 +238,7 @@ class PosterAutoDB(PosterXDownloadThread):
 
 threadAutoDB = PosterAutoDB()
 threadAutoDB.start()
-class PosterX(Renderer):
+class xPosterX(Renderer):
 	def __init__(self):
 		Renderer.__init__(self)
 		self.nxts = 0
@@ -370,7 +370,7 @@ class PosterX(Renderer):
 
 	def logPoster(self, logmsg):
 		if self.logdbg:
-			w = open(path_folder + "PosterX.log", "a+")
+			w = open(path_folder + "xPosterX.log", "a+")
 			w.write("%s\n"%logmsg)
 			w.close()
 

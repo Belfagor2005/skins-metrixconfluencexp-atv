@@ -46,13 +46,13 @@
 		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
 				<convert type="xEventList">primetime=yed,eventcount=5</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="ServiceEvent" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 	  
-	  <widget source="Event" render="XParental" position="52,679" size="50,50" zPosition="10" transparent="1" />
-	  <widget source="session.Event_Now" render="XInfoEvents" />
-	  <widget source="session.Event_Next" render="XInfoEvents" />
+	  <widget source="Event" render="xParental" position="52,679" size="50,50" zPosition="10" transparent="1" />
+	  <widget source="session.Event_Now" render="xInfoEvents" />
+	  <widget source="session.Event_Next" render="xInfoEvents" />
 	  
 	  <widget source="session.VideoPicture" render="Pig" position="46,65" zPosition="3" size="1075,610" backgroundColor="transparent" transparent="0" borderWidth="1" borderColor="cyan" />
  		

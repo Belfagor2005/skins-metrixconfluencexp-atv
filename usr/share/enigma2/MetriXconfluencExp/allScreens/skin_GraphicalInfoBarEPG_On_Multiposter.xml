@@ -35,7 +35,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="Event" render="PosterXSingleEpgList8" position="102,387" size="593,246" font="Regular;24" foregroundColor="grey"/>
-		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1232,390" size="593,246" font="Regular; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
+		<widget source="Event" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1232,390" size="593,246" font="Regular; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<panel position="47,1025" size="360,40">
@@ -66,15 +66,15 @@
 		<!-- 		
 		<ePixmap pixmap="noBackdrop.png" position="700,370" size="520,290" alphatest="blend" zPosition="1" transparent="1" />
 		 -->
-		<widget source="Event" render="PosterX" position="97,91" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="294,91" nexts="1" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="488,91" nexts="2" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="680,91" nexts="3" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="876,91" nexts="4" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="1070,91" nexts="5" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="1263,91" nexts="6" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="1454,91" nexts="7" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="1646,91" nexts="8" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="bannerX" position="700,370" size="520,290" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="97,91" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="294,91" nexts="1" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="488,91" nexts="2" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="680,91" nexts="3" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="876,91" nexts="4" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="1070,91" nexts="5" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="1263,91" nexts="6" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="1454,91" nexts="7" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="1646,91" nexts="8" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xBannerX" position="700,370" size="520,290" zPosition="2" alphatest="blend"/>
 	</screen>
 </skin>

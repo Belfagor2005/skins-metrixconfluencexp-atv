@@ -59,12 +59,12 @@
 		<widget source="ServiceEvent" render="xEventListDisplay" position="1269,819" size="530,200" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
 				<convert type="xEventList">primetime=yed,eventcount=5</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1268,588" size="530,230" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="ServiceEvent" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1268,588" size="530,230" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		 
-		<widget source="Event" render="XInfoEvents" />		 
-		<widget render="XParental" source="Event" position="1225,440" size="50,50" zPosition="3" transparent="1" />
+		<widget source="Event" render="xInfoEvents" />		 
+		<widget render="xParental" source="Event" position="1225,440" size="50,50" zPosition="3" transparent="1" />
 
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1280,458" size="350,30" alphatest="blend" zPosition="20" transparent="1" />
 
@@ -74,11 +74,11 @@
 		<ePixmap pixmap="nocover.png" position="1025,375" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
 		<ePixmap pixmap="nocover.png" position="825,680" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
 		<ePixmap pixmap="nocover.png" position="1025,680" size="185,278" alphatest="blend" zPosition="1" transparent="1" />
-		<widget source="ServiceEvent" render="PosterX" position="825,75" size="190,278" zPosition="2" alphatest="blend" />
-		<widget source="ServiceEvent" render="PosterX" position="1025,75" nexts="1" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="ServiceEvent" render="PosterX" position="825,375" nexts="2" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="ServiceEvent" render="PosterX" position="1025,375" nexts="3" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="ServiceEvent" render="PosterX" position="825,680" nexts="4" size="190,278" alphatest="blend" zPosition="2" />
-		<widget source="ServiceEvent" render="PosterX" position="1025,680" nexts="5" size="190,278" alphatest="blend" zPosition="2" />
+		<widget source="ServiceEvent" render="xPosterX" position="825,75" size="190,278" zPosition="2" alphatest="blend" />
+		<widget source="ServiceEvent" render="xPosterX" position="1025,75" nexts="1" size="190,278" alphatest="blend" zPosition="2" />
+		<widget source="ServiceEvent" render="xPosterX" position="825,375" nexts="2" size="190,278" alphatest="blend" zPosition="2" />
+		<widget source="ServiceEvent" render="xPosterX" position="1025,375" nexts="3" size="190,278" alphatest="blend" zPosition="2" />
+		<widget source="ServiceEvent" render="xPosterX" position="825,680" nexts="4" size="190,278" alphatest="blend" zPosition="2" />
+		<widget source="ServiceEvent" render="xPosterX" position="1025,680" nexts="5" size="190,278" alphatest="blend" zPosition="2" />
 	</screen>
 </skin>

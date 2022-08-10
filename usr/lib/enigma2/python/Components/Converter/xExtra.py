@@ -2,15 +2,15 @@
 # modded by lululla
 # <ePixmap pixmap="icons/cpu_temp.png" position="744,1038" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="770,1036" size="200,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Temperature" noWrap="1" halign="left">
-    # <convert type="zExtra">Temperature</convert>
+    # <convert type="xExtra">Temperature</convert>
 # </widget>
 # <ePixmap pixmap="icons/cpu_load.png" position="623,1039" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="659,1037" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="CPUload" halign="left" noWrap="1">
-    # <convert type="zExtra">CPULoad</convert>
+    # <convert type="xExtra">CPULoad</convert>
 # </widget>
 # <ePixmap pixmap="icons/cpu_ip.png" position="68,1005" size="25,25" zPosition="1" alphatest="blend" transparent="1" />
 # <widget source="session.CurrentService" render="Label" position="96,1004" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Iplocal" halign="left" noWrap="1">
-    # <convert type="zExtra">Iplocal</convert>
+    # <convert type="xExtra">Iplocal</convert>
 # </widget>
 
 # <widget source="session.CurrentService" render="Label" position="71,1040" size="250,30" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Ipwan" halign="left" noWrap="1">
@@ -25,7 +25,7 @@ import os, re, socket
 
 
 
-class zExtra(Poll, Converter):
+class xExtra(Poll, Converter):
     TEMPERATURE = 0
     HDDTEMP = 1
     CPULOAD = 2
@@ -108,7 +108,7 @@ class zExtra(Poll, Converter):
                     load = ''
 
                 cpuload = load.replace('\n', '').replace(' ', '')
-                return 'CPU : %s' % cpuload
+                return '%s' % cpuload
         if self.type == self.TEMPERATURE:
             systemp = ""
             cputemp = ""

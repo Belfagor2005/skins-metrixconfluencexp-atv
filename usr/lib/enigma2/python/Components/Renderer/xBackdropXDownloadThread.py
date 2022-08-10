@@ -15,11 +15,10 @@ except:
     pass
 
 global cur_skin, my_cur_skin, tmdb_api, omdb_api
-isz="140,760"
-
+isz="680,1000"
 tmdb_api = "9273a48a3cbdcef9484bf45de6f53ff0"
 omdb_api = "6a4c9432"
-
+# epgcache = eEPGCache.getInstance()
 my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
@@ -54,7 +53,7 @@ try:
 except:
     pass
 
-class bannerXDownloadThread(threading.Thread):
+class xBackdropXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.intCheck()
@@ -68,7 +67,7 @@ class bannerXDownloadThread(threading.Thread):
         except:
             return False
 
-    def search_tmdb(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
+    def search_tmdb(self,dwn_backdrop,title,shortdesc,fulldesc,channel=None):
         if self.intCheck():
             try:
                 fd = "{}\n{}\n{}".format(title,shortdesc,fulldesc)
@@ -109,21 +108,19 @@ class bannerXDownloadThread(threading.Thread):
                     url_tmdb += "&year={}".format(year)
                 if lng:
                     url_tmdb += "&language={}".format(lng[:-3])
-
-
-                banner = requests.get(url_tmdb).json()['results'][0]['banner_path'] #banner = json.load(urlopen(url_tmdb))['results'][0]['banner_path']
-                if banner:
-                    url_banner = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), banner)
-                    self.savebanner(dwn_banner, url_banner)
-                    return True, "[SUCCESS : tmdb] {} => {} => {}".format(title,url_tmdb,url_banner)
+                backdrop = requests.get(url_tmdb).json()['results'][0]['backdrop_path'] #backdrop = json.load(urlopen(url_tmdb))['results'][0]['backdrop_path']
+                if backdrop:
+                    url_backdrop = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), backdrop)
+                    self.saveBackdrop(dwn_backdrop, url_backdrop)
+                    return True, "[SUCCESS : tmdb] {} => {} => {}".format(title,url_tmdb,url_backdrop)
                 else:
                     return False, "[ERROR : tmdb] {} => {} (None)".format(title,url_tmdb)
             except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
+                if os.path.exists(dwn_backdrop):
+                    os.remove(dwn_backdrop)
                 return False, "[ERROR : tmdb] {} => {} ({})".format(title,url_tmdb,str(e))
 
-    def search_molotov_google(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
+    def search_molotov_google(self,dwn_backdrop,title,shortdesc,fulldesc,channel=None):
         if self.intCheck():
             try:
                 headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
@@ -141,20 +138,20 @@ class bannerXDownloadThread(threading.Thread):
                     url_tmdb += "+{}".format(year)
                 url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
                 ff = requests.get(url_tmdb, stream=True, headers=headers).text
-                banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
-                if banner.find("molotov"):
-                    banner = re.sub('\d+x\d+',re.sub(',','x',isz),banner)
-                    banner = "https://{}".format(banner)
-                    self.savebanner(dwn_banner, url_banner)
-                    return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title,url_tmdb,url_banner)
+                backdrop = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
+                if backdrop.find("molotov"):
+                    backdrop = re.sub('\d+x\d+',re.sub(',','x',isz),backdrop)
+                    backdrop = "https://{}".format(backdrop)
+                    self.saveBackdrop(dwn_backdrop, url_backdrop)
+                    return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title,url_tmdb,url_backdrop)
                 else:
                     return False, "[ERROR : molotov-google] {} => {} (not in molotov site)".format(title,url_tmdb)
             except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
+                if os.path.exists(dwn_backdrop):
+                    os.remove(dwn_backdrop)
                 return False, "[ERROR : molotov-google] {} => {} ({})".format(title,url_tmdb,str(e))
 
-    def search_google(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
+    def search_google(self,dwn_backdrop,title,shortdesc,fulldesc,channel=None):
         if self.intCheck():
             try:
                 headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
@@ -174,29 +171,29 @@ class bannerXDownloadThread(threading.Thread):
                 #url_tmdb = url_tmdb + "%20imagesize:" + re.sub(',','x',isz)
                 url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
                 ff = requests.get(url_tmdb, stream=True, headers=headers).text
-                banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
-                url_banner = "https://{}".format(banner)
-                self.savebanner(dwn_banner, url_banner)
-                return True, "[SUCCESS : google] {} => {} => {}".format(title,url_tmdb,url_banner)
+                backdrop = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
+                url_backdrop = "https://{}".format(backdrop)
+                self.saveBackdrop(dwn_backdrop, url_backdrop)
+                return True, "[SUCCESS : google] {} => {} => {}".format(title,url_tmdb,url_backdrop)
             except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
+                if os.path.exists(dwn_backdrop):
+                    os.remove(dwn_backdrop)
                 return False, "[ERROR : google] {} => {} ({})".format(title,url_tmdb,str(e))
 
-    def savebanner(self, dwn_banner, url_banner):
-        with open(dwn_banner,'wb') as f:
-            f.write(requests.get(url_banner, stream=True, allow_redirects=True).content) #f.write(urlopen(url_banner).read())
+    def saveBackdrop(self, dwn_backdrop, url_backdrop):
+        with open(dwn_backdrop,'wb') as f:
+            f.write(requests.get(url_backdrop, stream=True, allow_redirects=True).content) #f.write(urlopen(url_backdrop).read())
             f.close()
 
 
-#tpx = bannerXDownloadThread()
-#dwn_banner = "test-download-file.jpg"
+#tpx = backdropXDownloadThread()
+#dwn_backdrop = "test-download-file.jpg"
 #print("search_tmdb")
-#val, log = tpx.search_tmdb(dwn_banner,"The Voice is not a MadMax","","")
+#val, log = tpx.search_tmdb(dwn_backdrop,"The Voice is not a MadMax","","")
 #print(log)
 #print("search_molotov_google")
-#val, log = tpx.search_molotov_google(dwn_banner,"The Voice","","")
+#val, log = tpx.search_molotov_google(dwn_backdrop,"The Voice","","")
 #print(log)
 #print("search_google")
-#val, log = tpx.search_google(dwn_banner,"The Voice","","","TF1")
+#val, log = tpx.search_google(dwn_backdrop,"The Voice","","","TF1")
 #print(log)

@@ -31,13 +31,13 @@
 		<widget source="key_help" render="Label" position="650,958" size="45,44" backgroundColor="key_back" font="Regular;20" conditional="key_blue" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="Event" render="PosterX" position="440,628" size="190,278" zPosition="2" alphatest="blend"/>
-		<widget source="Event" render="PosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1166,640" nexts="3" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1387,640" nexts="4" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2"/>
-		<widget source="Event" render="PosterXSingleEpgList" position="696,408" size="1122,200" font="Regular;32" foregroundColor="grey"/>
+		<widget source="Event" render="xPosterX" position="440,628" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="Event" render="xPosterX" position="730,640" nexts="1" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="xPosterX" position="948,640" nexts="2" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="xPosterX" position="1166,640" nexts="3" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="xPosterX" position="1387,640" nexts="4" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="xPosterX" position="1606,640" nexts="5" size="190,278" alphatest="blend" zPosition="2"/>
+		<widget source="Event" render="xPosterXSingleEpgList" position="696,408" size="1122,200" font="Regular;32" foregroundColor="grey"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="275,711" size="62,30" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" position="275,711" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>

@@ -516,7 +516,7 @@
 		<widget source="Event" render="Label" position="185,56" size="1200,69" font="Regular; 53" backgroundColor="background20" transparent="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="185,125" size="1500,150" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="Event" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="185,125" size="1500,150" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Event" render="Label" position="160,275" size=" 98, 33" font="Regular; 27" halign="center" backgroundColor="background20" transparent="1">
@@ -628,12 +628,12 @@
 		<panel name="ClockTime"/>
 		<panel name="btCRYB"/>
 		<panel name="btPIMO"/>
-		<widget source="Event" render="RunningTextXposter" position="209,426" size="1590,228" font="Regular;28" foregroundColor="#ffffff" backgroundColor="black" transparent="1" valign="center" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=4000,wrap=1,always=0,repeat=3,oneshot=1">
+		<widget source="Event" render="xRunningTextXposter" position="209,426" size="1590,228" font="Regular;28" foregroundColor="#ffffff" backgroundColor="black" transparent="1" valign="center" halign="center" options="movetype=running,direction=top,startpoint=0,startdelay=4000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<eLabel position="10,10" size="290,415" backgroundColor="#30000000" zPosition="1"/>
 		<ePixmap pixmap="nocover.png" position="20,20" size="270,395" alphatest="blend" scale="1" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="20,20" size="270,395" zPosition="3"/>
+		<widget source="Event" render="xPosterX" position="20,20" size="270,395" zPosition="3"/>
 		<widget name="lab1" position="101,328" size="1725,64" halign="center" valign="center" zPosition="5" backgroundColor="background20" transparent="0"/>
 		<widget name="bouquetlist" position="101,297" size="1900,30" zPosition="2" itemHeight="30" font="Regular;19" borderColor="#202020" borderWidth="1" backgroundColor="#000000" foregroundColor="ltbluette" backgroundColorSelected="barColor" foregroundColorSelected="ltbluette" transparent="0"/>
 		<widget name="timeline_text" position="105,261" size="1717,30" TimelineFont="Regular;26" itemHeight="40" foregroundColor="white" backgroundColor="#2f4974" borderWidth="0" transparent="0" zPosition="11"/>

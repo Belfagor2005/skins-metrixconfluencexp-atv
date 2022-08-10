@@ -66,7 +66,7 @@
 		<widget source="Event" render="Label" borderWidth="2" position="110,413" size="580,68" font="Regular; 44" halign="center" backgroundColor="background20" transparent="1" noWrap="1" foregroundColor="metrixAccent">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="PosterX" position="432,628" size="190,278" zPosition="2" alphatest="blend" />
-		<widget source="Event" render="BackdropX" position="930,512" size="640,360" zPosition="2" alphatest="blend" />
+		<widget source="Event" render="xPosterX" position="432,628" size="190,278" zPosition="2" alphatest="blend" />
+		<widget source="Event" render="xBackdropX" position="930,512" size="640,360" zPosition="2" alphatest="blend" />
 	</screen>
 </skin>

@@ -2,10 +2,10 @@
 # by beber...03.2022,
 # 03.2022 several enhancements : several renders
 # for channel,
-# <widget source="session.CurrentService" render="PosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
+# <widget source="session.CurrentService" render="xPosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
 # for epg, event
-# <widget source="session.Event_Now" render="PosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
-# <widget source="Event" render="PosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
+# <widget source="session.Event_Now" render="xPosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
+# <widget source="Event" render="xPosterXSingleEpgList" position="800,540" size="900,150" noWrap="1" font="Regular;32" foregroundColor="grey" />
 from Components.VariableText import VariableText
 from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, eEPGCache
@@ -16,7 +16,7 @@ from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
 import NavigationInstance
 
-class PosterXSingleEpgList(Renderer, VariableText):
+class xPosterXSingleEpgList(Renderer, VariableText):
 
 	def __init__(self):
 		Renderer.__init__(self)

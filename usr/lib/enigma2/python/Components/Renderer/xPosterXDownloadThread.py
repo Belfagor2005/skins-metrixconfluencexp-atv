@@ -57,7 +57,7 @@ try:
 except:
 	pass
 
-class PosterXDownloadThread(threading.Thread):
+class xPosterXDownloadThread(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 		self.intCheck()
@@ -190,7 +190,7 @@ class PosterXDownloadThread(threading.Thread):
 			f.close()
 
 
-#tpx = PosterXDownloadThread()
+#tpx = xPosterXDownloadThread()
 #dwn_poster = "test-download-file.jpg"
 #print("search_tmdb")
 #val, log = tpx.search_tmdb(dwn_poster,"The Voice is not a MadMax","","")

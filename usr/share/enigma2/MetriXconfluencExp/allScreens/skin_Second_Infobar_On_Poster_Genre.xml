@@ -6,10 +6,10 @@
 		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2" />
 		<widget name="epg_description" position="497,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1" />
 
-		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Next" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- end check -->
@@ -262,10 +262,10 @@
 			<convert type="xNOVAccess">CamName</convert>
 		</widget>
 		
-		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" zPosition="3" transparent="1" />
-		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" zPosition="3" transparent="1" />	
-		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2" />
-		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2" />
+		<widget source="session.Event_Now" render="xParental" position="315,874" size="50,50" zPosition="3" transparent="1" />
+		<widget source="session.Event_Next" render="xParental" position="315,945" size="50,50" zPosition="3" transparent="1" />	
+		<widget source="session.Event_Now" render="xPosterX" position="632,139" size="365,500" zPosition="2" />
+		<widget source="session.Event_Now" render="xPosterX" position="1513,215" size="315,430" nexts="1" zPosition="2" />
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1" />
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1510,650" size="320,30" alphatest="blend" zPosition="20" transparent="1" />
 			
@@ -276,12 +276,12 @@
 		</widget>
 		<ePixmap position="417,1033" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/wifi_off.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/wifi_on.png" position="417,1033" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Wifi</convert>
+			<convert type="xRouteInfo">Wifi</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap position="477,1035" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/lan_off.png" alphatest="blend" />
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/lan.png" position="477,1035" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Lan</convert>
+			<convert type="xRouteInfo">Lan</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<ePixmap position="542,1024" size="70,70" zPosition="8" pixmap="MetriXconfluencExp/icons/vpn.png" alphatest="blend" />

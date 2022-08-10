@@ -8,7 +8,7 @@
 # by beber...03.2022,
 # 03.2022 specific for EMC plugin ...
 # for emc plugin,
-# <widget source="Service" render="PosterXEMC" position="100,100" size="185,278" />
+# <widget source="Service" render="xPosterXEMC" position="100,100" size="185,278" />
 from __future__ import absolute_import
 from __future__ import print_function
 from Components.Renderer.Renderer import Renderer
@@ -118,7 +118,7 @@ class PosterDBEMC(PosterXDownloadThread):
 threadDB = PosterDBEMC()
 threadDB.start()
 
-class PosterXEMC(Renderer):
+class xPosterXEMC(Renderer):
     def __init__(self):
         Renderer.__init__(self)
         self.canal = [None,None,None,None,None,None]
@@ -229,7 +229,7 @@ class PosterXEMC(Renderer):
 
     def logPoster(self, logmsg):
         if self.logdbg:
-            w = open(path_folder + "PosterXEMC.log", "a+")
+            w = open(path_folder + "xPosterXEMC.log", "a+")
             w.write("%s\n"%logmsg)
             w.close()
 

@@ -1497,7 +1497,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	</screen>
 	<screen name="Volume" position="0,480" size="300,180" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/icons/sound/volume.png" position="0,0" size="4,105" backgroundColor="background20" zPosition="-11"/>
-		<widget render="VolumeText" source="global.CurrentTime" font="LCD; 80" position="127,34" size="150,90" backgroundColor="background20" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="20"/>
+		<widget render="xvolumeText" source="global.CurrentTime" font="LCD; 80" position="127,34" size="150,90" backgroundColor="background20" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="20"/>
 		<widget name="Volume" position="0,594" size="872,7" backgroundColor="black" transparent="1" foregroundColor="blue" zPosition="20"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/volume2.png" position="13,-447" zPosition="-10" size="300,180"/>
 	</screen>
@@ -1669,7 +1669,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="Event" render="Progress" position="219,690" size="1485,8" borderWidth="1" backgroundColor="white" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="Event" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="602,115" size="1238,400" font="Regular; 35" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
+		<widget source="Event" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="602,115" size="1238,400" font="Regular; 35" foregroundColor="grey" backgroundColor="black" transparent="1" valign="top" halign="left" zPosition="2">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<panel position="92,950" size="360,40">
@@ -1685,7 +1685,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<panel name="Blue-New-Button" />
 		</panel>
 		<ePixmap pixmap="nocover.png" position="180,112" size="270,395" alphatest="blend" scale="1" zPosition="2" />
-		<widget source="Event" render="PosterX" position="180,112" size="270,395" zPosition="3" />
+		<widget source="Event" render="xPosterX" position="180,112" size="270,395" zPosition="3" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_info.png" position="1598,897" size="110,54" zPosition="10" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="MetriXconfluencExp/buttons/key_menu.png" position="1665,897" size="110,54" zPosition="10" transparent="1" alphatest="blend" />
 	</screen>
@@ -1758,10 +1758,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="Event" render="Label" position="109,74" size="560,91" font="Regular; 36" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="RunningTextXposter" position="162,173" size="480,400" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
+		<widget source="Event" render="xRunningTextXposter" position="162,173" size="480,400" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1"/>
+		<widget source="Event" render="xBannerX" position="163,581" size="475,235" zPosition="1"/>
 	</screen>
 	<screen name="SimpleChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
@@ -1785,10 +1785,10 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="Event" render="Label" position="109,74" size="560,91" font="Regular; 36" foregroundColor="metrixAccent" backgroundColor="background20" transparent="1" halign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="RunningTextXposter" position="162,173" size="480,400" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
+		<widget source="Event" render="xRunningTextXposter" position="162,173" size="480,400" font="RegularLight; 25" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center" borderWidth="2" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="Event" render="bannerX" position="163,581" size="475,235" zPosition="1"/>
+		<widget source="Event" render="xBannerX" position="163,581" size="475,235" zPosition="1"/>
 	</screen>
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
 		<widget name="menu" position="865,110" size="745,849" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/camselect.png"/>
@@ -1870,7 +1870,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 			<convert type="EventName">Name</convert>
 		</widget>
 		<ePixmap pixmap="nocover.png" position="215,435" size="350,480" alphatest="blend" scale="1" zPosition="2"/>
-		<widget source="Event" render="PosterX" position="215,435" size="350,480" zPosition="3"/>
+		<widget source="Event" render="xPosterX" position="215,435" size="350,480" zPosition="3"/>
 	</screen>
 	<screen name="EventViewSimple" position="0,0" size="1920,1080" title="EventViewSimple" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-15" size="1920,1080" alphatest="off"/>
@@ -1897,7 +1897,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<panel position="1582,969" size="230,8">
 			<panel name="Blue-New-Button"/>
 		</panel>
-		<widget source="ServiceEvent" render="PosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend"/>
+		<widget source="ServiceEvent" render="xPosterX" position="332,586" size="190,278" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/ico_hd_off.png" position="583,872" size="62,30" zPosition="1" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" position="583,875" size="62,30" zPosition="2" pixmap="MetriXconfluencExp/icons/ico_hd_on.png" alphatest="blend">
 			<convert type="ServiceInfo">VideoWidth</convert>

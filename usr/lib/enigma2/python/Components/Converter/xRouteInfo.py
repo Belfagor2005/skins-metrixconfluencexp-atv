@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# RouteInfo
+# xRouteInfo
 # Copyright (c) 2boom 2012-13
 # v.0.8
 # This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,10 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # <widget source="session.CurrentService" render="Label" position="189,397" zPosition="4" size="50,20" valign="center" halign="center" font="Regular;14" foregroundColor="foreground" transparent="1"  backgroundColor="background">
-#	<convert type="RouteInfo">Info</convert>
+#	<convert type="xRouteInfo">Info</convert>
 # </widget>
 #<widget source="session.CurrentService" render="Pixmap" pixmap="750HD/icons/ico_lan_on.png" position="1103,35" zPosition="1" size="28,15" transparent="1" alphatest="blend">
-#    <convert type="RouteInfo">Lan  | Wifi | Modem</convert>
+#    <convert type="xRouteInfo">Lan  | Wifi | Modem</convert>
 #    <convert type="ConditionalShowHide" />
 #  </widget>
 
@@ -27,7 +27,7 @@
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 
-class RouteInfo(Converter, object):
+class xRouteInfo(Converter, object):
 	Info = 0
 	Lan = 1
 	Wifi = 2

@@ -51,7 +51,7 @@
 		<widget source="ServiceEvent" render="xEventListDisplay" position="49,770" size="530,240" column0="0,150,yellow,Regular,24,0,0" column1="165,950,white,Regular,24,0,1" primetimeoffset="0" rowHeight="40" backgroundColor="#20000000" transparent="1" zPosition="3">
 				<convert type="xEventList">primetime=yed,eventcount=5</convert>
 		</widget>
-		<widget source="ServiceEvent" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="ServiceEvent" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="589,770" size="530,240" font="RegularLight; 24" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		
@@ -62,15 +62,15 @@
 			<convert type="xServiceName2">Provider</convert>
 		</widget>
 		<!--
- 		<widget source="Event" render="XInfoEvents" />
+ 		<widget source="Event" render="xInfoEvents" />
 		-->
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<widget source="ServiceEvent" render="BackdropX" position="50,69" size="1075,610" zPosition="10" borderWidth="2" borderColor="background20"/>
+		<widget source="session.Event_Now" render="xInfoEvents"/>
+		<widget source="session.Event_Next" render="xInfoEvents"/>
+		<widget source="ServiceEvent" render="xBackdropX" position="50,69" size="1075,610" zPosition="10" borderWidth="2" borderColor="background20"/>
 		<!-- 
-		<widget render="XParental" source="session.Event_Now" position="61,622" size="50,50" zPosition="3" transparent="1" />
+		<widget render="xParental" source="session.Event_Now" position="61,622" size="50,50" zPosition="3" transparent="1" />
 		-->
-		<widget render="XParental" source="ServiceEvent" position="61,622" size="50,50" zPosition="4" transparent="1"/>
+		<widget render="xParental" source="ServiceEvent" position="61,622" size="50,50" zPosition="4" transparent="1"/>
 		<widget source="ServiceEvent" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="114,640" size="330,30" alphatest="blend" zPosition="20" transparent="1"/>
 	</screen>
 </skin>

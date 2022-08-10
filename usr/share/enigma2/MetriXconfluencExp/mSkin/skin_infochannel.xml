@@ -5,10 +5,10 @@
 		<!--  check	 on test debug -->
 		<widget name="channel" position="515,1164" size="850,55" font="RegularLight;40" transparent="1" foregroundColor="grey" backgroundColor="background40" zPosition="2"/>
 		<widget name="epg_description" position="497,1219" size="1155,82" zPosition="1" font="Regular; 25" foregroundColor="unffffff" transparent="1"/>
-		<widget source="session.Event_Now" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Now" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="100,153" size="520,552" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="session.Event_Next" borderWidth="2" render="RunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
+		<widget source="session.Event_Next" borderWidth="2" render="xRunningTextXposter" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=3,oneshot=1" position="1043,174" size="458,510" font="RegularLight; 28" foregroundColor="grey" backgroundColor="black" transparent="1" valign="center" halign="center">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<!-- end check -->
@@ -63,23 +63,23 @@
 		<widget source="session.CurrentService" render="Label" text="camname" position="1189,871" size="328,41" font="Regular; 24" halign="left" zPosition="1" backgroundColor="background" transparent="1" valign="center" noWrap="1">
 			<convert type="xNOVAccess">CamName</convert>
 		</widget>
-		<widget source="session.Event_Now" render="XInfoEvents"/>
-		<widget source="session.Event_Next" render="XInfoEvents"/>
-		<widget source="session.Event_Now" render="XParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Next" render="XParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget source="session.Event_Now" render="PosterX" position="632,139" size="365,500" zPosition="2"/>
-		<widget source="session.Event_Now" render="PosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
+		<widget source="session.Event_Now" render="xInfoEvents"/>
+		<widget source="session.Event_Next" render="xInfoEvents"/>
+		<widget source="session.Event_Now" render="xParental" position="315,874" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
+		<widget source="session.Event_Next" render="xParental" position="315,945" size="50,50" alphatest="blend" zPosition="3" transparent="1"/>
+		<widget source="session.Event_Now" render="xPosterX" position="632,139" size="365,500" zPosition="2"/>
+		<widget source="session.Event_Now" render="xPosterX" position="1513,215" size="315,430" nexts="1" zPosition="2"/>
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="640,650" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1510,650" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<!-- OPTIONAL LAN VPN WIFI TEMP -->
 		<ePixmap position="417,1033" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/wifi_off.png" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/wifi_on.png" position="417,1033" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Wifi</convert>
+			<convert type="xRouteInfo">Wifi</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap position="477,1035" size="42,42" zPosition="5" pixmap="MetriXconfluencExp/icons/lan_off.png" alphatest="blend"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="MetriXconfluencExp/icons/lan.png" position="477,1035" zPosition="6" size="42,42" transparent="1" alphatest="blend">
-			<convert type="RouteInfo">Lan</convert>
+			<convert type="xRouteInfo">Lan</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap position="542,1024" size="70,70" zPosition="8" pixmap="MetriXconfluencExp/icons/vpn.png" alphatest="blend"/>
@@ -89,18 +89,18 @@
 		</widget>
 		<ePixmap pixmap="icons/cpu_temp.png" position="744,1038" size="25,25" zPosition="1" alphatest="blend" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="768,1037" size="200,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="Temperature" noWrap="1" halign="left">
-			<convert type="zExtra">Temperature</convert>
+			<convert type="xExtra">Temperature</convert>
 		</widget>
 		<ePixmap pixmap="icons/cpu_load.png" position="623,1039" size="25,25" zPosition="1" alphatest="blend" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="649,1036" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#ffffff" text="CPUload" halign="left" noWrap="1">
-			<convert type="zExtra">CPULoad</convert>
+			<convert type="xExtra">CPULoad</convert>
 		</widget>
 		<ePixmap pixmap="icons/cpu_ip.png" position="68,1005" size="25,25" zPosition="1" alphatest="blend" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="96,1004" size="300,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#cc0033" text="Iplocal" halign="left" noWrap="1">
-			<convert type="zExtra">Iplocal</convert>
+			<convert type="xExtra">Iplocal</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="71,1040" size="325,35" font="Regular; 26" zPosition="6" backgroundColor="black" transparent="1" foregroundColor="#33ccff" text="Ipwan" halign="left" noWrap="1">
-			<convert type="zExtra">Ipwan</convert>
+			<convert type="xExtra">Ipwan</convert>
 		</widget>
 	</screen>
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
@@ -131,14 +131,14 @@
 		<widget position="1191,909" size="414,35" source="session.CurrentService" render="Label" font="Regular; 28" halign="left" backgroundColor="background20" zPosition="20" transparent="1" foregroundColor="grey">
 			<convert type="xServiceName2">TpansponderInfo</convert>
 		</widget>
-		<widget render="XInfoEvents" source="session.Event_Now"/>
-		<widget render="XInfoEvents" source="session.Event_Next"/>
-		<widget render="XParental" source="session.Event_Now" position="315,874" alphatest="blend" size="50,50" zPosition="3" transparent="1"/>
-		<widget render="XParental" source="session.Event_Next" position="315,945" alphatest="blend" size="50,50" zPosition="4" transparent="1"/>
+		<widget render="xInfoEvents" source="session.Event_Now"/>
+		<widget render="xInfoEvents" source="session.Event_Next"/>
+		<widget render="xParental" source="session.Event_Now" position="315,874" alphatest="blend" size="50,50" zPosition="3" transparent="1"/>
+		<widget render="xParental" source="session.Event_Next" position="315,945" alphatest="blend" size="50,50" zPosition="4" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<widget source="session.Event_Now" render="PosterX" position="39,809" size="180,245" zPosition="2"/>
-		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="2"/>
+		<widget source="session.Event_Now" render="xPosterX" position="39,809" size="180,245" zPosition="2"/>
+		<widget source="session.Event_Now" render="xPosterX" position="1701,809" size="180,245" nexts="1" zPosition="2"/>
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="225,840" size="350,30" alphatest="blend" zPosition="20" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1378,840" size="320,30" alphatest="blend" zPosition="20" transparent="1"/>
 	</screen>

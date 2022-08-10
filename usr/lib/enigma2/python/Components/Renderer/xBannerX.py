@@ -9,16 +9,16 @@
 # 03.2022 several enhancements : several renders with one queue thread, google search (incl. molotov for france) + autosearch & autoclean thread ...
 #
 # for infobar,
-# <widget source="session.Event_Now" render="bannerX" position="100,100" size="680,1000" />
-# <widget source="session.Event_Next" render="bannerX" position="100,100" size="680,1000" />
-# <widget source="session.Event_Now" render="bannerX" position="100,100" size="680,1000" nexts="2" />
-# <widget source="session.CurrentService" render="bannerX" position="100,100" size="680,1000" nexts="3" />
+# <widget source="session.Event_Now" render="xBannerX" position="100,100" size="680,1000" />
+# <widget source="session.Event_Next" render="xBannerX" position="100,100" size="680,1000" />
+# <widget source="session.Event_Now" render="xBannerX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="session.CurrentService" render="xBannerX" position="100,100" size="680,1000" nexts="3" />
 # for ch,
-# <widget source="ServiceEvent" render="bannerX" position="100,100" size="680,1000" />
-# <widget source="ServiceEvent" render="bannerX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="ServiceEvent" render="xBannerX" position="100,100" size="680,1000" />
+# <widget source="ServiceEvent" render="xBannerX" position="100,100" size="680,1000" nexts="2" />
 # for epg, event
-# <widget source="Event" render="bannerX" position="100,100" size="680,1000" />
-# <widget source="Event" render="bannerX" position="100,100" size="680,1000" nexts="2" />
+# <widget source="Event" render="xBannerX" position="100,100" size="680,1000" />
+# <widget source="Event" render="xBannerX" position="100,100" size="680,1000" nexts="2" />
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -29,7 +29,7 @@ from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.CurrentService import CurrentService
 from Components.Sources.EventInfo import EventInfo
 from Components.Sources.Event import Event
-from Components.Renderer.bannerXDownloadThread import bannerXDownloadThread
+from Components.Renderer.xBannerXDownloadThread import xBannerXDownloadThread
 import NavigationInstance
 import os
 import sys
@@ -137,9 +137,9 @@ if PY3:
 else:
     pdb = Queue.LifoQueue()
 
-class bannerDB(bannerXDownloadThread):
+class bannerDB(xBannerXDownloadThread):
     def __init__(self):
-        bannerXDownloadThread.__init__(self)
+        xBannerXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
@@ -170,9 +170,9 @@ class bannerDB(bannerXDownloadThread):
 threadDB = bannerDB()
 threadDB.start()
 
-class bannerAutoDB(bannerXDownloadThread):
+class bannerAutoDB(xBannerXDownloadThread):
     def __init__(self):
-        bannerXDownloadThread.__init__(self)
+        xBannerXDownloadThread.__init__(self)
         self.logdbg = None
 
     def run(self):
@@ -239,7 +239,7 @@ class bannerAutoDB(bannerXDownloadThread):
 threadAutoDB = bannerAutoDB()
 threadAutoDB.start()
 
-class bannerX(Renderer):
+class xBannerX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
         self.nxts = 0
@@ -371,6 +371,6 @@ class bannerX(Renderer):
 
     def logbanner(self, logmsg):
         if self.logdbg:
-            w = open(path_folder + "bannerX.log", "a+")
+            w = open(path_folder + "xBannerX.log", "a+")
             w.write("%s\n"%logmsg)
             w.close()

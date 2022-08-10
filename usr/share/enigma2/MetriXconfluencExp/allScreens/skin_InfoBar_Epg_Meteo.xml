@@ -266,18 +266,18 @@
 		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
-		<widget render="XParental" source="ServiceEvent" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
+		<widget render="xParental" source="ServiceEvent" position="21,1109" size="50,50" zPosition="3" transparent="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="38,808" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
 		<ePixmap pixmap="MetriXconfluencExp/nocover.png" position="1701,809" size="180,245" zPosition="1" transparent="1" alphatest="blend" noWrap="1"/>
-		<widget source="session.Event_Now" render="PosterX" position="38,808" size="180,245" zPosition="3"/>
-		<widget source="session.Event_Now" render="PosterX" position="1701,809" size="180,245" nexts="1" zPosition="3"/>
+		<widget source="session.Event_Now" render="xPosterX" position="38,808" size="180,245" zPosition="3"/>
+		<widget source="session.Event_Now" render="xPosterX" position="1701,809" size="180,245" nexts="1" zPosition="3"/>
 		<!-- 		
-		<widget source="session.Event_Next" render="XInfoEvents" borderWidth="2" position="38,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
-		<widget source="session.Event_Now" render="XInfoEvents" borderWidth="2" position="1701,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
+		<widget source="session.Event_Next" render="xInfoEvents" borderWidth="2" position="38,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
+		<widget source="session.Event_Now" render="xInfoEvents" borderWidth="2" position="1701,558" size="180,245" font="Regular; 22" halign="left" transparent="1" zPosition="2" backgroundColor="black" valign="top"/>
 		 -->
 		<widget source="session.Event_Now" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="232,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
 		<widget source="session.Event_Next" render="xtraStarX" pixmap="MetriXconfluencExp/logos/stars/100.png" position="1370,835" size="320,30" alphatest="blend" zPosition="3" transparent="1"/>
-		<widget render="XParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1"/>
-		<widget render="XParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1"/>
+		<widget render="xParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="2" transparent="1"/>
+		<widget render="xParental" source="session.Event_Next" position="315,945" size="50,50" zPosition="2" transparent="1"/>
 	</screen>
 </skin>
