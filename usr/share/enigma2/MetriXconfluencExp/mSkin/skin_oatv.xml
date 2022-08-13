@@ -1497,7 +1497,7 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 	</screen>
 	<screen name="Volume" position="0,480" size="300,180" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="MetriXconfluencExp/icons/sound/volume.png" position="0,0" size="4,105" backgroundColor="background20" zPosition="-11"/>
-		<widget render="xvolumeText" source="global.CurrentTime" font="LCD; 80" position="127,34" size="150,90" backgroundColor="background20" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="20"/>
+		<widget render="xVolumeText" source="global.CurrentTime" font="LCD; 80" position="127,34" size="150,90" backgroundColor="background20" halign="center" valign="center" foregroundColor="white" transparent="1" zPosition="20"/>
 		<widget name="Volume" position="0,594" size="872,7" backgroundColor="black" transparent="1" foregroundColor="blue" zPosition="20"/>
 		<ePixmap pixmap="MetriXconfluencExp/icons/volume2.png" position="13,-447" zPosition="-10" size="300,180"/>
 	</screen>
@@ -1604,8 +1604,8 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget source="session.CurrentService" render="Label" position="761,208" size="458,30" foregroundColor="epg-service-foreground" backgroundColor="epg-service-background" font="Regular;19" zPosition="1" halign="center" valign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="MetrixHDXPicon" position="1174,208" size="50,30" zPosition="2" alphatest="blend">
-			<convert type="MetrixHDServiceName2">Reference</convert>
+		<widget source="session.CurrentService" render="Picon" position="1174,208" size="50,30" zPosition="2" alphatest="blend">
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<eLabel position="831,525" size="319,1" backgroundColor="layer-a-accent1" zPosition="1"/>
 		<widget source="session.Event_Now" render="Progress" position="831,523" size="319,5" foregroundColor="layer-a-progress" transparent="1" zPosition="2">

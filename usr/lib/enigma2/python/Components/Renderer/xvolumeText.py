@@ -26,7 +26,7 @@ from Components.VariableText import VariableText
 from enigma import eLabel, eDVBVolumecontrol, eTimer, ePoint
 from Components.Renderer.Renderer import Renderer
 
-class xvolumeText(Renderer, VariableText):
+class xVolumeText(Renderer, VariableText):
 	def __init__(self):
 		Renderer.__init__(self)
 		VariableText.__init__(self)

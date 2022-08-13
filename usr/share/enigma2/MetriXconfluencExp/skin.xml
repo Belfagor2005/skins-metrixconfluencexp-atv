@@ -73,7 +73,7 @@
 		<color name="cyan1" value="#0000deff"/>
 		<color name="cyan2" value="#0000d2ff"/>
 		<color name="dark" value="#50000000"/>
-		<color name="darkgrey" value="#00999999"/>
+		<color name="darkgrey" value="#00999999"/> 
 		<color name="epg-background" value="#1a0f0f0f"/>
 		<color name="epg-borderlines" value="#1abdbdbd"/>
 		<color name="epg-event-background" value="#1a0f0f0f"/>
