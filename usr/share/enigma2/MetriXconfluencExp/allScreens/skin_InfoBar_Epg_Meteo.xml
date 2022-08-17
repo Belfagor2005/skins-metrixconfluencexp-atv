@@ -2,7 +2,7 @@
 	<!--  InfoBar  -->
 	<screen name="InfoBar" position="0,0" size="1920,1080" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1"/>
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,86" size="1084,70" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,101" size="1084,70" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
 			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<eLabel text="A" position="1188,991" zPosition="1" size="30,39" font="Regular; 30" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center"/>

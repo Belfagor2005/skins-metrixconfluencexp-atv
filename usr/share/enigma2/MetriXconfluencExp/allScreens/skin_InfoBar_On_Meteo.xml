@@ -15,7 +15,7 @@
 			<panel name="Blue-New-Button" />
 		</panel>
 		<ePixmap pixmap="MetriXconfluencExp/menu/css1.png" position="0,0" zPosition="-10" size="1920,1073" transparent="1" />
-		<widget source="session.CurrentService" render="Label" borderWidth="2" position="250,86" size="1084,55" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="245,121" size="1084,55" font="Regular; 48" valign="center" noWrap="1" backgroundColor="black" transparent="1" foregroundColor="grey" zPosition="-1" halign="left">
 			<convert type="xServiceName2">Name</convert>
 		</widget>
 		<eLabel text="A" position="1188,991" zPosition="1" size="30,39" font="Regular; 30" halign="center" foregroundColor="un777777" backgroundColor="background20" transparent="1" valign="center" />
@@ -199,7 +199,7 @@
 		<widget source="session.CurrentService" render="Label" borderWidth="2" position="1188,888" size="260,42" font="Regular; 28" valign="center" backgroundColor="black" zPosition="2" transparent="1" halign="left" foregroundColor="grey">
 			<convert type="xServiceName2">Provider</convert>
 		</widget>
-		<widget source="session.CurrentService" borderWidth="2" render="Label" position="250,24" size="286,65" zPosition="2" font="Regular; 58" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
+		<widget source="session.CurrentService" borderWidth="2" render="Label" position="247,52" size="286,65" zPosition="2" font="Regular; 50" halign="left" backgroundColor="black" transparent="1" foregroundColor="grey" valign="top">
 			<convert type="xServiceName2">%n</convert>
 		</widget>
 		<!-- Weather */-->
@@ -243,43 +243,43 @@
 		<widget alphatest="blend" render="MSNWeatherPixmap" position="537,17" size="80,80" source="session.MSNWeather" transparent="1" zPosition="8">
 			<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="background" font="Regular; 33" render="Label" typeSpeed="1500" typeCaret="_" position="618,14" size="450,39" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
+		<widget noWrap="1" backgroundColor="background" font="Regular; 28" render="Label" typeSpeed="1500" typeCaret="_" position="618,14" size="450,39" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
 			<convert type="MSNWeather">city</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="background" font="Regular; 33" render="Label" typeSpeed="1500" typeCaret="_" position="619,53" size="450,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
+		<widget noWrap="1" backgroundColor="background" font="Regular; 28" render="Label" typeSpeed="1500" typeCaret="_" position="619,53" size="450,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
 			<convert type="MSNWeather">temperature_text,current</convert>
 		</widget>
 		<!-- ***** Temperature day-3 ***** -->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1069,16" size="80,80" zPosition="12" alphatest="blend">
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1099,16" size="80,80" zPosition="12" alphatest="blend">
 			<convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1149,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1184,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">weekday,day3</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1147,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1182,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">temperature_heigh_low,day3</convert>
 		</widget>
 		<!-- ***** Temperature day-4 ***** -->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1299,16" size="80,80" zPosition="12" alphatest="blend">
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1336,16" size="80,80" zPosition="12" alphatest="blend">
 			<convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1380,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1415,15" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">weekday,day4</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1384,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1414,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">temperature_heigh_low,day4</convert>
 		</widget>
 		<!-- ***** Temperature day-5 ***** -->
-		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1532,16" size="80,80" zPosition="12" alphatest="blend">
+		<widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1562,16" size="80,80" zPosition="12" alphatest="blend">
 			<convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/MetriXconfluencExp/WeatherIcon/,png</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1609,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1639,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">weekday,day5</convert>
 		</widget>
-		<widget source="session.MSNWeather" render="Label" position="1610,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+		<widget source="session.MSNWeather" render="Label" position="1640,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
 			<convert type="MSNWeather">temperature_heigh_low,day5</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="940,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
+		<widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="970,20" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
 			<convert type="MSNWeather">temperature_current</convert>
 		</widget>
 		<!-- 
