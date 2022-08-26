@@ -2530,21 +2530,22 @@ self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheigh
 		<widget name="lab1" position="105,811" halign="center" size="1065,90" zPosition="1" font="Regular;36" valign="top" transparent="1"/>
 	</screen>
 	<screen name="IMDB" position="0,0" size="1920,1080" title="IMDb Details Plugin" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>
-		<widget name="title" position=" 105,180" size="735,42" font="Regular;38" valign="center" transparent="1"/>
-		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off"/>
-		<ePixmap position="1380,345" size="384,384" zPosition="2" pixmap="MetriXconfluencExp/icons/imdb.png" transparent="1" alphatest="blend"/>
-		<panel name="ClockTime"/>
-		<panel name="btCRYB"/>
-		<widget name="menu" position="106,258" size="1050,620" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" zPosition="3"/>
-		<widget name="starsbg" position="840,173" size="315,32" pixmap="MetriXconfluencExp/logos/stars/0.png" zPosition="2" alphatest="blend"/>
-		<widget name="stars" position="840,173" size="315,32" pixmap="MetriXconfluencExp/logos/stars/100.png" zPosition="3" transparent="1"/>
-		<widget name="ratinglabel" position="840,201" size="315,36" font="Regular;30" halign="center" foregroundColor="#04f2b7" transparent="1"/>
-		<widget name="poster" position=" 120,255" size="165,270" alphatest="blend"/>
-		<widget name="detailslabel" position="300,255" size="855,263" font="Regular;30" backgroundColor="background20" transparent="1"/>
-		<widget name="castlabel" position=" 105,548" size="1050,330" font="Regular;30" backgroundColor="background20" transparent="1"/>
-		<widget name="extralabel" position=" 105,255" size="1050,525" font="Regular;30" backgroundColor="background20" transparent="1"/>
-		<widget name="statusbar" position=" 105,893" size="1050,42" font="Regular;30" foregroundColor="grey" backgroundColor="background20" transparent="1"/>
+		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1" />
+		<widget name="title" position="109,149" size="735,42" font="Regular;38" valign="center" transparent="1" />
+		<ePixmap pixmap="MetriXconfluencExp/menu/panel.png" position="0,0" zPosition="-20" size="1920,1080" alphatest="off" />
+		<panel name="ClockTime" />
+		<panel name="btCRYB" />
+		<widget name="titellabel" position="106,196" size="1100,50" font="Regular;38" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" />
+		<widget name="storylinelabel" position="114,759" size="1045,238" font="Regular;26" foregroundColor="ltbluette" backgroundColor="#000000" scrollbarWidth="10" transparent="1" />
+		<widget name="menu" position="108,254" size="1050,490" itemHeight="50" font="Regular; 26" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background20" transparent="1" selectionPixmap="MetriXconfluencExp/icons/listSelection.png" zPosition="3" />
+		<widget name="starsbg" position="1387,178" size="315,32" pixmap="MetriXconfluencExp/logos/stars/0.png" zPosition="2" alphatest="blend" />
+		<widget name="stars" position="1387,178" size="315,32" pixmap="MetriXconfluencExp/logos/stars/100.png" zPosition="3" transparent="1" />
+		<widget name="ratinglabel" position="1389,222" size="315,36" font="Regular;30" halign="center" foregroundColor="#04f2b7" transparent="1" />
+		<widget name="poster" position="1393,278" size="300,420" alphatest="blend" />
+		<widget name="detailslabel" position="112,758" size="1045,240" font="Regular;30" backgroundColor="background20" transparent="1" />
+		<widget name="castlabel" position="107,447" size="1050,308" font="Regular;30" backgroundColor="background20" transparent="1" />
+		<widget name="extralabel" position=" 105,255" size="1050,490" font="Regular;30" backgroundColor="background20" transparent="1" />
+		<widget name="statusbar" position="1167,788" size="673,171" font="Regular;30" foregroundColor="grey" backgroundColor="background20" transparent="1" />
 	</screen>
 	<screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
 		<widget source="Title" render="Label" position="105,71" size="1200,65" font="Regular;53" backgroundColor="background20" transparent="1"/>

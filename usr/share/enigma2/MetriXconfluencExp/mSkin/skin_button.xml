@@ -18,10 +18,10 @@
 	-->
 
 	<screen name="New-Buttons">
-		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" conditional="key_red" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" conditional="key_green" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="key_yellow" render="Label" position="390,e-50" size="180,40" backgroundColor="key_yellow" conditional="key_yellow" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
@@ -30,15 +30,18 @@
 		<widget source="key_blue" render="Label" position="580,e-50" size="180,40" backgroundColor="key_blue" conditional="key_blue" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_menu" render="Label" position="e-300,e-50" size="90,40" backgroundColor="key_back" conditional="key_menu" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		
+		
+		<widget source="key_menu" render="Label" position="960,70" size="80,40" backgroundColor="key_back" conditional="key_menu" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_info" render="Label" position="e-200,e-50" size="90,40" backgroundColor="key_back" conditional="key_info" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		<widget source="key_info" render="Label" position="e-200,e-50" size="80,40" backgroundColor="key_back" conditional="key_info" font="Regular;20" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" conditional="key_help" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
+		<widget source="key_help" render="Label" position="e-100,e-50" size="80,40" backgroundColor="key_back" font="Regular;20" conditional="key_help" foregroundColor="key_text" halign="center" noWrap="1" valign="center">
 			<convert type="ConditionalShowHide" />
 		</widget>	
+
 	</screen>
 	
 	<screen name="Red-New-Button">
@@ -279,20 +282,20 @@
 		</panel>
 	</screen>
 	<screen name="btPIMO">
-		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1577,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_pvr.png" transparent="1" alphatest="blend"/>		
 	</screen>
 	<screen name="btEIMO">
-		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1505,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1430,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend"/>		
 		<ePixmap position="1577,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend"/>
 		<ePixmap position="1656,876" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend"/>
 	</screen>
 	<screen name="btIBAR">
-		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />
 		<ePixmap position="703,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_info.png" transparent="1" alphatest="blend" />
+		<ePixmap position="649,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/menu.png" transparent="1" alphatest="blend" />		
 		<ePixmap position="756,1031" size="50,55" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_ok.png" transparent="1" alphatest="blend" />
 		<ePixmap position="806,1031" size="50,50" zPosition="10" pixmap="MetriXconfluencExp/buttons/key_epg.png" transparent="1" alphatest="blend" />
 		<ePixmap pixmap="buttons/green.png" position="197,1036" size="44,33" alphatest="blend" zPosition="3" />
