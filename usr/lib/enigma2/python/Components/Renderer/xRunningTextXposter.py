@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 ################################################################################
 #	 RunningText.py - Running Text Renderer for Enigma2
 #	 Version: 1.5 (04.04.2012 23:40)

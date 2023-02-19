@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # by digiteng...07.2021,
 # 08.2021(stb lang support),
 # 09.2021 mini fixes
@@ -46,15 +47,35 @@ except:
     lng = None
     pass
 
-path_folder = "/tmp/xemc/"
+def isMountReadonly(mnt):
+    with open('/proc/mounts') as f:
+        for line in f:
+            line = line.split(',')[0]
+            line = line.split()   
+            print('line ', line)
+            try:
+                device, mount_point, filesystem, flags = line
+            except Exception as err:
+                   print("Error: %s" % err)                    
+            if mount_point == mnt:
+                return 'ro' in flags            
+    return "mount: '%s' doesn't exist" % mnt        
+
 if os.path.isdir("/media/hdd"):
-    path_folder = "/media/hdd/xemc/"
-elif not os.path.isdir("/media/usb"):
-    path_folder = "/media/usb/xemc/"
+    if not isMountReadonly("/media/hdd"):
+        path_folder = "/media/hdd/xemc/"
+elif os.path.isdir("/media/usb"):
+    if not isMountReadonly("/media/usb"):
+        path_folder = "/media/usb/xemc/"
+elif os.path.isdir("/media/mmc"):
+    if not isMountReadonly("/media/mmc"):
+        path_folder = "/media/mmc/xemc/"    
 else:
-    path_folder = "/tmp/xemc/"
+    path_folder = "/tmp/xemc/" 
+
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
+
 
 REGEX = re.compile(
         r'([\(\[]).*?([\)\]])|'
@@ -115,20 +136,35 @@ class PosterDBEMC(PosterXDownloadThread):
             w.write("%s\n"%logmsg)
             w.close()
 
+
 threadDB = PosterDBEMC()
 threadDB.start()
+
+
+def intCheck():
+    import socket
+    try:
+        response = urlopen("http://google.com", None, 5)
+        response.close()
+    except HTTPError:
+        return False
+    except URLError:
+        return False
+    except socket.timeout:
+        return False
+    else:
+        return True
+
 
 class xPosterXEMC(Renderer):
     def __init__(self):
         Renderer.__init__(self)
+        adsl = intCheck()
+        if not adsl:
+            return
         self.canal = [None,None,None,None,None,None]
-        self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showPoster)
-        # try:
-            # self.timer.callback.append(self.showPoster)
-        # except:
-            # self.timer_conn = self.timer.timeout.connect(self.showPoster)  
         self.logdbg = None
 
     def applySkin(self, desktop, parent):
@@ -137,15 +173,6 @@ class xPosterXEMC(Renderer):
             attribs.append((attrib, value))
         self.skinAttributes = attribs
         return Renderer.applySkin(self, desktop, parent)
-
-    def intCheck(self):
-        import socket
-        try:
-            socket.setdefaulttimeout(1)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
-            return True
-        except:
-            return False
 
     GUI_WIDGET = ePixmap
     def changed(self, what):
@@ -199,33 +226,31 @@ class xPosterXEMC(Renderer):
 
 
     def showPoster(self):
-        if self.intCheck():
-            self.instance.hide()
-            if self.canal[5]:
-                pstrNm = path_folder + self.canal[5] + ".jpg"
-                if os.path.exists(pstrNm):
-                    self.logPoster("[LOAD : showPoster] {}".format(spstrNm))
-                    self.instance.setPixmap(loadJPG(spstrNm))
-                    self.instance.setScale(2)
-                    self.instance.show()
+        self.instance.hide()
+        if self.canal[5]:
+            pstrNm = path_folder + self.canal[5] + ".jpg"
+            if os.path.exists(pstrNm):
+                self.logPoster("[LOAD : showPoster] {}".format(spstrNm))
+                self.instance.setPixmap(loadJPG(spstrNm))
+                self.instance.setScale(2)
+                self.instance.show()
 
     def waitPoster(self):
-        if self.intCheck():
-            self.instance.hide()
-            if self.canal[5]:
-                pstrNm = path_folder + self.canal[5] + ".jpg"
-                loop = 180
-                found = None
-                self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
-                while loop>=0:
-                    if os.path.exists(pstrNm):
-                        if os.path.getsize(pstrNm) > 0:
-                            loop = 0
-                            found = True
-                    time.sleep(0.8)
-                    loop = loop - 1
-                if found:
-                    self.timer.start(10, True)
+        self.instance.hide()
+        if self.canal[5]:
+            pstrNm = path_folder + self.canal[5] + ".jpg"
+            loop = 180
+            found = None
+            self.logPoster("[LOOP : waitPoster] {}".format(pstrNm))
+            while loop>=0:
+                if os.path.exists(pstrNm):
+                    if os.path.getsize(pstrNm) > 0:
+                        loop = 0
+                        found = True
+                time.sleep(0.8)
+                loop = loop - 1
+            if found:
+                self.timer.start(10, True)
 
     def logPoster(self, logmsg):
         if self.logdbg:

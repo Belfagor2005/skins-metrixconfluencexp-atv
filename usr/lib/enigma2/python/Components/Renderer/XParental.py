@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # by digiteng...04.2020
 # file for skin MetriXconfluencExp by sunriser 07.2021
 # <widget render="zParental" source="session.Event_Now" position="315,874" size="50,50" zPosition="3" transparent="1" alphatest="blend"/>
@@ -42,6 +43,7 @@ REGEX = re.compile(
 		r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
 		r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
 		r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+
 
 class xParental(Renderer):
 	def __init__(self):
@@ -98,21 +100,17 @@ class xParental(Renderer):
 										"": "UN",
 										"Passed": "UN",}.get(age)
 					except:
-							pass
+                        pass
 				if cert:
-						self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
-						self.instance.show()
+                    self.instance.setPixmap(loadPNG(os.path.join(pratePath, "FSK_{}.png".format(cert))))
+                    self.instance.show()
 				else:
-						self.instance.hide()
+                    self.instance.hide()
 		except:
 				self.instance.hide()
 
 	def delay(self):
-			self.timer = eTimer()
-			self.timer.callback.append(self.showParental)
-			# try:
-				# self.timer.callback.append(self.showParental)
-			# except:
-				# self.timer_conn = self.timer.timeout.connect(self.showParental)
-			self.timer.start(200, True)
+        self.timer = eTimer()
+        self.timer.callback.append(self.showParental)
+        self.timer.start(200, True)
 

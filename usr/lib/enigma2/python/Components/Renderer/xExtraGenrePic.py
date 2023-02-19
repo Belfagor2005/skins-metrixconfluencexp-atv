@@ -23,7 +23,7 @@ PY3 = (sys.version_info[0] == 3)
 
 global cur_skin, found
 curskin = config.skin.primary_skin.value.replace('/skin.xml', '')
-PIC_PATH = '/usr/share/enigma2/%s/genre_pic/' %curskin
+PIC_PATH = '/usr/share/enigma2/%s/genre_pic/' % curskin
 # print('patch genre PIC_PATH', PIC_PATH)
 found = False
 
@@ -55,6 +55,7 @@ REGEX = re.compile(
 		r'\.\s\d{1,3}\s(ч|ч\.|с\.|с)\s.+|'
 		r'\s(ч|ч\.|с\.|с)\s\d{1,3}.+|'
 		r'\d{1,3}(-я|-й|\sс-н).+|', re.DOTALL)
+
 
 class xExtraGenrePic(Renderer):
 	def __init__(self):

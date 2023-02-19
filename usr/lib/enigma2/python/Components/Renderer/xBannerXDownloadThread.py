@@ -54,134 +54,140 @@ try:
 except:
     pass
 
+
+def intCheck():
+    import socket
+    try:
+        response = urlopen("http://google.com", None, 5)
+        response.close()
+    except HTTPError:
+        return False
+    except URLError:
+        return False
+    except socket.timeout:
+        return False
+    else:
+        return True
+
+
 class xBannerXDownloadThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-        self.intCheck()
-
-    def intCheck(self):
-        import socket
-        try:
-            socket.setdefaulttimeout(1)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
-            return True
-        except:
-            return False
+        adsl = intCheck()
+        if not adsl:
+            return
 
     def search_tmdb(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
-        if self.intCheck():
+        try:
+            fd = "{}\n{}\n{}".format(title,shortdesc,fulldesc)
+            srch = "multi"
+            year = None
+            url_tmdb = ""
+
             try:
-                fd = "{}\n{}\n{}".format(title,shortdesc,fulldesc)
-                srch = "multi"
+                pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
+                pattern = re.findall('\d{4}', pattern[0])
+                year = pattern[0]
+            except:
                 year = None
-                url_tmdb = ""
+                pass
 
-                try:
-                    pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
-                    pattern = re.findall('\d{4}', pattern[0])
-                    year = pattern[0]
-                except:
-                    year = None
-                    pass
+            checkMovie = ["film", "movie", "фильм", "кино", "ταινία", "película", "cinéma", "cine", "cinema", "filma"]
+            for i in checkMovie:
+                if i in fd.lower():
+                    srch = "movie"
+                    break
 
-                checkMovie = ["film", "movie", "фильм", "кино", "ταινία", "película", "cinéma", "cine", "cinema", "filma"]
-                for i in checkMovie:
+            checkTV = [ "serial", "series", "serie", "serien", "série", "séries", "serious",
+                        "folge", "episodio", "episode", "épisode", "l'épisode", "ep.",
+                        "staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela",
+                        "dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality",
+                        "program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
+                        "magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
+                        "information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
+                        "société", "clips" ]
+            if srch != "movie":
+                for i in checkTV:
                     if i in fd.lower():
-                        srch = "movie"
+                        srch = "tv"
                         break
 
-                checkTV = [ "serial", "series", "serie", "serien", "série", "séries", "serious",
-                            "folge", "episodio", "episode", "épisode", "l'épisode", "ep.",
-                            "staffel", "soap", "doku", "tv", "talk", "show", "news", "factual", "entertainment", "telenovela",
-                            "dokumentation", "dokutainment", "documentary", "informercial", "information", "sitcom", "reality",
-                            "program", "magazine", "mittagsmagazin", "т/с", "м/с", "сезон", "с-н", "эпизод", "сериал", "серия",
-                            "magazine", "actualité", "discussion", "interview", "débat", "émission", "divertissement", "jeu",
-                            "information", "météo", "journal", "talk-show", "sport", "culture", "infos", "feuilleton", "téléréalité",
-                            "société", "clips" ]
-                if srch != "movie":
-                    for i in checkTV:
-                        if i in fd.lower():
-                            srch = "tv"
-                            break
-
-                url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(srch, tmdb_api, quote(title))
-                if year:
-                    url_tmdb += "&year={}".format(year)
-                if lng:
-                    url_tmdb += "&language={}".format(lng[:-3])
+            url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(srch, tmdb_api, quote(title))
+            if year:
+                url_tmdb += "&year={}".format(year)
+            if lng:
+                url_tmdb += "&language={}".format(lng[:-3])
 
 
-                banner = requests.get(url_tmdb).json()['results'][0]['banner_path'] #banner = json.load(urlopen(url_tmdb))['results'][0]['banner_path']
-                if banner:
-                    url_banner = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), banner)
-                    self.savebanner(dwn_banner, url_banner)
-                    return True, "[SUCCESS : tmdb] {} => {} => {}".format(title,url_tmdb,url_banner)
-                else:
-                    return False, "[ERROR : tmdb] {} => {} (None)".format(title,url_tmdb)
-            except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
-                return False, "[ERROR : tmdb] {} => {} ({})".format(title,url_tmdb,str(e))
+            banner = requests.get(url_tmdb).json()['results'][0]['banner_path'] #banner = json.load(urlopen(url_tmdb))['results'][0]['banner_path']
+            if banner:
+                url_banner = "https://image.tmdb.org/t/p/w{}{}".format(str(isz.split(",")[0]), banner)
+                self.savebanner(dwn_banner, url_banner)
+                return True, "[SUCCESS : tmdb] {} => {} => {}".format(title,url_tmdb,url_banner)
+            else:
+                return False, "[ERROR : tmdb] {} => {} (None)".format(title,url_tmdb)
+        except Exception as e:
+            if os.path.exists(dwn_banner):
+                os.remove(dwn_banner)
+            return False, "[ERROR : tmdb] {} => {} ({})".format(title,url_tmdb,str(e))
 
     def search_molotov_google(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
-        if self.intCheck():
+        try:
+            headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+            fd = "{}\n{}".format(shortdesc,fulldesc)
+            year = None
             try:
-                headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-                fd = "{}\n{}".format(shortdesc,fulldesc)
+                pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
+                pattern = re.findall('\d{4}', pattern[0])
+                year = pattern[0]
+            except:
                 year = None
-                try:
-                    pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
-                    pattern = re.findall('\d{4}', pattern[0])
-                    year = pattern[0]
-                except:
-                    year = None
-                    pass
-                url_tmdb = "site:molotov.tv+" + quote(title)
-                if year:
-                    url_tmdb += "+{}".format(year)
-                url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
-                ff = requests.get(url_tmdb, stream=True, headers=headers).text
-                banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
-                if banner.find("molotov"):
-                    banner = re.sub('\d+x\d+',re.sub(',','x',isz),banner)
-                    banner = "https://{}".format(banner)
-                    self.savebanner(dwn_banner, url_banner)
-                    return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title,url_tmdb,url_banner)
-                else:
-                    return False, "[ERROR : molotov-google] {} => {} (not in molotov site)".format(title,url_tmdb)
-            except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
-                return False, "[ERROR : molotov-google] {} => {} ({})".format(title,url_tmdb,str(e))
+                pass
+            url_tmdb = "site:molotov.tv+" + quote(title)
+            if year:
+                url_tmdb += "+{}".format(year)
+            url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
+            ff = requests.get(url_tmdb, stream=True, headers=headers).text
+            banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
+            if banner.find("molotov"):
+                banner = re.sub('\d+x\d+',re.sub(',','x',isz),banner)
+                banner = "https://{}".format(banner)
+                self.savebanner(dwn_banner, url_banner)
+                return True, "[SUCCESS : molotov-google] {} => {} => {}".format(title,url_tmdb,url_banner)
+            else:
+                return False, "[ERROR : molotov-google] {} => {} (not in molotov site)".format(title,url_tmdb)
+        except Exception as e:
+            if os.path.exists(dwn_banner):
+                os.remove(dwn_banner)
+            return False, "[ERROR : molotov-google] {} => {} ({})".format(title,url_tmdb,str(e))
 
     def search_google(self,dwn_banner,title,shortdesc,fulldesc,channel=None):
-        if self.intCheck():
+        try:
+            headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+            fd = "{}\n{}".format(shortdesc,fulldesc)
+            year = None
             try:
-                headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
-                fd = "{}\n{}".format(shortdesc,fulldesc)
+                pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
+                pattern = re.findall('\d{4}', pattern[0])
+                year = pattern[0]
+            except:
                 year = None
-                try:
-                    pattern = re.findall('[A-Z].+19\d{2}|[A-Z].+20\d{2}', fd)
-                    pattern = re.findall('\d{4}', pattern[0])
-                    year = pattern[0]
-                except:
-                    year = None
-                    pass
-                #url_tmdb = quote(title) + "%20" + quote(channel)
-                url_tmdb = quote(title)
-                if year:
-                    url_tmdb += "+{}".format(year)
-                #url_tmdb = url_tmdb + "%20imagesize:" + re.sub(',','x',isz)
-                url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
-                ff = requests.get(url_tmdb, stream=True, headers=headers).text
-                banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
-                url_banner = "https://{}".format(banner)
-                self.savebanner(dwn_banner, url_banner)
-                return True, "[SUCCESS : google] {} => {} => {}".format(title,url_tmdb,url_banner)
-            except Exception as e:
-                if os.path.exists(dwn_banner):
-                    os.remove(dwn_banner)
-                return False, "[ERROR : google] {} => {} ({})".format(title,url_tmdb,str(e))
+                pass
+            #url_tmdb = quote(title) + "%20" + quote(channel)
+            url_tmdb = quote(title)
+            if year:
+                url_tmdb += "+{}".format(year)
+            #url_tmdb = url_tmdb + "%20imagesize:" + re.sub(',','x',isz)
+            url_tmdb = "https://www.google.com/search?q={}&tbm=isch&tbs=ift:jpg%2Cisz:m".format(url_tmdb)
+            ff = requests.get(url_tmdb, stream=True, headers=headers).text
+            banner = re.findall('\],\["https://(.*?)",\d+,\d+]', ff)[0]
+            url_banner = "https://{}".format(banner)
+            self.savebanner(dwn_banner, url_banner)
+            return True, "[SUCCESS : google] {} => {} => {}".format(title,url_tmdb,url_banner)
+        except Exception as e:
+            if os.path.exists(dwn_banner):
+                os.remove(dwn_banner)
+            return False, "[ERROR : google] {} => {} ({})".format(title,url_tmdb,str(e))
 
     def savebanner(self, dwn_banner, url_banner):
         with open(dwn_banner,'wb') as f:

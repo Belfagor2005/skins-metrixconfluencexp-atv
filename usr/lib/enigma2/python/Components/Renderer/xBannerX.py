@@ -84,13 +84,32 @@ else:
                     apdb[i] = service
 
 
-path_folder = "/tmp/banner/"
+def isMountReadonly(mnt):
+    with open('/proc/mounts') as f:
+        for line in f:
+            line = line.split(',')[0]
+            line = line.split()   
+            print('line ', line)
+            try:
+                device, mount_point, filesystem, flags = line
+            except Exception as err:
+                   print("Error: %s" % err)                    
+            if mount_point == mnt:
+                return 'ro' in flags            
+    return "mount: '%s' doesn't exist" % mnt        
+
 if os.path.isdir("/media/hdd"):
-    path_folder = "/media/hdd/banner/"
-elif not os.path.isdir("/media/usb"):
-    path_folder = "/media/usb/banner/"
+    if not isMountReadonly("/media/hdd"):
+        path_folder = "/media/hdd/banner/"
+elif os.path.isdir("/media/usb"):
+    if not isMountReadonly("/media/usb"):
+        path_folder = "/media/usb/banner/"
+elif os.path.isdir("/media/mmc"):
+    if not isMountReadonly("/media/mmc"):
+        path_folder = "/media/mmc/banner/"    
 else:
-    path_folder = "/tmp/banner/"
+    path_folder = "/tmp/banner/" 
+
 if not os.path.isdir(path_folder):
     os.makedirs(path_folder)
 
@@ -136,6 +155,21 @@ if PY3:
     pdb = queue.LifoQueue()
 else:
     pdb = Queue.LifoQueue()
+
+
+def intCheck():
+    import socket
+    try:
+        response = urlopen("http://google.com", None, 5)
+        response.close()
+    except HTTPError:
+        return False
+    except URLError:
+        return False
+    except socket.timeout:
+        return False
+    else:
+        return True
 
 class bannerDB(xBannerXDownloadThread):
     def __init__(self):
@@ -242,10 +276,12 @@ threadAutoDB.start()
 class xBannerX(Renderer):
     def __init__(self):
         Renderer.__init__(self)
+        adsl = intCheck()
+        if not adsl:
+            return
         self.nxts = 0
         self.canal = [None,None,None,None,None,None]
         self.oldCanal = None
-        self.intCheck()
         self.timer = eTimer()
         self.timer.callback.append(self.showbanner)
         # try:
@@ -262,15 +298,6 @@ class xBannerX(Renderer):
             attribs.append((attrib, value))
         self.skinAttributes = attribs
         return Renderer.applySkin(self, desktop, parent)
-
-    def intCheck(self):
-        import socket
-        try:
-            socket.setdefaulttimeout(1)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
-            return True
-        except:
-            return False
 
     GUI_WIDGET = ePixmap
     def changed(self, what):
@@ -341,33 +368,31 @@ class xBannerX(Renderer):
 
 
     def showbanner(self):
-        if self.intCheck():
-            self.instance.hide()
-            if self.canal[5]:
-                pstrNm = path_folder + self.canal[5] + ".jpg"
-                if os.path.exists(pstrNm):
-                    self.logbanner("[LOAD : showbanner] {}".format(pstrNm))
-                    self.instance.setPixmap(loadJPG(pstrNm))
-                    self.instance.setScale(2)
-                    self.instance.show()
+        self.instance.hide()
+        if self.canal[5]:
+            pstrNm = path_folder + self.canal[5] + ".jpg"
+            if os.path.exists(pstrNm):
+                self.logbanner("[LOAD : showbanner] {}".format(pstrNm))
+                self.instance.setPixmap(loadJPG(pstrNm))
+                self.instance.setScale(2)
+                self.instance.show()
 
     def waitbanner(self):
-        if self.intCheck():
-            self.instance.hide()
-            if self.canal[5]:
-                pstrNm = path_folder + self.canal[5] + ".jpg"
-                loop = 180
-                found = None
-                self.logbanner("[LOOP : waitbanner] {}".format(pstrNm))
-                while loop>=0:
-                    if os.path.exists(pstrNm):
-                        if os.path.getsize(pstrNm) > 0:
-                            loop = 0
-                            found = True
-                    time.sleep(0.5)
-                    loop = loop - 1
-                if found:
-                    self.timer.start(10, True)
+        self.instance.hide()
+        if self.canal[5]:
+            pstrNm = path_folder + self.canal[5] + ".jpg"
+            loop = 180
+            found = None
+            self.logbanner("[LOOP : waitbanner] {}".format(pstrNm))
+            while loop>=0:
+                if os.path.exists(pstrNm):
+                    if os.path.getsize(pstrNm) > 0:
+                        loop = 0
+                        found = True
+                time.sleep(0.5)
+                loop = loop - 1
+            if found:
+                self.timer.start(10, True)
 
     def logbanner(self, logmsg):
         if self.logdbg:
