@@ -1,26 +1,25 @@
 # -*- coding: utf-8 -*-
+
 # by digiteng...04.2020, 11.2020, 06.2021
 # file by sunriser 07.2021
 # <widget source="session.Event_Now" render="ZInfoEvents"/>
 # <widget source="session.Event_Next" render="ZInfoEvents"/>
 # <widget source="Event" render="ZInfoEvents"/>
-#edit by lululla 07.2022
+# edit by lululla 07.2022
 from __future__ import print_function
 from __future__ import absolute_import
 from Components.Renderer.Renderer import Renderer
 from Components.VariableText import VariableText
 from Components.config import config
-from enigma import eLabel, eTimer, eEPGCache#, getBestPlayableServiceReference
+from enigma import eLabel, eTimer, eEPGCache
 from time import gmtime
-import glob
 import json
 import os
 import re
-import requests
-import shutil
 import socket
 import sys
 import NavigationInstance
+
 global cur_skin, my_cur_skin, tmdb_api, omdb_api
 tmdb_api = "3c3efcf47c3577558812bb9d64019d65"
 omdb_api = "cb1d9f55"
@@ -29,17 +28,17 @@ my_cur_skin = False
 cur_skin = config.skin.primary_skin.value.replace('/skin.xml', '')
 
 if os.path.isdir("/tmp"):
-        pathLoc = "/tmp/infos/"
+    pathLoc = "/tmp/infos/"
 else:
-        pathLoc = "/tmp/infos/"
+    pathLoc = "/tmp/infos/"
 if not os.path.exists(pathLoc):
-        os.mkdir(pathLoc)
+    os.mkdir(pathLoc)
 
 try:
-    if my_cur_skin == False:
-        myz_skin = "/usr/share/enigma2/%s/apikey" %cur_skin
+    if my_cur_skin is False:
+        myz_skin = "/usr/share/enigma2/%s/apikey" % cur_skin
         print('skinz namez', myz_skin)
-        omdb_skin = "/usr/share/enigma2/%s/omdbkey" %cur_skin
+        omdb_skin = "/usr/share/enigma2/%s/omdbkey" % cur_skin
         print('skinz namez', omdb_skin)
         if os.path.exists(myz_skin):
             with open(myz_skin, "r") as f:
@@ -53,12 +52,12 @@ except:
 PY3 = (sys.version_info[0] == 3)
 
 if PY3:
-    from urllib.parse import quote, urlencode
-    from urllib.request import urlopen, Request
+    from urllib.parse import quote
+    from urllib.request import urlopen
     from _thread import start_new_thread
 else:
-    from urllib import quote, urlencode
-    from urllib2 import urlopen, Request
+    from urllib import quote
+    from urllib2 import urlopen
     from thread import start_new_thread
 
 REGEX = re.compile(
@@ -86,7 +85,6 @@ REGEX = re.compile(
 
 
 def intCheck():
-    import socket
     try:
         response = urlopen("http://google.com", None, 5)
         response.close()
@@ -124,7 +122,7 @@ class xInfoEvents(Renderer, VariableText):
         self.event = self.source.event
         if self.event:
             self.delay2()
-            eventNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё','е')
+            eventNm = REGEX.sub("", self.event.getEventName()).strip().replace('ё', 'е')
             infos_file = "{}{}.json".format(pathLoc, eventNm)
             if not os.path.exists(infos_file):
                 self.downloadInfos(eventNm, infos_file)
@@ -133,7 +131,7 @@ class xInfoEvents(Renderer, VariableText):
                 try:
                     with open(infos_file) as f:
                         data = json.load(f)
-                        Title =''
+                        Title = ''
                         imdbRating = ''
                         Country = ''
                         Year = ''
@@ -151,17 +149,17 @@ class xInfoEvents(Renderer, VariableText):
                             Country = data["Country"]
                         if 'year' in data:
                             Year = data["Year"]
-                        if 'rated' in data:                        
+                        if 'rated' in data:
                             Rated = data["Rated"]
-                        if 'genre' in data:                        
+                        if 'genre' in data:
                             Genre = data["Genre"]
-                        if 'awards' in data: 
+                        if 'awards' in data:
                             Awards = data["Awards"]
-                        if 'director' in data: 
+                        if 'director' in data:
                             Director = data["Director"]
-                        if 'writer' in data: 
+                        if 'writer' in data:
                             Writer = data["Writer"]
-                        if 'actors' in data:     
+                        if 'actors' in data:
                             Actors = data["Actors"]
 
                         if Title and Title != "N/A":
@@ -196,7 +194,7 @@ class xInfoEvents(Renderer, VariableText):
         try:
             try:
                 url_tmdb = "https://api.themoviedb.org/3/search/{}?api_key={}&query={}".format(self.srch, tmdb_api, quote(eventNm))
-                if self.year != None:
+                if self.year is None:
                     url_tmdb += "&year={}".format(self.year)
                     print('url_tmdb1: ', url_tmdb)
                 try:
@@ -236,7 +234,7 @@ class xInfoEvents(Renderer, VariableText):
                 # "Response": "True"
             # }
 
-            ###### for future
+            # ##### for future
             # Title=None
             # Type = None
             # Genre = None
@@ -286,18 +284,6 @@ class xInfoEvents(Renderer, VariableText):
                 pass
         except Exception as e:
             print('error ', str(e))
-            # url_ggl = "https://www.google.it/search?q={}+imdb".format(quote(eventNm))
-            # if self.year != None:
-                    # url_ggl += "+{}".format(self.year)
-                    # fl = requests.get(url_ggl).text
-                    # ptrn = "https://www.imdb.com/title/(tt\d*)"
-                    # res = re.search(ptrn, fl)
-                    # imdb_id  = res.group(1)
-                    # url_omdb = "http://www.omdbapi.com/?apikey={}&i={}".format(omdb_api, quote(imdb_id))
-                    # data_omdb = json.load(urlopen(url_omdb))
-                    # if(data_omdb["Plot"]):
-                            # dwn_infos = "{}{}.json".format(pathLoc, eventNm)
-                            # open(dwn_infos,"w").write(json.dumps(data_omdb))
 
     def filterSearch(self):
         try:
@@ -334,7 +320,7 @@ class xInfoEvents(Renderer, VariableText):
             events = epgcache.lookupEvent(['IBDCT', (ref, 0, -1, -1)])
             for i in range(9):
                 titleNxt = events[i][4]
-                eventNm = REGEX.sub('', titleNxt).rstrip().replace('ё','е')
+                eventNm = REGEX.sub('', titleNxt).rstrip().replace('ё', 'е')
                 infos_file = "{}{}.json".format(pathLoc, eventNm)
                 if not os.path.exists(infos_file):
                     self.downloadInfos(eventNm, infos_file)
